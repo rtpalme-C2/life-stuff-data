@@ -871,6 +871,18 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_gaduo6a",
+      "model": "Viper - Silver Guilloche",
+      "maker": "Diplomat",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 100,
+      "purchase": 80,
+      "status": "En Route",
+      "care": []
     }
   ],
   "inks": [
