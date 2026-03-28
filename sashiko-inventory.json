@@ -705,15 +705,17 @@
       "id": "seed-58"
     },
     {
-      "cat": "Notions",
+      "id": "seed-59",
       "name": "Clover Chaco Liner Refill — White",
+      "cat": "Notions",
       "detail": "Refill for Chaco Liner",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "enroute",
-      "note": "Arriving Mar 26",
-      "id": "seed-59"
+      "status": "delivered",
+      "role": "",
+      "swatch": "",
+      "note": "Arriving Mar 26"
     },
     {
       "cat": "Notions",
