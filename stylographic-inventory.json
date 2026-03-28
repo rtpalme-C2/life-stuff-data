@@ -2033,6 +2033,20 @@
       "retail": 0,
       "purchase": 0,
       "status": "Resting"
+    },
+    {
+      "id": "_95iu1m0",
+      "name": "Hollyhock",
+      "maker": "Colorverse",
+      "color": "Purple",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "No",
+      "limited": true,
+      "size": "15ml",
+      "retail": 15,
+      "purchase": 12,
+      "status": "Resting"
     }
   ],
   "accessories": [
