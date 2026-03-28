@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sashiko Craft">
+<title>Sashiko Craft — Supplies & Fabric Inventory</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ai-indigo:   #1A2840;
+    --deep-ai:     #2E4A68;
+    --steel-blue:  #4A7A9B;
+    --thread-blue: #8AAEC4;
+    --sky-thread:  #C8DCE8;
+    --washi:       #F5F2EC;
+    --brass:       #B8965A;
+    --brass-light: #D4AE78;
+    --shadow:      rgba(20,40,70,.12);
+    --ink:         #1A2840;
+  }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:var(--washi); color:var(--ink); min-height:100vh; }
+
+  /* ── Header ── */
+  header {
+    background:var(--ai-indigo);
+    padding:36px 40px 30px;
+    position:relative;
+    overflow:hidden;
+  }
+  .header-curves {
+    position:absolute; inset:0; pointer-events:none;
+  }
+  header::after {
+    content:''; position:absolute; bottom:0; left:0; right:0;
+    height:2px; background:linear-gradient(90deg,transparent,var(--brass),transparent);
+  }
+  .header-inner { position:relative; display:flex; align-items:center; gap:22px; }
+  .header-eyebrow { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--brass-light); margin-bottom:7px; font-weight:400; }
+  header h1 { font-family:'Plus Jakarta Sans',sans-serif; font-size:2.2rem; font-weight:300; color:var(--washi); letter-spacing:.04em; line-height:1; position:relative; }
+  header h1 em { font-style:italic; color:var(--sky-thread); }
+  header p { font-size:.68rem; color:rgba(255,255,255,.32); margin-top:7px; letter-spacing:.12em; text-transform:uppercase; position:relative; }
+
+  /* ── Sync bar ── */
+  .sync-bar {
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    padding:10px 40px; background:#f8f9fb; border-bottom:1px solid var(--sky-thread);
+    font-size:.74rem;
+  }
+  .sync-status { display:flex; align-items:center; gap:8px; color:#888; }
+  .sync-dot { width:8px; height:8px; border-radius:50%; background:#ccc; flex-shrink:0; transition:background .3s; }
+  .sync-dot.connected { background:#2e8b57; }
+  .sync-dot.saving    { background:#c9a84c; animation:pulse .8s infinite; }
+  .sync-dot.error     { background:#c0392b; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .sync-actions { display:flex; gap:8px; }
+  .btn-sync {
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.7rem; font-weight:500;
+    letter-spacing:.06em; text-transform:uppercase;
+    padding:5px 14px; border-radius:20px; border:1.5px solid var(--sky-thread);
+    background:white; color:var(--steel-blue); cursor:pointer; transition:all .18s;
+  }
+  .btn-sync:hover { border-color:var(--steel-blue); color:var(--deep-ai); }
+  .btn-sync.primary { background:var(--ai-indigo); border-color:var(--ai-indigo); color:white; }
+  .btn-sync.primary:hover { background:var(--deep-ai); border-color:var(--deep-ai); }
+
+  /* ── Config / setup notice ── */
+  .config-notice {
+    margin:20px 40px; padding:16px 20px;
+    background:#fff8e6; border:1.5px solid #f0c040; border-radius:8px;
+    font-size:.8rem; line-height:1.6; color:#5a4000;
+  }
+  .config-notice strong { display:block; margin-bottom:4px; font-size:.85rem; }
+  .config-notice code {
+    background:#f0e8c8; padding:1px 6px; border-radius:4px;
+    font-family:monospace; font-size:.78rem;
+  }
+
+  /* ── PAT setup modal ── */
+  .pat-modal-backdrop {
+    display:none; position:fixed; inset:0; background:rgba(20,40,70,.5);
+    z-index:2000; align-items:center; justify-content:center; padding:1rem;
+  }
+  .pat-modal-backdrop.open { display:flex; }
+  .pat-modal {
+    background:var(--washi); border-top:4px solid var(--brass); border-radius:16px;
+    padding:2rem; width:100%; max-width:460px;
+    box-shadow:0 16px 48px rgba(20,40,70,.28); animation:slideUp .2s ease;
+  }
+  .pat-modal h2 { font-size:1.2rem; font-weight:500; color:var(--ai-indigo); margin-bottom:.5rem; }
+  .pat-modal p { font-size:.79rem; color:#666; line-height:1.6; margin-bottom:1rem; }
+  .pat-modal p a { color:var(--steel-blue); }
+  .pat-field label { display:block; font-size:.63rem; text-transform:uppercase; letter-spacing:.12em; color:#aaa; margin-bottom:.3rem; }
+  .pat-field input {
+    width:100%; padding:8px 12px; border:1.5px solid var(--sky-thread); border-radius:8px;
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.82rem; color:var(--ink);
+    background:white; outline:none; transition:border-color .18s; margin-bottom:1rem;
+  }
+  .pat-field input:focus { border-color:var(--steel-blue); }
+  .pat-actions { display:flex; gap:.75rem; }
+  .btn-pat-cancel {
+    flex:1; padding:8px; border:1.5px solid var(--sky-thread); border-radius:8px;
+    background:white; font-family:'Plus Jakarta Sans',sans-serif; font-size:.74rem;
+    letter-spacing:.08em; text-transform:uppercase; cursor:pointer; color:#aaa; transition:all .15s;
+  }
+  .btn-pat-cancel:hover { border-color:var(--steel-blue); color:var(--steel-blue); }
+  .btn-pat-save {
+    flex:2; padding:8px; border:none; border-radius:8px; background:var(--ai-indigo); color:white;
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.74rem; font-weight:500;
+    letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background .15s;
+  }
+  .btn-pat-save:hover { background:var(--deep-ai); }
+
+  /* ── Top controls ── */
+  .top-bar {
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    padding:14px 40px; background:white; border-bottom:1px solid var(--sky-thread);
+  }
+  .search-wrap { position:relative; flex:1; min-width:180px; max-width:340px; }
+  .search-wrap input {
+    width:100%; padding:7px 12px 7px 34px;
+    border:1.5px solid var(--sky-thread); border-radius:20px;
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.78rem; color:var(--ink);
+    outline:none; transition:border-color .18s; background:var(--washi);
+  }
+  .search-wrap input:focus { border-color:var(--steel-blue); background:white; }
+  .search-wrap svg { position:absolute; left:11px; top:50%; transform:translateY(-50%); color:#aaa; pointer-events:none; }
+  .btn-add-item {
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.74rem; font-weight:500;
+    letter-spacing:.06em; text-transform:uppercase;
+    padding:7px 18px; border-radius:20px; border:none;
+    background:var(--ai-indigo); color:white; cursor:pointer; transition:background .18s; white-space:nowrap;
+  }
+  .btn-add-item:hover { background:var(--deep-ai); }
+
+  /* ── Summary ── */
+  .summary { display:flex; gap:16px; padding:20px 40px 4px; flex-wrap:wrap; }
+  .stat { background:white; border:1px solid var(--sky-thread); border-radius:10px; padding:12px 20px; text-align:center; min-width:100px; }
+  .stat-num { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:600; color:var(--deep-ai); line-height:1; }
+  .stat-label { font-size:.68rem; text-transform:uppercase; letter-spacing:.07em; color:#aaa; margin-top:3px; }
+
+  /* ── Filters ── */
+  .filters {
+    display:flex; flex-direction:column; gap:8px; padding:16px 40px;
+    background:white; border-bottom:1px solid var(--sky-thread);
+    position:sticky; top:0; z-index:10; box-shadow:0 2px 12px var(--shadow);
+  }
+  .filter-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .filter-label { font-size:.63rem; text-transform:uppercase; letter-spacing:.09em; color:#ccc; margin-right:2px; flex-shrink:0; }
+  .filter-btn {
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.71rem; font-weight:500;
+    letter-spacing:.06em; text-transform:uppercase;
+    padding:5px 13px; border-radius:20px; border:1.5px solid var(--sky-thread);
+    background:white; color:var(--steel-blue); cursor:pointer; transition:all .18s;
+  }
+  .filter-btn:hover { border-color:var(--steel-blue); color:var(--deep-ai); }
+  .filter-btn.active { background:var(--deep-ai); border-color:var(--deep-ai); color:white; }
+  .filter-btn-status { font-size:.67rem; border-color:#EBEBEB; color:#bbb; }
+  .filter-btn-status:hover { border-color:var(--steel-blue); color:var(--deep-ai); }
+  .filter-btn-status.active { background:var(--ai-indigo); border-color:var(--ai-indigo); color:white; }
+
+  /* ── Grid ── */
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; padding:24px 40px 48px; }
+  .card {
+    background:white; border-radius:12px; border:1px solid var(--sky-thread);
+    overflow:hidden; box-shadow:0 2px 8px var(--shadow);
+    transition:transform .2s, box-shadow .2s; animation:fadeUp .3s ease both;
+  }
+  .card:hover { transform:translateY(-3px); box-shadow:0 8px 24px var(--shadow); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+  .card-top { height:7px; }
+  .card-body { padding:15px 17px 13px; }
+  .card-cat  { font-size:.63rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--steel-blue); margin-bottom:5px; }
+  .card-name { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.05rem; font-weight:600; line-height:1.3; color:var(--ai-indigo); margin-bottom:4px; }
+  .card-detail { font-size:.74rem; color:#888; line-height:1.5; }
+  .card-detail strong { color:var(--ink); font-weight:500; }
+  .card-footer { display:flex; align-items:center; justify-content:space-between; padding:9px 17px; border-top:1px solid var(--sky-thread); background:#f8fbfd; }
+  .card-qty { font-size:.71rem; color:#aaa; }
+  .card-actions { display:flex; gap:6px; }
+  .btn-card {
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.62rem; font-weight:500;
+    letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 10px; border-radius:10px; border:1.5px solid var(--sky-thread);
+    background:white; color:var(--steel-blue); cursor:pointer; transition:all .15s;
+  }
+  .btn-card:hover { border-color:var(--steel-blue); color:var(--deep-ai); }
+  .btn-card.del:hover { border-color:#c0392b; color:#c0392b; background:#fff0ee; }
+  .badge-row { padding:0 17px 11px; display:flex; justify-content:flex-end; }
+  .badge { font-size:.63rem; font-weight:500; letter-spacing:.05em; text-transform:uppercase; padding:3px 9px; border-radius:10px; }
+  .badge-delivered { background:#d0e8d8; color:#1a5c38; }
+  .badge-enroute   { background:#ccdcee; color:#1a3c60; }
+  .badge-pending   { background:#dde4ec; color:#3a5070; }
+  .swatch-row { display:flex; gap:5px; margin-top:7px; }
+  .swatch { width:17px; height:17px; border-radius:50%; border:1.5px solid rgba(0,0,0,.1); }
+  .section-label {
+    grid-column:1/-1; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.1rem; font-style:italic; font-weight:300;
+    color:var(--steel-blue); border-bottom:1px solid var(--sky-thread); padding-bottom:7px; margin-top:4px;
+  }
+  .no-results { grid-column:1/-1; text-align:center; padding:60px 20px; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-style:italic; color:var(--thread-blue); }
+
+  /* ── Item Modal ── */
+  .modal-backdrop { display:none; position:fixed; inset:0; background:rgba(20,40,70,.45); z-index:1000; align-items:center; justify-content:center; padding:1rem; }
+  .modal-backdrop.open { display:flex; }
+  .modal {
+    background:var(--washi); border-top:4px solid var(--deep-ai); border-radius:16px;
+    padding:2rem; width:100%; max-width:500px;
+    box-shadow:0 16px 48px rgba(20,40,70,.25); animation:slideUp .2s ease;
+    max-height:90vh; overflow-y:auto;
+  }
+  @keyframes slideUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+  .modal h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.35rem; font-weight:600; color:var(--ai-indigo); margin-bottom:1.25rem; }
+  .field { margin-bottom:.9rem; }
+  .field label { display:block; font-size:.65rem; text-transform:uppercase; letter-spacing:.12em; color:#aaa; margin-bottom:.3rem; }
+  .field input, .field select, .field textarea {
+    width:100%; padding:7px 10px; border:1.5px solid var(--sky-thread); border-radius:8px;
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.82rem; color:var(--ink);
+    background:white; outline:none; transition:border-color .18s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color:var(--steel-blue); }
+  .field textarea { resize:vertical; min-height:72px; }
+  .field-row { display:flex; gap:.75rem; }
+  .field-row .field { flex:1; }
+  .modal-actions { display:flex; gap:.75rem; margin-top:1.25rem; }
+  .btn-cancel {
+    flex:1; padding:8px; border:1.5px solid var(--sky-thread); border-radius:8px;
+    background:white; font-family:'Plus Jakarta Sans',sans-serif; font-size:.74rem;
+    letter-spacing:.08em; text-transform:uppercase; cursor:pointer; color:#aaa; transition:all .15s;
+  }
+  .btn-cancel:hover { border-color:var(--steel-blue); color:var(--steel-blue); }
+  .btn-save {
+    flex:2; padding:8px; border:none; border-radius:8px; background:var(--ai-indigo); color:white;
+    font-family:'Plus Jakarta Sans',sans-serif; font-size:.74rem; font-weight:500;
+    letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background .15s;
+  }
+  .btn-save:hover { background:var(--deep-ai); }
+
+  /* ── Toast ── */
+  .toast {
+    position:fixed; bottom:24px; right:24px; z-index:3000;
+    background:var(--ai-indigo); color:white;
+    padding:10px 18px; border-radius:10px; font-size:.76rem;
+    letter-spacing:.04em; box-shadow:0 4px 18px rgba(20,40,70,.3);
+    opacity:0; transform:translateY(8px); transition:all .25s;
+    pointer-events:none;
+  }
+  .toast.show { opacity:1; transform:translateY(0); }
+
+  /* ── Responsive ── */
+  @media (max-width:768px) {
+    header { padding:24px 20px 20px; }
+    .sync-bar, .top-bar, .summary, .filters { padding-left:16px; padding-right:16px; }
+    .grid { padding:16px; gap:12px; }
+  }
+  @media (max-width:480px) {
+    header h1 { font-size:1.7rem; }
+    .grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- Sweeping curved SVG paths background -->
+  <svg class="header-curves" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-100 120 Q200 20 500 80 Q800 140 1100 60 Q1200 30 1300 50" stroke="#8AAEC4" stroke-width="1.5" fill="none" opacity=".14"/>
+    <path d="M-100 90 Q300 160 600 50 Q900 -40 1300 100" stroke="#8AAEC4" stroke-width="1" fill="none" opacity=".08"/>
+    <path d="M0 160 Q250 80 550 130 Q850 180 1100 90 Q1180 70 1300 80" stroke="#8AAEC4" stroke-width="2" fill="none" opacity=".05"/>
+    <path d="M-50 40 Q150 10 350 60 Q550 110 750 40 Q950 -30 1100 30 Q1200 55 1300 20" stroke="#D4AE78" stroke-width="1" fill="none" opacity=".10"/>
+  </svg>
+
+  <div class="header-inner">
+    <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(10, 24, 30)">
+        <path d="M22 2 C24 1 28 2 28 6 L26 52 C26 55 25 58 24 60 C23 58 22 55 22 52 L20 6 C20 2 21 2 22 2 Z" fill="#B8965A" opacity="0.9"/>
+        <path d="M24 1 C26 1 27 3 27 6 L25 52 C25 55 24.5 57 24 60 C23.5 57 23 55 23 52 L21 6 C21 3 22 1 24 1 Z" fill="#D4AE78" opacity="0.5"/>
+        <ellipse cx="24" cy="10" rx="2.5" ry="4" fill="#1A3050"/>
+        <ellipse cx="24" cy="10" rx="1.4" ry="2.5" fill="#D4AE78" opacity="0.4"/>
+        <path d="M22 52 C22 55 23 58 24 60 C25 58 26 55 26 52 Z" fill="#D4AE78" opacity="0.85"/>
+        <path d="M23.2 55 C23.6 57.5 23.9 59 24 60 C24.1 59 24.4 57.5 24.8 55 Z" fill="#F2EAD8" opacity="0.6"/>
+      </g>
+      <path d="M2 6 Q8 2 14 6 Q18 9 21 13" stroke="#B8965A" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" fill="none" opacity="0.5"/>
+      <path d="M21 13 Q24 16 26 20" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+      <path d="M28 20 Q26 30 28 38 Q30 44 36 46 Q42 48 44 42 Q46 36 42 30" stroke="#B8965A" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <path d="M42 30 Q44 24 46 22" stroke="#B8965A" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3" fill="none" opacity="0.45"/>
+    </svg>
+    <div>
+      <div class="header-eyebrow">Chapter 2 · Craft</div>
+      <h1>Sashiko <em>Craft</em></h1>
+      <p>Supplies · Fabric · Notions</p>
+    </div>
+  </div>
+</header>
+
+<!-- Sync bar -->
+<div class="sync-bar">
+  <div class="sync-status">
+    <div class="sync-dot" id="sync-dot"></div>
+    <span id="sync-label">Not connected to GitHub</span>
+  </div>
+  <div class="sync-actions">
+    <button class="btn-sync" id="btn-reset" onclick="resetLocalData()">Reset local data</button>
+    <button class="btn-sync" id="btn-disconnect" style="display:none" onclick="disconnectGitHub()">Disconnect</button>
+    <button class="btn-sync primary" id="btn-connect" onclick="openPATModal()">Connect GitHub</button>
+  </div>
+</div>
+
+<!-- Setup notice (hidden once PAT is configured) -->
+<div class="config-notice" id="config-notice">
+  <strong>&#9888;&#65039; GitHub sync not configured</strong>
+  Tap <strong>Connect GitHub</strong> to enter your Personal Access Token.
+  The PAT needs <code>contents: write</code> permission on the
+  <code>rtpalme-C2/life-stuff-data</code> repo. It is stored only in your
+  browser's localStorage and never sent anywhere except the GitHub API.
+</div>
+
+<div class="top-bar">
+  <div class="search-wrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="search" placeholder="Search inventory…" oninput="renderGrid(); renderSummary();">
+  </div>
+  <button class="btn-add-item" onclick="openModal()">+ Add Item</button>
+</div>
+
+<div class="summary" id="summary"></div>
+<div class="filters"  id="filters"></div>
+<div class="grid"     id="grid"></div>
+
+<!-- PAT setup modal -->
+<div class="pat-modal-backdrop" id="pat-modal" onclick="patBackdropClose(event)">
+  <div class="pat-modal">
+    <h2>Connect GitHub Sync</h2>
+    <p>
+      Enter a GitHub Personal Access Token with <strong>Contents: Read &amp; write</strong>
+      permission scoped to the <code>rtpalme-C2/life-stuff-data</code> repository.
+      The token is stored only in this browser's localStorage.
+    </p>
+    <div class="pat-field">
+      <label>Personal Access Token</label>
+      <input type="password" id="pat-input" placeholder="github_pat_…" autocomplete="off">
+    </div>
+    <div class="pat-actions">
+      <button class="btn-pat-cancel" onclick="closePATModal()">Cancel</button>
+      <button class="btn-pat-save" onclick="savePAT()">Save &amp; Sync</button>
+    </div>
+  </div>
+</div>
+
+<!-- Item modal -->
+<div class="modal-backdrop" id="modal" onclick="backdropClose(event)">
+  <div class="modal">
+    <h2 id="modal-title">Add Item</h2>
+    <div class="field-row">
+      <div class="field" style="flex:2">
+        <label>Name</label>
+        <input type="text" id="f-name" placeholder="e.g. Kona Cotton — Rose">
+      </div>
+      <div class="field">
+        <label>Category</label>
+        <select id="f-cat">
+          <option value="Fabric">Fabric</option>
+          <option value="Thread">Thread</option>
+          <option value="Needles">Needles</option>
+          <option value="Stencils">Stencils</option>
+          <option value="Notions">Notions</option>
+          <option value="Tools">Tools</option>
+          <option value="Reference">Reference</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Detail</label>
+      <input type="text" id="f-detail" placeholder="e.g. K001-1310 · Embroidered squares">
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Maker</label>
+        <input type="text" id="f-maker">
+      </div>
+      <div class="field">
+        <label>Supplier</label>
+        <input type="text" id="f-supplier">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Qty</label>
+        <input type="text" id="f-qty">
+      </div>
+      <div class="field">
+        <label>Status</label>
+        <select id="f-status">
+          <option value="delivered">Delivered</option>
+          <option value="enroute">En Route</option>
+          <option value="pending">Not Yet Ordered</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Use / Role</label>
+        <input type="text" id="f-role">
+      </div>
+      <div class="field">
+        <label>Swatch Color</label>
+        <input type="text" id="f-swatch" placeholder="#C08080">
+      </div>
+    </div>
+    <div class="field">
+      <label>Notes</label>
+      <textarea id="f-notes"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-save" onclick="saveItem()">Save Item</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ─────────────────────────────────────────────
+//  GitHub sync config
+// ─────────────────────────────────────────────
+const GH_OWNER    = 'rtpalme-C2';
+const GH_REPO     = 'life-stuff-data';
+const GH_FILE     = 'sashiko-inventory.json';
+const GH_RAW_URL  = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${GH_FILE}`;
+const GH_API_URL  = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const LS_PAT      = 'sashiko_gh_pat';
+const LS_SHA      = 'sashiko_gh_sha';
+const LS_DATA_KEY = 'sashiko-v2';
+const DATA_VERSION = 2;
+
+let saveTimer   = null;
+let pendingSave = false;
+
+// ── PAT helpers ──
+function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
+function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
+function setSHA(s) { localStorage.setItem(LS_SHA, s); }
+
+function configOk() { return !!getPAT(); }
+
+function updateSetupBanner() {
+  const notice = document.getElementById('config-notice');
+  if (configOk()) {
+    notice.style.display = 'none';
+    document.getElementById('btn-connect').style.display    = 'none';
+    document.getElementById('btn-disconnect').style.display = '';
+  } else {
+    notice.style.display = '';
+    document.getElementById('btn-connect').style.display    = '';
+    document.getElementById('btn-disconnect').style.display = 'none';
+  }
+}
+
+// ── PAT modal ──
+function openPATModal() {
+  document.getElementById('pat-input').value = getPAT();
+  document.getElementById('pat-modal').classList.add('open');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function closePATModal() { document.getElementById('pat-modal').classList.remove('open'); }
+function patBackdropClose(e) { if (e.target === document.getElementById('pat-modal')) closePATModal(); }
+
+async function savePAT() {
+  const val = document.getElementById('pat-input').value.trim();
+  if (!val) { document.getElementById('pat-input').focus(); return; }
+  localStorage.setItem(LS_PAT, val);
+  closePATModal();
+  updateSetupBanner();
+  await syncFromGitHub();
+}
+
+function disconnectGitHub() {
+  if (!confirm('Remove GitHub token from this browser?\n\nLocal data will be kept.')) return;
+  localStorage.removeItem(LS_PAT);
+  localStorage.removeItem(LS_SHA);
+  updateSetupBanner();
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+
+// ── Sync status dot ──
+function setSyncStatus(state, label) {
+  const dot = document.getElementById('sync-dot');
+  document.getElementById('sync-label').textContent = label;
+  dot.className = 'sync-dot';
+  if (state === 'connected') dot.classList.add('connected');
+  else if (state === 'saving')    dot.classList.add('saving');
+  else if (state === 'error')     dot.classList.add('error');
+}
+
+// ── Read from GitHub raw URL ──
+async function syncFromGitHub() {
+  setSyncStatus('saving', 'Loading from GitHub…');
+  try {
+    const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    if (text && text.trim().startsWith('{')) {
+      const parsed = JSON.parse(text);
+      if (parsed && parsed._version === DATA_VERSION && Array.isArray(parsed.data) && parsed.data.length > 0) {
+        supplies = parsed.data;
+        persist();
+        renderGrid(); renderSummary();
+        setSyncStatus('connected', 'Synced from GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+        // Also fetch SHA so we can write back
+        await fetchSHA();
+        return;
+      }
+    }
+    // File exists but is empty or in old format — push local data up
+    setSyncStatus('saving', 'Pushing local data to GitHub…');
+    await saveToGitHub();
+  } catch(e) {
+    setSyncStatus('error', 'GitHub sync failed — working offline');
+    showToast('Could not reach GitHub. Changes saved locally.');
+  }
+}
+
+// ── Fetch current SHA (needed for every write) ──
+async function fetchSHA() {
+  try {
+    const res = await fetch(GH_API_URL, {
+      headers: {
+        'Authorization': 'Bearer ' + getPAT(),
+        'Accept': 'application/vnd.github+json',
+      }
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.sha) setSHA(data.sha);
+  } catch(e) { /* non-fatal */ }
+}
+
+// ── Write to GitHub ──
+async function saveToGitHub() {
+  if (!configOk()) return;
+  setSyncStatus('saving', 'Saving to GitHub…');
+  pendingSave = true;
+  try {
+    // We need a fresh SHA if we don't have one
+    if (!getSHA()) await fetchSHA();
+
+    const payload = { _version: DATA_VERSION, data: supplies };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+    const body = {
+      message: 'Sashiko Craft update · ' + new Date().toISOString().slice(0,10),
+      content,
+    };
+    if (getSHA()) body.sha = getSHA();
+
+    const res = await fetch(GH_API_URL, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + getPAT(),
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'HTTP ' + res.status);
+    }
+
+    const result = await res.json();
+    // Cache new SHA from response
+    if (result.content && result.content.sha) setSHA(result.content.sha);
+
+    pendingSave = false;
+    setSyncStatus('connected', 'Saved to GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+  } catch(e) {
+    pendingSave = false;
+    setSyncStatus('error', 'Save failed — changes kept locally');
+    showToast('GitHub save failed: ' + e.message);
+  }
+}
+
+function scheduleSave() {
+  persist();
+  if (!configOk()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToGitHub, 1200);
+}
+
+// ─────────────────────────────────────────────
+//  Data
+// ─────────────────────────────────────────────
+const CAT_COLORS = {
+  Fabric:'#2E5C8A', Thread:'#3A7090', Needles:'#4A6080',
+  Stencils:'#506878', Notions:'#3A5870', Tools:'#2A4A68', Reference:'#5A6878',
+};
+const statusMap = {
+  delivered: { label:'Delivered',       cls:'badge-delivered' },
+  enroute:   { label:'En Route',        cls:'badge-enroute'   },
+  pending:   { label:'Not Yet Ordered', cls:'badge-pending'   },
+};
+const CATS     = ['All','Fabric','Thread','Needles','Stencils','Notions','Tools','Reference'];
+const STATUSES = ['All Items','Delivered','En Route','Not Yet Ordered'];
+
+const SEED = [
+  { cat:'Fabric', name:'Kona Cotton \u2014 Rose',              detail:'K001-1310 \u00b7 Embroidered squares',     maker:'Robert Kaufman', supplier:'Sewfinity',              qty:'2 yd',   status:'delivered', swatch:'#C08080', role:"Sophie's Quilt \u2014 embroidered blocks" },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Ballet Slipper',    detail:'K001-861 \u00b7 Plain squares (Fabric B)',  maker:'Robert Kaufman', supplier:'Missouri Star Quilt Co.',qty:'2 yd',   status:'delivered', swatch:'#E8C8CC', role:"Sophie's Quilt \u2014 plain checkerboard", note:'Washed & ironed' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Ivory',             detail:'K001-1181 \u00b7 Plain squares (Fabric C)', maker:'Robert Kaufman', supplier:'Sewfinity',              qty:'2 yd',   status:'delivered', swatch:'#EDE8DF', role:"Sophie's Quilt \u2014 plain checkerboard" },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Foxglove',          detail:'K001-956 \u00b7 Backing',                   maker:'Robert Kaufman', supplier:'Missouri Star Quilt Co.',qty:'2 yd',   status:'delivered', swatch:'#C4909A', role:"Sophie's Quilt \u2014 backing", note:'Washed & ironed' },
+  { cat:'Fabric', name:'Liberty Tana Lawn \u2014 Paper White', detail:'Solid \u00b7 Binding',                      maker:'Liberty Fabrics', supplier:'DuckaDilly',           qty:'1 yd',   status:'delivered', swatch:'#F8F4EE', role:"Sophie's Quilt \u2014 binding", note:'Delivered Mar 22' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Ballet Slipper',    detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#E8C8CC', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Cloud',             detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#B8C8DC', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Desert Green',      detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#A8C8A0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Dove',              detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#C8C8C0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Haze',              detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#B8C8B0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Lingerie',          detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#E8C8A8', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Meringue',          detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#F0E8A0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Orchid',            detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#C0A0D0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Quicksilver',       detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#B8B8C0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Shell',             detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#F0C0B0', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Sky',               detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#B8D0E8', role:'Stash' },
+  { cat:'Fabric', name:'Kona Cotton \u2014 Snow',              detail:'Fat quarter \u00b7 Pantone 2026 Powdered Pastels', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'1 FQ', status:'delivered', swatch:'#EDE8E0', role:'Stash' },
+  { cat:'Fabric', name:'Essex Yarn Dyed \u2014 Nautical',      detail:'Linen-cotton blend \u00b7 dark navy', maker:'Robert Kaufman', supplier:'Sewfinity', qty:'2 FQ', status:'delivered', swatch:'#4A5868', role:'Stash' },
+  { cat:'Thread', name:'201 \u2014 White',           detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#F8F8F8', role:'Stash' },
+  { cat:'Thread', name:'202 \u2014 Off White',        detail:'Daruma thick \u00b7 3 extra cards from Snuggly Monkey', maker:'Daruma', supplier:'Amazon + Snuggly Monkey', qty:'4 cards', status:'enroute', swatch:'#F5F0E8', role:"Crane embroidery \u00b7 Sophie's Quilt" },
+  { cat:'Thread', name:'203 \u2014 Lemon',            detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#F5E870', role:'Stash' },
+  { cat:'Thread', name:'204 \u2014 Sunflower',        detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#F0C030', role:'Stash' },
+  { cat:'Thread', name:'205 \u2014 Peacock',          detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#30A898', role:'Stash' },
+  { cat:'Thread', name:'206 \u2014 Mint',             detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#A8DCC8', role:'Stash' },
+  { cat:'Thread', name:'207 \u2014 Emerald',          detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#2E8B57', role:'Stash' },
+  { cat:'Thread', name:'208 \u2014 Bamboo',           detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#788060', role:'Stash' },
+  { cat:'Thread', name:'209 \u2014 Cherry Blossom',   detail:'Daruma thick \u00b7 3 extra cards from Snuggly Monkey', maker:'Daruma', supplier:'Amazon + Snuggly Monkey', qty:'4 cards', status:'enroute', swatch:'#F0C4B8', role:"Sakura + Shippo \u00b7 Sophie's Quilt" },
+  { cat:'Thread', name:'210 \u2014 Wisteria',         detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#C8A0D0', role:'Stash' },
+  { cat:'Thread', name:'211 \u2014 Rose Pink',        detail:'Daruma thick \u00b7 8 extra cards from Snuggly Monkey', maker:'Daruma', supplier:'Amazon + Snuggly Monkey', qty:'9 cards', status:'enroute', swatch:'#D08898', role:"Kagome + Asanoha \u00b7 Sophie's Quilt" },
+  { cat:'Thread', name:'212 \u2014 Vermillion',       detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#E84030', role:'Stash' },
+  { cat:'Thread', name:'213 \u2014 Deep Red',         detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#A01820', role:'Stash' },
+  { cat:'Thread', name:'214 \u2014 Carrot',           detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#E87030', role:'Stash' },
+  { cat:'Thread', name:'215 \u2014 Navy Blue',        detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#1A2A5A', role:'Stash' },
+  { cat:'Thread', name:'216 \u2014 Deep Indigo',      detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#282050', role:'Stash' },
+  { cat:'Thread', name:'217 \u2014 Gray',             detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#A8A8A8', role:'Stash' },
+  { cat:'Thread', name:'218 \u2014 Brown',            detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#7A5038', role:'Stash' },
+  { cat:'Thread', name:'219 \u2014 Black',            detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#202020', role:'Stash' },
+  { cat:'Thread', name:'220 \u2014 Brown Gold',       detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#B88830', role:'Stash' },
+  { cat:'Thread', name:'221 \u2014 Madder',           detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#C04840', role:'Stash' },
+  { cat:'Thread', name:'222 \u2014 Japanese Apricot', detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#E8A878', role:'Stash' },
+  { cat:'Thread', name:'223 \u2014 Grape',            detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#785090', role:'Stash' },
+  { cat:'Thread', name:'224 \u2014 Blue',             detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#4060C0', role:'Stash' },
+  { cat:'Thread', name:'225 \u2014 Lapis Lazuli',     detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#2848A0', role:'Stash' },
+  { cat:'Thread', name:'226 \u2014 Water Blue',       detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#88B8D8', role:'Stash' },
+  { cat:'Thread', name:'227 \u2014 Spring Green',     detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#78C870', role:'Stash' },
+  { cat:'Thread', name:'228 \u2014 Uguisu',           detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#909858', role:'Stash' },
+  { cat:'Thread', name:'229 \u2014 Mouse',            detail:'Daruma thick', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#888078', role:'Stash' },
+  { cat:'Thread', name:'Kinari \u2014 Natural White', detail:'Daruma thin \u00b7 included with set', maker:'Daruma', supplier:'Amazon', qty:'1 card', status:'delivered', swatch:'#F0EAD8', role:'Stash' },
+  { cat:'Thread', name:'Hidamari \u2014 Tulip',           detail:'Cosmo sashiko \u00b7 deep red',  maker:'Cosmo/Lecien', supplier:'Sewfinity', qty:'1 spool', status:'delivered', swatch:'#C03040', role:'Stash' },
+  { cat:'Thread', name:'Hidamari \u2014 Cherry Blossom',  detail:'Cosmo sashiko \u00b7 soft pink', maker:'Cosmo/Lecien', supplier:'Sewfinity', qty:'1 spool', status:'delivered', swatch:'#ECA8A8', role:'Stash' },
+  { cat:'Thread', name:'Hidamari \u2014 Snow White',      detail:'Cosmo sashiko \u00b7 white',     maker:'Cosmo/Lecien', supplier:'Sewfinity', qty:'1 spool', status:'delivered', swatch:'#F8F5F0', role:'Stash' },
+  { cat:'Thread', name:'Neutral Cream Piecing Thread', detail:'Machine assembly of quilt top', maker:'TBD (Gutermann or Coats & Clark)', supplier:'TBD', qty:'2 spools', status:'pending', role:'Machine piecing' },
+  { cat:'Needles',   name:'Tulip Long Sashiko Needles',          detail:'Assorted \u00b7 tube of 6',          maker:'Tulip',    supplier:'Amazon', qty:'1 tube',  status:'enroute',   note:'Arriving Mar 23' },
+  { cat:'Stencils',  name:'FREEBLOSS Stencil Kit \u2014 Geometric 1', detail:'12-piece \u00b7 Kagome, Asanoha', maker:'FREEBLOSS', supplier:'Amazon', qty:'1 kit', status:'delivered', note:'Delivered Mar 14' },
+  { cat:'Stencils',  name:'FREEBLOSS Stencil Kit \u2014 Geometric 2', detail:'12-piece \u00b7 Shippo patterns', maker:'FREEBLOSS', supplier:'Amazon', qty:'1 kit', status:'delivered', note:'Delivered Mar 14' },
+  { cat:'Stencils',  name:'FREEBLOSS Stencil Kit \u2014 Flowers',     detail:'12-piece \u00b7 Sakura/floral',   maker:'FREEBLOSS', supplier:'Amazon', qty:'1 kit', status:'delivered', note:'Delivered Mar 14' },
+  { cat:'Stencils',  name:'Crane Stencil',                             detail:'Individual \u00b7 center square', maker:'\u2014',    supplier:'\u2014', qty:'1',     status:'delivered', note:'In hand' },
+  { cat:'Notions',   name:'Clover Mini Wonder Clips',                  detail:'50 pcs \u00b7 fabric clips',      maker:'Clover',   supplier:'Amazon', qty:'1 pack', status:'delivered', note:'Delivered Mar 14' },
+  { cat:'Notions',   name:'Clover White Chaco Liner Pen',              detail:'Stencil marking pen',             maker:'Clover',   supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Mar 31' },
+  { cat:'Notions',   name:'Clover Chaco Liner Refill \u2014 White',    detail:'Refill for Chaco Liner',          maker:'Clover',   supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Mar 26' },
+  { cat:'Notions',   name:'Clover Protect & Grip Thimble \u2014 Medium', detail:'Hand-stitching thimble',        maker:'Clover',   supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Apr 1' },
+  { cat:'Notions',   name:'Clover Protect & Grip Thimble \u2014 Large',  detail:'Hand-stitching thimble',        maker:'Clover',   supplier:'Amazon', qty:'1',      status:'delivered', note:'Delivered Mar 22' },
+  { cat:'Notions',   name:'Wooden Needle Case',                        detail:'2-piece set',                     maker:'\u2014',   supplier:'Amazon', qty:'1 set',  status:'enroute',   note:'Arriving Mar 23' },
+  { cat:'Notions',   name:'Japanese-style Pin Cushion',                detail:'Tomato-style cushion',            maker:'\u2014',   supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Mar 27' },
+  { cat:'Tools',     name:'Fiskars Crafts Essentials 5-piece',         detail:'Rotary cutter, mat & rulers',     maker:'Fiskars',  supplier:'Amazon', qty:'1 set',  status:'delivered', note:'Delivered Mar 14' },
+  { cat:'Tools',     name:'Fiskars Sewing Essentials 6-piece',         detail:'Scissors, seam ripper, etc.',     maker:'Fiskars',  supplier:'Amazon', qty:'1 set',  status:'delivered', note:'Delivered Mar 13' },
+  { cat:'Tools',     name:'Fiskars Self-Healing Cutting Mat 18\u201d\u00d724\u201d', detail:'Lilac \u00b7 extra cutting surface', maker:'Fiskars', supplier:'Amazon', qty:'1', status:'enroute', note:'Arriving Mar 23' },
+  { cat:'Tools',     name:'Fiskars Sewing Ruler 6\u201d\u00d724\u201d', detail:'Long quilting ruler',            maker:'Fiskars',  supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Mar 24' },
+  { cat:'Tools',     name:'Gingher 8\u201d Dressmaker Shears',         detail:'Right-hand fabric scissors',      maker:'Gingher',  supplier:'Amazon', qty:'1',      status:'enroute',   note:'Arriving Mar 27\u2013Apr 2' },
+  { cat:'Tools',     name:'Sewing Machine',                            detail:'Brother HC1850 or CS7000X',       maker:'Brother',  supplier:'TBD',    qty:'1',      status:'pending',   role:'Machine piecing + assembly' },
+  { cat:'Reference', name:'Kona Printed Color Chart 24\u201d Panel',   detail:'Full Kona palette reference',     maker:'Robert Kaufman', supplier:'Amazon', qty:'1 panel', status:'delivered', note:'Delivered Mar 18' },
+];
+
+let supplies = null;
+try {
+  const raw = JSON.parse(localStorage.getItem(LS_DATA_KEY) || 'null');
+  if (raw && raw._version === DATA_VERSION) supplies = raw.data;
+  else if (raw) localStorage.removeItem(LS_DATA_KEY);
+} catch(e) {}
+if (!supplies) { supplies = SEED.map((s,i) => ({...s, id:'seed-'+i})); persist(); }
+
+function persist() {
+  localStorage.setItem(LS_DATA_KEY, JSON.stringify({_version:DATA_VERSION, data:supplies}));
+}
+
+function resetLocalData() {
+  if (!confirm('Clear locally cached data and reload?\n\nIf GitHub sync is configured, data will reload from GitHub. Otherwise the app will reload from its built-in data.')) return;
+  localStorage.removeItem(LS_DATA_KEY);
+  localStorage.removeItem(LS_SHA);
+  location.reload();
+}
+
+// ─────────────────────────────────────────────
+//  UI
+// ─────────────────────────────────────────────
+let activeCat    = 'All';
+let activeStatus = 'All Items';
+let editingId    = null;
+
+function matchesCat(s)    { return activeCat === 'All' || s.cat === activeCat; }
+function matchesStatus(s) {
+  if (activeStatus === 'All Items')       return true;
+  if (activeStatus === 'Delivered')       return s.status === 'delivered';
+  if (activeStatus === 'En Route')        return s.status === 'enroute';
+  if (activeStatus === 'Not Yet Ordered') return s.status === 'pending';
+  return true;
+}
+function matchesSearch(s) {
+  const q = (document.getElementById('search').value||'').toLowerCase();
+  if (!q) return true;
+  return [s.name,s.cat,s.detail,s.maker,s.supplier,s.role,s.note,s.qty].some(v=>v&&v.toLowerCase().includes(q));
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderFilters() {
+  document.getElementById('filters').innerHTML = `
+    <div class="filter-row">
+      <span class="filter-label">Category</span>
+      ${CATS.map(c=>`<button class="filter-btn${c===activeCat?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Status</span>
+      ${STATUSES.map(s=>`<button class="filter-btn filter-btn-status${s===activeStatus?' active':''}" onclick="setStat('${s.replace(/'/g,"\\'")}')">${s}</button>`).join('')}
+    </div>`;
+}
+
+function setCat(c)  { activeCat=c;    renderFilters(); renderGrid(); renderSummary(); }
+function setStat(s) { activeStatus=s; renderFilters(); renderGrid(); renderSummary(); }
+
+function renderGrid() {
+  const el = document.getElementById('grid');
+  const filtered = supplies.filter(s=>matchesCat(s)&&matchesStatus(s)&&matchesSearch(s));
+  if (!filtered.length) { el.innerHTML=`<div class="no-results">Nothing found.</div>`; return; }
+  const groups = {};
+  filtered.forEach(s=>{ (groups[s.cat]=groups[s.cat]||[]).push(s); });
+  let html='', d=0;
+  Object.entries(groups).forEach(([cat,items])=>{
+    if (activeCat==='All') { html+=`<div class="section-label" style="animation-delay:${d*.025}s">${esc(cat)}</div>`; d++; }
+    items.forEach(s=>{
+      const color    = CAT_COLORS[s.cat]||'#4A6080';
+      const st       = statusMap[s.status]||statusMap.pending;
+      const swHtml   = s.swatch ? `<div class="swatch-row"><div class="swatch" style="background:${esc(s.swatch)}"></div></div>` : '';
+      const noteHtml = s.note   ? `<div class="card-detail" style="margin-top:3px;color:#bbb;font-size:.69rem">${esc(s.note)}</div>` : '';
+      const roleHtml = s.role   ? `<div class="card-detail" style="margin-top:3px"><strong>Use:</strong> ${esc(s.role)}</div>` : '';
+      html+=`
+        <div class="card" style="animation-delay:${d*.025}s">
+          <div class="card-top" style="background:${color}"></div>
+          <div class="card-body">
+            <div class="card-cat">${esc(s.cat)}</div>
+            <div class="card-name">${esc(s.name)}</div>
+            <div class="card-detail">${esc(s.detail||'')}</div>
+            <div class="card-detail" style="margin-top:3px"><strong>Maker:</strong> ${esc(s.maker||'\u2014')}</div>
+            ${roleHtml}${swHtml}${noteHtml}
+          </div>
+          <div class="card-footer">
+            <span class="card-qty">${esc(s.qty||'')} &middot; ${esc(s.supplier||'')}</span>
+            <div class="card-actions">
+              <button class="btn-card" onclick="openModal('${s.id}')">Edit</button>
+              <button class="btn-card del" onclick="deleteItem('${s.id}')">Delete</button>
+            </div>
+          </div>
+          <div class="badge-row"><span class="badge ${st.cls}">${st.label}</span></div>
+        </div>`;
+      d++;
+    });
+  });
+  el.innerHTML = html;
+}
+
+function renderSummary() {
+  const src       = supplies.filter(s=>matchesCat(s)&&matchesStatus(s)&&matchesSearch(s));
+  const delivered = src.filter(s=>s.status==='delivered').length;
+  const enroute   = src.filter(s=>s.status==='enroute').length;
+  const pending   = src.filter(s=>s.status==='pending').length;
+  document.getElementById('summary').innerHTML = `
+    <div class="stat"><div class="stat-num">${src.length}</div><div class="stat-label">Total</div></div>
+    <div class="stat"><div class="stat-num">${delivered}</div><div class="stat-label">Delivered</div></div>
+    <div class="stat"><div class="stat-num">${enroute}</div><div class="stat-label">En Route</div></div>
+    ${pending?`<div class="stat"><div class="stat-num" style="color:#3a5070">${pending}</div><div class="stat-label">Still Needed</div></div>`:''}`;
+}
+
+function openModal(id) {
+  editingId = id||null;
+  const s = id ? supplies.find(i=>i.id===id) : null;
+  document.getElementById('modal-title').textContent = s ? 'Edit Item' : 'Add Item';
+  document.getElementById('f-name').value     = s?.name     ||'';
+  document.getElementById('f-cat').value      = s?.cat      ||'Fabric';
+  document.getElementById('f-detail').value   = s?.detail   ||'';
+  document.getElementById('f-maker').value    = s?.maker    ||'';
+  document.getElementById('f-supplier').value = s?.supplier ||'';
+  document.getElementById('f-qty').value      = s?.qty      ||'';
+  document.getElementById('f-status').value   = s?.status   ||'delivered';
+  document.getElementById('f-role').value     = s?.role     ||'';
+  document.getElementById('f-swatch').value   = s?.swatch   ||'';
+  document.getElementById('f-notes').value    = s?.note     ||'';
+  document.getElementById('modal').classList.add('open');
+  setTimeout(()=>document.getElementById('f-name').focus(),50);
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('open'); editingId=null; }
+function backdropClose(e) { if(e.target===document.getElementById('modal')) closeModal(); }
+
+function saveItem() {
+  const name = document.getElementById('f-name').value.trim();
+  if (!name) { document.getElementById('f-name').focus(); return; }
+  const item = {
+    id:       editingId||(Date.now().toString(36)+Math.random().toString(36).slice(2,6)),
+    name,
+    cat:      document.getElementById('f-cat').value,
+    detail:   document.getElementById('f-detail').value.trim(),
+    maker:    document.getElementById('f-maker').value.trim(),
+    supplier: document.getElementById('f-supplier').value.trim(),
+    qty:      document.getElementById('f-qty').value.trim(),
+    status:   document.getElementById('f-status').value,
+    role:     document.getElementById('f-role').value.trim(),
+    swatch:   document.getElementById('f-swatch').value.trim(),
+    note:     document.getElementById('f-notes').value.trim(),
+  };
+  supplies = editingId ? supplies.map(s=>s.id===editingId?item:s) : [item,...supplies];
+  scheduleSave();
+  closeModal();
+  renderGrid();
+  renderSummary();
+}
+
+function deleteItem(id) {
+  if (!confirm('Remove this item?')) return;
+  supplies = supplies.filter(s=>s.id!==id);
+  scheduleSave();
+  renderGrid();
+  renderSummary();
+}
+
+// ── Toast ──
+let toastTimer;
+function showToast(msg, duration=3500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), duration);
+}
+
+// ── Keyboard shortcuts ──
+document.addEventListener('keydown', e=>{
+  if (e.key==='Escape') { closeModal(); closePATModal(); }
+  if (e.key==='Enter' && document.getElementById('modal').classList.contains('open') && e.target.tagName!=='TEXTAREA') {
+    e.preventDefault(); saveItem();
+  }
+  if (e.key==='Enter' && document.getElementById('pat-modal').classList.contains('open')) {
+    e.preventDefault(); savePAT();
+  }
+});
+
+window.addEventListener('beforeunload', e=>{
+  if (saveTimer || pendingSave) { e.preventDefault(); e.returnValue=''; }
+});
+
+// ── Init ──
+updateSetupBanner();
+renderFilters();
+renderGrid();
+renderSummary();
+
+// Auto-sync on load if PAT is already set
+if (configOk()) {
+  syncFromGitHub();
+} else {
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+</script>
+</body>
+</html>
