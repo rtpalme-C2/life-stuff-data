@@ -806,15 +806,17 @@
       "id": "seed-67"
     },
     {
-      "cat": "Tools",
+      "id": "seed-68",
       "name": "Gingher 8” Dressmaker Shears",
+      "cat": "Tools",
       "detail": "Right-hand fabric scissors",
       "maker": "Gingher",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "enroute",
-      "note": "Arriving Mar 27–Apr 2",
-      "id": "seed-68"
+      "status": "delivered",
+      "role": "",
+      "swatch": "",
+      "note": "Arriving Mar 27–Apr 2"
     },
     {
       "cat": "Tools",
