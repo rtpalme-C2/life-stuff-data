@@ -749,15 +749,17 @@
       "id": "seed-62"
     },
     {
-      "cat": "Notions",
+      "id": "seed-63",
       "name": "Japanese-style Pin Cushion",
+      "cat": "Notions",
       "detail": "Tomato-style cushion",
       "maker": "—",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "enroute",
-      "note": "Arriving Mar 27",
-      "id": "seed-63"
+      "status": "delivered",
+      "role": "",
+      "swatch": "",
+      "note": "Arriving Mar 27"
     },
     {
       "cat": "Tools",
