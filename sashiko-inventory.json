@@ -233,16 +233,17 @@
       "id": "seed-18"
     },
     {
-      "cat": "Thread",
+      "id": "seed-19",
       "name": "202 — Off White",
+      "cat": "Thread",
       "detail": "Daruma thick · 3 extra cards from Snuggly Monkey",
       "maker": "Daruma",
-      "supplier": "Amazon + Snuggly Monkey",
+      "supplier": "Snuggly Monkey",
       "qty": "4 cards",
-      "status": "enroute",
-      "swatch": "#F5F0E8",
+      "status": "delivered",
       "role": "Crane embroidery · Sophie's Quilt",
-      "id": "seed-19"
+      "swatch": "#F5F0E8",
+      "note": ""
     },
     {
       "cat": "Thread",
