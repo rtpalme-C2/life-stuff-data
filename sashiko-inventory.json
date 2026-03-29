@@ -318,16 +318,17 @@
       "id": "seed-25"
     },
     {
-      "cat": "Thread",
+      "id": "seed-26",
       "name": "209 — Cherry Blossom",
+      "cat": "Thread",
       "detail": "Daruma thick · 3 extra cards from Snuggly Monkey",
       "maker": "Daruma",
-      "supplier": "Amazon + Snuggly Monkey",
+      "supplier": "Snuggly Monkey",
       "qty": "4 cards",
-      "status": "enroute",
-      "swatch": "#F0C4B8",
+      "status": "delivered",
       "role": "Sakura + Shippo · Sophie's Quilt",
-      "id": "seed-26"
+      "swatch": "#F0C4B8",
+      "note": ""
     },
     {
       "cat": "Thread",
