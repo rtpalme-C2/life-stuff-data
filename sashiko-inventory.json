@@ -697,15 +697,17 @@
       "id": "seed-57"
     },
     {
-      "cat": "Notions",
+      "id": "seed-58",
       "name": "Clover White Chaco Liner Pen",
+      "cat": "Notions",
       "detail": "Stencil marking pen",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "enroute",
-      "note": "Arriving Mar 31",
-      "id": "seed-58"
+      "status": "delivered",
+      "role": "",
+      "swatch": "",
+      "note": "Arriving Mar 31"
     },
     {
       "id": "seed-59",
