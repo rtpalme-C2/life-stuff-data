@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="[App Name]">
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  ICONS — embed both as base64 PNG data URIs                     ║
+  ║  Minimum 180×180 for apple-touch-icon                           ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<link rel="icon" type="image/png" href="data:image/png;base64,[FAVICON_BASE64]">
+<link rel="apple-touch-icon" href="data:image/png;base64,[TOUCH_ICON_BASE64]">
+<title>[App Name] — [Subtitle]</title>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  FONTS — always use this exact string, all weights              ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/*
+ * ════════════════════════════════════════════════════════════════════
+ *  LIFE STUFF APPS — DESIGN SYSTEM TEMPLATE
+ *  Chapter [N] · [Category]
+ *  Reference: DESIGN_SYSTEM.md
+ * ════════════════════════════════════════════════════════════════════
+ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── PALETTE — replace with app-specific values ── */
+:root {
+  /* Chapter 2 · Craft & Life palette (Sashiko / reference)
+     For other apps, swap these values — keep variable names */
+  --app-dark:    #1A2840;   /* header bg, primary dark */
+  --app-mid:     #2E4A68;   /* sync bar, hover states */
+  --app-accent:  #4A7A9B;   /* active states */
+  --app-thread:  #8AAEC4;   /* secondary accent */
+  --app-border:  #C8DCE8;   /* borders, rules */
+  --app-bg:      #F5F2EC;   /* page background */
+  --brass:       #B8965A;   /* primary brass — consistent across suite */
+  --brass-light: #D4AE78;   /* button text on dark, hover */
+  --shadow:      rgba(20,40,70,.12);
+  --ink:         #1A2840;   /* body text */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--app-bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════════════════════════ */
+header {
+  background: var(--app-dark);
+  padding: 36px 40px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.header-curves {
+  position: absolute; inset: 0; pointer-events: none;
+}
+header::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+}
+.header-inner { position: relative; display: flex; align-items: center; gap: 22px; }
+.header-eyebrow {
+  font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--brass-light); margin-bottom: 7px; font-weight: 400;
+}
+header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.2rem; font-weight: 300; color: var(--app-bg);
+  letter-spacing: .04em; line-height: 1;
+}
+header h1 em { font-style: italic; color: var(--app-border); }
+header p {
+  font-size: .68rem; color: rgba(255,255,255,.32);
+  margin-top: 7px; letter-spacing: .12em; text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SYNC BAR — dark, extends from header
+   ══════════════════════════════════════════════════════════════════ */
+.sync-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px;
+  padding: 8px 40px;
+  background: var(--app-mid);
+  border-bottom: 1px solid rgba(184,150,90,.12);
+  font-size: .72rem;
+}
+.sync-status { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.38); }
+.sync-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255,255,255,.18); flex-shrink: 0; transition: background .3s;
+}
+.sync-dot.connected { background: #5aab7a; }
+.sync-dot.saving    { background: var(--brass); animation: pulse .8s infinite; }
+.sync-dot.error     { background: #b05050; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+.sync-actions { display: flex; gap: 8px; }
+.btn-sync {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .63rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px;
+  border: 1px solid rgba(184,150,90,.35);
+  background: transparent; color: var(--brass-light);
+  cursor: pointer; transition: all .18s;
+}
+.btn-sync:hover { border-color: var(--brass); color: var(--brass); }
+.btn-sync.primary {
+  background: var(--brass); border-color: var(--brass);
+  color: var(--app-dark); font-weight: 500;
+}
+.btn-sync.primary:hover { background: var(--brass-light); }
+
+/* ══════════════════════════════════════════════════════════════════
+   CONFIG NOTICE — shown until PAT is set
+   border-radius: 4px intentionally sharper (alert style, not card)
+   ══════════════════════════════════════════════════════════════════ */
+.config-notice {
+  margin: 20px 40px; padding: 16px 20px;
+  background: #fff8e6; border: 1.5px solid #f0c040; border-radius: 4px;
+  font-size: .8rem; line-height: 1.6; color: #5a4000;
+}
+.config-notice strong { display: block; margin-bottom: 4px; font-size: .85rem; }
+.config-notice code {
+  background: #f0e8c8; padding: 1px 6px; border-radius: 4px;
+  font-family: monospace; font-size: .78rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PAT MODAL
+   ══════════════════════════════════════════════════════════════════ */
+.pat-modal-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(20,40,70,.5);
+  z-index: 2000; align-items: center; justify-content: center; padding: 1rem;
+}
+.pat-modal-backdrop.open { display: flex; }
+.pat-modal {
+  background: var(--app-bg); border-top: 4px solid var(--brass); border-radius: 16px;
+  padding: 2rem; width: 100%; max-width: 460px;
+  box-shadow: 0 16px 48px rgba(20,40,70,.28); animation: slideUp .2s ease;
+}
+.pat-modal h2 { font-size: 1.2rem; font-weight: 500; color: var(--app-dark); margin-bottom: .5rem; }
+.pat-modal p { font-size: .79rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
+.pat-modal p code { background: #f0e8c8; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: .76rem; }
+.pat-field label {
+  display: block; font-size: .63rem; text-transform: uppercase;
+  letter-spacing: .12em; color: #aaa; margin-bottom: .3rem;
+}
+.pat-field input {
+  width: 100%; padding: 8px 12px; border: 1.5px solid var(--app-border);
+  border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .82rem; color: var(--ink); background: white;
+  outline: none; transition: border-color .18s; margin-bottom: 1rem;
+}
+.pat-field input:focus { border-color: var(--app-accent); }
+.pat-actions { display: flex; gap: .75rem; }
+.btn-pat-cancel {
+  flex: 1; padding: 8px; border: 1.5px solid var(--app-border); border-radius: 8px;
+  background: white; font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .74rem; letter-spacing: .08em; text-transform: uppercase;
+  cursor: pointer; color: #aaa; transition: all .15s;
+}
+.btn-pat-cancel:hover { border-color: var(--app-accent); color: var(--app-accent); }
+.btn-pat-save {
+  flex: 2; padding: 8px; border: none; border-radius: 8px;
+  background: var(--app-dark); color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .74rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: background .15s;
+}
+.btn-pat-save:hover { background: var(--app-mid); }
+
+/* ══════════════════════════════════════════════════════════════════
+   ITEM / CONTENT MODAL
+   Both PAT and item modal use border-top: 4px solid var(--brass)
+   ══════════════════════════════════════════════════════════════════ */
+.modal-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(20,40,70,.45); z-index: 1000;
+  align-items: center; justify-content: center; padding: 1rem;
+}
+.modal-backdrop.open { display: flex; }
+.modal {
+  background: var(--app-bg); border-top: 4px solid var(--brass); border-radius: 16px;
+  padding: 2rem; width: 100%; max-width: 500px;
+  box-shadow: 0 16px 48px rgba(20,40,70,.25); animation: slideUp .2s ease;
+  max-height: 90vh; overflow-y: auto;
+}
+@keyframes slideUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.modal h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem; font-weight: 600; color: var(--app-dark); margin-bottom: 1.25rem;
+}
+
+/* ── Form fields (inside modals) ── */
+.field { margin-bottom: .9rem; }
+.field label {
+  display: block; font-size: .65rem; text-transform: uppercase;
+  letter-spacing: .12em; color: #aaa; margin-bottom: .3rem;
+}
+.field input, .field select, .field textarea {
+  width: 100%; padding: 7px 10px;
+  border: 1.5px solid var(--app-border); border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .82rem; color: var(--ink);
+  background: white; outline: none; transition: border-color .18s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--app-accent); }
+.field textarea { resize: vertical; min-height: 72px; }
+.field-row { display: flex; gap: .75rem; }
+.field-row .field { flex: 1; }
+.modal-actions { display: flex; gap: .75rem; margin-top: 1.25rem; }
+.btn-cancel {
+  flex: 1; padding: 8px; border: 1.5px solid var(--app-border); border-radius: 8px;
+  background: white; font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .74rem; letter-spacing: .08em; text-transform: uppercase;
+  cursor: pointer; color: #aaa; transition: all .15s;
+}
+.btn-cancel:hover { border-color: var(--app-accent); color: var(--app-accent); }
+.btn-save {
+  flex: 2; padding: 8px; border: none; border-radius: 8px;
+  background: var(--app-dark); color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .74rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: background .15s;
+}
+.btn-save:hover { background: var(--app-mid); }
+
+/* ══════════════════════════════════════════════════════════════════
+   CONTENT AREA
+   ══════════════════════════════════════════════════════════════════ */
+.top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  padding: 14px 40px; background: white; border-bottom: 1px solid var(--app-border);
+}
+.search-wrap { position: relative; flex: 1; min-width: 180px; max-width: 340px; }
+.search-wrap input {
+  width: 100%; padding: 7px 12px 7px 34px;
+  border: 1.5px solid var(--app-border); border-radius: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .78rem; color: var(--ink);
+  outline: none; transition: border-color .18s; background: var(--app-bg);
+}
+.search-wrap input:focus { border-color: var(--app-accent); background: white; }
+.search-wrap svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: #aaa; pointer-events: none; }
+.btn-add-item {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .74rem; font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 7px 18px; border-radius: 20px; border: none;
+  background: var(--app-dark); color: white; cursor: pointer; transition: background .18s;
+}
+.btn-add-item:hover { background: var(--app-mid); }
+
+/* ── Summary stats ── */
+.summary { display: flex; gap: 16px; padding: 20px 40px 4px; flex-wrap: wrap; }
+.stat {
+  background: white; border: 1px solid var(--app-border); border-radius: 10px;
+  padding: 12px 20px; text-align: center; min-width: 100px;
+}
+.stat-num { font-size: 1.8rem; font-weight: 600; color: var(--app-mid); line-height: 1; }
+.stat-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: #aaa; margin-top: 3px; }
+
+/* ── Filters ── */
+.filters {
+  display: flex; flex-direction: column; gap: 8px; padding: 16px 40px;
+  background: white; border-bottom: 1px solid var(--app-border);
+  position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 12px var(--shadow);
+}
+.filter-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.filter-label { font-size: .63rem; text-transform: uppercase; letter-spacing: .09em; color: #ccc; margin-right: 2px; flex-shrink: 0; }
+.filter-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .71rem; font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 5px 13px; border-radius: 20px; border: 1.5px solid var(--app-border);
+  background: white; color: var(--app-accent); cursor: pointer; transition: all .18s;
+}
+.filter-btn:hover { border-color: var(--app-accent); color: var(--app-mid); }
+/* All filter types use same active colour — no hierarchy distinction */
+.filter-btn.active { background: var(--app-mid); border-color: var(--app-mid); color: white; }
+
+/* ── Cards (inventory grid) ── */
+.grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 16px; padding: 24px 40px 48px; }
+.card {
+  background: white; border-radius: 12px; border: 1px solid var(--app-border);
+  overflow: hidden; box-shadow: 0 2px 8px var(--shadow);
+  transition: transform .2s, box-shadow .2s; animation: fadeUp .3s ease both;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+.card-top { height: 7px; /* category colour stripe via inline style */ }
+.card-body { padding: 15px 17px 13px; }
+.card-name { font-size: 1.05rem; font-weight: 600; line-height: 1.3; color: var(--app-dark); margin-bottom: 4px; }
+.card-detail { font-size: .74rem; color: #888; line-height: 1.5; }
+.card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 9px 17px; border-top: 1px solid var(--app-border); background: #f8fbfd;
+}
+.card-actions { display: flex; gap: 6px; }
+.btn-card {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .62rem; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 10px; border: 1.5px solid var(--app-border);
+  background: white; color: var(--app-accent); cursor: pointer; transition: all .15s;
+}
+.btn-card:hover { border-color: var(--app-accent); color: var(--app-mid); }
+.btn-card.del:hover { border-color: #c0392b; color: #c0392b; background: #fff0ee; }
+
+/* ── Badges ── */
+.badge { font-size: .63rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; }
+
+/* ── No results ── */
+.no-results { grid-column: 1/-1; text-align: center; padding: 60px 20px; font-style: italic; color: var(--app-thread); font-size: 1.3rem; }
+
+/* ══════════════════════════════════════════════════════════════════
+   TOAST
+   ══════════════════════════════════════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 3000;
+  background: var(--app-dark); color: white;
+  padding: 10px 18px; border-radius: 10px; font-size: .76rem;
+  letter-spacing: .04em; box-shadow: 0 4px 18px rgba(20,40,70,.3);
+  opacity: 0; transform: translateY(8px); transition: all .25s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — 768px tablet, 480px phone
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width:768px) {
+  header { padding: 24px 20px 20px; }
+  .sync-bar, .top-bar, .summary, .filters, .config-notice { padding-left: 16px; padding-right: 16px; }
+  .grid { padding: 16px; gap: 12px; }
+}
+@media (max-width:480px) {
+  header h1 { font-size: 1.7rem; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════════════ -->
+<header>
+  <!-- Sweeping curved SVG background — tint stroke to app's accent colour -->
+  <svg class="header-curves" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-100 120 Q200 20 500 80 Q800 140 1100 60 Q1200 30 1300 50" stroke="#8AAEC4" stroke-width="1.5" fill="none" opacity=".14"/>
+    <path d="M-100 90 Q300 160 600 50 Q900 -40 1300 100"              stroke="#8AAEC4" stroke-width="1"   fill="none" opacity=".08"/>
+    <path d="M0 160 Q250 80 550 130 Q850 180 1100 90 Q1180 70 1300 80" stroke="#8AAEC4" stroke-width="2"   fill="none" opacity=".05"/>
+    <path d="M-50 40 Q150 10 350 60 Q550 110 750 40 Q950 -30 1100 30 Q1200 55 1300 20" stroke="#D4AE78" stroke-width="1" fill="none" opacity=".10"/>
+  </svg>
+
+  <div class="header-inner">
+    <!--
+      APP ICON — replace with app-specific inline SVG
+      56×56px, rx:12 rounded square background, transparent bg for in-app use
+    -->
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="56" height="56" rx="12" fill="#0E1620" fill-opacity="0.5"/>
+      <!-- Replace interior with app-specific icon mark -->
+      <text x="28" y="35" text-anchor="middle" font-size="20" fill="rgba(255,255,255,0.4)">[?]</text>
+    </svg>
+
+    <div>
+      <div class="header-eyebrow">Chapter N · Category</div>
+      <h1>App <em>Name</em></h1>
+      <p>Tagline · Subtitle · Description</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SYNC BAR
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="sync-bar">
+  <div class="sync-status">
+    <div class="sync-dot" id="sync-dot"></div>
+    <span id="sync-label">Not connected to GitHub</span>
+  </div>
+  <div class="sync-actions">
+    <button class="btn-sync" onclick="resetLocalData()">Reset local data</button>
+    <button class="btn-sync" id="btn-disconnect" style="display:none" onclick="disconnectGitHub()">Disconnect</button>
+    <button class="btn-sync primary" id="btn-connect" onclick="openPATModal()">Connect GitHub</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     CONFIG NOTICE — hidden once PAT is configured
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="config-notice" id="config-notice">
+  <strong>⚠️ GitHub sync not configured</strong>
+  Tap <strong>Connect GitHub</strong> to enter your Personal Access Token.
+  The PAT needs <code>contents: write</code> permission on the
+  <code>rtpalme-C2/life-stuff-data</code> repo. It is stored only in your
+  browser's localStorage and never sent anywhere except the GitHub API.
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TOP BAR — search + add
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="top-bar">
+  <div class="search-wrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="search" placeholder="Search…" oninput="renderGrid(); renderSummary();">
+  </div>
+  <button class="btn-add-item" onclick="openModal()">+ Add Item</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SUMMARY + FILTERS + GRID
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="summary" id="summary"></div>
+<div class="filters"  id="filters"></div>
+<div class="grid"     id="grid"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     PAT MODAL
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="pat-modal-backdrop" id="pat-modal" onclick="patBackdropClose(event)">
+  <div class="pat-modal">
+    <h2>Connect GitHub Sync</h2>
+    <p>
+      Enter a GitHub Personal Access Token with <strong>Contents: Read &amp; write</strong>
+      permission scoped to the <code>rtpalme-C2/life-stuff-data</code> repository.
+      The token is stored only in this browser's localStorage.
+    </p>
+    <div class="pat-field">
+      <label>Personal Access Token</label>
+      <input type="password" id="pat-input" placeholder="github_pat_…" autocomplete="off">
+    </div>
+    <div class="pat-actions">
+      <button class="btn-pat-cancel" onclick="closePATModal()">Cancel</button>
+      <button class="btn-pat-save"   onclick="savePAT()">Save &amp; Sync</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     ITEM MODAL
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="modal-backdrop" id="modal" onclick="backdropClose(event)">
+  <div class="modal">
+    <h2 id="modal-title">Add Item</h2>
+    <!-- Add app-specific form fields here using .field / .field-row pattern -->
+    <div class="field-row">
+      <div class="field" style="flex:2">
+        <label>Name</label>
+        <input type="text" id="f-name" placeholder="Item name">
+      </div>
+      <div class="field">
+        <label>Category</label>
+        <select id="f-cat">
+          <option>Category A</option>
+          <option>Category B</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Notes</label>
+      <textarea id="f-notes"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-save"   onclick="saveItem()">Save Item</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TOAST
+     ══════════════════════════════════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════════════════════════════════
+//  GITHUB SYNC CONFIG — update per-app
+// ════════════════════════════════════════════════════════════════════
+const GH_OWNER    = 'rtpalme-C2';
+const GH_REPO     = 'life-stuff-data';
+const GH_FILE     = '[app-name]-inventory.json';   // ← UPDATE
+const GH_RAW_URL  = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${GH_FILE}`;
+const GH_API_URL  = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const LS_PAT      = '[app]_gh_pat';    // ← UPDATE e.g. 'sashiko_gh_pat'
+const LS_SHA      = '[app]_gh_sha';    // ← UPDATE e.g. 'sashiko_gh_sha'
+const LS_DATA_KEY = '[app]-v1';        // ← UPDATE e.g. 'sashiko-v2'
+
+// ── Data version contract ─────────────────────────────────────────
+// Bump DATA_VERSION when schema changes make old data incompatible.
+// Update LS_DATA_KEY to match (e.g. '[app]-v2').
+// For minor additions (new optional fields), no bump needed.
+const DATA_VERSION = 1;
+
+let saveTimer   = null;
+let pendingSave = false;
+
+// ════════════════════════════════════════════════════════════════════
+//  PAT / SHA HELPERS
+// ════════════════════════════════════════════════════════════════════
+function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
+function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
+function setSHA(s) { localStorage.setItem(LS_SHA, s); }
+function configOk(){ return !!getPAT(); }
+
+function updateSetupBanner() {
+  const notice = document.getElementById('config-notice');
+  if (configOk()) {
+    notice.style.display = 'none';
+    document.getElementById('btn-connect').style.display    = 'none';
+    document.getElementById('btn-disconnect').style.display = '';
+  } else {
+    notice.style.display = '';
+    document.getElementById('btn-connect').style.display    = '';
+    document.getElementById('btn-disconnect').style.display = 'none';
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  PAT MODAL
+// ════════════════════════════════════════════════════════════════════
+function openPATModal() {
+  document.getElementById('pat-input').value = getPAT();
+  document.getElementById('pat-modal').classList.add('open');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function closePATModal() { document.getElementById('pat-modal').classList.remove('open'); }
+function patBackdropClose(e) { if (e.target === document.getElementById('pat-modal')) closePATModal(); }
+
+async function savePAT() {
+  const val = document.getElementById('pat-input').value.trim();
+  if (!val) { document.getElementById('pat-input').focus(); return; }
+  localStorage.setItem(LS_PAT, val);
+  closePATModal();
+  updateSetupBanner();
+  await syncFromGitHub();
+}
+
+function disconnectGitHub() {
+  if (!confirm('Remove GitHub token from this browser?\n\nLocal data will be kept.')) return;
+  localStorage.removeItem(LS_PAT);
+  localStorage.removeItem(LS_SHA);
+  updateSetupBanner();
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  SYNC STATUS DOT
+// ════════════════════════════════════════════════════════════════════
+function setSyncStatus(state, label) {
+  const dot = document.getElementById('sync-dot');
+  document.getElementById('sync-label').textContent = label;
+  dot.className = 'sync-dot';
+  if (state === 'connected') dot.classList.add('connected');
+  else if (state === 'saving') dot.classList.add('saving');
+  else if (state === 'error')  dot.classList.add('error');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  GITHUB SYNC FUNCTIONS
+// ════════════════════════════════════════════════════════════════════
+async function syncFromGitHub() {
+  setSyncStatus('saving', 'Loading from GitHub…');
+  try {
+    const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    if (text && text.trim().startsWith('{')) {
+      const parsed = JSON.parse(text);
+      const hasData = parsed && parsed._version === DATA_VERSION &&
+        Array.isArray(parsed.data) && parsed.data.length > 0;
+      if (hasData) {
+        supplies = parsed.data;
+        persist();
+        renderGrid(); renderSummary();
+        setSyncStatus('connected', 'Synced from GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+        await fetchSHA();
+        return;
+      }
+    }
+    setSyncStatus('saving', 'Pushing local data to GitHub…');
+    await saveToGitHub();
+  } catch(e) {
+    setSyncStatus('error', 'GitHub sync failed — working offline');
+    showToast('Could not reach GitHub. Changes saved locally.');
+  }
+}
+
+async function fetchSHA() {
+  try {
+    const res = await fetch(GH_API_URL, {
+      headers: { 'Authorization': 'Bearer ' + getPAT(), 'Accept': 'application/vnd.github+json' }
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.sha) setSHA(data.sha);
+  } catch(e) {}
+}
+
+async function saveToGitHub() {
+  if (!configOk()) return;
+  setSyncStatus('saving', 'Saving to GitHub…');
+  pendingSave = true;
+  try {
+    await fetchSHA();
+    const payload = { _version: DATA_VERSION, data: supplies };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+    const body = { message: '[AppName] update · ' + new Date().toISOString().slice(0,10), content };
+    if (getSHA()) body.sha = getSHA();
+    const res = await fetch(GH_API_URL, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + getPAT(),
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || 'HTTP ' + res.status); }
+    const result = await res.json();
+    if (result.content && result.content.sha) setSHA(result.content.sha);
+    pendingSave = false;
+    setSyncStatus('connected', 'Saved to GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+  } catch(e) {
+    pendingSave = false;
+    setSyncStatus('error', 'Save failed — changes kept locally');
+    showToast('GitHub save failed: ' + e.message);
+  }
+}
+
+// persist() — always write to localStorage first (safety net)
+function persist() {
+  try { localStorage.setItem(LS_DATA_KEY, JSON.stringify({ _version: DATA_VERSION, data: supplies })); }
+  catch(e) {}
+}
+
+// scheduleSave — persist() fires first, then debounced GitHub write
+function scheduleSave() {
+  persist();
+  if (!configOk()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToGitHub, 1200);
+}
+
+function resetLocalData() {
+  if (!confirm('Clear locally cached data and reload?\n\nYour GitHub token will be kept — only data and the cached SHA are cleared. If GitHub sync is configured, data will reload from GitHub. Otherwise the app will reload from its built-in seed data.')) return;
+  localStorage.removeItem(LS_DATA_KEY);
+  localStorage.removeItem(LS_SHA);
+  location.reload();
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  DATA — replace SEED and schema per app
+// ════════════════════════════════════════════════════════════════════
+const SEED = [
+  { name: 'Sample Item 1', cat: 'Category A', note: '' },
+  { name: 'Sample Item 2', cat: 'Category B', note: '' },
+];
+
+let supplies = null;
+try {
+  const raw = JSON.parse(localStorage.getItem(LS_DATA_KEY) || 'null');
+  if (raw && raw._version === DATA_VERSION) supplies = raw.data;
+  else if (raw) localStorage.removeItem(LS_DATA_KEY); // stale — discard
+} catch(e) {}
+if (!supplies) { supplies = SEED.map((s,i) => ({...s, id: 'seed-'+i})); persist(); }
+
+// ════════════════════════════════════════════════════════════════════
+//  UI STATE
+// ════════════════════════════════════════════════════════════════════
+const CATS     = ['All', 'Category A', 'Category B'];  // ← update per app
+const STATUSES = ['All Items', 'Status 1', 'Status 2']; // ← update per app
+
+let activeCat    = 'All';
+let activeStatus = 'All Items';
+let editingId    = null;
+
+function matchesCat(s)    { return activeCat === 'All' || s.cat === activeCat; }
+function matchesStatus(s) { return activeStatus === 'All Items' || s.status === activeStatus; }
+function matchesSearch(s) {
+  const q = (document.getElementById('search').value || '').toLowerCase();
+  if (!q) return true;
+  return [s.name, s.cat, s.note].some(v => v && v.toLowerCase().includes(q));
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  RENDER
+// ════════════════════════════════════════════════════════════════════
+function renderFilters() {
+  document.getElementById('filters').innerHTML = `
+    <div class="filter-row">
+      <span class="filter-label">Category</span>
+      ${CATS.map(c=>`<button class="filter-btn${c===activeCat?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}
+    </div>`;
+}
+
+function setCat(c) { activeCat = c; renderFilters(); renderGrid(); renderSummary(); }
+
+function renderGrid() {
+  const el = document.getElementById('grid');
+  const filtered = supplies.filter(s => matchesCat(s) && matchesStatus(s) && matchesSearch(s));
+  if (!filtered.length) { el.innerHTML = `<div class="no-results">Nothing found.</div>`; return; }
+  el.innerHTML = filtered.map((s, d) => `
+    <div class="card" style="animation-delay:${d*.025}s">
+      <div class="card-top" style="background:#4A6080"></div>
+      <div class="card-body">
+        <div class="card-name">${esc(s.name)}</div>
+        <div class="card-detail">${esc(s.cat)}</div>
+      </div>
+      <div class="card-footer">
+        <span style="font-size:.71rem;color:#aaa">${esc(s.note||'')}</span>
+        <div class="card-actions">
+          <button class="btn-card" onclick="openModal('${s.id}')">Edit</button>
+          <button class="btn-card del" onclick="deleteItem('${s.id}')">Delete</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderSummary() {
+  const src = supplies.filter(s => matchesCat(s) && matchesStatus(s) && matchesSearch(s));
+  document.getElementById('summary').innerHTML = `
+    <div class="stat"><div class="stat-num">${src.length}</div><div class="stat-label">Total</div></div>`;
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  ITEM MODAL
+// ════════════════════════════════════════════════════════════════════
+function openModal(id) {
+  editingId = id || null;
+  const s = id ? supplies.find(i => i.id === id) : null;
+  document.getElementById('modal-title').textContent = s ? 'Edit Item' : 'Add Item';
+  document.getElementById('f-name').value  = s?.name  || '';
+  document.getElementById('f-cat').value   = s?.cat   || CATS[1];
+  document.getElementById('f-notes').value = s?.note  || '';
+  document.getElementById('modal').classList.add('open');
+  setTimeout(() => document.getElementById('f-name').focus(), 50);
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('open'); editingId = null; }
+function backdropClose(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+
+function saveItem() {
+  const name = document.getElementById('f-name').value.trim();
+  if (!name) { document.getElementById('f-name').focus(); return; }
+  const item = {
+    id:   editingId || (Date.now().toString(36) + Math.random().toString(36).slice(2,6)),
+    name,
+    cat:  document.getElementById('f-cat').value,
+    note: document.getElementById('f-notes').value.trim(),
+  };
+  supplies = editingId ? supplies.map(s => s.id === editingId ? item : s) : [item, ...supplies];
+  scheduleSave();
+  closeModal();
+  renderGrid();
+  renderSummary();
+}
+
+function deleteItem(id) {
+  if (!confirm('Remove this item?')) return;
+  supplies = supplies.filter(s => s.id !== id);
+  scheduleSave();
+  renderGrid();
+  renderSummary();
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  TOAST
+// ════════════════════════════════════════════════════════════════════
+let toastTimer;
+function showToast(msg, duration=3500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  KEYBOARD SHORTCUTS + SAFETY GUARDS
+// ════════════════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closePATModal(); }
+  if (e.key === 'Enter' && document.getElementById('modal').classList.contains('open') && e.target.tagName !== 'TEXTAREA') {
+    e.preventDefault(); saveItem();
+  }
+  if (e.key === 'Enter' && document.getElementById('pat-modal').classList.contains('open')) {
+    e.preventDefault(); savePAT();
+  }
+});
+
+window.addEventListener('beforeunload', e => {
+  if (saveTimer || pendingSave) { e.preventDefault(); e.returnValue = ''; }
+});
+
+// ════════════════════════════════════════════════════════════════════
+//  INIT — order matters: render first, then setup banner, then sync
+// ════════════════════════════════════════════════════════════════════
+renderFilters();
+renderGrid();
+renderSummary();
+updateSetupBanner();
+
+if (configOk()) {
+  syncFromGitHub();
+} else {
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+</script>
+</body>
+</html>
