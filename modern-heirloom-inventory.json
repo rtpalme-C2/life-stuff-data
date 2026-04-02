@@ -1,20 +1,4 @@
 {
   "_version": 1,
-  "items": [
-    {
-      "id": "mni4bs7yjlk9",
-      "name": "Card Holder",
-      "brand": "Louis Vuitton",
-      "category": "Small Leather Goods",
-      "notes": "",
-      "cost": "",
-      "price": "",
-      "soldPrice": "",
-      "status": "draft",
-      "channels": [],
-      "acquired": "",
-      "receipt": false,
-      "priceHistory": []
-    }
-  ]
+  "items": []
 }
