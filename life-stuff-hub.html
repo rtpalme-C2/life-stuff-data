@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Stuff</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+html{font-size:16px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#1A1814;
+  --surface:#EDEBE5;
+  --text-dark:#1A1814;
+  --text-mid:#6A6860;
+  --text-dim:#9A9490;
+  --text-faint:#C8C4BE;
+}
+
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--surface);
+  color:var(--text-dark);
+  min-height:100vh;
+}
+
+/* ── HEADER ── */
+header{
+  background:var(--bg);
+  padding:64px 48px 56px;
+  position:relative;
+  overflow:hidden;
+}
+.hdr-bg{
+  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+.hdr-inner{position:relative;z-index:1;max-width:900px}
+.hdr-eyebrow{
+  font-size:.47rem;letter-spacing:.28em;text-transform:uppercase;
+  color:#5A5850;font-weight:500;margin-bottom:16px;
+}
+.hdr-name{
+  font-size:clamp(2.8rem,6vw,4.2rem);
+  font-weight:500;color:#F2EDE8;
+  letter-spacing:-.03em;line-height:1;
+  margin-bottom:6px;
+}
+.hdr-name em{font-style:italic;font-weight:200;color:#9A9490}
+.hdr-desc{
+  font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#4A4840;font-weight:300;margin-top:16px;
+  max-width:480px;line-height:2;
+}
+.hdr-accent{
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,#5A5850 30%,#5A5850 70%,transparent);
+}
+
+/* ── CHAPTER SECTIONS ── */
+.chapters{padding:64px 48px 80px;max-width:1100px;margin:0 auto}
+
+.chapter{margin-bottom:72px}
+.chapter-head{
+  display:flex;align-items:center;gap:16px;margin-bottom:32px;
+}
+.chapter-label{
+  font-size:.47rem;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:500;color:var(--text-dim);white-space:nowrap;
+}
+.chapter-line{flex:1;height:1px;background:rgba(0,0,0,.1)}
+.chapter-title{
+  font-size:1.1rem;font-weight:500;color:var(--text-dark);
+  letter-spacing:-.01em;
+}
+.chapter-title em{font-style:italic;font-weight:200;color:var(--text-mid)}
+
+/* ── PROJECT CARDS ── */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.06);
+  transition:transform .2s ease,box-shadow .2s ease;
+  cursor:pointer;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 2px 6px rgba(0,0,0,.1),0 8px 28px rgba(0,0,0,.1);
+}
+
+.card-header{
+  height:140px;
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.card-hbg{position:absolute;inset:0;width:100%;height:100%}
+.card-hbar{position:absolute;bottom:0;left:0;right:0;height:2px;z-index:2}
+.card-mark{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+
+.card-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card-eyebrow{
+  font-size:.44rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:500;opacity:.5;
+}
+.card-name{
+  font-size:1.25rem;font-weight:500;letter-spacing:-.01em;line-height:1.1;
+}
+.card-name em{font-style:italic;font-weight:200}
+.card-tagline{
+  font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:300;color:var(--text-dim);margin-top:2px;
+}
+
+.card-palette{display:flex;gap:5px;margin-top:auto;padding-top:12px}
+.swatch{width:18px;height:18px;border-radius:3px}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--bg);padding:32px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.footer-name{
+  font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;
+  color:#3A3830;font-weight:500;
+}
+.footer-count{
+  font-size:.56rem;letter-spacing:.12em;color:#3A3830;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.card{animation:fadeUp .4s ease both}
+.card:nth-child(1){animation-delay:.05s}
+.card:nth-child(2){animation-delay:.1s}
+.card:nth-child(3){animation-delay:.15s}
+.card:nth-child(4){animation-delay:.2s}
+.card:nth-child(5){animation-delay:.25s}
+.card:nth-child(6){animation-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <svg class="hdr-bg" viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
+    <path d="M-40 240 C120 140 340 200 600 100 C800 20 1000 120 1280 80" stroke="rgba(255,255,255,.04)" stroke-width="2" fill="none"/>
+    <path d="M-40 180 C140 80 400 160 680 60 C900 -20 1100 80 1280 40" stroke="rgba(255,255,255,.025)" stroke-width="1.5" fill="none"/>
+    <path d="M0 280 C200 160 500 240 800 120 C1000 40 1200 160 1280 100" stroke="rgba(255,255,255,.015)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="hdr-accent"></div>
+  <div class="hdr-inner">
+    <div class="hdr-eyebrow">Personal Projects · Design System</div>
+    <div class="hdr-name">Life <em>Stuff</em></div>
+    <div class="hdr-desc">Six projects · Two chapters · One shared design language</div>
+  </div>
+</header>
+
+<!-- ── CHAPTERS ── -->
+<div class="chapters">
+
+  <!-- CHAPTER 1 -->
+  <div class="chapter">
+    <div class="chapter-head">
+      <span class="chapter-label">Chapter 1</span>
+      <div class="chapter-line"></div>
+      <span class="chapter-title">Ritual &amp; Sophie's <em>Quilt</em></span>
+    </div>
+    <div class="cards">
+
+      <!-- RITUEL -->
+      <a class="card" href="https://rtpalme-c2.github.io/Ritual/ritual-routine.html">
+        <div class="card-header" style="background:#2D1810">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(196,98,42,.15)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(196,98,42,.08)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#C4622A,transparent)"></div>
+          <div class="card-mark">
+            <svg width="64" height="64" viewBox="0 0 54 54" fill="none">
+              <ellipse cx="27" cy="33" rx="16" ry="11.5" fill="#3A1F12" opacity=".9"/>
+              <path d="M11.2 37.5 C11.8 42 18.5 46 27 46 C35.5 46 42.2 42 42.8 37.5 C42 34.5 35.5 32.5 27 32.5 C18.5 32.5 12 34.5 11.2 37.5 Z" fill="#7A3520" opacity=".75"/>
+              <path d="M11.3 33 C11.8 28.5 18.5 25 27 25 C35.5 25 42.2 28.5 42.7 33 C42 36 35.5 37.8 27 37.8 C18.5 37.8 12 36 11.3 33 Z" fill="#C4622A" opacity=".82"/>
+              <path d="M12.5 27 C14 22.5 19.5 20 27 20 C34.5 20 40 22.5 41.5 27 C40.5 30.5 34.5 32 27 32 C19.5 32 13.5 30.5 12.5 27 Z" fill="#E8A06A" opacity=".9"/>
+              <ellipse cx="27" cy="33" rx="16" ry="11.5" fill="none" stroke="#C4622A" stroke-width="1" opacity=".4"/>
+              <path d="M11.5 33 C18 31 36 31 42.5 33" stroke="#2D1810" stroke-width="1" fill="none" opacity=".4"/>
+              <path d="M11.3 37.5 C18 35.8 36 35.8 42.7 37.5" stroke="#2D1810" stroke-width="1" fill="none" opacity=".35"/>
+              <ellipse cx="27" cy="20.5" rx="10.5" ry="2.8" fill="#C4622A" opacity=".88"/>
+              <ellipse cx="27" cy="18.5" rx="10.5" ry="2.8" fill="#C4622A" opacity=".92"/>
+              <ellipse cx="27" cy="16.8" rx="6" ry="1.8" fill="#E8A06A" opacity=".55"/>
+              <path d="M14 27 C13.5 31 14 37 15.5 42" stroke="#FAE8D8" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".18"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#C4622A">Chapter 1 · Skincare</div>
+          <div class="card-name">Ritual</div>
+          <div class="card-tagline">Morning &amp; Evening Routine</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#2D1810"></div>
+            <div class="swatch" style="background:#C4622A"></div>
+            <div class="swatch" style="background:#E8A06A"></div>
+            <div class="swatch" style="background:#FAF6F2;outline:1px solid #DDD8D0"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- SOPHIE'S QUILT -->
+      <a class="card" href="#">
+        <div class="card-header" style="background:#3D2030">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(196,114,138,.15)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(196,114,138,.08)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#C4728A,transparent)"></div>
+          <div class="card-mark">
+            <svg width="68" height="68" viewBox="0 0 48 48" fill="none">
+              <rect x="2" y="2" width="20" height="20" rx="1.5" fill="#C4728A" opacity=".9"/>
+              <line x1="12" y1="7" x2="12" y2="17" stroke="#F5F0E8" stroke-width="1.3" stroke-linecap="round" opacity=".72"/>
+              <line x1="7" y1="12" x2="17" y2="12" stroke="#F5F0E8" stroke-width="1.3" stroke-linecap="round" opacity=".72"/>
+              <rect x="26" y="2" width="20" height="20" rx="1.5" stroke="#E8C4CC" stroke-width="1" fill="none" opacity=".5"/>
+              <line x1="36" y1="7" x2="36" y2="17" stroke="#E8C4CC" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+              <line x1="31" y1="12" x2="41" y2="12" stroke="#E8C4CC" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+              <rect x="2" y="26" width="20" height="20" rx="1.5" stroke="#E8C4CC" stroke-width="1" fill="none" opacity=".5"/>
+              <line x1="12" y1="31" x2="12" y2="41" stroke="#E8C4CC" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+              <line x1="7" y1="36" x2="17" y2="36" stroke="#E8C4CC" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+              <rect x="26" y="26" width="20" height="20" rx="1.5" fill="#C4728A" opacity=".9"/>
+              <line x1="36" y1="31" x2="36" y2="41" stroke="#F5F0E8" stroke-width="1.3" stroke-linecap="round" opacity=".72"/>
+              <line x1="31" y1="36" x2="41" y2="36" stroke="#F5F0E8" stroke-width="1.3" stroke-linecap="round" opacity=".72"/>
+              <circle cx="24" cy="24" r="1.5" fill="#C4728A" opacity=".5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#C4728A">Chapter 1 · Quilting</div>
+          <div class="card-name">Sophie's <em>Quilt</em></div>
+          <div class="card-tagline">Sashiko Embroidery · Crib Quilt · 2025</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#3D2030"></div>
+            <div class="swatch" style="background:#C4728A"></div>
+            <div class="swatch" style="background:#E8C4CC"></div>
+            <div class="swatch" style="background:#F5F0E8;outline:1px solid #DDD8D0"></div>
+          </div>
+        </div>
+      </a>
+      <!-- STEADY -->
+      <a class="card" href="https://rtpalme-c2.github.io/Steady/steady.html">
+        <div class="card-header" style="background:#1F3329">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(212,176,106,.15)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(212,176,106,.08)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#D4B06A,transparent)"></div>
+          <div class="card-mark">
+            <svg width="72" height="72" viewBox="0 0 160 160" fill="none">
+              <ellipse cx="82" cy="136" rx="52" ry="18" fill="#182D22"/>
+              <ellipse cx="82" cy="124" rx="52" ry="18" fill="#3D5E4A"/>
+              <ellipse cx="76" cy="99"  rx="37" ry="15" fill="#182D22"/>
+              <ellipse cx="76" cy="86"  rx="37" ry="15" fill="#4A7A5E"/>
+              <ellipse cx="86" cy="63"  rx="24" ry="14" fill="#182D22"/>
+              <ellipse cx="86" cy="51"  rx="24" ry="14" fill="#D4B06A"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#D4B06A">Chapter 1 · Health</div>
+          <div class="card-name">Steady</div>
+          <div class="card-tagline">Weekly · Weight · Progress</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#1F3329"></div>
+            <div class="swatch" style="background:#D4B06A"></div>
+            <div class="swatch" style="background:#E8C97E"></div>
+            <div class="swatch" style="background:#F0EADA;outline:1px solid #E2D9C8"></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- CHAPTER 2 -->
+  <div class="chapter">
+    <div class="chapter-head">
+      <span class="chapter-label">Chapter 2</span>
+      <div class="chapter-line"></div>
+      <span class="chapter-title">Stylo<em>graphic</em>, Sashiko <em>Craft</em>, Modern <em>Heirloom</em> &amp; Journey <em>Intelligence</em></span>
+    </div>
+    <div class="cards">
+
+      <!-- STYLOGRAPHIC -->
+      <a class="card" href="https://rtpalme-c2.github.io/Stylographic/stylographic-inventory.html">
+        <div class="card-header" style="background:#1E2328">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(184,150,90,.16)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(184,150,90,.09)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#B8965A,transparent)"></div>
+          <div class="card-mark">
+            <svg width="36" height="50" viewBox="0 0 44 62" fill="none">
+              <path d="M4 3 L22 3 L22 44 L14 29 Z" fill="#B8965A" opacity=".88"/>
+              <path d="M40 3 L22 3 L22 44 L30 29 Z" fill="#D4AE78" opacity=".72"/>
+              <line x1="4" y1="3" x2="40" y2="3" stroke="#D4AE78" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="16" x2="22" y2="44" stroke="#F5F0E8" stroke-width="1.3" stroke-linecap="round" opacity=".5"/>
+              <ellipse cx="22" cy="17" rx="3" ry="4" fill="#1E2328"/>
+              <ellipse cx="22" cy="17" rx="1.8" ry="2.5" stroke="#D4AE78" stroke-width=".7" fill="none" opacity=".5"/>
+              <rect x="17" y="28" width="10" height="2.5" rx=".8" fill="#D4AE78" opacity=".6"/>
+              <circle cx="22" cy="44" r="2" fill="#D4AE78" opacity=".9"/>
+              <path d="M22 47 C22 47 19 53 19 56 C19 58.8 20.3 60.2 22 60.2 C23.7 60.2 25 58.8 25 56 C25 53 22 47 22 47Z" fill="#B8965A" opacity=".78"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#B8965A">Chapter 2 · Pens &amp; Ink</div>
+          <div class="card-name">Stylo<em>graphic</em></div>
+          <div class="card-tagline">Fountain Pens · Inks · Journal</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#1E2328"></div>
+            <div class="swatch" style="background:#B8965A"></div>
+            <div class="swatch" style="background:#D4AE78"></div>
+            <div class="swatch" style="background:#F5F0E8;outline:1px solid #DDD8D0"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- SASHIKO CRAFT -->
+      <a class="card" href="https://rtpalme-c2.github.io/Sashiko-Craft/sashiko-craft-inventory.html">
+        <div class="card-header" style="background:#1A2840">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(138,174,196,.13)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(138,174,196,.07)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#4A7A9B,transparent)"></div>
+          <div class="card-mark">
+            <svg width="72" height="54" viewBox="0 0 56 42" fill="none">
+              <line x1="2" y1="10" x2="14" y2="10" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="20" y1="10" x2="32" y2="10" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="38" y1="10" x2="50" y2="10" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="14" y1="10" x2="20" y2="10" stroke="#F5F2EC" stroke-width=".6" stroke-linecap="round" opacity=".28"/>
+              <line x1="32" y1="10" x2="38" y2="10" stroke="#F5F2EC" stroke-width=".6" stroke-linecap="round" opacity=".28"/>
+              <line x1="8" y1="21" x2="20" y2="21" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="26" y1="21" x2="38" y2="21" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="20" y1="21" x2="26" y2="21" stroke="#F5F2EC" stroke-width=".6" stroke-linecap="round" opacity=".28"/>
+              <line x1="2" y1="32" x2="14" y2="32" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="20" y1="32" x2="32" y2="32" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="38" y1="32" x2="50" y2="32" stroke="#F5F2EC" stroke-width="2.2" stroke-linecap="round" opacity=".92"/>
+              <line x1="14" y1="32" x2="20" y2="32" stroke="#F5F2EC" stroke-width=".6" stroke-linecap="round" opacity=".28"/>
+              <line x1="32" y1="32" x2="38" y2="32" stroke="#F5F2EC" stroke-width=".6" stroke-linecap="round" opacity=".28"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#4A7A9B">Chapter 2 · Sewing</div>
+          <div class="card-name">Sashiko <em>Craft</em></div>
+          <div class="card-tagline">Supplies · Fabric · Inventory</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#1A2840"></div>
+            <div class="swatch" style="background:#4A7A9B"></div>
+            <div class="swatch" style="background:#8AAEC4"></div>
+            <div class="swatch" style="background:#F5F2EC;outline:1px solid #DDD8D0"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- MODERN HEIRLOOM -->
+      <a class="card" href="https://rtpalme-c2.github.io/Modern-Heirloom/modern-heirloom-inventory.html">
+        <div class="card-header" style="background:#1C0810">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(212,97,122,.12)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(212,97,122,.07)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#D4617A,transparent)"></div>
+          <div class="card-mark">
+            <svg width="64" height="64" viewBox="0 0 56 56" fill="none">
+              <rect width="56" height="56" rx="12" fill="#3D0F20"/>
+              <path d="M16,28 C16,8 20,4 28,4 C36,4 40,8 40,28" fill="none" stroke="rgba(0,0,0,.6)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M15,27 C15,7 20,3 28,3 C36,3 41,7 41,27" fill="none" stroke="#8B2040" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M15,27 C15,7 20,3 28,3 C36,3 41,7 41,27" fill="none" stroke="#D4617A" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+              <rect x="6" y="28" width="44" height="24" rx="5" fill="rgba(0,0,0,.5)"/>
+              <rect x="5" y="27" width="44" height="24" rx="5" fill="#6B1E38"/>
+              <rect x="5" y="27" width="44" height="10" rx="5" fill="#4A1428"/>
+              <rect x="5" y="34" width="44" height="3" fill="#4A1428"/>
+              <rect x="20" y="28.5" width="16" height="9" rx="3" fill="#8B2040"/>
+              <rect x="22" y="30.5" width="12" height="5" rx="2.5" fill="#D4617A"/>
+              <circle cx="28" cy="33" r="1.8" fill="#8B2040"/>
+              <circle cx="28" cy="33" r="0.8" fill="#D4617A"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#D4617A">Chapter 2 · Luxury Resale</div>
+          <div class="card-name">Modern <em>Heirloom</em></div>
+          <div class="card-tagline">Authenticated · Curated · Provenance</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#1C0810"></div>
+            <div class="swatch" style="background:#D4617A"></div>
+            <div class="swatch" style="background:#F5F2EC"></div>
+            <div class="swatch" style="background:#FAF6F2;outline:1px solid #DDD8D0"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- JOURNEY INTELLIGENCE -->
+      <a class="card" href="#">
+        <div class="card-header" style="background:#1E1609">
+          <svg class="card-hbg" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+            <path d="M-20 120 C60 60 180 100 360 40 C440 10 480 60 520 50" stroke="rgba(184,144,12,.12)" stroke-width="2" fill="none"/>
+            <path d="M-20 80 C80 20 220 80 380 20" stroke="rgba(184,144,12,.07)" stroke-width="1.3" fill="none"/>
+          </svg>
+          <div class="card-hbar" style="background:linear-gradient(90deg,transparent,#B8900C,transparent)"></div>
+          <div class="card-mark">
+            <svg width="80" height="80" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="21" stroke="#6C500F" stroke-width=".7" fill="none" opacity=".4"/>
+              <ellipse cx="24" cy="24" rx="9" ry="21" stroke="#B8900C" stroke-width="1.8" fill="none" opacity=".95"/>
+              <line x1="3" y1="24" x2="45" y2="24" stroke="#B8900C" stroke-width="1.1" stroke-linecap="round" opacity=".65"/>
+              <path d="M6 14 Q24 10 42 14" stroke="#6C500F" stroke-width=".6" fill="none" stroke-linecap="round" opacity=".45"/>
+              <path d="M6 34 Q24 38 42 34" stroke="#6C500F" stroke-width=".6" fill="none" stroke-linecap="round" opacity=".45"/>
+              <circle cx="24" cy="24" r="2.5" fill="#B8900C" opacity=".95"/>
+              <circle cx="24" cy="24" r="1.1" fill="#1E1609"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow" style="color:#B8900C">Chapter 2 · Travel Advisory</div>
+          <div class="card-name">Journey <em>Intelligence</em></div>
+          <div class="card-tagline">Advisory · Curation · Insight</div>
+          <div class="card-palette">
+            <div class="swatch" style="background:#1E1609"></div>
+            <div class="swatch" style="background:#B8900C"></div>
+            <div class="swatch" style="background:#D4AE3A"></div>
+            <div class="swatch" style="background:#F5F2EC;outline:1px solid #E2DCCC"></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">Life Stuff</div>
+  <div class="footer-count">6 projects · 2 chapters</div>
+</footer>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 # Life Stuff Apps — Design System
-**Version 1.0 · March 2026**
+**Version 1.1 · April 2026**
 **Reference implementation: Sashiko Craft**
 
 ---
@@ -59,23 +59,36 @@ Data files in rtpalme-C2/life-stuff-data:
 ```
 
 ### Weight Usage
+
+**Critical rule: `font-weight: 600` and above must never be used.** Plus Jakarta Sans is loaded at weights 200/300/400/500 only — any value above 500 silently falls back to the OS system font, breaking visual consistency. The maximum allowed weight is **500**.
+
 | Weight | Usage |
 |---|---|
 | 200 | Wordmark secondary word (italic), decorative |
 | 300 | `<h1>` wordmark, body copy, panel titles |
 | 400 | Default body, labels, tags |
-| 500 | Buttons, section headers, eyebrow, emphasis |
-| 600 | Stat numbers, card names (inventory apps) |
+| 500 | Buttons, section headers, eyebrow, stat numbers, card names, modal titles, emphasis |
 | italic 200–500 | Available for secondary wordmark, taglines |
 
 ### Scale (rem-based)
+
+**Critical rule: all font sizes must use `rem`, never `px`.** The one exception is `html { font-size: 16px }` — that is the rem base and must stay in `px`. Using `px` for any other font size breaks zoom scaling and cross-app consistency.
+
+Conversion reference:
+```
+7px  → .44rem    8px  → .5rem     9px  → .56rem
+10px → .62rem    11px → .68rem    12px → .74rem
+13px → .8rem     14px → .88rem    15px → .94rem
+16px → 1rem      18px → 1.1rem    20px → 1.25rem
+```
+
 | Role | Size | Weight |
 |---|---|---|
 | Wordmark `<h1>` | 2.2rem | 300 |
-| Stat / metric number | 1.8–2.1rem | 400–600 |
+| Stat / metric number | 1.8–2.1rem | 500 |
 | Panel title | 1.5–1.7rem | 300–400 |
 | Body | 0.82rem | 400 |
-| Card name | 1.05rem | 600 |
+| Card name | 1.05rem | 500 |
 | Button label | 0.67–0.74rem | 500 |
 | Eyebrow / label | 0.6–0.63rem | 400–500 |
 | Tagline / caption | 0.68rem | 300–400 |
@@ -136,8 +149,6 @@ Data files in rtpalme-C2/life-stuff-data:
 --text-dim:      #C8BEA8;
 --warn:          #B85C3A;
 --warn-light:    #E8705A;
---radius:        12px;      /* card radius token */
---radius-sm:     8px;       /* input/button radius token */
 ```
 
 ---
@@ -151,7 +162,9 @@ Data files in rtpalme-C2/life-stuff-data:
 | Card | 12px | Content cards, metric blocks, control panels |
 | Soft | 10px | Stat pills, toast, badges |
 | Input | 8px | Form inputs, selects, textareas, modal action buttons |
-| Sharp | 2–4px | Config notice alert, Stylographic badges |
+| Sharp | 4px | Config notice alert, code tags, inline badges |
+
+**Invalid values: `2px`, `3px`, `9px`, `10px` are not design system values and must not be used.** Pick the correct token from the table above for every element.
 
 **Rule:** Never mix these — pick the correct scale token for each element type and apply consistently.
 
@@ -209,6 +222,12 @@ header, .sync-bar, .top-bar, .filters, .content { padding-left: 40px; padding-ri
 <!-- (via header::after pseudo-element) -->
 ```
 
+### Eyebrow Format
+The eyebrow text must use **mixed case**, never all-caps. Format: `Chapter N · Name` where `·` is a middle dot (U+00B7), not a hyphen or bullet.
+
+✓ Correct: `Chapter 1 · Skincare`, `Chapter 2 · Craft`, `Chapter 2 · Travel Advisory`
+✗ Wrong: `CHAPTER 1 · SKINCARE`, `chapter 2 - craft`
+
 ### Header CSS
 ```css
 header {
@@ -249,16 +268,20 @@ header p { font-size: .68rem; color: rgba(255,255,255,.32);
     stroke="#D4AE78" stroke-width="1" fill="none" opacity=".10"/>
 </svg>
 ```
-Replace stroke colours with app's thread/accent colour and brass.
+Replace stroke colours with the app's thread/accent colour and brass.
+
+**viewBox height:** The standard is `0 0 1200 160`. A taller coordinate space (e.g. 200, 220) is permitted when an app's header content requires it, provided `preserveAspectRatio="xMidYMid slice"` is set. The visual rendered height is always controlled by CSS padding, not the viewBox — so changing an existing taller viewBox to 160 would distort the curve shapes without changing the visual header height. Do not alter an existing app's viewBox without redrawing the path coordinates.
 
 ---
 
 ## 9. Sync Bar Pattern
 
 ### Visual
-- **Dark background** extending from the header (`var(--deep-ai)` or equivalent mid-dark)
+- **Dark background using a CSS variable** — always `var(--[app]-mid)` or equivalent, never a hardcoded hex value
 - Creates a unified brand zone: header → sync bar → content begins
 - Pill buttons only, no solid backgrounds on ghost buttons
+
+**Critical rule: the sync bar background, sync dot states (`.saving`), and all colour references in the sync bar must use CSS custom properties — never hardcoded hex values.** This ensures the sync bar reads as a visual extension of the header across all palette variants.
 
 ### HTML
 ```html
@@ -281,7 +304,7 @@ Replace stroke colours with app's thread/accent colour and brass.
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 10px;
   padding: 8px 40px;
-  background: var(--deep-ai);          /* dark — extends from header */
+  background: var(--app-mid);          /* dark — extends from header; MUST be a CSS var */
   border-bottom: 1px solid rgba(184,150,90,.12);
   font-size: .72rem;
 }
@@ -304,7 +327,7 @@ Replace stroke colours with app's thread/accent colour and brass.
 .btn-sync:hover { border-color: var(--brass); color: var(--brass); }
 .btn-sync.primary {
   background: var(--brass); border-color: var(--brass);
-  color: var(--ai-indigo); font-weight: 500;
+  color: var(--app-dark); font-weight: 500;
 }
 .btn-sync.primary:hover { background: var(--brass-light); }
 ```
@@ -431,10 +454,10 @@ For Add/Edit modals on inventory items.
   animation: slideUp .2s ease;
   max-height: 90vh; overflow-y: auto;
 }
-.modal h2 { font-size: 1.35rem; font-weight: 600; color: var(--ai-indigo); margin-bottom: 1.25rem; }
+.modal h2 { font-size: 1.35rem; font-weight: 500; color: var(--ai-indigo); margin-bottom: 1.25rem; }
 ```
 
-**Both PAT modal and item modal use `border-top: 4px solid var(--brass)` — unified.**
+**Both PAT modal and item modal use `border-top: 4px solid var(--brass)` and `border-radius: 16px` — unified.**
 
 ---
 
@@ -859,19 +882,24 @@ if (configOk()) {
 
 ---
 
-## 24. Checklist — New App
+## 24. Checklist — New App or Audit
 
-Before shipping any new app, verify:
+Before shipping any new app, and when auditing existing apps, verify:
 
-- [ ] Correct font load string (full weight set)
+- [ ] Correct font load string (full weight set 200–500 + italics)
+- [ ] No `font-weight` above 500 anywhere in the file
+- [ ] All font sizes use `rem` (only exception: `html { font-size: 16px }`)
 - [ ] `DATA_VERSION` constant with comment block
 - [ ] `_version` included in GitHub payload
 - [ ] `persist()` function present and called first in `scheduleSave()`
 - [ ] Config notice banner HTML + CSS
 - [ ] PAT modal using CSS `.open` class toggle (not `display:flex/none`)
-- [ ] Both modals use `border-top: 4px solid var(--brass)`
-- [ ] Sync bar uses dark background (not light/white)
+- [ ] Both modals use `border-top: 4px solid var(--brass)` and `border-radius: 16px`
+- [ ] No hardcoded hex in sync bar background, brass accent gradient, sync dot `.saving` state, or toast border — use CSS vars
+- [ ] Sync bar uses dark background CSS variable (not light/white, not raw hex)
 - [ ] Sync bar padding `8px 40px`
+- [ ] Header SVG uses `preserveAspectRatio="xMidYMid slice"`
+- [ ] Eyebrow text in mixed case: `Chapter N · Name` (never all-caps)
 - [ ] Filter pills: all active states use same colour — no hierarchy distinction
 - [ ] `resetLocalData()` confirm text mentions token is kept
 - [ ] `beforeunload` guard in place
@@ -882,4 +910,6 @@ Before shipping any new app, verify:
 - [ ] Icons embedded as base64 PNG (not SVG, not external)
 - [ ] Both `rel="icon"` and `rel="apple-touch-icon"` present
 - [ ] Card border-radius 12px
-- [ ] Input border-radius 8px
+- [ ] Input / form field border-radius 8px
+- [ ] No non-standard border-radius values (2px, 3px, 9px, 10px)
+- [ ] Action buttons (primary CTA) border-radius 20px pill
