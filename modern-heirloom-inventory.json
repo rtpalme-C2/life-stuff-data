@@ -1,4 +1,23 @@
 {
   "_version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "mni60ftvsxin",
+      "name": "Alligator Card Holder - Blue",
+      "brand": "Louis Vuitton",
+      "category": "Small Leather Good",
+      "notes": "",
+      "cost": "",
+      "price": "",
+      "soldPrice": "",
+      "status": "draft",
+      "channels": [],
+      "acquired": "",
+      "receipt": false,
+      "priceHistory": [],
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172961/IMG_1387_semfzh.jpg"
+      ]
+    }
+  ]
 }
