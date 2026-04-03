@@ -1,4 +1,21 @@
 {
   "_version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "mni59uv6x5zr",
+      "name": "Chanel Classic Flap Medium",
+      "brand": "Chanel",
+      "category": "Handbag",
+      "notes": "",
+      "cost": "3200",
+      "price": "4800",
+      "soldPrice": "",
+      "status": "active",
+      "channels": [],
+      "acquired": "",
+      "receipt": false,
+      "priceHistory": [],
+      "images": []
+    }
+  ]
 }
