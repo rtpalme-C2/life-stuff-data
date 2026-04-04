@@ -61,7 +61,16 @@
       "acquired": "2021-05-30",
       "receipt": true,
       "priceHistory": [],
-      "images": [],
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345344/IMG_7139_hap5jc.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345341/IMG_7140_w3b1c5.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345341/IMG_7137_iptaxo.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345340/IMG_7138_vwrfng.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345339/IMG_7147_wazb3e.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345339/IMG_7144_xabwum.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345341/IMG_7143_hst1eu.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775345341/IMG_7141_vufnst.jpg"
+      ],
       "costCurrency": "MXN"
     },
     {
