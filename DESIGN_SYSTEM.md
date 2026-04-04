@@ -1,5 +1,5 @@
 # Life Stuff Apps — Design System
-**Version 1.1 · April 2026**
+**Version 1.2 · April 2026**
 **Reference implementation: Sashiko Craft**
 
 ---
@@ -22,11 +22,11 @@ GitHub Org: rtpalme-C2
 Data repo:  rtpalme-C2/life-stuff-data (public)
 
 Each app has its own repo:
-  rtpalme-C2/Sashiko-Craft     → sashiko-craft-inventory.html
-  rtpalme-C2/Stylographic      → stylographic-inventory.html
-  rtpalme-C2/Steady            → steady.html
-  rtpalme-C2/Ritual            → ritual-routine.html
-  rtpalme-C2/Modern-Heirloom   → modern-heirloom.html
+  rtpalme-C2/Sashiko-Craft        → sashiko-craft-inventory.html
+  rtpalme-C2/Stylographic         → stylographic-inventory.html
+  rtpalme-C2/Steady               → steady.html
+  rtpalme-C2/Ritual               → ritual-routine.html
+  rtpalme-C2/Modern-Heirloom      → modern-heirloom-inventory.html
   rtpalme-C2/Journey-Intelligence → journey-intelligence.html
 
 Data files in rtpalme-C2/life-stuff-data:
@@ -34,17 +34,24 @@ Data files in rtpalme-C2/life-stuff-data:
   stylographic-inventory.json
   steady-inventory.json
   ritual-data.json
-  (others as added)
+  modern-heirloom-inventory.json
+  journey-intelligence.json
 ```
 
 ---
 
 ## 3. Chapter Structure
 
-| Chapter | Theme | Apps |
-|---|---|---|
-| Chapter 1 · Health | Forest / amber palette | Ritual (skincare), Steady (weight) |
-| Chapter 2 · Craft & Life | Navy-indigo / brass palette | Sashiko Craft, Stylographic, Modern Heirloom, Journey Intelligence |
+Each app has its own distinct colour palette. Chapter groupings reflect content theme, not shared palette.
+
+| Chapter | App | Purpose | Palette |
+|---|---|---|---|
+| Chapter 1 · Health | Ritual | Skincare routine | Terracotta / warm brown |
+| Chapter 1 · Health | Steady | Weight tracking | Midnight Sage / forest green |
+| Chapter 2 · Craft & Life | Sashiko Craft | Sewing supplies | AI Indigo / brass |
+| Chapter 2 · Craft & Life | Stylographic | Fountain pens & ink | Gunmetal / brass |
+| Chapter 2 · Craft & Life | Modern Heirloom | Luxury resale | Burgundy / rose |
+| Chapter 2 · Craft & Life | Journey Intelligence | Travel advisory | Ochre |
 
 ---
 
@@ -59,36 +66,23 @@ Data files in rtpalme-C2/life-stuff-data:
 ```
 
 ### Weight Usage
-
-**Critical rule: `font-weight: 600` and above must never be used.** Plus Jakarta Sans is loaded at weights 200/300/400/500 only — any value above 500 silently falls back to the OS system font, breaking visual consistency. The maximum allowed weight is **500**.
-
 | Weight | Usage |
 |---|---|
 | 200 | Wordmark secondary word (italic), decorative |
 | 300 | `<h1>` wordmark, body copy, panel titles |
 | 400 | Default body, labels, tags |
-| 500 | Buttons, section headers, eyebrow, stat numbers, card names, modal titles, emphasis |
+| 500 | Buttons, section headers, eyebrow, emphasis |
+| 600 | Stat numbers, card names (inventory apps) |
 | italic 200–500 | Available for secondary wordmark, taglines |
 
 ### Scale (rem-based)
-
-**Critical rule: all font sizes must use `rem`, never `px`.** The one exception is `html { font-size: 16px }` — that is the rem base and must stay in `px`. Using `px` for any other font size breaks zoom scaling and cross-app consistency.
-
-Conversion reference:
-```
-7px  → .44rem    8px  → .5rem     9px  → .56rem
-10px → .62rem    11px → .68rem    12px → .74rem
-13px → .8rem     14px → .88rem    15px → .94rem
-16px → 1rem      18px → 1.1rem    20px → 1.25rem
-```
-
 | Role | Size | Weight |
 |---|---|---|
 | Wordmark `<h1>` | 2.2rem | 300 |
-| Stat / metric number | 1.8–2.1rem | 500 |
+| Stat / metric number | 1.8–2.1rem | 400–600 |
 | Panel title | 1.5–1.7rem | 300–400 |
 | Body | 0.82rem | 400 |
-| Card name | 1.05rem | 500 |
+| Card name | 1.05rem | 600 |
 | Button label | 0.67–0.74rem | 500 |
 | Eyebrow / label | 0.6–0.63rem | 400–500 |
 | Tagline / caption | 0.68rem | 300–400 |
@@ -98,7 +92,10 @@ Conversion reference:
 
 ## 5. Colour Palettes
 
-### Chapter 2 · Craft & Life (Sashiko, Stylographic, Modern Heirloom, Journey Intelligence)
+### Standard Page Background
+All apps use **`#F5F2EC`** (washi) as the page background — the same warm off-white as Sashiko Craft. This creates visual consistency across the suite regardless of each app's accent palette.
+
+### Chapter 2 · Craft & Life
 
 #### Sashiko Craft — AI Indigo
 ```css
@@ -121,7 +118,7 @@ Conversion reference:
 --brass:       #B8965A;
 --brass-light: #D4AE78;
 --brass-pale:  #F2EAD8;
---cream:       #F5F0E8;   /* page background */
+--cream:       #F5F2EC;   /* page background — washi standard */
 --cream-dark:  #EDE6D8;   /* borders */
 --teal:        #2A4A50;   /* hover state */
 --ink:         #1A1C20;
@@ -130,14 +127,33 @@ Conversion reference:
 --rule:        rgba(184,150,90,.22);
 ```
 
-### Chapter 1 · Health (Ritual, Steady)
+#### Modern Heirloom — Burgundy
+```css
+--mh-dark:     #1C0810;   /* header background */
+--mh-mid:      #4A1428;   /* sync bar */
+--mh-accent:   #8B2040;   /* active states */
+--mh-rose:     #D4617A;   /* primary accent, header rule, eyebrow */
+--mh-petal:    #F5F2EC;   /* page background — washi standard */
+--mh-petal-dim:#EAE6DF;   /* borders, card backgrounds */
+```
 
-#### Steady — Forest
+### Chapter 1 · Health
+
+#### Ritual — Terracotta
+```css
+--ritual-dark:   #2D1810;   /* header background */
+--ritual-mid:    #5C2A14;   /* sync bar */
+--ritual-accent: #C4622A;   /* primary accent, header rule */
+--ritual-warm:   #E8A06A;   /* accent light */
+--ritual-cream:  #F5F2EC;   /* page background — washi standard */
+```
+
+#### Steady — Midnight Sage / Forest
 ```css
 --forest-deep:   #1F3329;   /* header background */
 --forest-mid:    #2D4A3A;   /* sync bar, stats bar */
 --forest-light:  #4A7A5E;   /* success states */
---parchment:     #F0EADA;   /* page background */
+--parchment:     #F5F2EC;   /* page background — washi standard */
 --parchment-dim: #E2D9C8;   /* borders, card backgrounds */
 --amber:         #D4B06A;   /* primary accent */
 --amber-light:   #E8C97E;   /* hover amber */
@@ -153,7 +169,42 @@ Conversion reference:
 
 ---
 
-## 6. Border Radius Scale
+## 6. App Icon Pattern
+
+All icons are **inline SVG, 56×56px** in the header, with `rx:12` rounded square background. Base64 PNG versions (generated via `cairosvg`) embedded in `<head>` for favicon (32×32) and apple-touch-icon (180×180).
+
+### Critical Rules
+- Header icon SVG: always `width="56" height="56" viewBox="0 0 56 56"`
+- Icon background square must be **visibly distinct** from the header background — use a slightly lighter shade, not the same dark colour
+- Icon shapes must **fill the viewBox** — test that the icon reads clearly at small sizes
+- Favicons and apple-touch-icons must be **regenerated from the SVG** whenever the icon changes — they are not auto-updated
+
+### Three-Color Construction (all icons)
+Every icon uses three tones:
+1. **Shadow layer** — darkest shade, offset slightly down/behind for depth
+2. **Body layer** — mid shade, the primary visible shape
+3. **Accent highlight** — accent color on the topmost or focal element only
+
+### Per-App Icon Reference
+| App | Icon | Background | Body | Accent |
+|---|---|---|---|---|
+| Sashiko Craft | Running stitch (3 offset rows) | `#1A2840` | washi dashes | brass rule |
+| Stylographic | Fountain pen nib | `#1E2328` | brass shape | — |
+| Ritual | Ceramic cream pot / dome | `#3D1008` | terracotta | warm orange lid |
+| Steady | Stacked stones (3 ellipses) | `#1F3329` | forest greens | amber top stone |
+| Modern Heirloom | Hermès-style handbag + Kelly clasp | `#3D0F20` | `#6B1E38` body | `#D4617A` toggle |
+
+### Modern Heirloom Handbag — Construction Detail
+- Handles: narrow tall arch from upper sides (not spanning full width — avoids briefcase read)
+- Handles use `#8B2040` stroke with `#D4617A` highlight stroke on top for visibility
+- Flap: top portion of bag body, darker than body (`#4A1428`)
+- Clasp plate: `#8B2040`, rectangular with rounded corners
+- Toggle bar: `#D4617A` (rose accent)
+- Center post: `#8B2040` outer, `#D4617A` inner
+
+---
+
+## 7. Border Radius Scale
 
 | Name | Value | Usage |
 |---|---|---|
@@ -162,15 +213,13 @@ Conversion reference:
 | Card | 12px | Content cards, metric blocks, control panels |
 | Soft | 10px | Stat pills, toast, badges |
 | Input | 8px | Form inputs, selects, textareas, modal action buttons |
-| Sharp | 4px | Config notice alert, code tags, inline badges |
-
-**Invalid values: `2px`, `3px`, `9px`, `10px` are not design system values and must not be used.** Pick the correct token from the table above for every element.
+| Sharp | 2–4px | Config notice alert, Stylographic badges |
 
 **Rule:** Never mix these — pick the correct scale token for each element type and apply consistently.
 
 ---
 
-## 7. Layout
+## 8. Layout
 
 ### Full-Width Pattern
 All apps use **full-width layout with consistent side padding** — not centered max-width columns.
@@ -199,18 +248,17 @@ header, .sync-bar, .top-bar, .filters, .content { padding-left: 40px; padding-ri
 
 ---
 
-## 8. Header Pattern
+## 9. Header Pattern
 
 ### Structure (all apps)
 ```html
 <header>
-  <!-- Sweeping curved SVG background paths -->
   <svg class="header-curves" ...>
     <!-- 3–4 paths tinted to app's accent colour at .14/.08/.05 opacity -->
   </svg>
   <div class="header-inner">
     <!-- App icon: inline SVG, 56×56px, rx:12 rounded square bg -->
-    <svg width="56" height="56" ...>...</svg>
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">...</svg>
     <div>
       <div class="header-eyebrow">Chapter N · Category</div>
       <h1>App <em>Name</em></h1>
@@ -218,20 +266,12 @@ header, .sync-bar, .top-bar, .filters, .content { padding-left: 40px; padding-ri
     </div>
   </div>
 </header>
-<!-- Brass gradient rule separating header from sync bar -->
-<!-- (via header::after pseudo-element) -->
 ```
-
-### Eyebrow Format
-The eyebrow text must use **mixed case**, never all-caps. Format: `Chapter N · Name` where `·` is a middle dot (U+00B7), not a hyphen or bullet.
-
-✓ Correct: `Chapter 1 · Skincare`, `Chapter 2 · Craft`, `Chapter 2 · Travel Advisory`
-✗ Wrong: `CHAPTER 1 · SKINCARE`, `chapter 2 - craft`
 
 ### Header CSS
 ```css
 header {
-  background: var(--[palette]-indigo);   /* darkest palette colour */
+  background: var(--[app]-dark);   /* darkest palette colour */
   padding: 36px 40px 30px;
   position: relative;
   overflow: hidden;
@@ -239,49 +279,26 @@ header {
 header::after {
   content: ''; position: absolute; bottom: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+  background: linear-gradient(90deg, transparent, var(--[app]-rose/brass), transparent);
 }
 .header-inner { position: relative; display: flex; align-items: center; gap: 22px; }
 .header-eyebrow { font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--brass-light); margin-bottom: 7px; font-weight: 400; }
-header h1 { font-size: 2.2rem; font-weight: 300; color: var(--washi);
+  color: var(--[app]-rose/brass-light); margin-bottom: 7px; font-weight: 400; }
+header h1 { font-size: 2.2rem; font-weight: 300; color: var(--[app]-petal/washi);
   letter-spacing: .04em; line-height: 1; }
-header h1 em { font-style: italic; color: var(--sky-thread); }
+header h1 em { font-style: italic; color: var(--[app]-rose/sky-thread); }
 header p { font-size: .68rem; color: rgba(255,255,255,.32);
   margin-top: 7px; letter-spacing: .12em; text-transform: uppercase; }
 ```
 
-### SVG Header Curves
-```html
-<svg class="header-curves" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMid slice">
-  <!-- Primary curve — accent at .14 opacity -->
-  <path d="M-100 120 Q200 20 500 80 Q800 140 1100 60 Q1200 30 1300 50"
-    stroke="#8AAEC4" stroke-width="1.5" fill="none" opacity=".14"/>
-  <!-- Secondary — .08 opacity -->
-  <path d="M-100 90 Q300 160 600 50 Q900 -40 1300 100"
-    stroke="#8AAEC4" stroke-width="1" fill="none" opacity=".08"/>
-  <!-- Tertiary — .05 opacity -->
-  <path d="M0 160 Q250 80 550 130 Q850 180 1100 90 Q1180 70 1300 80"
-    stroke="#8AAEC4" stroke-width="2" fill="none" opacity=".05"/>
-  <!-- Brass accent path — .10 opacity -->
-  <path d="M-50 40 Q150 10 350 60 Q550 110 750 40 Q950 -30 1100 30 Q1200 55 1300 20"
-    stroke="#D4AE78" stroke-width="1" fill="none" opacity=".10"/>
-</svg>
-```
-Replace stroke colours with the app's thread/accent colour and brass.
-
-**viewBox height:** The standard is `0 0 1200 160`. A taller coordinate space (e.g. 200, 220) is permitted when an app's header content requires it, provided `preserveAspectRatio="xMidYMid slice"` is set. The visual rendered height is always controlled by CSS padding, not the viewBox — so changing an existing taller viewBox to 160 would distort the curve shapes without changing the visual header height. Do not alter an existing app's viewBox without redrawing the path coordinates.
-
 ---
 
-## 9. Sync Bar Pattern
+## 10. Sync Bar Pattern
 
 ### Visual
-- **Dark background using a CSS variable** — always `var(--[app]-mid)` or equivalent, never a hardcoded hex value
+- **Dark background** extending from the header (app's mid-dark variable)
 - Creates a unified brand zone: header → sync bar → content begins
-- Pill buttons only, no solid backgrounds on ghost buttons
-
-**Critical rule: the sync bar background, sync dot states (`.saving`), and all colour references in the sync bar must use CSS custom properties — never hardcoded hex values.** This ensures the sync bar reads as a visual extension of the header across all palette variants.
+- Pill buttons only, **transparent background** on ghost buttons (never white)
 
 ### HTML
 ```html
@@ -304,15 +321,15 @@ Replace stroke colours with the app's thread/accent colour and brass.
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 10px;
   padding: 8px 40px;
-  background: var(--app-mid);          /* dark — extends from header; MUST be a CSS var */
-  border-bottom: 1px solid rgba(184,150,90,.12);
+  background: var(--[app]-mid);
+  border-bottom: 1px solid rgba([accent-rgb],.12);
   font-size: .72rem;
 }
 .sync-status { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.38); }
 .sync-dot { width: 7px; height: 7px; border-radius: 50%;
   background: rgba(255,255,255,.18); flex-shrink: 0; transition: background .3s; }
 .sync-dot.connected { background: #5aab7a; }
-.sync-dot.saving    { background: var(--brass); animation: pulse .8s infinite; }
+.sync-dot.saving    { background: var(--[app]-rose/brass); animation: pulse .8s infinite; }
 .sync-dot.error     { background: #b05050; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
 .sync-actions { display: flex; gap: 8px; }
@@ -320,25 +337,24 @@ Replace stroke colours with the app's thread/accent colour and brass.
   font-family: 'Plus Jakarta Sans', sans-serif; font-size: .63rem; font-weight: 500;
   letter-spacing: .1em; text-transform: uppercase;
   padding: 5px 14px; border-radius: 20px;
-  border: 1px solid rgba(184,150,90,.35);
-  background: transparent; color: var(--brass-light);
+  border: 1px solid rgba([accent-rgb],.35);
+  background: transparent; color: rgba(255,255,255,.7);
   cursor: pointer; transition: all .18s;
 }
-.btn-sync:hover { border-color: var(--brass); color: var(--brass); }
+.btn-sync:hover { border-color: var(--[app]-rose/brass); color: var(--[app]-petal/washi); }
 .btn-sync.primary {
-  background: var(--brass); border-color: var(--brass);
-  color: var(--app-dark); font-weight: 500;
+  background: var(--[app]-dark); border-color: var(--[app]-rose/brass);
+  color: var(--[app]-rose/brass);
 }
-.btn-sync.primary:hover { background: var(--brass-light); }
+.btn-sync.primary:hover { background: rgba(0,0,0,.2); }
 ```
 
 ---
 
-## 10. Config Notice Banner
+## 11. Config Notice Banner
 
 Shown until PAT is configured. Hidden once `configOk()` returns true.
 
-### HTML
 ```html
 <div class="config-notice" id="config-notice">
   <strong>⚠️ GitHub sync not configured</strong>
@@ -349,7 +365,6 @@ Shown until PAT is configured. Hidden once `configOk()` returns true.
 </div>
 ```
 
-### CSS
 ```css
 .config-notice {
   margin: 20px 40px; padding: 16px 20px;
@@ -363,13 +378,12 @@ Shown until PAT is configured. Hidden once `configOk()` returns true.
 }
 ```
 
-**Note:** `border-radius: 4px` is intentionally sharper than content cards — reads as a system alert, not a content card.
+**Note:** `border-radius: 4px` is intentionally sharper than content cards — reads as a system alert.
 
 ---
 
-## 11. PAT Modal Pattern
+## 12. PAT Modal Pattern
 
-### HTML
 ```html
 <div class="pat-modal-backdrop" id="pat-modal" onclick="patBackdropClose(event)">
   <div class="pat-modal">
@@ -391,7 +405,6 @@ Shown until PAT is configured. Hidden once `configOk()` returns true.
 </div>
 ```
 
-### CSS
 ```css
 .pat-modal-backdrop {
   display: none; position: fixed; inset: 0;
@@ -400,45 +413,17 @@ Shown until PAT is configured. Hidden once `configOk()` returns true.
 }
 .pat-modal-backdrop.open { display: flex; }
 .pat-modal {
-  background: var(--washi); border-top: 4px solid var(--brass); border-radius: 16px;
-  padding: 2rem; width: 100%; max-width: 460px;
+  background: var(--[app]-petal/washi);
+  border-top: 4px solid var(--[app]-rose/brass);
+  border-radius: 16px; padding: 2rem; width: 100%; max-width: 460px;
   box-shadow: 0 16px 48px rgba(20,40,70,.28); animation: slideUp .2s ease;
 }
 @keyframes slideUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
-.pat-modal h2 { font-size: 1.2rem; font-weight: 500; color: var(--ai-indigo); margin-bottom: .5rem; }
-.pat-modal p { font-size: .79rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
-.pat-field label { display: block; font-size: .63rem; text-transform: uppercase;
-  letter-spacing: .12em; color: #aaa; margin-bottom: .3rem; }
-.pat-field input {
-  width: 100%; padding: 8px 12px; border: 1.5px solid var(--sky-thread);
-  border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: .82rem; color: var(--ink); background: white;
-  outline: none; transition: border-color .18s; margin-bottom: 1rem;
-}
-.pat-field input:focus { border-color: var(--steel-blue); }
-.pat-actions { display: flex; gap: .75rem; }
-.btn-pat-cancel {
-  flex: 1; padding: 8px; border: 1.5px solid var(--sky-thread); border-radius: 8px;
-  background: white; font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: .74rem; letter-spacing: .08em; text-transform: uppercase;
-  cursor: pointer; color: #aaa; transition: all .15s;
-}
-.btn-pat-cancel:hover { border-color: var(--steel-blue); color: var(--steel-blue); }
-.btn-pat-save {
-  flex: 2; padding: 8px; border: none; border-radius: 8px;
-  background: var(--ai-indigo); color: white;
-  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .74rem; font-weight: 500;
-  letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
-  transition: background .15s;
-}
-.btn-pat-save:hover { background: var(--deep-ai); }
 ```
 
 ---
 
-## 12. Item / Content Modal Pattern
-
-For Add/Edit modals on inventory items.
+## 13. Item / Content Modal Pattern
 
 ```css
 .modal-backdrop { display:none; position:fixed; inset:0;
@@ -446,22 +431,19 @@ For Add/Edit modals on inventory items.
   align-items:center; justify-content:center; padding:1rem; }
 .modal-backdrop.open { display:flex; }
 .modal {
-  background: var(--washi);
-  border-top: 4px solid var(--brass);  /* brass — same as PAT modal */
-  border-radius: 16px;
-  padding: 2rem; width: 100%; max-width: 500px;
+  background: var(--[app]-petal/washi);
+  border-top: 4px solid var(--[app]-rose/brass);
+  border-radius: 16px; padding: 2rem; width: 100%; max-width: 500px;
   box-shadow: 0 16px 48px rgba(20,40,70,.25);
-  animation: slideUp .2s ease;
-  max-height: 90vh; overflow-y: auto;
+  animation: slideUp .2s ease; max-height: 90vh; overflow-y: auto;
 }
-.modal h2 { font-size: 1.35rem; font-weight: 500; color: var(--ai-indigo); margin-bottom: 1.25rem; }
 ```
 
-**Both PAT modal and item modal use `border-top: 4px solid var(--brass)` and `border-radius: 16px` — unified.**
+**Both PAT modal and item modal use `border-top: 4px solid var(--[app]-rose/brass)` — unified.**
 
 ---
 
-## 13. Form Fields (inside modals)
+## 14. Form Fields (inside modals)
 
 ```css
 .field { margin-bottom: .9rem; }
@@ -469,37 +451,23 @@ For Add/Edit modals on inventory items.
   letter-spacing: .12em; color: #aaa; margin-bottom: .3rem; }
 .field input, .field select, .field textarea {
   width: 100%; padding: 7px 10px;
-  border: 1.5px solid var(--sky-thread); border-radius: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .82rem; color: var(--ink);
+  border: 1.5px solid var(--[app]-petal-dim/sky-thread); border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: .82rem;
   background: white; outline: none; transition: border-color .18s;
 }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--steel-blue); }
-.field textarea { resize: vertical; min-height: 72px; }
-.field-row { display: flex; gap: .75rem; }
-.field-row .field { flex: 1; }
-.modal-actions { display: flex; gap: .75rem; margin-top: 1.25rem; }
-.btn-cancel {
-  flex: 1; padding: 8px; border: 1.5px solid var(--sky-thread); border-radius: 8px;
-  background: white; font-size: .74rem; letter-spacing: .08em;
-  text-transform: uppercase; cursor: pointer; color: #aaa;
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--[app]-rose/steel-blue);
 }
-.btn-cancel:hover { border-color: var(--steel-blue); color: var(--steel-blue); }
-.btn-save {
-  flex: 2; padding: 8px; border: none; border-radius: 8px;
-  background: var(--ai-indigo); color: white; font-size: .74rem; font-weight: 500;
-  letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
-}
-.btn-save:hover { background: var(--deep-ai); }
 ```
 
 ---
 
-## 14. Toast Pattern
+## 15. Toast Pattern
 
 ```css
 .toast {
   position: fixed; bottom: 24px; right: 24px; z-index: 3000;
-  background: var(--ai-indigo); color: white;
+  background: var(--[app]-dark); color: white;
   padding: 10px 18px; border-radius: 10px; font-size: .76rem;
   letter-spacing: .04em; box-shadow: 0 4px 18px rgba(20,40,70,.3);
   opacity: 0; transform: translateY(8px); transition: all .25s;
@@ -508,20 +476,9 @@ For Add/Edit modals on inventory items.
 .toast.show { opacity: 1; transform: translateY(0); }
 ```
 
-```js
-let toastTimer;
-function showToast(msg, duration=3500) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), duration);
-}
-```
-
 ---
 
-## 15. Tab Bar Pattern (Stylographic / multi-section apps)
+## 16. Tab Bar Pattern (multi-section apps)
 
 ```css
 .tab-bar { display:flex; gap:2px; padding:0 40px;
@@ -538,7 +495,7 @@ function showToast(msg, duration=3500) {
 
 ---
 
-## 16. Card Pattern (Sashiko-style inventory grid)
+## 17. Card Pattern (inventory grid)
 
 ```css
 .card {
@@ -547,31 +504,6 @@ function showToast(msg, duration=3500) {
   transition: transform .2s, box-shadow .2s;
 }
 .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
-.card-top { height: 7px; /* category colour stripe */ }
-.card-body { padding: 15px 17px 13px; }
-.card-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 17px; border-top: 1px solid var(--sky-thread);
-  background: #f8fbfd;
-}
-```
-
----
-
-## 17. Table / Row Pattern (Stylographic-style)
-
-```css
-.table-wrap { background:white; border:1px solid var(--rule);
-  border-radius:16px; overflow:hidden; box-shadow:0 2px 8px var(--shadow); }
-table { width:100%; border-collapse:collapse; font-size:.79rem; }
-th { text-align:left; padding:10px 14px; font-size:.6rem; font-weight:500;
-  letter-spacing:.1em; text-transform:uppercase; color:#bbb;
-  background:var(--cream); border-bottom:1px solid var(--rule); white-space:nowrap; }
-td { padding:11px 14px; border-bottom:1px solid var(--cream-dark);
-  vertical-align:middle; color:var(--ink); }
-tr:last-child td { border-bottom:none; }
-tr.clickable { cursor:pointer; transition:background .12s; }
-tr.clickable:hover td { background:var(--brass-pale); }
 ```
 
 ---
@@ -582,13 +514,12 @@ tr.clickable:hover td { background:var(--brass-pale); }
 .filter-btn {
   font-size: .71rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
   padding: 5px 13px; border-radius: 20px; border: 1.5px solid var(--sky-thread);
-  background: white; color: var(--steel-blue); cursor: pointer; transition: all .18s;
+  background: white; cursor: pointer; transition: all .18s;
 }
-.filter-btn:hover { border-color: var(--steel-blue); color: var(--deep-ai); }
 .filter-btn.active { background: var(--deep-ai); border-color: var(--deep-ai); color: white; }
 ```
 
-**All filter pill types (category, status, etc.) use the same active colour — `var(--deep-ai)`. No hierarchy distinction between filter dimensions.**
+**All filter pill types use the same active colour — no hierarchy distinction between filter dimensions.**
 
 ---
 
@@ -599,7 +530,6 @@ tr.clickable:hover td { background:var(--brass-pale); }
   font-size: .63rem; font-weight: 500; letter-spacing: .05em;
   text-transform: uppercase; padding: 3px 9px; border-radius: 10px;
 }
-/* Status examples */
 .badge-delivered { background: #d0e8d8; color: #1a5c38; }
 .badge-enroute   { background: #ccdcee; color: #1a3c60; }
 .badge-pending   { background: #dde4ec; color: #3a5070; }
@@ -613,69 +543,46 @@ tr.clickable:hover td { background:var(--brass-pale); }
 ```js
 const GH_OWNER    = 'rtpalme-C2';
 const GH_REPO     = 'life-stuff-data';
-const GH_FILE     = '[app-name]-inventory.json';    // app-specific
+const GH_FILE     = '[app-name].json';
 const GH_RAW_URL  = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${GH_FILE}`;
 const GH_API_URL  = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
-const LS_PAT      = '[app]_gh_pat';     // e.g. 'sashiko_gh_pat'
-const LS_SHA      = '[app]_gh_sha';     // e.g. 'sashiko_gh_sha'
-const LS_DATA_KEY = '[app]-v1';         // e.g. 'sashiko-v2'
+const LS_PAT      = '[app]_gh_pat';
+const LS_SHA      = '[app]_gh_sha';
+const LS_DATA_KEY = '[app]-v1';
 ```
+
+### Per-App Sync Keys
+| App | GH_FILE | LS_PAT | LS_SHA | LS_DATA_KEY |
+|---|---|---|---|---|
+| Sashiko Craft | sashiko-inventory.json | sashiko_gh_pat | sashiko_gh_sha | sashiko-v2 |
+| Stylographic | stylographic-inventory.json | stylo_gh_pat | stylo_gh_sha | stylographic_local |
+| Ritual | ritual-data.json | ritual_gh_pat | ritual_gh_sha | ritual_local |
+| Steady | steady-inventory.json | steady_gh_pat | steady_gh_sha | steady-v1 |
+| Modern Heirloom | modern-heirloom-inventory.json | mh_gh_pat | mh_gh_sha | mh-v1 |
+| Journey Intelligence | journey-intelligence.json | ji_gh_pat | ji_gh_sha | ji-v1 |
 
 ### DATA_VERSION Contract
 ```js
-// ── Data version contract ─────────────────────────────────────────────────
-// DATA_VERSION guards against loading stale/incompatible localStorage data.
-// Rules:
-//   • Bump DATA_VERSION (e.g. 1→2) whenever the data schema changes in a
-//     way that makes old data incompatible (new required fields, renamed keys,
-//     structural changes to the payload shape).
-//   • Also update LS_DATA_KEY to match (e.g. '[app]-v2') so the old key
-//     is ignored rather than migrated (safest default).
-//   • If you need to migrate rather than discard, add a migration function
-//     before the data load block.
-//   • Minor additions (new optional fields) do NOT require a version bump —
-//     just use optional chaining (s?.newField) when reading.
+// Bump DATA_VERSION when schema changes make old data incompatible.
+// Update LS_DATA_KEY to match (e.g. '[app]-v2').
+// Minor additions (new optional fields) do NOT require a bump.
 const DATA_VERSION = 1;
 ```
 
-### Payload Shape
+### syncFromGitHub — Standard Pattern
+**Critical:** A `404` response means the data file does not yet exist in the repo. This must be caught explicitly and treated as "push local data up to create the file" — not as an error. Without this, the app will fail to connect on first deploy.
+
 ```js
-// Inventory apps (Sashiko, Stylographic, etc.)
-const payload = { _version: DATA_VERSION, data: supplies };
-
-// Multi-collection apps (Stylographic)
-const payload = { _version: DATA_VERSION, pens, inks, accessories, journal };
-
-// Tracking apps (Steady)
-const payload = { _version: DATA_VERSION, entries: loadEntries(), shots: loadShots() };
-```
-
-### Core Sync Functions
-```js
-function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
-function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
-function setSHA(s) { localStorage.setItem(LS_SHA, s); }
-function configOk(){ return !!getPAT(); }
-
-// Always write to localStorage first — safety net independent of GitHub
-function persist() {
-  try { localStorage.setItem(LS_DATA_KEY, JSON.stringify({ _version: DATA_VERSION, data: supplies })); }
-  catch(e) {}
-}
-
-// Debounced save — persist() always fires first
-function scheduleSave() {
-  persist();
-  if (!configOk()) return;
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(saveToGitHub, 1200);
-}
-
-// Read: raw URL, no auth header needed
 async function syncFromGitHub() {
   setSyncStatus('saving', 'Loading from GitHub…');
   try {
     const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
+    // 404 = file doesn't exist yet — push local data up to create it
+    if (res.status === 404) {
+      setSyncStatus('saving', 'Creating data file on GitHub…');
+      await saveToGitHub();
+      return;
+    }
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const text = await res.text();
     if (text && text.trim().startsWith('{')) {
@@ -691,14 +598,18 @@ async function syncFromGitHub() {
         return;
       }
     }
-    // No valid data on GitHub — push local up
+    // File exists but has no usable data — push local up
+    setSyncStatus('saving', 'Pushing local data to GitHub…');
     await saveToGitHub();
   } catch(e) {
     setSyncStatus('error', 'GitHub sync failed — working offline');
+    showToast('Could not reach GitHub. Changes saved locally.');
   }
 }
+```
 
-// Always fetch fresh SHA before every write — prevents conflicts
+### fetchSHA
+```js
 async function fetchSHA() {
   try {
     const res = await fetch(GH_API_URL, {
@@ -709,8 +620,10 @@ async function fetchSHA() {
     if (data.sha) setSHA(data.sha);
   } catch(e) {}
 }
+```
 
-// Write: API URL with auth header
+### saveToGitHub
+```js
 async function saveToGitHub() {
   if (!configOk()) return;
   setSyncStatus('saving', 'Saving to GitHub…');
@@ -743,25 +656,32 @@ async function saveToGitHub() {
 }
 ```
 
-### Reset Local Data
+### Helper Functions
 ```js
+function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
+function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
+function setSHA(s) { localStorage.setItem(LS_SHA, s); }
+function configOk(){ return !!getPAT(); }
+
+function persist() {
+  try { localStorage.setItem(LS_DATA_KEY, JSON.stringify({ _version: DATA_VERSION, data: supplies })); }
+  catch(e) {}
+}
+
+// persist() always fires first — safety net independent of GitHub
+function scheduleSave() {
+  persist();
+  if (!configOk()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToGitHub, 1200);
+}
+
 function resetLocalData() {
-  if (!confirm('Clear locally cached data and reload?\n\nYour GitHub token will be kept — only data and the cached SHA are cleared. If GitHub sync is configured, data will reload from GitHub. Otherwise the app will reload from its built-in seed data.')) return;
+  if (!confirm('Clear locally cached data and reload?\n\nYour GitHub token will be kept — only data and the cached SHA are cleared.')) return;
   localStorage.removeItem(LS_DATA_KEY);
   localStorage.removeItem(LS_SHA);
   location.reload();
 }
-```
-
-### Data Load on Init
-```js
-let supplies = null;
-try {
-  const raw = JSON.parse(localStorage.getItem(LS_DATA_KEY) || 'null');
-  if (raw && raw._version === DATA_VERSION) supplies = raw.data;
-  else if (raw) localStorage.removeItem(LS_DATA_KEY); // stale version — discard
-} catch(e) {}
-if (!supplies) { supplies = SEED.map((s,i) => ({...s, id:'seed-'+i})); persist(); }
 ```
 
 ### Setup Banner & PAT Modal JS
@@ -810,7 +730,6 @@ function disconnectGitHub() {
 ## 21. Init Pattern
 
 ```js
-// ── Safety guards ──
 let saveTimer   = null;
 let pendingSave = false;
 
@@ -829,7 +748,7 @@ document.addEventListener('keydown', e => {
 
 // ── Init ──
 updateSetupBanner();
-render();  // or renderAll() / renderGrid() + renderSummary()
+render();
 
 if (configOk()) {
   syncFromGitHub();
@@ -847,26 +766,21 @@ if (configOk()) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="[App Name]">
-<link rel="icon" type="image/png" href="data:image/png;base64,[base64]">
-<link rel="apple-touch-icon" href="data:image/png;base64,[base64]">
+<meta name="apple-mobile-web-app-title" content="[App Short Name]">
+<link rel="icon" type="image/png" href="data:image/png;base64,[base64-32x32]">
+<link rel="apple-touch-icon" href="data:image/png;base64,[base64-180x180]">
 <title>[App Name] — [Subtitle]</title>
 ```
 
 **Icon rules:**
 - Both `rel="icon"` and `rel="apple-touch-icon"` required
 - Must be PNG base64 embedded — never a separate file
+- Regenerate base64 PNGs via `cairosvg` whenever the icon SVG changes
 - iOS home screen: Safari → Add to Home Screen (not Chrome)
-- Apple touch icon should be 180×180px minimum
 
 ---
 
 ## 23. Responsive Breakpoints
-
-| Breakpoint | Width | Changes |
-|---|---|---|
-| Tablet | 768px | Reduce header/sync padding to 16–20px, single-column forms |
-| Phone | 480px | Reduce wordmark to 1.7rem, single-column grid |
 
 ```css
 @media (max-width:768px) {
@@ -882,34 +796,34 @@ if (configOk()) {
 
 ---
 
-## 24. Checklist — New App or Audit
+## 24. Checklist — New App
 
-Before shipping any new app, and when auditing existing apps, verify:
+Before shipping any new app, verify:
 
-- [ ] Correct font load string (full weight set 200–500 + italics)
-- [ ] No `font-weight` above 500 anywhere in the file
-- [ ] All font sizes use `rem` (only exception: `html { font-size: 16px }`)
+- [ ] Correct font load string (full weight set including `1,400;1,500`)
 - [ ] `DATA_VERSION` constant with comment block
 - [ ] `_version` included in GitHub payload
 - [ ] `persist()` function present and called first in `scheduleSave()`
-- [ ] Config notice banner HTML + CSS
+- [ ] `syncFromGitHub()` includes explicit 404 handling before generic `!res.ok` throw
+- [ ] Config notice banner HTML + CSS (`border-radius: 4px`)
 - [ ] PAT modal using CSS `.open` class toggle (not `display:flex/none`)
-- [ ] Both modals use `border-top: 4px solid var(--brass)` and `border-radius: 16px`
-- [ ] No hardcoded hex in sync bar background, brass accent gradient, sync dot `.saving` state, or toast border — use CSS vars
-- [ ] Sync bar uses dark background CSS variable (not light/white, not raw hex)
+- [ ] Both modals use `border-top: 4px solid var(--[app]-rose/brass)`
+- [ ] Sync bar uses dark background (not light/white)
+- [ ] Sync bar ghost buttons use `background: transparent` (not white)
 - [ ] Sync bar padding `8px 40px`
-- [ ] Header SVG uses `preserveAspectRatio="xMidYMid slice"`
-- [ ] Eyebrow text in mixed case: `Chapter N · Name` (never all-caps)
 - [ ] Filter pills: all active states use same colour — no hierarchy distinction
 - [ ] `resetLocalData()` confirm text mentions token is kept
 - [ ] `beforeunload` guard in place
 - [ ] Escape key closes modals
-- [ ] `renderAll()` / `render()` called at init before `updateSetupBanner()`
+- [ ] `render()` called at init before `updateSetupBanner()`
 - [ ] Mobile breakpoints: 768px and 480px both present
 - [ ] Config notice included in mobile padding rule
+- [ ] Page background is `#F5F2EC` (washi standard)
 - [ ] Icons embedded as base64 PNG (not SVG, not external)
 - [ ] Both `rel="icon"` and `rel="apple-touch-icon"` present
+- [ ] Base64 PNGs regenerated from current SVG (not from a previous icon version)
+- [ ] Icon SVG in header is `width="56" height="56" viewBox="0 0 56 56"`
+- [ ] Icon background is visibly distinct from header background
 - [ ] Card border-radius 12px
-- [ ] Input / form field border-radius 8px
-- [ ] No non-standard border-radius values (2px, 3px, 9px, 10px)
-- [ ] Action buttons (primary CTA) border-radius 20px pill
+- [ ] Input border-radius 8px
+- [ ] `:root` uses app-specific CSS variable names (no leftover template names)
