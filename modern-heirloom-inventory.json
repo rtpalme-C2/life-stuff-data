@@ -13,7 +13,7 @@
       "status": "draft",
       "channels": [],
       "acquired": "",
-      "receipt": false,
+      "receipt": true,
       "priceHistory": [],
       "images": [
         "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172961/IMG_1387_semfzh.jpg"
