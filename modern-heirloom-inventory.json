@@ -44,12 +44,17 @@
       "soldPrice": "",
       "status": "active",
       "channels": [],
-      "acquired": "",
+      "acquired": "2021-08-23",
       "receipt": true,
       "priceHistory": [],
       "images": [
-        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172961/IMG_1387_semfzh.jpg"
-      ]
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172961/IMG_1387_semfzh.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172961/IMG_1390_uo1ycw.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172960/IMG_1388_eu9vnh.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172960/IMG_1391_cnny9r.jpg",
+        "https://res.cloudinary.com/drbkhakzv/image/upload/q_auto/f_auto/v1775172960/IMG_1392_jgewqi.jpg"
+      ],
+      "costCurrency": "USD"
     }
   ]
 }
