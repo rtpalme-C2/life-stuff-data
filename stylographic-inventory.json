@@ -881,8 +881,16 @@
       "special": false,
       "retail": 100,
       "purchase": 80,
-      "status": "Resting",
-      "care": []
+      "status": "Working",
+      "care": [
+        {
+          "id": "_yxw7zco",
+          "date": "4/2/2026",
+          "type": "Fill only",
+          "ink": "Hollyhock",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -2046,7 +2054,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "_8lxnj21",
