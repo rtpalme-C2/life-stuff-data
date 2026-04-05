@@ -11,7 +11,29 @@
       "phone2": "",
       "email2": "",
       "notes": "Afraid of heights",
-      "trips": []
+      "trips": [
+        {
+          "id": "mnls1axdlbmi",
+          "destination": "Vancouver, British Columbia, CN",
+          "depart": "2026-04-18",
+          "return": "2026-04-22",
+          "travelers": "",
+          "notes": "",
+          "status": "booked",
+          "commLines": [
+            {
+              "supplier": "Metropolitan Hotel Vancouver",
+              "price": "868.08",
+              "pct": null,
+              "amt": null,
+              "splitOverride": null,
+              "received": false
+            }
+          ],
+          "fee": "0",
+          "feeReceived": false
+        }
+      ]
     }
   ],
   "settings": {
