@@ -160,7 +160,9 @@
       "price": "2200",
       "soldPrice": "",
       "status": "active",
-      "channels": [],
+      "channels": [
+        "Vestiaire"
+      ],
       "acquired": "2021-08-23",
       "receipt": true,
       "priceHistory": [],
