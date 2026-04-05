@@ -24,9 +24,9 @@
             {
               "supplier": "Metropolitan Hotel Vancouver",
               "price": "868.08",
-              "pct": null,
-              "amt": null,
-              "splitOverride": null,
+              "pct": "10",
+              "amt": "86.81",
+              "splitOverride": 70,
               "received": false
             }
           ],
