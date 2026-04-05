@@ -6,9 +6,9 @@
       "lastName": "Yee",
       "primaryFirst": "Thrish",
       "secondaryFirst": "Nelson",
-      "phone": "7077046678",
+      "phone": "(707) 704-6678",
       "email": "atyee@comcast.net",
-      "phone2": "",
+      "phone2": "(707) 704-6678",
       "email2": "",
       "notes": "Afraid of heights",
       "trips": [
@@ -61,6 +61,6 @@
     }
   ],
   "settings": {
-    "agencyPct": 30
+    "myPct": 70
   }
 }
