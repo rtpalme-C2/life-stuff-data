@@ -733,7 +733,7 @@
       "special": false,
       "retail": 274,
       "purchase": 274,
-      "status": "Working",
+      "status": "Resting",
       "care": [
         {
           "id": "c14",
@@ -747,6 +747,13 @@
           "date": "3/21/2026",
           "type": "Fill only",
           "ink": "Siddhartha",
+          "note": ""
+        },
+        {
+          "id": "_91668d3",
+          "date": "3/27/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -1319,7 +1326,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "i31",
