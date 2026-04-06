@@ -435,13 +435,20 @@
       "special": false,
       "retail": 85,
       "purchase": 76.5,
-      "status": "Working",
+      "status": "Resting",
       "care": [
         {
           "id": "c79",
           "date": "2/12/2026",
           "type": "Fill only",
           "ink": "Milky Sea",
+          "note": ""
+        },
+        {
+          "id": "_zh3y1dj",
+          "date": "3/27/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -962,7 +969,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "i6",
