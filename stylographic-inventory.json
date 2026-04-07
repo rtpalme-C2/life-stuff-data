@@ -256,7 +256,7 @@
       "special": true,
       "retail": 202.5,
       "purchase": 202.5,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c21b",
@@ -299,6 +299,13 @@
           "type": "Empty, Clean",
           "ink": "",
           "note": "All good. Just swapping pens"
+        },
+        {
+          "id": "_lh5yjjq",
+          "date": "3/27/2026",
+          "type": "Fill only",
+          "ink": "Blood Falls",
+          "note": ""
         }
       ]
     },
@@ -1550,7 +1557,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic13",
