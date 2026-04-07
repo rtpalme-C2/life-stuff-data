@@ -713,7 +713,7 @@
       "special": true,
       "retail": 307.64,
       "purchase": 230.73,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c64",
@@ -727,6 +727,13 @@
           "date": "12/4/2025",
           "type": "Empty, Clean",
           "ink": "",
+          "note": ""
+        },
+        {
+          "id": "_pc30n68",
+          "date": "3/27/2026",
+          "type": "Fill only",
+          "ink": "Sungrazing Comet",
           "note": ""
         }
       ]
@@ -1473,7 +1480,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic07",
