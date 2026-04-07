@@ -880,15 +880,17 @@
       "note": "Arriving Mar 27–Apr 2"
     },
     {
-      "cat": "Tools",
+      "id": "seed-69",
       "name": "Sewing Machine",
-      "detail": "Brother HC1850 or CS7000X",
+      "cat": "Tools",
+      "detail": "Brother CS7000X",
       "maker": "Brother",
-      "supplier": "TBD",
+      "supplier": "Amazon",
       "qty": "1",
-      "status": "pending",
+      "status": "enroute",
       "role": "Machine piecing + assembly",
-      "id": "seed-69"
+      "swatch": "",
+      "note": ""
     },
     {
       "cat": "Reference",
