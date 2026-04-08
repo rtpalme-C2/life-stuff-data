@@ -11,7 +11,7 @@
       "qty": "1",
       "status": "delivered",
       "role": "Stash",
-      "swatch": "000000",
+      "swatch": "#000000",
       "note": ""
     },
     {
