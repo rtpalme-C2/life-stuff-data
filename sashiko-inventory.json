@@ -1114,8 +1114,8 @@
     },
     {
       "id": "gut-1040",
+      "name": "1040 — Ivory",
       "cat": "Thread",
-      "name": "Gütermann 1040 — Ivory",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1123,7 +1123,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#F0E8C8",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-4780",
