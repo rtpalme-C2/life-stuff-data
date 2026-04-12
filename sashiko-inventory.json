@@ -348,16 +348,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-25",
       "name": "208 — Bamboo",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#788060",
       "role": "Stash",
-      "id": "seed-25"
+      "swatch": "#788060",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
