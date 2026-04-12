@@ -628,16 +628,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-45",
       "name": "228 — Uguisu",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#909858",
       "role": "Stash",
-      "id": "seed-45"
+      "swatch": "#909858",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
