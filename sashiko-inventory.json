@@ -803,15 +803,18 @@
       "id": "seed-50"
     },
     {
-      "cat": "Needles",
+      "id": "seed-52",
       "name": "Tulip Long Sashiko Needles",
+      "cat": "Needles",
       "detail": "Assorted · tube of 6",
       "maker": "Tulip",
       "supplier": "Amazon",
       "qty": "1 tube",
       "status": "delivered",
+      "role": "",
+      "swatch": "",
       "note": "Delivered Mar 25",
-      "id": "seed-52"
+      "reorder": "yes"
     },
     {
       "cat": "Stencils",
