@@ -432,16 +432,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-31",
       "name": "214 — Carrot",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#E87030",
       "role": "Stash",
-      "id": "seed-31"
+      "swatch": "#E87030",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
