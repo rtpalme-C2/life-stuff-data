@@ -292,16 +292,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-21",
       "name": "204 — Sunflower",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#F0C030",
       "role": "Stash",
-      "id": "seed-21"
+      "swatch": "#F0C030",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
