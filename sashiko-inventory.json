@@ -224,16 +224,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-16",
       "name": "Kona Cotton — Snow",
-      "detail": "Fat quarter · Pantone 2026 Powdered Pastels",
+      "cat": "Fabric",
+      "detail": "Fat quarter · Pantone 2026 Collection",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "1 FQ",
       "status": "in-stock",
-      "swatch": "#EDE8E0",
       "role": "Stash",
-      "id": "seed-16"
+      "swatch": "#EDE8E0",
+      "note": "Powdered Pastels",
+      "reorder": null
     },
     {
       "cat": "Fabric",
