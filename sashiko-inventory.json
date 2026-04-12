@@ -782,15 +782,18 @@
       "reorder": "no"
     },
     {
-      "cat": "Notions",
+      "id": "seed-60",
       "name": "Clover Protect & Grip Thimble — Medium",
+      "cat": "Notions",
       "detail": "Hand-stitching thimble",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "on-order",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Arriving Apr 1",
-      "id": "seed-60"
+      "reorder": "no"
     },
     {
       "cat": "Notions",
