@@ -807,15 +807,18 @@
       "id": "seed-61"
     },
     {
-      "cat": "Notions",
+      "id": "seed-62",
       "name": "Wooden Needle Case",
+      "cat": "Notions",
       "detail": "2-piece set",
       "maker": "—",
       "supplier": "Amazon",
       "qty": "1 set",
-      "status": "on-order",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Arriving Mar 23",
-      "id": "seed-62"
+      "reorder": "yes"
     },
     {
       "cat": "Notions",
