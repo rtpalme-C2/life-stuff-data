@@ -949,8 +949,8 @@
     },
     {
       "id": "gut-9240",
+      "name": "9240 — Grey Blue",
       "cat": "Thread",
-      "name": "Gütermann 9240 — Grey Blue",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -958,7 +958,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#8A9DB5",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-8780",
