@@ -1208,8 +1208,8 @@
     },
     {
       "id": "gut-3260",
+      "name": "3260 — Taupe",
       "cat": "Thread",
-      "name": "Gütermann 3260 — Taupe",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1217,7 +1217,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#A89880",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-3880",
