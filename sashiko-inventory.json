@@ -1279,8 +1279,8 @@
     },
     {
       "id": "gut-4880",
+      "name": "4880 — Dark Red",
       "cat": "Thread",
-      "name": "Gütermann 4880 — Dark Red",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1288,7 +1288,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#901820",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-5090",
