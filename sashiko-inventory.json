@@ -1,190 +1,6 @@
 {
-  "_version": 2,
+  "_version": 3,
   "data": [
-    {
-      "id": "mnqrsyuaktu8",
-      "name": "Embroidery Needle Threader Tool",
-      "cat": "Notions",
-      "detail": "50pcs Aluminum Sewing Machine Needle Threader",
-      "maker": "Beadnova",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": ""
-    },
-    {
-      "id": "mnqrpj6kkmcs",
-      "name": "Piecing Thread",
-      "cat": "Thread",
-      "detail": "50wt Cotton 1,422yd - Muslin",
-      "maker": "Aurifil",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#F5F2EE",
-      "note": ""
-    },
-    {
-      "id": "mnqrnlys6n84",
-      "name": "60mm Tungsten Tool Steel Rotary Blades",
-      "cat": "Tools",
-      "detail": "OLFA 60mm Tungsten Tool Steel Rotary Blades,Set of 5",
-      "maker": "OLFA",
-      "supplier": "Amazon",
-      "qty": "5",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "yes"
-    },
-    {
-      "id": "mnqrln8is84h",
-      "name": "Sewline Fabric Pencil Trio",
-      "cat": "Tools",
-      "detail": "Refillable 3-Color Mechanical Fabric Marking Pencil with White, Black & Pink Leads for Quilting and Sewing",
-      "maker": "Sewline",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#FF69B4",
-      "note": ""
-    },
-    {
-      "id": "mnq3xue8e32h",
-      "name": "Sewing Thread - Taupe",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#B9A281",
-      "note": ""
-    },
-    {
-      "id": "mnq3w7zhacs6",
-      "name": "Sewing Thread - Pink",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#FFC0CB",
-      "note": ""
-    },
-    {
-      "id": "mnq3ugzfnr12",
-      "name": "Sewing Thread - Blue",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#0000ff",
-      "note": ""
-    },
-    {
-      "id": "mnq3r90l50if",
-      "name": "Sewing Thread - Gray",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#a9a9a9",
-      "note": ""
-    },
-    {
-      "id": "mnq3mpj098dt",
-      "name": "Sewing Thread - Black",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#000000",
-      "note": ""
-    },
-    {
-      "id": "mnq3k26nkh0v",
-      "name": "Sewing Thread - White",
-      "cat": "Thread",
-      "detail": "Size 40, Polyester",
-      "maker": "Brother",
-      "supplier": "Brother",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#ffffff",
-      "note": ""
-    },
-    {
-      "id": "mnc4qujvr0km",
-      "name": "710 Mark-B-Gone Marking Pen",
-      "cat": "Tools",
-      "detail": "Combo Pack Blue & White",
-      "maker": "Dritz",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "yes"
-    },
-    {
-      "id": "mnc4nzfge700",
-      "name": "Sashiko Coasters Collection",
-      "cat": "Notions",
-      "detail": "5 pieces, Dark Red",
-      "maker": "Olympus",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#8B0000",
-      "note": ""
-    },
-    {
-      "id": "mnc4leeqsa5h",
-      "name": "Sashiko Coasters Collection",
-      "cat": "Notions",
-      "detail": "5 pieces, Navy Blue",
-      "maker": "Olympus",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "#1D2545",
-      "note": ""
-    },
-    {
-      "id": "mnbuofkdef7g",
-      "name": "60mm Straight Handle Rotary Cutter",
-      "cat": "Tools",
-      "detail": "Rotary Fabric Cutter w/Blade Cover",
-      "maker": "OLFA",
-      "supplier": "Amazon",
-      "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "Replacement Blade: OLFA RB60-1"
-    },
     {
       "cat": "Fabric",
       "name": "Kona Cotton — Rose",
@@ -194,9 +10,8 @@
       "qty": "2 yd",
       "status": "in-stock",
       "swatch": "#C08080",
-      "role": "Project",
-      "id": "seed-0",
-      "note": ""
+      "role": "Sophie's Quilt — embroidered blocks",
+      "id": "seed-0"
     },
     {
       "cat": "Fabric",
@@ -207,7 +22,7 @@
       "qty": "2 yd",
       "status": "in-stock",
       "swatch": "#E8C8CC",
-      "role": "Project",
+      "role": "Sophie's Quilt — plain checkerboard",
       "note": "Washed & ironed",
       "id": "seed-1"
     },
@@ -220,9 +35,8 @@
       "qty": "2 yd",
       "status": "in-stock",
       "swatch": "#EDE8DF",
-      "role": "Project",
-      "id": "seed-2",
-      "note": ""
+      "role": "Sophie's Quilt — plain checkerboard",
+      "id": "seed-2"
     },
     {
       "cat": "Fabric",
@@ -233,7 +47,7 @@
       "qty": "2 yd",
       "status": "in-stock",
       "swatch": "#C4909A",
-      "role": "Project",
+      "role": "Sophie's Quilt — backing",
       "note": "Washed & ironed",
       "id": "seed-3"
     },
@@ -246,8 +60,8 @@
       "qty": "1 yd",
       "status": "in-stock",
       "swatch": "#F8F4EE",
-      "role": "Project",
-      "note": "",
+      "role": "Sophie's Quilt — binding",
+      "note": "Delivered Mar 22",
       "id": "seed-4"
     },
     {
@@ -260,8 +74,7 @@
       "status": "in-stock",
       "swatch": "#E8C8CC",
       "role": "Stash",
-      "id": "seed-5",
-      "note": ""
+      "id": "seed-5"
     },
     {
       "cat": "Fabric",
@@ -273,8 +86,7 @@
       "status": "in-stock",
       "swatch": "#B8C8DC",
       "role": "Stash",
-      "id": "seed-6",
-      "note": ""
+      "id": "seed-6"
     },
     {
       "cat": "Fabric",
@@ -286,8 +98,7 @@
       "status": "in-stock",
       "swatch": "#A8C8A0",
       "role": "Stash",
-      "id": "seed-7",
-      "note": ""
+      "id": "seed-7"
     },
     {
       "cat": "Fabric",
@@ -299,8 +110,7 @@
       "status": "in-stock",
       "swatch": "#C8C8C0",
       "role": "Stash",
-      "id": "seed-8",
-      "note": ""
+      "id": "seed-8"
     },
     {
       "cat": "Fabric",
@@ -312,8 +122,7 @@
       "status": "in-stock",
       "swatch": "#B8C8B0",
       "role": "Stash",
-      "id": "seed-9",
-      "note": ""
+      "id": "seed-9"
     },
     {
       "cat": "Fabric",
@@ -325,8 +134,7 @@
       "status": "in-stock",
       "swatch": "#E8C8A8",
       "role": "Stash",
-      "id": "seed-10",
-      "note": ""
+      "id": "seed-10"
     },
     {
       "cat": "Fabric",
@@ -338,8 +146,7 @@
       "status": "in-stock",
       "swatch": "#F0E8A0",
       "role": "Stash",
-      "id": "seed-11",
-      "note": ""
+      "id": "seed-11"
     },
     {
       "cat": "Fabric",
@@ -351,8 +158,7 @@
       "status": "in-stock",
       "swatch": "#C0A0D0",
       "role": "Stash",
-      "id": "seed-12",
-      "note": ""
+      "id": "seed-12"
     },
     {
       "cat": "Fabric",
@@ -364,8 +170,7 @@
       "status": "in-stock",
       "swatch": "#B8B8C0",
       "role": "Stash",
-      "id": "seed-13",
-      "note": ""
+      "id": "seed-13"
     },
     {
       "cat": "Fabric",
@@ -377,8 +182,7 @@
       "status": "in-stock",
       "swatch": "#F0C0B0",
       "role": "Stash",
-      "id": "seed-14",
-      "note": ""
+      "id": "seed-14"
     },
     {
       "cat": "Fabric",
@@ -390,8 +194,7 @@
       "status": "in-stock",
       "swatch": "#B8D0E8",
       "role": "Stash",
-      "id": "seed-15",
-      "note": ""
+      "id": "seed-15"
     },
     {
       "cat": "Fabric",
@@ -403,8 +206,7 @@
       "status": "in-stock",
       "swatch": "#EDE8E0",
       "role": "Stash",
-      "id": "seed-16",
-      "note": ""
+      "id": "seed-16"
     },
     {
       "cat": "Fabric",
@@ -416,8 +218,7 @@
       "status": "in-stock",
       "swatch": "#4A5868",
       "role": "Stash",
-      "id": "seed-17",
-      "note": ""
+      "id": "seed-17"
     },
     {
       "cat": "Thread",
@@ -429,21 +230,19 @@
       "status": "in-stock",
       "swatch": "#F8F8F8",
       "role": "Stash",
-      "id": "seed-18",
-      "note": ""
+      "id": "seed-18"
     },
     {
-      "id": "seed-19",
-      "name": "202 — Off White",
       "cat": "Thread",
+      "name": "202 — Off White",
       "detail": "Daruma thick · 3 extra cards from Snuggly Monkey",
       "maker": "Daruma",
-      "supplier": "Snuggly Monkey",
+      "supplier": "Amazon + Snuggly Monkey",
       "qty": "4 cards",
-      "status": "in-stock",
-      "role": "Project",
+      "status": "on-order",
       "swatch": "#F5F0E8",
-      "note": ""
+      "role": "Crane embroidery · Sophie's Quilt",
+      "id": "seed-19"
     },
     {
       "cat": "Thread",
@@ -455,8 +254,7 @@
       "status": "in-stock",
       "swatch": "#F5E870",
       "role": "Stash",
-      "id": "seed-20",
-      "note": ""
+      "id": "seed-20"
     },
     {
       "cat": "Thread",
@@ -468,8 +266,7 @@
       "status": "in-stock",
       "swatch": "#F0C030",
       "role": "Stash",
-      "id": "seed-21",
-      "note": ""
+      "id": "seed-21"
     },
     {
       "cat": "Thread",
@@ -481,8 +278,7 @@
       "status": "in-stock",
       "swatch": "#30A898",
       "role": "Stash",
-      "id": "seed-22",
-      "note": ""
+      "id": "seed-22"
     },
     {
       "cat": "Thread",
@@ -494,8 +290,7 @@
       "status": "in-stock",
       "swatch": "#A8DCC8",
       "role": "Stash",
-      "id": "seed-23",
-      "note": ""
+      "id": "seed-23"
     },
     {
       "cat": "Thread",
@@ -507,8 +302,7 @@
       "status": "in-stock",
       "swatch": "#2E8B57",
       "role": "Stash",
-      "id": "seed-24",
-      "note": ""
+      "id": "seed-24"
     },
     {
       "cat": "Thread",
@@ -520,21 +314,19 @@
       "status": "in-stock",
       "swatch": "#788060",
       "role": "Stash",
-      "id": "seed-25",
-      "note": ""
+      "id": "seed-25"
     },
     {
-      "id": "seed-26",
-      "name": "209 — Cherry Blossom",
       "cat": "Thread",
+      "name": "209 — Cherry Blossom",
       "detail": "Daruma thick · 3 extra cards from Snuggly Monkey",
       "maker": "Daruma",
-      "supplier": "Snuggly Monkey",
+      "supplier": "Amazon + Snuggly Monkey",
       "qty": "4 cards",
-      "status": "in-stock",
-      "role": "Project",
+      "status": "on-order",
       "swatch": "#F0C4B8",
-      "note": ""
+      "role": "Sakura + Shippo · Sophie's Quilt",
+      "id": "seed-26"
     },
     {
       "cat": "Thread",
@@ -546,21 +338,19 @@
       "status": "in-stock",
       "swatch": "#C8A0D0",
       "role": "Stash",
-      "id": "seed-27",
-      "note": ""
+      "id": "seed-27"
     },
     {
-      "id": "seed-28",
-      "name": "211 — Rose Pink",
       "cat": "Thread",
+      "name": "211 — Rose Pink",
       "detail": "Daruma thick · 8 extra cards from Snuggly Monkey",
       "maker": "Daruma",
-      "supplier": "Snuggly Monkey",
+      "supplier": "Amazon + Snuggly Monkey",
       "qty": "9 cards",
-      "status": "in-stock",
-      "role": "Project",
+      "status": "on-order",
       "swatch": "#D08898",
-      "note": ""
+      "role": "Kagome + Asanoha · Sophie's Quilt",
+      "id": "seed-28"
     },
     {
       "cat": "Thread",
@@ -572,8 +362,7 @@
       "status": "in-stock",
       "swatch": "#E84030",
       "role": "Stash",
-      "id": "seed-29",
-      "note": ""
+      "id": "seed-29"
     },
     {
       "cat": "Thread",
@@ -585,8 +374,7 @@
       "status": "in-stock",
       "swatch": "#A01820",
       "role": "Stash",
-      "id": "seed-30",
-      "note": ""
+      "id": "seed-30"
     },
     {
       "cat": "Thread",
@@ -598,8 +386,7 @@
       "status": "in-stock",
       "swatch": "#E87030",
       "role": "Stash",
-      "id": "seed-31",
-      "note": ""
+      "id": "seed-31"
     },
     {
       "cat": "Thread",
@@ -611,8 +398,7 @@
       "status": "in-stock",
       "swatch": "#1A2A5A",
       "role": "Stash",
-      "id": "seed-32",
-      "note": ""
+      "id": "seed-32"
     },
     {
       "cat": "Thread",
@@ -624,8 +410,7 @@
       "status": "in-stock",
       "swatch": "#282050",
       "role": "Stash",
-      "id": "seed-33",
-      "note": ""
+      "id": "seed-33"
     },
     {
       "cat": "Thread",
@@ -637,8 +422,7 @@
       "status": "in-stock",
       "swatch": "#A8A8A8",
       "role": "Stash",
-      "id": "seed-34",
-      "note": ""
+      "id": "seed-34"
     },
     {
       "cat": "Thread",
@@ -650,8 +434,7 @@
       "status": "in-stock",
       "swatch": "#7A5038",
       "role": "Stash",
-      "id": "seed-35",
-      "note": ""
+      "id": "seed-35"
     },
     {
       "cat": "Thread",
@@ -663,8 +446,7 @@
       "status": "in-stock",
       "swatch": "#202020",
       "role": "Stash",
-      "id": "seed-36",
-      "note": ""
+      "id": "seed-36"
     },
     {
       "cat": "Thread",
@@ -676,8 +458,7 @@
       "status": "in-stock",
       "swatch": "#B88830",
       "role": "Stash",
-      "id": "seed-37",
-      "note": ""
+      "id": "seed-37"
     },
     {
       "cat": "Thread",
@@ -689,8 +470,7 @@
       "status": "in-stock",
       "swatch": "#C04840",
       "role": "Stash",
-      "id": "seed-38",
-      "note": ""
+      "id": "seed-38"
     },
     {
       "cat": "Thread",
@@ -702,8 +482,7 @@
       "status": "in-stock",
       "swatch": "#E8A878",
       "role": "Stash",
-      "id": "seed-39",
-      "note": ""
+      "id": "seed-39"
     },
     {
       "cat": "Thread",
@@ -715,8 +494,7 @@
       "status": "in-stock",
       "swatch": "#785090",
       "role": "Stash",
-      "id": "seed-40",
-      "note": ""
+      "id": "seed-40"
     },
     {
       "cat": "Thread",
@@ -728,8 +506,7 @@
       "status": "in-stock",
       "swatch": "#4060C0",
       "role": "Stash",
-      "id": "seed-41",
-      "note": ""
+      "id": "seed-41"
     },
     {
       "cat": "Thread",
@@ -741,8 +518,7 @@
       "status": "in-stock",
       "swatch": "#2848A0",
       "role": "Stash",
-      "id": "seed-42",
-      "note": ""
+      "id": "seed-42"
     },
     {
       "cat": "Thread",
@@ -754,8 +530,7 @@
       "status": "in-stock",
       "swatch": "#88B8D8",
       "role": "Stash",
-      "id": "seed-43",
-      "note": ""
+      "id": "seed-43"
     },
     {
       "cat": "Thread",
@@ -767,8 +542,7 @@
       "status": "in-stock",
       "swatch": "#78C870",
       "role": "Stash",
-      "id": "seed-44",
-      "note": ""
+      "id": "seed-44"
     },
     {
       "cat": "Thread",
@@ -780,8 +554,7 @@
       "status": "in-stock",
       "swatch": "#909858",
       "role": "Stash",
-      "id": "seed-45",
-      "note": ""
+      "id": "seed-45"
     },
     {
       "cat": "Thread",
@@ -793,8 +566,7 @@
       "status": "in-stock",
       "swatch": "#888078",
       "role": "Stash",
-      "id": "seed-46",
-      "note": ""
+      "id": "seed-46"
     },
     {
       "cat": "Thread",
@@ -806,8 +578,7 @@
       "status": "in-stock",
       "swatch": "#F0EAD8",
       "role": "Stash",
-      "id": "seed-47",
-      "note": ""
+      "id": "seed-47"
     },
     {
       "cat": "Thread",
@@ -819,8 +590,7 @@
       "status": "in-stock",
       "swatch": "#C03040",
       "role": "Stash",
-      "id": "seed-48",
-      "note": ""
+      "id": "seed-48"
     },
     {
       "cat": "Thread",
@@ -832,8 +602,7 @@
       "status": "in-stock",
       "swatch": "#ECA8A8",
       "role": "Stash",
-      "id": "seed-49",
-      "note": ""
+      "id": "seed-49"
     },
     {
       "cat": "Thread",
@@ -845,22 +614,29 @@
       "status": "in-stock",
       "swatch": "#F8F5F0",
       "role": "Stash",
-      "id": "seed-50",
-      "note": ""
+      "id": "seed-50"
     },
     {
-      "id": "seed-52",
-      "name": "Tulip Long Sashiko Needles",
+      "cat": "Thread",
+      "name": "Neutral Cream Piecing Thread",
+      "detail": "Machine assembly of quilt top",
+      "maker": "TBD (Gutermann or Coats & Clark)",
+      "supplier": "TBD",
+      "qty": "2 spools",
+      "status": "to-order",
+      "role": "Machine piecing",
+      "id": "seed-51"
+    },
+    {
       "cat": "Needles",
+      "name": "Tulip Long Sashiko Needles",
       "detail": "Assorted · tube of 6",
       "maker": "Tulip",
       "supplier": "Amazon",
       "qty": "1 tube",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "yes"
+      "status": "on-order",
+      "note": "Arriving Mar 23",
+      "id": "seed-52"
     },
     {
       "cat": "Stencils",
@@ -870,9 +646,8 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-53",
-      "role": "Stash"
+      "note": "Delivered Mar 14",
+      "id": "seed-53"
     },
     {
       "cat": "Stencils",
@@ -882,9 +657,8 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-54",
-      "role": "Stash"
+      "note": "Delivered Mar 14",
+      "id": "seed-54"
     },
     {
       "cat": "Stencils",
@@ -894,9 +668,19 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-55",
-      "role": "Stash"
+      "note": "Delivered Mar 14",
+      "id": "seed-55"
+    },
+    {
+      "cat": "Stencils",
+      "name": "Crane Stencil",
+      "detail": "Individual · center square",
+      "maker": "—",
+      "supplier": "—",
+      "qty": "1",
+      "status": "in-stock",
+      "note": "In hand",
+      "id": "seed-56"
     },
     {
       "cat": "Notions",
@@ -906,50 +690,41 @@
       "supplier": "Amazon",
       "qty": "1 pack",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-57",
-      "role": "Stash"
+      "note": "Delivered Mar 14",
+      "id": "seed-57"
     },
     {
-      "id": "seed-58",
-      "name": "Clover White Chaco Liner Pen",
       "cat": "Notions",
+      "name": "Clover White Chaco Liner Pen",
       "detail": "Stencil marking pen",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "no"
+      "status": "on-order",
+      "note": "Arriving Mar 31",
+      "id": "seed-58"
     },
     {
-      "id": "seed-59",
-      "name": "Clover Chaco Liner Refill — White",
       "cat": "Notions",
+      "name": "Clover Chaco Liner Refill — White",
       "detail": "Refill for Chaco Liner",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "no"
+      "status": "on-order",
+      "note": "Arriving Mar 26",
+      "id": "seed-59"
     },
     {
-      "id": "seed-60",
-      "name": "Clover Protect & Grip Thimble — Medium",
       "cat": "Notions",
+      "name": "Clover Protect & Grip Thimble — Medium",
       "detail": "Hand-stitching thimble",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": ""
+      "status": "on-order",
+      "note": "Arriving Apr 1",
+      "id": "seed-60"
     },
     {
       "cat": "Notions",
@@ -959,9 +734,8 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-61",
-      "role": "Stash"
+      "note": "Delivered Mar 22",
+      "id": "seed-61"
     },
     {
       "cat": "Notions",
@@ -970,51 +744,42 @@
       "maker": "—",
       "supplier": "Amazon",
       "qty": "1 set",
-      "status": "in-stock",
-      "note": "",
-      "id": "seed-62",
-      "role": "Stash"
+      "status": "on-order",
+      "note": "Arriving Mar 23",
+      "id": "seed-62"
     },
     {
-      "id": "seed-63",
-      "name": "Japanese-style Pin Cushion",
       "cat": "Notions",
+      "name": "Japanese-style Pin Cushion",
       "detail": "Tomato-style cushion",
       "maker": "—",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": ""
+      "status": "on-order",
+      "note": "Arriving Mar 27",
+      "id": "seed-63"
     },
     {
-      "id": "seed-64",
-      "name": "Fiskars Crafts Essentials 5-piece",
       "cat": "Tools",
+      "name": "Fiskars Crafts Essentials 5-piece",
       "detail": "Rotary cutter, mat & rulers",
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "no"
+      "note": "Delivered Mar 14",
+      "id": "seed-64"
     },
     {
-      "id": "seed-65",
-      "name": "Fiskars Sewing Essentials 6-piece",
       "cat": "Tools",
+      "name": "Fiskars Sewing Essentials 6-piece",
       "detail": "Scissors, seam ripper, etc.",
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": "",
-      "reorder": "no"
+      "note": "Delivered Mar 13",
+      "id": "seed-65"
     },
     {
       "cat": "Tools",
@@ -1023,10 +788,9 @@
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "note": "",
-      "id": "seed-66",
-      "role": "Stash"
+      "status": "on-order",
+      "note": "Arriving Mar 23",
+      "id": "seed-66"
     },
     {
       "cat": "Tools",
@@ -1035,36 +799,31 @@
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "note": "",
-      "id": "seed-67",
-      "role": "Stash"
+      "status": "on-order",
+      "note": "Arriving Mar 24",
+      "id": "seed-67"
     },
     {
-      "id": "seed-68",
-      "name": "Gingher 8” Dressmaker Shears",
       "cat": "Tools",
+      "name": "Gingher 8” Dressmaker Shears",
       "detail": "Right-hand fabric scissors",
       "maker": "Gingher",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": ""
+      "status": "on-order",
+      "note": "Arriving Mar 27–Apr 2",
+      "id": "seed-68"
     },
     {
-      "id": "seed-69",
-      "name": "Sewing Machine",
       "cat": "Tools",
-      "detail": "Brother CS7000X",
+      "name": "Sewing Machine",
+      "detail": "Brother HC1850 or CS7000X",
       "maker": "Brother",
-      "supplier": "Amazon",
+      "supplier": "TBD",
       "qty": "1",
-      "status": "in-stock",
-      "role": "Stash",
-      "swatch": "",
-      "note": ""
+      "status": "to-order",
+      "role": "Machine piecing + assembly",
+      "id": "seed-69"
     },
     {
       "cat": "Reference",
@@ -1074,347 +833,8 @@
       "supplier": "Amazon",
       "qty": "1 panel",
       "status": "in-stock",
-      "note": "",
-      "id": "seed-70",
-      "role": "Stash"
-    },
-    {
-      "id": "gut-9240",
-      "cat": "Thread",
-      "name": "Gütermann 9240 — Grey Blue",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#8A9DB5",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-8780",
-      "cat": "Thread",
-      "name": "Gütermann 8780 — Olive Drab",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#7A7848",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-8975",
-      "cat": "Thread",
-      "name": "Gütermann 8975 — Lime",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#B8C850",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-7290",
-      "cat": "Thread",
-      "name": "Gütermann 7290 — Steel Blue",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#5878A0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-7330",
-      "cat": "Thread",
-      "name": "Gütermann 7330 — Dark Azure",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#3858A0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-7532",
-      "cat": "Thread",
-      "name": "Gütermann 7532 — Turquoise",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#40A8C0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-6250",
-      "cat": "Thread",
-      "name": "Gütermann 6250 — Medium Blue",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#5080C0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-6150",
-      "cat": "Thread",
-      "name": "Gütermann 6150 — Cornflower",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#6888C8",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-6170",
-      "cat": "Thread",
-      "name": "Gütermann 6170 — Dark Violet",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#483880",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-9430",
-      "cat": "Thread",
-      "name": "Gütermann 9430 — Graphite",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#606068",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-9280",
-      "cat": "Thread",
-      "name": "Gütermann 9280 — Medium Grey",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#909098",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-9045",
-      "cat": "Thread",
-      "name": "Gütermann 9045 — Light Nickel",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#B8B8B0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-1040",
-      "cat": "Thread",
-      "name": "Gütermann 1040 — Ivory",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#F0E8C8",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-4780",
-      "cat": "Thread",
-      "name": "Gütermann 4780 — Burgundy",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#881828",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-6080",
-      "cat": "Thread",
-      "name": "Gütermann 6080 — Lavender",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#9890C8",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-5110",
-      "cat": "Thread",
-      "name": "Gütermann 5110 — Mauve",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#C080A0",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-5980",
-      "cat": "Thread",
-      "name": "Gütermann 5980 — Rose",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#D89898",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-1001",
-      "cat": "Thread",
-      "name": "Gütermann 1001 — Black",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#202020",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-1006",
-      "cat": "Thread",
-      "name": "Gütermann 1006 — White",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#F8F8F8",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-3260",
-      "cat": "Thread",
-      "name": "Gütermann 3260 — Taupe",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#A89880",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-3880",
-      "cat": "Thread",
-      "name": "Gütermann 3880 — Dark Brown",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#503820",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-3060",
-      "cat": "Thread",
-      "name": "Gütermann 3060 — Camel",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#C09860",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-1640",
-      "cat": "Thread",
-      "name": "Gütermann 1640 — Gold",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#C8A030",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-1720",
-      "cat": "Thread",
-      "name": "Gütermann 1720 — Terracotta",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#C05830",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-4880",
-      "cat": "Thread",
-      "name": "Gütermann 4880 — Dark Red",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#901820",
-      "role": "Stash",
-      "note": ""
-    },
-    {
-      "id": "gut-5090",
-      "cat": "Thread",
-      "name": "Gütermann 5090 — Blush Pink",
-      "detail": "Cotton 50wt · 100m spool",
-      "maker": "Gütermann",
-      "supplier": "Amazon",
-      "qty": "1 spool",
-      "status": "in-stock",
-      "swatch": "#E8B8B8",
-      "role": "Stash",
-      "note": ""
+      "note": "Delivered Mar 18",
+      "id": "seed-70"
     }
   ]
 }
