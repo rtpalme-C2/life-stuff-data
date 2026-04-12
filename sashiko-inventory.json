@@ -600,16 +600,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-43",
       "name": "226 — Water Blue",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#88B8D8",
       "role": "Stash",
-      "id": "seed-43"
+      "swatch": "#88B8D8",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
