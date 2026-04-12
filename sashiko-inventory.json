@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mnw3uwr9dqdo",
+      "name": "Non Slip Ruler",
+      "cat": "Tools",
+      "detail": "5\" Square",
+      "maker": "Omnigrip",
+      "supplier": "Ama",
+      "qty": "",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
+      "note": "",
+      "reorder": null
+    },
+    {
       "id": "seed-0",
       "name": "Kona Cotton — Rose",
       "cat": "Fabric",
