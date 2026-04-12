@@ -306,16 +306,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-22",
       "name": "205 — Peacock",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#30A898",
       "role": "Stash",
-      "id": "seed-22"
+      "swatch": "#30A898",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
