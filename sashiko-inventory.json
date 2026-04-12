@@ -866,7 +866,7 @@
     },
     {
       "id": "seed-64",
-      "name": "Fiskars Crafts Essentials 5-piece",
+      "name": "Crafts Essentials 5-piece",
       "cat": "Tools",
       "detail": "Rotary cutter, mat & rulers",
       "maker": "Fiskars",
@@ -875,7 +875,7 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "",
-      "note": "Delivered Mar 14",
+      "note": "",
       "reorder": "no"
     },
     {
