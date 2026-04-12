@@ -16,17 +16,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-1",
       "name": "Kona Cotton — Ballet Slipper",
-      "detail": "K001-861 · Plain squares (Fabric B)",
+      "cat": "Fabric",
+      "detail": "K001-861",
       "maker": "Robert Kaufman",
       "supplier": "Missouri Star Quilt Co.",
       "qty": "2 yd",
       "status": "in-stock",
+      "role": "",
       "swatch": "#E8C8CC",
-      "role": "Sophie's Quilt — plain checkerboard",
       "note": "Washed & ironed",
-      "id": "seed-1"
+      "reorder": null
     },
     {
       "cat": "Fabric",
