@@ -250,16 +250,18 @@
       "id": "seed-17"
     },
     {
-      "cat": "Thread",
+      "id": "seed-18",
       "name": "201 — White",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#F8F8F8",
       "role": "Stash",
-      "id": "seed-18"
+      "swatch": "#F8F8F8",
+      "note": "",
+      "reorder": null
     },
     {
       "id": "seed-19",
