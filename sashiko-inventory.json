@@ -879,15 +879,18 @@
       "reorder": "no"
     },
     {
-      "cat": "Tools",
+      "id": "seed-65",
       "name": "Fiskars Sewing Essentials 6-piece",
+      "cat": "Tools",
       "detail": "Scissors, seam ripper, etc.",
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Delivered Mar 13",
-      "id": "seed-65"
+      "reorder": "no"
     },
     {
       "id": "seed-66",
