@@ -1193,8 +1193,8 @@
     },
     {
       "id": "gut-1006",
+      "name": "1006 — White",
       "cat": "Thread",
-      "name": "Gütermann 1006 — White",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1202,7 +1202,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#F8F8F8",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-3260",
