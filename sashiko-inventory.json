@@ -44,17 +44,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-3",
       "name": "Kona Cotton — Foxglove",
-      "detail": "K001-956 · Backing",
+      "cat": "Fabric",
+      "detail": "K001-956",
       "maker": "Robert Kaufman",
       "supplier": "Missouri Star Quilt Co.",
       "qty": "2 yd",
       "status": "in-stock",
+      "role": "Project",
       "swatch": "#C4909A",
-      "role": "Sophie's Quilt — backing",
       "note": "Washed & ironed",
-      "id": "seed-3"
+      "reorder": null
     },
     {
       "cat": "Fabric",
