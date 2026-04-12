@@ -376,16 +376,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-27",
       "name": "210 — Wisteria",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#C8A0D0",
       "role": "Stash",
-      "id": "seed-27"
+      "swatch": "#C8A0D0",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
