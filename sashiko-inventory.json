@@ -100,16 +100,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-7",
       "name": "Kona Cotton — Desert Green",
-      "detail": "Fat quarter · Pantone 2026 Powdered Pastels",
+      "cat": "Fabric",
+      "detail": "Fat quarter · Pantone 2026 Collection",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "1 FQ",
       "status": "in-stock",
-      "swatch": "#A8C8A0",
       "role": "Stash",
-      "id": "seed-7"
+      "swatch": "#A8C8A0",
+      "note": "Powdered Pastels",
+      "reorder": null
     },
     {
       "cat": "Fabric",
