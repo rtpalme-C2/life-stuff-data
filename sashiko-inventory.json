@@ -1222,8 +1222,8 @@
     },
     {
       "id": "gut-3880",
+      "name": "3880 — Dark Brown",
       "cat": "Thread",
-      "name": "Gütermann 3880 — Dark Brown",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1231,7 +1231,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#503820",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-3060",
