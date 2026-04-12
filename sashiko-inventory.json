@@ -142,7 +142,8 @@
       "status": "delivered",
       "role": "Stash",
       "swatch": "",
-      "note": ""
+      "note": "",
+      "reorder": "yes"
     },
     {
       "id": "mnc4nzfge700",
