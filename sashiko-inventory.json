@@ -991,8 +991,8 @@
     },
     {
       "id": "gut-7290",
+      "name": "7290 — Steel Blue",
       "cat": "Thread",
-      "name": "Gütermann 7290 — Steel Blue",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1000,7 +1000,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#5878A0",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-7330",
