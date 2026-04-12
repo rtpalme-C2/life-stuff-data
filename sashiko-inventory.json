@@ -1155,8 +1155,8 @@
     },
     {
       "id": "gut-5110",
+      "name": "5110 — Mauve",
       "cat": "Thread",
-      "name": "Gütermann 5110 — Mauve",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1164,7 +1164,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#C080A0",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-5980",
