@@ -572,16 +572,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-41",
       "name": "224 — Blue",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#4060C0",
       "role": "Stash",
-      "id": "seed-41"
+      "swatch": "#4060C0",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
