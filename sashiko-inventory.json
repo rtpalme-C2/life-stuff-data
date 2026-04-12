@@ -642,16 +642,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-46",
       "name": "229 — Mouse",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#888078",
       "role": "Stash",
-      "id": "seed-46"
+      "swatch": "#888078",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
