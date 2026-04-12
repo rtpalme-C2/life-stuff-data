@@ -196,16 +196,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-14",
       "name": "Kona Cotton — Shell",
-      "detail": "Fat quarter · Pantone 2026 Powdered Pastels",
+      "cat": "Fabric",
+      "detail": "Fat quarter · Pantone 2026 Collection",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "1 FQ",
       "status": "in-stock",
-      "swatch": "#F0C0B0",
       "role": "Stash",
-      "id": "seed-14"
+      "swatch": "#F0C0B0",
+      "note": "Powdered Pastels",
+      "reorder": null
     },
     {
       "cat": "Fabric",
