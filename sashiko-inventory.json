@@ -963,8 +963,8 @@
     },
     {
       "id": "gut-8780",
+      "name": "8780 — Olive Drab",
       "cat": "Thread",
-      "name": "Gütermann 8780 — Olive Drab",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -972,7 +972,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#7A7848",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-8975",
