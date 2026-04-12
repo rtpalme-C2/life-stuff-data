@@ -1061,8 +1061,8 @@
     },
     {
       "id": "gut-6170",
+      "name": "6170 — Dark Violet",
       "cat": "Thread",
-      "name": "Gütermann 6170 — Dark Violet",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1070,7 +1070,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#483880",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-9430",
