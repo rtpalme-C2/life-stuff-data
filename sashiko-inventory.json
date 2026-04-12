@@ -320,16 +320,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-23",
       "name": "206 — Mint",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#A8DCC8",
       "role": "Stash",
-      "id": "seed-23"
+      "swatch": "#A8DCC8",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
