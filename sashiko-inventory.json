@@ -740,15 +740,18 @@
       "reorder": null
     },
     {
+      "id": "seed-54",
+      "name": "Stencil Kit — Geometric",
       "cat": "Stencils",
-      "name": "FREEBLOSS Stencil Kit — Geometric 2",
       "detail": "12-piece · Shippo patterns",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Delivered Mar 14",
-      "id": "seed-54"
+      "reorder": null
     },
     {
       "cat": "Stencils",
