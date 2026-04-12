@@ -1250,8 +1250,8 @@
     },
     {
       "id": "gut-5090",
+      "name": "Blush Pink - 5090",
       "cat": "Thread",
-      "name": "Gütermann 5090 — Blush Pink",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1259,7 +1259,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#E8B8B8",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "bro-taupe",
