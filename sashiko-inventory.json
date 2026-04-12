@@ -838,15 +838,18 @@
       "reorder": null
     },
     {
+      "id": "seed-57",
+      "name": "Mini Wonder Clips",
       "cat": "Notions",
-      "name": "Clover Mini Wonder Clips",
       "detail": "50 pcs · fabric clips",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1 pack",
       "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Delivered Mar 14",
-      "id": "seed-57"
+      "reorder": null
     },
     {
       "id": "seed-58",
