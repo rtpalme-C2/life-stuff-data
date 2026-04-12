@@ -1169,8 +1169,8 @@
     },
     {
       "id": "gut-5980",
+      "name": "5980 — Rose",
       "cat": "Thread",
-      "name": "Gütermann 5980 — Rose",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1178,7 +1178,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#D89898",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-1001",
