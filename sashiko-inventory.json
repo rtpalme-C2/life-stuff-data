@@ -1247,8 +1247,8 @@
     },
     {
       "id": "gut-1640",
+      "name": "1640 — Gold",
       "cat": "Thread",
-      "name": "Gütermann 1640 — Gold",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1256,7 +1256,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#C8A030",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-1720",
