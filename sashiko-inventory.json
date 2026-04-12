@@ -474,16 +474,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-34",
       "name": "217 — Gray",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#A8A8A8",
       "role": "Stash",
-      "id": "seed-34"
+      "swatch": "#A8A8A8",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
