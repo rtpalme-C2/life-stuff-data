@@ -558,16 +558,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-40",
       "name": "223 — Grape",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#785090",
       "role": "Stash",
-      "id": "seed-40"
+      "swatch": "#785090",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
