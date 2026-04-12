@@ -237,7 +237,8 @@
       "use": "Supplemental — daytime",
       "status": "depleted",
       "size": "",
-      "note": ""
+      "note": "",
+      "active": false
     }
   ],
   "log": [
