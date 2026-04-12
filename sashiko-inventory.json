@@ -1019,8 +1019,8 @@
     },
     {
       "id": "gut-7532",
+      "name": "7532 — Turquoise",
       "cat": "Thread",
-      "name": "Gütermann 7532 — Turquoise",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1028,7 +1028,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#40A8C0",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-6250",
