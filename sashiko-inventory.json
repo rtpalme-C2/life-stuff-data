@@ -446,16 +446,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-32",
       "name": "215 — Navy Blue",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#1A2A5A",
       "role": "Stash",
-      "id": "seed-32"
+      "swatch": "#1A2A5A",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
