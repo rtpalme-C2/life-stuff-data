@@ -977,8 +977,8 @@
     },
     {
       "id": "gut-8975",
+      "name": "8975 — Lime",
       "cat": "Thread",
-      "name": "Gütermann 8975 — Lime",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -986,7 +986,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#B8C850",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-7290",
