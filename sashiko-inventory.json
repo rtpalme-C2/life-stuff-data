@@ -334,16 +334,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-24",
       "name": "207 — Emerald",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#2E8B57",
       "role": "Stash",
-      "id": "seed-24"
+      "swatch": "#2E8B57",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
