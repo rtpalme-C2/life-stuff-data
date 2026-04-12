@@ -418,16 +418,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-30",
       "name": "213 — Deep Red",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#A01820",
       "role": "Stash",
-      "id": "seed-30"
+      "swatch": "#A01820",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
