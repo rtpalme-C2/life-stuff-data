@@ -892,7 +892,8 @@
       "status": "delivered",
       "role": "",
       "swatch": "",
-      "note": "Arriving Mar 26"
+      "note": "Arriving Mar 26",
+      "reorder": "no"
     },
     {
       "id": "seed-60",
