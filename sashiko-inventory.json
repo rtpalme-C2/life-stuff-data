@@ -544,16 +544,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-39",
       "name": "222 — Japanese Apricot",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#E8A878",
       "role": "Stash",
-      "id": "seed-39"
+      "swatch": "#E8A878",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
