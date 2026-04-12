@@ -871,15 +871,18 @@
       "reorder": "no"
     },
     {
-      "cat": "Tools",
+      "id": "seed-67",
       "name": "Fiskars Sewing Ruler 6”×24”",
+      "cat": "Tools",
       "detail": "Long quilting ruler",
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "on-order",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Arriving Mar 24",
-      "id": "seed-67"
+      "reorder": null
     },
     {
       "cat": "Tools",
