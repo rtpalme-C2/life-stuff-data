@@ -726,15 +726,18 @@
       "reorder": null
     },
     {
+      "id": "seed-53",
+      "name": "Stencil Kit — Geometric",
       "cat": "Stencils",
-      "name": "FREEBLOSS Stencil Kit — Geometric 1",
       "detail": "12-piece · Kagome, Asanoha",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "in-stock",
-      "note": "Delivered Mar 14",
-      "id": "seed-53"
+      "role": "Stash",
+      "swatch": "",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Stencils",
