@@ -154,16 +154,18 @@
       "id": "seed-10"
     },
     {
-      "cat": "Fabric",
+      "id": "seed-11",
       "name": "Kona Cotton — Meringue",
-      "detail": "Fat quarter · Pantone 2026 Powdered Pastels",
+      "cat": "Fabric",
+      "detail": "Fat quarter · Pantone 2026 Collection",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "1 FQ",
       "status": "in-stock",
-      "swatch": "#F0E8A0",
       "role": "Stash",
-      "id": "seed-11"
+      "swatch": "#F0E8A0",
+      "note": "Powdered Pastels",
+      "reorder": null
     },
     {
       "cat": "Fabric",
