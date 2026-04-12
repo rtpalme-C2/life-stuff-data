@@ -918,7 +918,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "Arriving Mar 24",
-      "reorder": null
+      "reorder": "no"
     },
     {
       "id": "seed-68",
