@@ -656,16 +656,18 @@
       "reorder": null
     },
     {
+      "id": "seed-47",
+      "name": "202 - Kinari",
       "cat": "Thread",
-      "name": "Kinari — Natural White",
-      "detail": "Daruma thin · included with set",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#F0EAD8",
       "role": "Stash",
-      "id": "seed-47"
+      "swatch": "#F0EAD8",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
