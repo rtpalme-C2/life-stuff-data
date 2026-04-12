@@ -38,7 +38,8 @@
       "status": "delivered",
       "role": "Stash",
       "swatch": "",
-      "note": ""
+      "note": "",
+      "reorder": "yes"
     },
     {
       "id": "mnqrln8is84h",
