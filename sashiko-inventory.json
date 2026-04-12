@@ -935,15 +935,18 @@
       "reorder": "yes"
     },
     {
-      "cat": "Tools",
+      "id": "seed-69",
       "name": "Sewing Machine",
-      "detail": "Brother HC1850 or CS7000X",
+      "cat": "Tools",
+      "detail": "CS7000X",
       "maker": "Brother",
       "supplier": "TBD",
       "qty": "1",
-      "status": "to-order",
-      "role": "Machine piecing + assembly",
-      "id": "seed-69"
+      "status": "in-stock",
+      "role": "",
+      "swatch": "",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Reference",
