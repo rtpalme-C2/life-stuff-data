@@ -58,17 +58,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-4",
       "name": "Liberty Tana Lawn — Paper White",
+      "cat": "Fabric",
       "detail": "Solid · Binding",
       "maker": "Liberty Fabrics",
       "supplier": "DuckaDilly",
       "qty": "1 yd",
       "status": "in-stock",
+      "role": "Project",
       "swatch": "#F8F4EE",
-      "role": "Sophie's Quilt — binding",
       "note": "Delivered Mar 22",
-      "id": "seed-4"
+      "reorder": null
     },
     {
       "cat": "Fabric",
