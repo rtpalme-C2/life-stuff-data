@@ -1088,8 +1088,8 @@
     },
     {
       "id": "gut-9280",
+      "name": "9280 — Medium Grey",
       "cat": "Thread",
-      "name": "Gütermann 9280 — Medium Grey",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1097,7 +1097,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#909098",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-9045",
