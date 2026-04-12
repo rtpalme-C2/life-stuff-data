@@ -656,16 +656,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-48",
       "name": "Hidamari — Tulip",
-      "detail": "Cosmo sashiko · deep red",
-      "maker": "Cosmo/Lecien",
+      "cat": "Thread",
+      "detail": "Sashiko - 30m",
+      "maker": "Cosmo Lecien",
       "supplier": "Sewfinity",
       "qty": "1 spool",
       "status": "in-stock",
-      "swatch": "#C03040",
       "role": "Stash",
-      "id": "seed-48"
+      "swatch": "#C03040",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
