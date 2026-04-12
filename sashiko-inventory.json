@@ -2,16 +2,18 @@
   "_version": 3,
   "data": [
     {
-      "cat": "Fabric",
+      "id": "seed-0",
       "name": "Kona Cotton — Rose",
-      "detail": "K001-1310 · Embroidered squares",
+      "cat": "Fabric",
+      "detail": "K001-1310",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "2 yd",
       "status": "in-stock",
+      "role": "",
       "swatch": "#C08080",
-      "role": "Sophie's Quilt — embroidered blocks",
-      "id": "seed-0"
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Fabric",
