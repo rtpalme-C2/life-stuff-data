@@ -1234,8 +1234,8 @@
     },
     {
       "id": "gut-3060",
+      "name": "3060 — Camel",
       "cat": "Thread",
-      "name": "Gütermann 3060 — Camel",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1243,7 +1243,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#C09860",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-1640",
