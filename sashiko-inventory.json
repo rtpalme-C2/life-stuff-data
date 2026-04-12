@@ -586,16 +586,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-42",
       "name": "225 — Lapis Lazuli",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#2848A0",
       "role": "Stash",
-      "id": "seed-42"
+      "swatch": "#2848A0",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
