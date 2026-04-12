@@ -949,15 +949,18 @@
       "reorder": null
     },
     {
+      "id": "seed-70",
+      "name": "Printed Color Chart 24” Panel",
       "cat": "Reference",
-      "name": "Kona Printed Color Chart 24” Panel",
       "detail": "Full Kona palette reference",
       "maker": "Robert Kaufman",
       "supplier": "Amazon",
       "qty": "1 panel",
       "status": "in-stock",
-      "note": "Delivered Mar 18",
-      "id": "seed-70"
+      "role": "Stash",
+      "swatch": "",
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-9240",
