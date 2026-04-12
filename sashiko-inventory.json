@@ -1075,8 +1075,8 @@
     },
     {
       "id": "gut-9430",
+      "name": "9430 — Graphite",
       "cat": "Thread",
-      "name": "Gütermann 9430 — Graphite",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1084,7 +1084,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#606068",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-9280",
