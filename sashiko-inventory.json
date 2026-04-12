@@ -857,15 +857,18 @@
       "id": "seed-65"
     },
     {
-      "cat": "Tools",
+      "id": "seed-66",
       "name": "Fiskars Self-Healing Cutting Mat 18”×24”",
+      "cat": "Tools",
       "detail": "Lilac · extra cutting surface",
       "maker": "Fiskars",
       "supplier": "Amazon",
       "qty": "1",
-      "status": "on-order",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
       "note": "Arriving Mar 23",
-      "id": "seed-66"
+      "reorder": "no"
     },
     {
       "cat": "Tools",
