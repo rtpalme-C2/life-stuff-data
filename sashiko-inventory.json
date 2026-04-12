@@ -194,8 +194,9 @@
       "qty": "2 yd",
       "status": "delivered",
       "swatch": "#C08080",
-      "role": "Sophie's Quilt — embroidered blocks",
-      "id": "seed-0"
+      "role": "Project",
+      "id": "seed-0",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -206,7 +207,7 @@
       "qty": "2 yd",
       "status": "delivered",
       "swatch": "#E8C8CC",
-      "role": "Sophie's Quilt — plain checkerboard",
+      "role": "Project",
       "note": "Washed & ironed",
       "id": "seed-1"
     },
@@ -219,8 +220,9 @@
       "qty": "2 yd",
       "status": "delivered",
       "swatch": "#EDE8DF",
-      "role": "Sophie's Quilt — plain checkerboard",
-      "id": "seed-2"
+      "role": "Project",
+      "id": "seed-2",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -231,7 +233,7 @@
       "qty": "2 yd",
       "status": "delivered",
       "swatch": "#C4909A",
-      "role": "Sophie's Quilt — backing",
+      "role": "Project",
       "note": "Washed & ironed",
       "id": "seed-3"
     },
@@ -244,8 +246,8 @@
       "qty": "1 yd",
       "status": "delivered",
       "swatch": "#F8F4EE",
-      "role": "Sophie's Quilt — binding",
-      "note": "Delivered Mar 22",
+      "role": "Project",
+      "note": "",
       "id": "seed-4"
     },
     {
@@ -258,7 +260,8 @@
       "status": "delivered",
       "swatch": "#E8C8CC",
       "role": "Stash",
-      "id": "seed-5"
+      "id": "seed-5",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -270,7 +273,8 @@
       "status": "delivered",
       "swatch": "#B8C8DC",
       "role": "Stash",
-      "id": "seed-6"
+      "id": "seed-6",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -282,7 +286,8 @@
       "status": "delivered",
       "swatch": "#A8C8A0",
       "role": "Stash",
-      "id": "seed-7"
+      "id": "seed-7",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -294,7 +299,8 @@
       "status": "delivered",
       "swatch": "#C8C8C0",
       "role": "Stash",
-      "id": "seed-8"
+      "id": "seed-8",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -306,7 +312,8 @@
       "status": "delivered",
       "swatch": "#B8C8B0",
       "role": "Stash",
-      "id": "seed-9"
+      "id": "seed-9",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -318,7 +325,8 @@
       "status": "delivered",
       "swatch": "#E8C8A8",
       "role": "Stash",
-      "id": "seed-10"
+      "id": "seed-10",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -330,7 +338,8 @@
       "status": "delivered",
       "swatch": "#F0E8A0",
       "role": "Stash",
-      "id": "seed-11"
+      "id": "seed-11",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -342,7 +351,8 @@
       "status": "delivered",
       "swatch": "#C0A0D0",
       "role": "Stash",
-      "id": "seed-12"
+      "id": "seed-12",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -354,7 +364,8 @@
       "status": "delivered",
       "swatch": "#B8B8C0",
       "role": "Stash",
-      "id": "seed-13"
+      "id": "seed-13",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -366,7 +377,8 @@
       "status": "delivered",
       "swatch": "#F0C0B0",
       "role": "Stash",
-      "id": "seed-14"
+      "id": "seed-14",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -378,7 +390,8 @@
       "status": "delivered",
       "swatch": "#B8D0E8",
       "role": "Stash",
-      "id": "seed-15"
+      "id": "seed-15",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -390,7 +403,8 @@
       "status": "delivered",
       "swatch": "#EDE8E0",
       "role": "Stash",
-      "id": "seed-16"
+      "id": "seed-16",
+      "note": ""
     },
     {
       "cat": "Fabric",
@@ -402,7 +416,8 @@
       "status": "delivered",
       "swatch": "#4A5868",
       "role": "Stash",
-      "id": "seed-17"
+      "id": "seed-17",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -414,7 +429,8 @@
       "status": "delivered",
       "swatch": "#F8F8F8",
       "role": "Stash",
-      "id": "seed-18"
+      "id": "seed-18",
+      "note": ""
     },
     {
       "id": "seed-19",
@@ -425,7 +441,7 @@
       "supplier": "Snuggly Monkey",
       "qty": "4 cards",
       "status": "delivered",
-      "role": "Crane embroidery · Sophie's Quilt",
+      "role": "Project",
       "swatch": "#F5F0E8",
       "note": ""
     },
@@ -439,7 +455,8 @@
       "status": "delivered",
       "swatch": "#F5E870",
       "role": "Stash",
-      "id": "seed-20"
+      "id": "seed-20",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -451,7 +468,8 @@
       "status": "delivered",
       "swatch": "#F0C030",
       "role": "Stash",
-      "id": "seed-21"
+      "id": "seed-21",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -463,7 +481,8 @@
       "status": "delivered",
       "swatch": "#30A898",
       "role": "Stash",
-      "id": "seed-22"
+      "id": "seed-22",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -475,7 +494,8 @@
       "status": "delivered",
       "swatch": "#A8DCC8",
       "role": "Stash",
-      "id": "seed-23"
+      "id": "seed-23",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -487,7 +507,8 @@
       "status": "delivered",
       "swatch": "#2E8B57",
       "role": "Stash",
-      "id": "seed-24"
+      "id": "seed-24",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -499,7 +520,8 @@
       "status": "delivered",
       "swatch": "#788060",
       "role": "Stash",
-      "id": "seed-25"
+      "id": "seed-25",
+      "note": ""
     },
     {
       "id": "seed-26",
@@ -510,7 +532,7 @@
       "supplier": "Snuggly Monkey",
       "qty": "4 cards",
       "status": "delivered",
-      "role": "Sakura + Shippo · Sophie's Quilt",
+      "role": "Project",
       "swatch": "#F0C4B8",
       "note": ""
     },
@@ -524,7 +546,8 @@
       "status": "delivered",
       "swatch": "#C8A0D0",
       "role": "Stash",
-      "id": "seed-27"
+      "id": "seed-27",
+      "note": ""
     },
     {
       "id": "seed-28",
@@ -535,7 +558,7 @@
       "supplier": "Snuggly Monkey",
       "qty": "9 cards",
       "status": "delivered",
-      "role": "Kagome + Asanoha · Sophie's Quilt",
+      "role": "Project",
       "swatch": "#D08898",
       "note": ""
     },
@@ -549,7 +572,8 @@
       "status": "delivered",
       "swatch": "#E84030",
       "role": "Stash",
-      "id": "seed-29"
+      "id": "seed-29",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -561,7 +585,8 @@
       "status": "delivered",
       "swatch": "#A01820",
       "role": "Stash",
-      "id": "seed-30"
+      "id": "seed-30",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -573,7 +598,8 @@
       "status": "delivered",
       "swatch": "#E87030",
       "role": "Stash",
-      "id": "seed-31"
+      "id": "seed-31",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -585,7 +611,8 @@
       "status": "delivered",
       "swatch": "#1A2A5A",
       "role": "Stash",
-      "id": "seed-32"
+      "id": "seed-32",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -597,7 +624,8 @@
       "status": "delivered",
       "swatch": "#282050",
       "role": "Stash",
-      "id": "seed-33"
+      "id": "seed-33",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -609,7 +637,8 @@
       "status": "delivered",
       "swatch": "#A8A8A8",
       "role": "Stash",
-      "id": "seed-34"
+      "id": "seed-34",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -621,7 +650,8 @@
       "status": "delivered",
       "swatch": "#7A5038",
       "role": "Stash",
-      "id": "seed-35"
+      "id": "seed-35",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -633,7 +663,8 @@
       "status": "delivered",
       "swatch": "#202020",
       "role": "Stash",
-      "id": "seed-36"
+      "id": "seed-36",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -645,7 +676,8 @@
       "status": "delivered",
       "swatch": "#B88830",
       "role": "Stash",
-      "id": "seed-37"
+      "id": "seed-37",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -657,7 +689,8 @@
       "status": "delivered",
       "swatch": "#C04840",
       "role": "Stash",
-      "id": "seed-38"
+      "id": "seed-38",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -669,7 +702,8 @@
       "status": "delivered",
       "swatch": "#E8A878",
       "role": "Stash",
-      "id": "seed-39"
+      "id": "seed-39",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -681,7 +715,8 @@
       "status": "delivered",
       "swatch": "#785090",
       "role": "Stash",
-      "id": "seed-40"
+      "id": "seed-40",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -693,7 +728,8 @@
       "status": "delivered",
       "swatch": "#4060C0",
       "role": "Stash",
-      "id": "seed-41"
+      "id": "seed-41",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -705,7 +741,8 @@
       "status": "delivered",
       "swatch": "#2848A0",
       "role": "Stash",
-      "id": "seed-42"
+      "id": "seed-42",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -717,7 +754,8 @@
       "status": "delivered",
       "swatch": "#88B8D8",
       "role": "Stash",
-      "id": "seed-43"
+      "id": "seed-43",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -729,7 +767,8 @@
       "status": "delivered",
       "swatch": "#78C870",
       "role": "Stash",
-      "id": "seed-44"
+      "id": "seed-44",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -741,7 +780,8 @@
       "status": "delivered",
       "swatch": "#909858",
       "role": "Stash",
-      "id": "seed-45"
+      "id": "seed-45",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -753,7 +793,8 @@
       "status": "delivered",
       "swatch": "#888078",
       "role": "Stash",
-      "id": "seed-46"
+      "id": "seed-46",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -765,7 +806,8 @@
       "status": "delivered",
       "swatch": "#F0EAD8",
       "role": "Stash",
-      "id": "seed-47"
+      "id": "seed-47",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -777,7 +819,8 @@
       "status": "delivered",
       "swatch": "#C03040",
       "role": "Stash",
-      "id": "seed-48"
+      "id": "seed-48",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -789,7 +832,8 @@
       "status": "delivered",
       "swatch": "#ECA8A8",
       "role": "Stash",
-      "id": "seed-49"
+      "id": "seed-49",
+      "note": ""
     },
     {
       "cat": "Thread",
@@ -801,7 +845,8 @@
       "status": "delivered",
       "swatch": "#F8F5F0",
       "role": "Stash",
-      "id": "seed-50"
+      "id": "seed-50",
+      "note": ""
     },
     {
       "id": "seed-52",
@@ -812,9 +857,9 @@
       "supplier": "Amazon",
       "qty": "1 tube",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Delivered Mar 25",
+      "note": "",
       "reorder": "yes"
     },
     {
@@ -825,8 +870,9 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "delivered",
-      "note": "Delivered Mar 14",
-      "id": "seed-53"
+      "note": "",
+      "id": "seed-53",
+      "role": "Stash"
     },
     {
       "cat": "Stencils",
@@ -836,8 +882,9 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "delivered",
-      "note": "Delivered Mar 14",
-      "id": "seed-54"
+      "note": "",
+      "id": "seed-54",
+      "role": "Stash"
     },
     {
       "cat": "Stencils",
@@ -847,8 +894,9 @@
       "supplier": "Amazon",
       "qty": "1 kit",
       "status": "delivered",
-      "note": "Delivered Mar 14",
-      "id": "seed-55"
+      "note": "",
+      "id": "seed-55",
+      "role": "Stash"
     },
     {
       "cat": "Notions",
@@ -858,8 +906,9 @@
       "supplier": "Amazon",
       "qty": "1 pack",
       "status": "delivered",
-      "note": "Delivered Mar 14",
-      "id": "seed-57"
+      "note": "",
+      "id": "seed-57",
+      "role": "Stash"
     },
     {
       "id": "seed-58",
@@ -870,9 +919,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Arriving Mar 31",
+      "note": "",
       "reorder": "no"
     },
     {
@@ -884,9 +933,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Arriving Mar 26",
+      "note": "",
       "reorder": "no"
     },
     {
@@ -898,9 +947,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Arriving Apr 1"
+      "note": ""
     },
     {
       "cat": "Notions",
@@ -910,8 +959,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "note": "Delivered Mar 22",
-      "id": "seed-61"
+      "note": "",
+      "id": "seed-61",
+      "role": "Stash"
     },
     {
       "cat": "Notions",
@@ -921,8 +971,9 @@
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "delivered",
-      "note": "Delivered Mar 25",
-      "id": "seed-62"
+      "note": "",
+      "id": "seed-62",
+      "role": "Stash"
     },
     {
       "id": "seed-63",
@@ -933,9 +984,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Arriving Mar 27"
+      "note": ""
     },
     {
       "id": "seed-64",
@@ -946,9 +997,9 @@
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Delivered Mar 14",
+      "note": "",
       "reorder": "no"
     },
     {
@@ -960,9 +1011,9 @@
       "supplier": "Amazon",
       "qty": "1 set",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Delivered Mar 13",
+      "note": "",
       "reorder": "no"
     },
     {
@@ -973,8 +1024,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "note": "Delivered Mar 25",
-      "id": "seed-66"
+      "note": "",
+      "id": "seed-66",
+      "role": "Stash"
     },
     {
       "cat": "Tools",
@@ -984,8 +1036,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "note": "Delivered Mar 25",
-      "id": "seed-67"
+      "note": "",
+      "id": "seed-67",
+      "role": "Stash"
     },
     {
       "id": "seed-68",
@@ -996,9 +1049,9 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "",
+      "role": "Stash",
       "swatch": "",
-      "note": "Arriving Mar 27–Apr 2"
+      "note": ""
     },
     {
       "id": "seed-69",
@@ -1009,7 +1062,7 @@
       "supplier": "Amazon",
       "qty": "1",
       "status": "delivered",
-      "role": "Machine piecing + assembly",
+      "role": "Stash",
       "swatch": "",
       "note": ""
     },
@@ -1021,8 +1074,9 @@
       "supplier": "Amazon",
       "qty": "1 panel",
       "status": "delivered",
-      "note": "Delivered Mar 18",
-      "id": "seed-70"
+      "note": "",
+      "id": "seed-70",
+      "role": "Stash"
     },
     {
       "id": "gut-9240",
@@ -1034,7 +1088,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#8A9DB5",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1047,7 +1101,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#7A7848",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1060,7 +1114,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#B8C850",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1073,7 +1127,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#5878A0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1086,7 +1140,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#3858A0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1099,7 +1153,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#40A8C0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1112,7 +1166,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#5080C0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1125,7 +1179,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#6888C8",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1138,7 +1192,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#483880",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1151,7 +1205,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#606068",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1164,7 +1218,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#909098",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1177,7 +1231,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#B8B8B0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1190,7 +1244,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#F0E8C8",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1203,7 +1257,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#881828",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1216,7 +1270,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#9890C8",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1229,7 +1283,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#C080A0",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1242,7 +1296,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#D89898",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1255,7 +1309,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#202020",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1268,7 +1322,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#F8F8F8",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1281,7 +1335,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#A89880",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1294,7 +1348,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#503820",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1307,7 +1361,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#C09860",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1320,7 +1374,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#C8A030",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1333,7 +1387,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#C05830",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1346,7 +1400,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#901820",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     },
     {
@@ -1359,7 +1413,7 @@
       "qty": "1 spool",
       "status": "delivered",
       "swatch": "#E8B8B8",
-      "role": "Machine sewing",
+      "role": "Stash",
       "note": ""
     }
   ]
