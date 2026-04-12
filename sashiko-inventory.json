@@ -516,16 +516,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-37",
       "name": "220 — Brown Gold",
-      "detail": "Daruma thick",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
       "supplier": "Amazon",
       "qty": "1 card",
       "status": "in-stock",
-      "swatch": "#B88830",
       "role": "Stash",
-      "id": "seed-37"
+      "swatch": "#B88830",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
