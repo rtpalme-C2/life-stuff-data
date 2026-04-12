@@ -1005,8 +1005,8 @@
     },
     {
       "id": "gut-7330",
+      "name": "7330 — Dark Azure",
       "cat": "Thread",
-      "name": "Gütermann 7330 — Dark Azure",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1014,7 +1014,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#3858A0",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-7532",
