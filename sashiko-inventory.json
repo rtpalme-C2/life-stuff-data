@@ -390,16 +390,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-28",
       "name": "211 — Rose Pink",
-      "detail": "Daruma thick · 8 extra cards from Snuggly Monkey",
+      "cat": "Thread",
+      "detail": "Sashiko - 40m",
       "maker": "Daruma",
-      "supplier": "Amazon + Snuggly Monkey",
+      "supplier": "Amazon",
       "qty": "9 cards",
       "status": "on-order",
+      "role": "Project",
       "swatch": "#D08898",
-      "role": "Kagome + Asanoha · Sophie's Quilt",
-      "id": "seed-28"
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
