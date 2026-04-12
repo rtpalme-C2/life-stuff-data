@@ -86,16 +86,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-6",
       "name": "Kona Cotton — Cloud",
-      "detail": "Fat quarter · Pantone 2026 Powdered Pastels",
+      "cat": "Fabric",
+      "detail": "Fat quarter · Pantone 2026 Collection",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "1 FQ",
       "status": "in-stock",
-      "swatch": "#B8C8DC",
       "role": "Stash",
-      "id": "seed-6"
+      "swatch": "#B8C8DC",
+      "note": "Powdered Pastels",
+      "reorder": null
     },
     {
       "cat": "Fabric",
