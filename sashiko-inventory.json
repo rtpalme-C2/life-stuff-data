@@ -30,16 +30,18 @@
       "reorder": null
     },
     {
-      "cat": "Fabric",
+      "id": "seed-2",
       "name": "Kona Cotton — Ivory",
-      "detail": "K001-1181 · Plain squares (Fabric C)",
+      "cat": "Fabric",
+      "detail": "K001-1181",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "2 yd",
       "status": "in-stock",
+      "role": "Project",
       "swatch": "#EDE8DF",
-      "role": "Sophie's Quilt — plain checkerboard",
-      "id": "seed-2"
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Fabric",
