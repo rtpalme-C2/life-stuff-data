@@ -670,16 +670,18 @@
       "reorder": null
     },
     {
-      "cat": "Thread",
+      "id": "seed-49",
       "name": "Hidamari — Cherry Blossom",
-      "detail": "Cosmo sashiko · soft pink",
-      "maker": "Cosmo/Lecien",
+      "cat": "Thread",
+      "detail": "Sashiko - 30m",
+      "maker": "Cosmo Lecien",
       "supplier": "Sewfinity",
       "qty": "1 spool",
       "status": "in-stock",
-      "swatch": "#ECA8A8",
       "role": "Stash",
-      "id": "seed-49"
+      "swatch": "#ECA8A8",
+      "note": "",
+      "reorder": null
     },
     {
       "cat": "Thread",
