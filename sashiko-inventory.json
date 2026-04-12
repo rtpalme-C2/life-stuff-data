@@ -1142,8 +1142,8 @@
     },
     {
       "id": "gut-6080",
+      "name": "6080 — Lavender",
       "cat": "Thread",
-      "name": "Gütermann 6080 — Lavender",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1151,7 +1151,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#9890C8",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-5110",
