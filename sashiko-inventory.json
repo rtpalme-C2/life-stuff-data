@@ -1101,8 +1101,8 @@
     },
     {
       "id": "gut-9045",
+      "name": "9045 — Light Nickel",
       "cat": "Thread",
-      "name": "Gütermann 9045 — Light Nickel",
       "detail": "Cotton 50wt · 100m spool",
       "maker": "Gütermann",
       "supplier": "Amazon",
@@ -1110,7 +1110,8 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#B8B8B0",
-      "note": ""
+      "note": "",
+      "reorder": null
     },
     {
       "id": "gut-1040",
