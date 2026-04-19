@@ -931,6 +931,18 @@
       "purchase": 236,
       "status": "En Route",
       "care": []
+    },
+    {
+      "id": "_eonekuh",
+      "model": "Hémisphère Understated Edit - Metallic Copper Red",
+      "maker": "Waterman",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 140.48,
+      "purchase": 140.48,
+      "status": "En Route",
+      "care": []
     }
   ],
   "inks": [
