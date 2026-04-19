@@ -21,7 +21,8 @@
       "use": "AM — Step 2",
       "status": "active",
       "size": "30ml",
-      "note": "Stable Vitamin C"
+      "note": "Stable Vitamin C",
+      "active": false
     },
     {
       "id": "p03",
