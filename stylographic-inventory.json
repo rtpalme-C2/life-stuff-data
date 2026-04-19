@@ -919,6 +919,18 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_s671zrt",
+      "model": "Legacy Fountain Pen",
+      "maker": "Sheaffer",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 236,
+      "purchase": 236,
+      "status": "En Route",
+      "care": []
     }
   ],
   "inks": [
