@@ -23,7 +23,7 @@
       "status": "active",
       "size": "30ml",
       "note": "",
-      "active": false
+      "active": true
     },
     {
       "id": "p03",
@@ -39,7 +39,7 @@
       "id": "p04",
       "name": "Niacinamide 10% + Zinc 1%",
       "brand": "The Ordinary",
-      "use": "PM — Retinol & Recovery nights",
+      "use": "Retinol — Step 3 / Recovery — Step 4",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -59,7 +59,7 @@
       "id": "p06",
       "name": "Natural Moisturizing Factors + HA",
       "brand": "The Ordinary",
-      "use": "AM — Step 6 / All PM",
+      "use": "AM — Step 7 / All PM",
       "status": "active",
       "size": "100ml",
       "note": "",
@@ -69,7 +69,7 @@
       "id": "p07",
       "name": "Caffeine Solution 5% + EGCG",
       "brand": "The Ordinary",
-      "use": "AM — Step 7",
+      "use": "AM — Step 6",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -99,7 +99,7 @@
       "id": "p10",
       "name": "Saccharomyces Ferment 30% Milky Toner",
       "brand": "The Ordinary",
-      "use": "AM — Step 2 / Retinol & Recovery — Step 2",
+      "use": "AM — Step 2 / Retinol — Step 2 / Recovery — Step 3",
       "status": "active",
       "size": "100ml",
       "note": "",
@@ -109,7 +109,7 @@
       "id": "p11",
       "name": "Retinol 0.5% in Squalane",
       "brand": "The Ordinary",
-      "use": "Retinol — Step 3",
+      "use": "Retinol — Step 4",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -119,7 +119,7 @@
       "id": "p12",
       "name": "Granactive Retinoid 2% Emulsion",
       "brand": "The Ordinary",
-      "use": "Retinol — Step 3",
+      "use": "Retinol — Step 4",
       "status": "depleting",
       "size": "30ml",
       "note": "",
@@ -159,7 +159,7 @@
       "id": "p16",
       "name": "Salicylic Acid 2% Solution",
       "brand": "The Ordinary",
-      "use": "Acid — Step 2",
+      "use": "Recovery — Step 2",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -169,7 +169,7 @@
       "id": "p17",
       "name": "Glycolic Acid 7% Toning Solution",
       "brand": "The Ordinary",
-      "use": "Acid Glycolic — Step 3",
+      "use": "Acid Glycolic — Step 2",
       "status": "active",
       "size": "240ml",
       "note": "",
@@ -179,7 +179,7 @@
       "id": "p18",
       "name": "Lactic Acid 10% + HA",
       "brand": "The Ordinary",
-      "use": "Acid Lactic — Step 3",
+      "use": "Acid Lactic — Step 2",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -189,7 +189,7 @@
       "id": "p19",
       "name": "Azelaic Acid Suspension 10%",
       "brand": "The Ordinary",
-      "use": "Acid — Step 4",
+      "use": "Acid — Step 3",
       "status": "active",
       "size": "30ml",
       "note": "",
@@ -267,31 +267,187 @@
     }
   ],
   "log": [
-    {"id":"_8y3u9nd","date":"4/18/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_edns9bn","date":"4/18/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_nyaicgj","date":"4/17/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_gd539yz","date":"4/16/2026","session":"evening","routine":"Acid Night (Glycolic)","note":""},
-    {"id":"_loigv60","date":"4/16/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_4518d17","date":"4/15/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_wsgmg4q","date":"4/15/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_xwwpw1o","date":"4/14/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_bgiaayg","date":"4/13/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_xw6774p","date":"4/13/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_wzxehe7","date":"4/12/2026","session":"evening","routine":"Peel Night","note":""},
-    {"id":"_bdot0pl","date":"4/12/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_dvhgj86","date":"4/10/2026","session":"evening","routine":"Recovery Night","note":""},
-    {"id":"_pmc7egw","date":"4/8/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_6764jju","date":"4/8/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_cem7owh","date":"4/7/2026","session":"evening","routine":"Acid Night (Glycolic)","note":""},
-    {"id":"_hrlyzbm","date":"4/7/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_1pjlssm","date":"4/6/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_b06fl68","date":"4/6/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_wkvowcm","date":"4/4/2026","session":"evening","routine":"Acid Night (Lactic)","note":""},
-    {"id":"_4pslr25","date":"4/4/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_2pegu85","date":"4/3/2026","session":"evening","routine":"Retinol Night","note":""},
-    {"id":"_3i3u61r","date":"4/3/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_acjpkww","date":"4/2/2026","session":"morning","routine":"Morning Routine","note":""},
-    {"id":"_f2ehdmq","date":"3/29/2026","session":"evening","routine":"Peel Night","note":""},
-    {"id":"_mn8htiv","date":"3/29/2026","session":"morning","routine":"Peel Night","note":""}
+    {
+      "id": "_8y3u9nd",
+      "date": "4/18/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_edns9bn",
+      "date": "4/18/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_nyaicgj",
+      "date": "4/17/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_gd539yz",
+      "date": "4/16/2026",
+      "session": "evening",
+      "routine": "Acid Night (Glycolic)",
+      "note": ""
+    },
+    {
+      "id": "_loigv60",
+      "date": "4/16/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_4518d17",
+      "date": "4/15/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_wsgmg4q",
+      "date": "4/15/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_xwwpw1o",
+      "date": "4/14/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_bgiaayg",
+      "date": "4/13/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_xw6774p",
+      "date": "4/13/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_wzxehe7",
+      "date": "4/12/2026",
+      "session": "evening",
+      "routine": "Peel Night",
+      "note": ""
+    },
+    {
+      "id": "_bdot0pl",
+      "date": "4/12/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_dvhgj86",
+      "date": "4/10/2026",
+      "session": "evening",
+      "routine": "Recovery Night",
+      "note": ""
+    },
+    {
+      "id": "_pmc7egw",
+      "date": "4/8/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_6764jju",
+      "date": "4/8/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_cem7owh",
+      "date": "4/7/2026",
+      "session": "evening",
+      "routine": "Acid Night (Glycolic)",
+      "note": ""
+    },
+    {
+      "id": "_hrlyzbm",
+      "date": "4/7/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_1pjlssm",
+      "date": "4/6/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_b06fl68",
+      "date": "4/6/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_wkvowcm",
+      "date": "4/4/2026",
+      "session": "evening",
+      "routine": "Acid Night (Lactic)",
+      "note": ""
+    },
+    {
+      "id": "_4pslr25",
+      "date": "4/4/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_2pegu85",
+      "date": "4/3/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
+    {
+      "id": "_3i3u61r",
+      "date": "4/3/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_acjpkww",
+      "date": "4/2/2026",
+      "session": "morning",
+      "routine": "Morning Routine",
+      "note": ""
+    },
+    {
+      "id": "_f2ehdmq",
+      "date": "3/29/2026",
+      "session": "evening",
+      "routine": "Peel Night",
+      "note": ""
+    },
+    {
+      "id": "_mn8htiv",
+      "date": "3/29/2026",
+      "session": "morning",
+      "routine": "Peel Night",
+      "note": ""
+    }
   ]
 }
