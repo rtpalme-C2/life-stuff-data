@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mobyeyb3406a",
+      "name": "Big Eye Thin Sashiko Needles",
+      "cat": "Needles",
+      "detail": "Tube of 4",
+      "maker": "Tulip",
+      "supplier": "Amazon",
+      "qty": "1",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mnwkqg7td5kd",
       "name": "Fabric Marking Pen",
       "cat": "Notions",
