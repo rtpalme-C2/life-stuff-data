@@ -950,7 +950,15 @@
       "retail": 140.48,
       "purchase": 140.48,
       "status": "En Route",
-      "care": []
+      "care": [
+        {
+          "id": "_9ymo5bn",
+          "date": "4/23/2026",
+          "type": "Received",
+          "ink": "",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
