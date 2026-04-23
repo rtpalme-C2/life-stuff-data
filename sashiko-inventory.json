@@ -905,7 +905,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "seed-53",
