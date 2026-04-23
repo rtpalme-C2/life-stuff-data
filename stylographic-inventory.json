@@ -930,7 +930,15 @@
       "retail": 236,
       "purchase": 236,
       "status": "En Route",
-      "care": []
+      "care": [
+        {
+          "id": "_1i8ef3u",
+          "date": "4/23/2026",
+          "type": "Received",
+          "ink": "",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_eonekuh",
