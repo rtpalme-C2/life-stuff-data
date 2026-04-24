@@ -903,8 +903,8 @@
       "nib_size": "Fine",
       "nib_type": "14K Gold",
       "special": false,
-      "retail": 265.0,
-      "purchase": 236.0,
+      "retail": 265,
+      "purchase": 236,
       "status": "Resting",
       "care": []
     }
@@ -2070,7 +2070,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "En Route"
+      "status": "Resting"
     },
     {
       "id": "_colorverse_coffee_break",
@@ -2082,8 +2082,8 @@
       "shading": "Medium",
       "limited": false,
       "size": "30ml",
-      "retail": 17.0,
-      "purchase": 17.0,
+      "retail": 17,
+      "purchase": 17,
       "status": "Resting"
     },
     {
