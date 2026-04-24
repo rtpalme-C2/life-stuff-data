@@ -882,7 +882,15 @@
       "retail": 100,
       "purchase": 80,
       "status": "Working",
-      "care": []
+      "care": [
+        {
+          "id": "_o6t1bpe",
+          "date": "4/23/2026",
+          "type": "Fill only",
+          "ink": "Hollyhock",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_hemisphere_copper",
@@ -2070,7 +2078,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "_colorverse_coffee_break",
