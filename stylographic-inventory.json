@@ -921,8 +921,16 @@
       "special": false,
       "retail": 265,
       "purchase": 236,
-      "status": "Resting",
-      "care": []
+      "status": "Working",
+      "care": [
+        {
+          "id": "_8oy80wa",
+          "date": "4/23/2026",
+          "type": "Fill only",
+          "ink": "Black",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -1134,7 +1142,7 @@
       "size": "60ml",
       "retail": 12.72,
       "purchase": 12.72,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i16",
