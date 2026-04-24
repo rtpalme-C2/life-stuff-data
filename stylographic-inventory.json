@@ -901,8 +901,16 @@
       "special": false,
       "retail": 175.6,
       "purchase": 140.48,
-      "status": "Resting",
-      "care": []
+      "status": "Working",
+      "care": [
+        {
+          "id": "_a9dalbp",
+          "date": "4/23/2026",
+          "type": "Fill only",
+          "ink": "Terre de Feu",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_sheaffer_legacy_chrome",
@@ -2106,7 +2114,7 @@
       "size": "30ml",
       "retail": 15.5,
       "purchase": 15.5,
-      "status": "Resting"
+      "status": "Working"
     }
   ],
   "accessories": [
