@@ -256,7 +256,7 @@
       "special": true,
       "retail": 202.5,
       "purchase": 202.5,
-      "status": "Working",
+      "status": "Resting",
       "care": [
         {
           "id": "c21b",
@@ -299,13 +299,6 @@
           "type": "Empty, Clean",
           "ink": "",
           "note": "All good. Just swapping pens"
-        },
-        {
-          "id": "_lh5yjjq",
-          "date": "3/27/2026",
-          "type": "Fill only",
-          "ink": "Blood Falls",
-          "note": ""
         }
       ]
     },
@@ -442,20 +435,13 @@
       "special": false,
       "retail": 85,
       "purchase": 76.5,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c79",
           "date": "2/12/2026",
           "type": "Fill only",
           "ink": "Milky Sea",
-          "note": ""
-        },
-        {
-          "id": "_zh3y1dj",
-          "date": "3/27/2026",
-          "type": "Empty, Clean",
-          "ink": "",
           "note": ""
         }
       ]
@@ -713,7 +699,7 @@
       "special": true,
       "retail": 307.64,
       "purchase": 230.73,
-      "status": "Working",
+      "status": "Resting",
       "care": [
         {
           "id": "c64",
@@ -728,13 +714,6 @@
           "type": "Empty, Clean",
           "ink": "",
           "note": ""
-        },
-        {
-          "id": "_pc30n68",
-          "date": "3/27/2026",
-          "type": "Fill only",
-          "ink": "Sungrazing Comet",
-          "note": ""
         }
       ]
     },
@@ -747,7 +726,7 @@
       "special": false,
       "retail": 274,
       "purchase": 274,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c14",
@@ -761,13 +740,6 @@
           "date": "3/21/2026",
           "type": "Fill only",
           "ink": "Siddhartha",
-          "note": ""
-        },
-        {
-          "id": "_91668d3",
-          "date": "3/27/2026",
-          "type": "Empty, Clean",
-          "ink": "",
           "note": ""
         }
       ]
@@ -901,7 +873,7 @@
       ]
     },
     {
-      "id": "_gaduo6a",
+      "id": "_ebpmgpu",
       "model": "Viper - Silver Guilloche",
       "maker": "Diplomat",
       "nib_size": "Fine",
@@ -909,56 +881,32 @@
       "special": false,
       "retail": 100,
       "purchase": 80,
-      "status": "Working",
-      "care": [
-        {
-          "id": "_yxw7zco",
-          "date": "4/2/2026",
-          "type": "Fill only",
-          "ink": "Hollyhock",
-          "note": ""
-        }
-      ]
+      "status": "En Route",
+      "care": []
     },
     {
-      "id": "_s671zrt",
-      "model": "Legacy Fountain Pen",
-      "maker": "Sheaffer",
-      "nib_size": "Fine",
-      "nib_type": "Steel",
-      "special": false,
-      "retail": 236,
-      "purchase": 236,
-      "status": "Resting",
-      "care": [
-        {
-          "id": "_1i8ef3u",
-          "date": "4/23/2026",
-          "type": "Received",
-          "ink": "",
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "_eonekuh",
+      "id": "_hemisphere_copper",
       "model": "Hémisphère Understated Edit - Metallic Copper Red",
       "maker": "Waterman",
       "nib_size": "Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 140.48,
+      "retail": 175.6,
       "purchase": 140.48,
       "status": "Resting",
-      "care": [
-        {
-          "id": "_9ymo5bn",
-          "date": "4/23/2026",
-          "type": "Received",
-          "ink": "",
-          "note": ""
-        }
-      ]
+      "care": []
+    },
+    {
+      "id": "_sheaffer_legacy_chrome",
+      "model": "Legacy - Chrome Cap and 14kt Gold PVD",
+      "maker": "Sheaffer",
+      "nib_size": "Fine",
+      "nib_type": "14K Gold",
+      "special": false,
+      "retail": 265.0,
+      "purchase": 236.0,
+      "status": "Resting",
+      "care": []
     }
   ],
   "inks": [
@@ -1016,7 +964,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i5",
@@ -1030,7 +978,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i6",
@@ -1380,7 +1328,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i31",
@@ -1492,7 +1440,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic05",
@@ -1520,7 +1468,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "ic07",
@@ -1604,7 +1552,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "ic13",
@@ -2111,7 +2059,7 @@
       "status": "Resting"
     },
     {
-      "id": "_95iu1m0",
+      "id": "_gammnno",
       "name": "Hollyhock",
       "maker": "Colorverse",
       "color": "Purple",
@@ -2122,30 +2070,30 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "Working"
+      "status": "En Route"
     },
     {
-      "id": "_0880i4t",
+      "id": "_colorverse_coffee_break",
       "name": "Coffee Break",
       "maker": "Colorverse",
       "color": "Brown",
       "shimmer": "No",
-      "sheen": "Low",
-      "shading": "Low",
+      "sheen": "No",
+      "shading": "Medium",
       "limited": false,
       "size": "30ml",
-      "retail": 17,
-      "purchase": 17,
+      "retail": 17.0,
+      "purchase": 17.0,
       "status": "Resting"
     },
     {
-      "id": "_esc6yyv",
+      "id": "_herbin_terre_de_feu",
       "name": "Terre de Feu",
       "maker": "Jacques Herbin",
       "color": "Brown",
       "shimmer": "No",
-      "sheen": "Low",
-      "shading": "Low",
+      "sheen": "Yes",
+      "shading": "Medium",
       "limited": false,
       "size": "30ml",
       "retail": 15.5,
@@ -2251,7 +2199,7 @@
       "maker": "Jacques Herbin",
       "purchase": 19.2,
       "status": "Active",
-      "note": "SKU H21716. The straight pen doesn't have the ball near the grip. Writes like Extra Fine/Fine."
+      "note": "SKU H21716. The \"straight\" or \"round\" pen description refers to the overall shape of the pen. This straight pen doesn't have the ball near the grip. It writes more like an Extra Fine/Fine. Pretty good for dabbing ink when using the end of the shaft."
     },
     {
       "id": "a12",
@@ -2260,7 +2208,7 @@
       "maker": "Jacques Herbin",
       "purchase": 19.2,
       "status": "Active",
-      "note": "SKU H21401. More delicate than the straight glass pen. Feels like Extra Fine when writing."
+      "note": "SKU H21401. Definitely more delicate than the straight glass pen. It feels more like Extra Fine when writing in the journal. Almost like cutting the page. The grip is ok, but not very smooth on the finger joint."
     },
     {
       "id": "a13",
