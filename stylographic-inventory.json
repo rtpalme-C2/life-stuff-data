@@ -922,7 +922,15 @@
       "retail": 265,
       "purchase": 236,
       "status": "Resting",
-      "care": []
+      "care": [
+        {
+          "id": "_h3olw1t",
+          "date": "5/1/2026",
+          "type": "Empty, Clean",
+          "ink": "",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
