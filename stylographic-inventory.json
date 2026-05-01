@@ -921,16 +921,8 @@
       "special": false,
       "retail": 265,
       "purchase": 236,
-      "status": "Working",
-      "care": [
-        {
-          "id": "_8oy80wa",
-          "date": "4/23/2026",
-          "type": "Fill only",
-          "ink": "Black",
-          "note": ""
-        }
-      ]
+      "status": "Resting",
+      "care": []
     }
   ],
   "inks": [
@@ -1002,7 +994,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i6",
@@ -1030,7 +1022,7 @@
       "size": "80ml",
       "retail": 17,
       "purchase": 14.45,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i8",
@@ -1044,7 +1036,7 @@
       "size": "25ml",
       "retail": 22,
       "purchase": 18.7,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i9",
@@ -1100,7 +1092,7 @@
       "size": "50ml",
       "retail": 12,
       "purchase": 10.8,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i13",
@@ -1142,7 +1134,7 @@
       "size": "60ml",
       "retail": 12.72,
       "purchase": 12.72,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "i16",
@@ -1352,7 +1344,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i31",
@@ -1394,7 +1386,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i34",
@@ -1464,7 +1456,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic05",
