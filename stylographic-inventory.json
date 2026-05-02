@@ -647,8 +647,16 @@
       "special": false,
       "retail": 220,
       "purchase": 198,
-      "status": "Resting",
-      "care": []
+      "status": "Working",
+      "care": [
+        {
+          "id": "_3vamu8m",
+          "date": "5/1/2026",
+          "type": "Fill only",
+          "ink": "MAVEN Mission",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "p28",
@@ -1611,7 +1619,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic15",
