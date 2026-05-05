@@ -2,7 +2,7 @@
   "_version": 2,
   "settings": {
     "cycleStartDate": "2026-03-23",
-    "retinolNext": "granactive"
+    "retinolNext": "retinol"
   },
   "products": [
     {
@@ -267,6 +267,13 @@
     }
   ],
   "log": [
+    {
+      "id": "_vnp1p57",
+      "date": "5/4/2026",
+      "session": "evening",
+      "routine": "Retinol Night",
+      "note": ""
+    },
     {
       "id": "_fo6zm1j",
       "date": "5/4/2026",
