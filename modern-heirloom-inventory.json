@@ -46,8 +46,8 @@
       "cost": "2750",
       "costCurrency": "EUR",
       "price": "3300",
-      "soldPrice": "",
-      "status": "active",
+      "soldPrice": "2400",
+      "status": "sold",
       "channels": [
         "Vestiaire"
       ],
