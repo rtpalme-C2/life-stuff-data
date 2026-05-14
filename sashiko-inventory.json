@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mp645zfgms5w",
+      "name": "Shibori Dragon - Indigo",
+      "cat": "Fabric",
+      "detail": "40% Cotton / 60% Linen",
+      "maker": "Shibori Dragon",
+      "supplier": "Shibori Dragon",
+      "qty": "2 yds",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#1a2840",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mp644chpjegd",
       "name": "Shibori Dragon -White",
       "cat": "Fabric",
