@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mp63z21vuynf",
+      "name": "Shibori Dragon Cotton-Linen",
+      "cat": "Fabric",
+      "detail": "Black - 40% Cotton / 60% Linen",
+      "maker": "Shibori Dragon",
+      "supplier": "Shibori Dragon",
+      "qty": "4 yards",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "1a1a1a",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mobyhc3s5o9e",
       "name": "Short Sashiko Needles",
       "cat": "Needles",
