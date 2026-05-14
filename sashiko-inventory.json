@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mp648vv9bh2j",
+      "name": "Shibori Dragon - Bordeaux",
+      "cat": "Fabric",
+      "detail": "40% Cotton / 60% Linen",
+      "maker": "Shibori Dragon",
+      "supplier": "Shibori Dragon",
+      "qty": "1 yd",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#6b1e35",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mp645zfgms5w",
       "name": "Shibori Dragon - Indigo",
       "cat": "Fabric",
