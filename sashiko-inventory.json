@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mp64107v1zw3",
+      "name": "Shibori Dragon Cotton-Linen",
+      "cat": "Fabric",
+      "detail": "Ivory- 40% Cotton / 60% Linen",
+      "maker": "Shibori Dragon",
+      "supplier": "Shibori Dragon",
+      "qty": "1 yard",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#f5f0e0",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mp63z21vuynf",
       "name": "Shibori Dragon Cotton-Linen",
       "cat": "Fabric",
