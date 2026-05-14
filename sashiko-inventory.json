@@ -2,6 +2,20 @@
   "_version": 3,
   "data": [
     {
+      "id": "mp644chpjegd",
+      "name": "Shibori Dragon Cotton-White",
+      "cat": "Fabric",
+      "detail": "40% Cotton / 60% Linen",
+      "maker": "Shibori Dragon",
+      "supplier": "Shibori Dragon",
+      "qty": "1 yd",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#f8f6f2",
+      "note": "",
+      "reorder": "yes"
+    },
+    {
       "id": "mp64107v1zw3",
       "name": "Shibori Dragon - Ivory",
       "cat": "Fabric",
