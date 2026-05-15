@@ -725,11 +725,19 @@
       "special": false,
       "retail": 165,
       "purchase": 165,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
       "order_date": "July 9, 2025",
-      "care": []
+      "care": [
+        {
+          "id": "_2u23cw7",
+          "date": "5/14/2026",
+          "type": "Fill only",
+          "ink": "MAVEN Mission",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "p28",
@@ -1869,7 +1877,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
       "order_date": "June 20, 2025"
