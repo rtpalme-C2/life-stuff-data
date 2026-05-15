@@ -1900,23 +1900,6 @@
       "order_date": "June 20, 2025"
     },
     {
-      "id": "ic18",
-      "name": "Red Aurora",
-      "maker": "Colorverse",
-      "color": "Red",
-      "shimmer": "No",
-      "sheen": "Yes",
-      "shading": "Low",
-      "limited": true,
-      "size": "15ml",
-      "retail": 0,
-      "purchase": 0,
-      "status": "Resting",
-      "supplier": "Atlas Stationers",
-      "order_number": "254926",
-      "order_date": "June 20, 2025"
-    },
-    {
       "id": "ic19",
       "name": "Cosmic Reef",
       "maker": "Colorverse",
