@@ -149,11 +149,11 @@
       "maker": "FREEBLOSS",
       "supplier": "Etsy",
       "qty": "1",
-      "status": "on-order",
+      "status": "in-stock",
       "role": "Stash",
       "swatch": "",
       "note": "",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "mnwcoguz46yp",
