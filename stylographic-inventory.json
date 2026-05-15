@@ -1101,23 +1101,6 @@
       "order_date": "6/20/2025"
     },
     {
-      "id": "i4",
-      "name": "Red Aurora",
-      "maker": "Colorverse",
-      "color": "Red",
-      "shimmer": "No",
-      "sheen": "Low",
-      "shading": "Medium",
-      "limited": false,
-      "size": "15ml",
-      "retail": 0,
-      "purchase": 0,
-      "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": ""
-    },
-    {
       "id": "i5",
       "name": "Milky Sea",
       "maker": "Colorverse",
