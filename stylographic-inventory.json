@@ -1031,7 +1031,15 @@
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "April 18, 2026",
-      "care": []
+      "care": [
+        {
+          "id": "_jvdcrpj",
+          "date": "5/14/2026",
+          "type": "Fill only",
+          "ink": "Terre de Feu",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_sheaffer_leg",
@@ -2473,7 +2481,7 @@
       "size": "30ml",
       "retail": 15.5,
       "purchase": 15.5,
-      "status": "En Route",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "April 18, 2026"
