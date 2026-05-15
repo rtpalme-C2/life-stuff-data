@@ -40,7 +40,7 @@
       "model": "Excellence A2 - Evergreen Gold Trim",
       "maker": "Diplomat",
       "nib_size": "Fine",
-      "nib_type": "Steel",
+      "nib_type": "14K Gold",
       "special": false,
       "retail": 214.95,
       "purchase": 183.56,
@@ -435,7 +435,7 @@
       "special": false,
       "retail": 85,
       "purchase": 76.5,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c79",
@@ -647,16 +647,8 @@
       "special": false,
       "retail": 220,
       "purchase": 198,
-      "status": "Working",
-      "care": [
-        {
-          "id": "_3vamu8m",
-          "date": "5/1/2026",
-          "type": "Fill only",
-          "ink": "MAVEN Mission",
-          "note": ""
-        }
-      ]
+      "status": "Resting",
+      "care": []
     },
     {
       "id": "p28",
@@ -734,7 +726,7 @@
       "special": false,
       "retail": 274,
       "purchase": 274,
-      "status": "Resting",
+      "status": "Working",
       "care": [
         {
           "id": "c14",
@@ -889,72 +881,17 @@
       "special": false,
       "retail": 100,
       "purchase": 80,
-      "status": "Working",
-      "care": [
-        {
-          "id": "_o6t1bpe",
-          "date": "4/23/2026",
-          "type": "Fill only",
-          "ink": "Hollyhock",
-          "note": ""
-        }
-      ]
+      "status": "En Route",
+      "care": []
     },
     {
-      "id": "_hemisphere_copper",
-      "model": "Hémisphère Understated Edit - Metallic Copper Red",
-      "maker": "Waterman",
-      "nib_size": "Fine",
-      "nib_type": "Steel",
-      "special": false,
-      "retail": 175.6,
-      "purchase": 140.48,
-      "status": "Working",
-      "care": [
-        {
-          "id": "_a9dalbp",
-          "date": "4/23/2026",
-          "type": "Fill only",
-          "ink": "Terre de Feu",
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "_sheaffer_legacy_chrome",
-      "model": "Legacy - Chrome Cap and 14kt Gold PVD",
-      "maker": "Sheaffer",
-      "nib_size": "Fine",
-      "nib_type": "14K Gold",
-      "special": false,
-      "retail": 265,
-      "purchase": 236,
-      "status": "Resting",
-      "care": [
-        {
-          "id": "_h3olw1t",
-          "date": "5/1/2026",
-          "type": "Empty, Clean",
-          "ink": "",
-          "note": ""
-        },
-        {
-          "id": "_7tz3td6",
-          "date": "4/20/2026",
-          "type": "Fill only",
-          "ink": "Black",
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "_chsa6by",
-      "model": "Excellence A2 - Violet Rain",
+      "id": "_violetrain",
+      "model": "Violet Rain",
       "maker": "Diplomat",
       "nib_size": "Extra Fine",
       "nib_type": "14K Gold",
       "special": false,
-      "retail": 800,
+      "retail": 800.0,
       "purchase": 658.16,
       "status": "Resting",
       "care": []
@@ -1015,7 +952,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i5",
@@ -1029,7 +966,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i6",
@@ -1379,7 +1316,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "i31",
@@ -1491,7 +1428,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Working"
     },
     {
       "id": "ic05",
@@ -1631,7 +1568,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Resting"
     },
     {
       "id": "ic15",
@@ -2121,35 +2058,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "Working"
-    },
-    {
-      "id": "_colorverse_coffee_break",
-      "name": "Coffee Break",
-      "maker": "Colorverse",
-      "color": "Brown",
-      "shimmer": "No",
-      "sheen": "No",
-      "shading": "Medium",
-      "limited": false,
-      "size": "30ml",
-      "retail": 17,
-      "purchase": 17,
-      "status": "Resting"
-    },
-    {
-      "id": "_herbin_terre_de_feu",
-      "name": "Terre de Feu",
-      "maker": "Jacques Herbin",
-      "color": "Brown",
-      "shimmer": "No",
-      "sheen": "Yes",
-      "shading": "Medium",
-      "limited": false,
-      "size": "30ml",
-      "retail": 15.5,
-      "purchase": 15.5,
-      "status": "Working"
+      "status": "En Route"
     }
   ],
   "accessories": [
