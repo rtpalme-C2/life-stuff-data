@@ -11,6 +11,9 @@
       "retail": 295,
       "purchase": 236,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c50",
@@ -45,6 +48,9 @@
       "retail": 214.95,
       "purchase": 183.56,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c11",
@@ -72,6 +78,9 @@
       "retail": 96,
       "purchase": 76.8,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264103",
+      "order_date": "August 6, 2025",
       "care": [
         {
           "id": "c18",
@@ -106,6 +115,9 @@
       "retail": 96,
       "purchase": 86.4,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "249268",
+      "order_date": "May 21, 2025",
       "care": [
         {
           "id": "c17",
@@ -161,6 +173,9 @@
       "retail": 120,
       "purchase": 100,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c43",
@@ -195,6 +210,9 @@
       "retail": 120,
       "purchase": 75,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "269706",
+      "order_date": "August 17, 2025",
       "care": [
         {
           "id": "c30",
@@ -233,10 +251,13 @@
       "nib_size": "Extra Fine",
       "nib_type": "Steel",
       "special": true,
-      "retail": 202.5,
-      "purchase": 202.5,
+      "retail": 175.5,
+      "purchase": 175.5,
       "status": "Gifted",
       "gifted_to": "Amanda Mintz",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025",
       "care": [
         {
           "id": "c1",
@@ -257,6 +278,9 @@
       "retail": 202.5,
       "purchase": 202.5,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025",
       "care": [
         {
           "id": "c21b",
@@ -306,12 +330,15 @@
       "id": "p9",
       "model": "Superman - Fortress of Solitude",
       "maker": "Ferris Wheel Press",
-      "nib_size": "Fine",
+      "nib_size": "Medium",
       "nib_type": "Steel",
       "special": true,
-      "retail": 225,
+      "retail": 250,
       "purchase": 225,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025",
       "care": [
         {
           "id": "c8",
@@ -329,9 +356,12 @@
       "nib_size": "Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 380,
-      "purchase": 342,
+      "retail": 420,
+      "purchase": 357,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "253821",
+      "order_date": "June 13, 2025",
       "care": [
         {
           "id": "c13b",
@@ -352,18 +382,24 @@
       "retail": 120,
       "purchase": 108,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": []
     },
     {
       "id": "p12",
       "model": "2000 - Steel",
       "maker": "Lamy",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 185,
-      "purchase": 166.5,
+      "retail": 319.2,
+      "purchase": 255.36,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "265514",
+      "order_date": "August 12, 2025",
       "care": [
         {
           "id": "c10",
@@ -378,12 +414,15 @@
       "id": "p13",
       "model": "Studio - Piano Red",
       "maker": "Lamy",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "Steel",
-      "special": false,
-      "retail": 75,
-      "purchase": 67.5,
+      "special": true,
+      "retail": 183.2,
+      "purchase": 146.56,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "267963",
+      "order_date": "August 15, 2025",
       "care": [
         {
           "id": "c71b",
@@ -404,6 +443,9 @@
       "retail": 95,
       "purchase": 85.5,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": []
     },
     {
@@ -416,6 +458,9 @@
       "retail": 85,
       "purchase": 76.5,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c78",
@@ -436,6 +481,9 @@
       "retail": 85,
       "purchase": 76.5,
       "status": "Working",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c79",
@@ -450,12 +498,15 @@
       "id": "p17",
       "model": "Studio - Orion",
       "maker": "Lamy",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "Steel",
       "special": true,
-      "retail": 95,
+      "retail": 79.2,
       "purchase": 71.28,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "289970",
+      "order_date": "October 17, 2025",
       "care": [
         {
           "id": "c56",
@@ -476,6 +527,9 @@
       "retail": 95,
       "purchase": 85.5,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": []
     },
     {
@@ -485,9 +539,12 @@
       "nib_size": "Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 120,
-      "purchase": 108,
+      "retail": 276,
+      "purchase": 220.8,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264103",
+      "order_date": "August 6, 2025",
       "care": [
         {
           "id": "c12",
@@ -505,21 +562,27 @@
       "nib_size": "Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 180,
-      "purchase": 162,
+      "retail": 238.7,
+      "purchase": 190.96,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "267963",
+      "order_date": "August 15, 2025",
       "care": []
     },
     {
       "id": "p21",
       "model": "Classic M200 - Brown Marble",
       "maker": "Pelikan",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 130,
-      "purchase": 117,
+      "retail": 154,
+      "purchase": 130.9,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "253821",
+      "order_date": "June 13, 2025",
       "care": [
         {
           "id": "c9",
@@ -544,21 +607,27 @@
       "nib_size": "Fine",
       "nib_type": "14K Gold",
       "special": false,
-      "retail": 276,
-      "purchase": 276,
+      "retail": 160,
+      "purchase": 144,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "249268",
+      "order_date": "May 21, 2025",
       "care": []
     },
     {
       "id": "p23",
       "model": "3776 - Chenonceau White Gold",
       "maker": "Platinum",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "14K Gold",
       "special": false,
-      "retail": 160,
-      "purchase": 144,
+      "retail": 240,
+      "purchase": 204,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "263055",
+      "order_date": "August 2, 2025",
       "care": [
         {
           "id": "c15",
@@ -587,6 +656,9 @@
       "purchase": 162,
       "status": "Gifted",
       "gifted_to": "Nick Wehlau",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c4",
@@ -608,6 +680,9 @@
       "purchase": 162,
       "status": "Gifted",
       "gifted_to": "Nichole",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c5",
@@ -628,6 +703,9 @@
       "retail": 180,
       "purchase": 162,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c6",
@@ -642,12 +720,15 @@
       "id": "p27",
       "model": "1911S - Trinity",
       "maker": "Sailor",
-      "nib_size": "Fine",
+      "nib_size": "Extra Fine",
       "nib_type": "21K Gold",
       "special": false,
-      "retail": 220,
-      "purchase": 198,
+      "retail": 165,
+      "purchase": 165,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025",
       "care": []
     },
     {
@@ -660,6 +741,9 @@
       "retail": 191.2,
       "purchase": 162.52,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "252592",
+      "order_date": "June 7, 2025",
       "care": [
         {
           "id": "c19",
@@ -680,6 +764,9 @@
       "retail": 215.2,
       "purchase": 161.4,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025",
       "care": [
         {
           "id": "c16",
@@ -700,6 +787,9 @@
       "retail": 307.64,
       "purchase": 230.73,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025",
       "care": [
         {
           "id": "c64",
@@ -727,6 +817,9 @@
       "retail": 274,
       "purchase": 274,
       "status": "Working",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
       "care": [
         {
           "id": "c14",
@@ -754,6 +847,9 @@
       "retail": 448,
       "purchase": 403.2,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "272959",
+      "order_date": "August 30, 2025",
       "care": [
         {
           "id": "c25",
@@ -794,7 +890,7 @@
     },
     {
       "id": "p33",
-      "model": "Exception Slim - L'essence du Blue",
+      "model": "Exception Slim - L'essence du Bleu",
       "maker": "Waterman",
       "nib_size": "Fine",
       "nib_type": "18K Gold",
@@ -802,6 +898,9 @@
       "retail": 522.8,
       "purchase": 418.24,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264678",
+      "order_date": "August 8, 2025",
       "care": [
         {
           "id": "c7",
@@ -822,6 +921,9 @@
       "retail": 224,
       "purchase": 201.6,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "272959",
+      "order_date": "August 30, 2025",
       "care": [
         {
           "id": "c38",
@@ -839,9 +941,12 @@
       "nib_size": "Fine",
       "nib_type": "Steel",
       "special": false,
-      "retail": 113.47,
+      "retail": 141.83,
       "purchase": 113.47,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264244",
+      "order_date": "August 7, 2025",
       "care": [
         {
           "id": "c22",
@@ -862,6 +967,9 @@
       "retail": 117.6,
       "purchase": 99.96,
       "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "263055",
+      "order_date": "August 2, 2025",
       "care": [
         {
           "id": "c20",
@@ -882,6 +990,9 @@
       "retail": 100,
       "purchase": 80,
       "status": "En Route",
+      "supplier": "Atlas Stationers",
+      "order_number": "362672",
+      "order_date": "March 27, 2026",
       "care": []
     },
     {
@@ -894,6 +1005,39 @@
       "retail": 800.0,
       "purchase": 658.16,
       "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": "",
+      "care": []
+    },
+    {
+      "id": "_hemisphere_cr",
+      "model": "Hemisphere Understated Edit - Metallic Copper Red",
+      "maker": "Waterman",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": true,
+      "retail": 175.6,
+      "purchase": 140.48,
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "372763",
+      "order_date": "April 18, 2026",
+      "care": []
+    },
+    {
+      "id": "_sheaffer_leg",
+      "model": "Legacy - Chrome Cap / 14kt Gold PVD",
+      "maker": "Sheaffer",
+      "nib_size": "Fine",
+      "nib_type": "14K Gold",
+      "special": false,
+      "retail": 236.0,
+      "purchase": 236.0,
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "372763",
+      "order_date": "April 18, 2026",
       "care": []
     }
   ],
@@ -910,7 +1054,10 @@
       "size": "Sample Set",
       "retail": 180,
       "purchase": 180,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "i2",
@@ -924,7 +1071,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i3",
@@ -938,7 +1088,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i4",
@@ -952,7 +1105,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Working",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i5",
@@ -966,7 +1122,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Working",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i6",
@@ -980,7 +1139,10 @@
       "size": "Sample Set",
       "retail": 108,
       "purchase": 108,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "i7",
@@ -994,7 +1156,10 @@
       "size": "80ml",
       "retail": 17,
       "purchase": 14.45,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264993",
+      "order_date": "August 9, 2025"
     },
     {
       "id": "i8",
@@ -1008,7 +1173,10 @@
       "size": "25ml",
       "retail": 22,
       "purchase": 18.7,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271384",
+      "order_date": "August 25, 2025"
     },
     {
       "id": "i9",
@@ -1020,9 +1188,12 @@
       "shading": "No",
       "limited": true,
       "size": "28ml",
-      "retail": 35,
-      "purchase": 0,
-      "status": "Resting"
+      "retail": 250,
+      "purchase": 225,
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "i10",
@@ -1036,7 +1207,10 @@
       "size": "30ml",
       "retail": 12.56,
       "purchase": 11.31,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271055",
+      "order_date": "August 23, 2025"
     },
     {
       "id": "i11",
@@ -1050,7 +1224,10 @@
       "size": "30ml",
       "retail": 12.56,
       "purchase": 11.31,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271055",
+      "order_date": "August 23, 2025"
     },
     {
       "id": "i12",
@@ -1064,7 +1241,10 @@
       "size": "50ml",
       "retail": 12,
       "purchase": 10.8,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "289970",
+      "order_date": "October 17, 2025"
     },
     {
       "id": "i13",
@@ -1078,7 +1258,10 @@
       "size": "35ml",
       "retail": 25,
       "purchase": 18.75,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025"
     },
     {
       "id": "i14",
@@ -1092,7 +1275,10 @@
       "size": "50ml",
       "retail": 32,
       "purchase": 32,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i15",
@@ -1106,7 +1292,10 @@
       "size": "60ml",
       "retail": 12.72,
       "purchase": 12.72,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "i16",
@@ -1120,7 +1309,10 @@
       "size": "50ml",
       "retail": 25.6,
       "purchase": 25.6,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "252366",
+      "order_date": "June 6, 2025"
     },
     {
       "id": "i17",
@@ -1134,7 +1326,10 @@
       "size": "50ml",
       "retail": 18,
       "purchase": 14.4,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264244",
+      "order_date": "August 7, 2025"
     },
     {
       "id": "i18",
@@ -1148,7 +1343,10 @@
       "size": "50ml",
       "retail": 18,
       "purchase": 15.3,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264993",
+      "order_date": "August 9, 2025"
     },
     {
       "id": "i19",
@@ -1162,7 +1360,10 @@
       "size": "50ml",
       "retail": 18,
       "purchase": 16.2,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "289970",
+      "order_date": "October 17, 2025"
     },
     {
       "id": "i20",
@@ -1176,7 +1377,10 @@
       "size": "20ml",
       "retail": 18,
       "purchase": 18,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025"
     },
     {
       "id": "i21",
@@ -1190,7 +1394,10 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 9.96,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "258692",
+      "order_date": "July 9, 2025"
     },
     {
       "id": "i22",
@@ -1204,7 +1411,10 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 10.62,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264244",
+      "order_date": "August 7, 2025"
     },
     {
       "id": "i23",
@@ -1218,7 +1428,10 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 11.28,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264993",
+      "order_date": "August 9, 2025"
     },
     {
       "id": "i24",
@@ -1232,7 +1445,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 22,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025"
     },
     {
       "id": "i25",
@@ -1246,7 +1462,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 22,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025"
     },
     {
       "id": "i26",
@@ -1260,7 +1479,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 22,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025"
     },
     {
       "id": "i27",
@@ -1274,7 +1496,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 19.8,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "249268",
+      "order_date": "May 21, 2025"
     },
     {
       "id": "i28",
@@ -1288,7 +1513,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 18.7,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "252366",
+      "order_date": "June 6, 2025"
     },
     {
       "id": "i29",
@@ -1302,7 +1530,10 @@
       "size": "30ml",
       "retail": 22,
       "purchase": 18.7,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "252366",
+      "order_date": "June 6, 2025"
     },
     {
       "id": "i30",
@@ -1316,7 +1547,10 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Working"
+      "status": "Working",
+      "supplier": "Atlas Stationers",
+      "order_number": "253821",
+      "order_date": "June 13, 2025"
     },
     {
       "id": "i31",
@@ -1330,7 +1564,10 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "264993",
+      "order_date": "August 9, 2025"
     },
     {
       "id": "i32",
@@ -1344,7 +1581,10 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271055",
+      "order_date": "August 23, 2025"
     },
     {
       "id": "i33",
@@ -1358,7 +1598,10 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271055",
+      "order_date": "August 23, 2025"
     },
     {
       "id": "i34",
@@ -1372,7 +1615,10 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "271055",
+      "order_date": "August 23, 2025"
     },
     {
       "id": "ic01",
@@ -1386,7 +1632,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic02",
@@ -1400,7 +1649,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic03",
@@ -1414,7 +1666,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic04",
@@ -1428,7 +1683,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working"
+      "status": "Working",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic05",
@@ -1442,7 +1700,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic06",
@@ -1456,7 +1717,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic07",
@@ -1470,7 +1734,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic08",
@@ -1484,7 +1751,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic09",
@@ -1498,7 +1768,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic10",
@@ -1512,7 +1785,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic11",
@@ -1526,7 +1802,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic12",
@@ -1540,7 +1819,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic13",
@@ -1554,7 +1836,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic14",
@@ -1568,7 +1853,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic15",
@@ -1582,7 +1870,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic16",
@@ -1596,7 +1887,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic17",
@@ -1610,7 +1904,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic18",
@@ -1624,7 +1921,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic19",
@@ -1638,7 +1938,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic20",
@@ -1652,7 +1955,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic21",
@@ -1666,7 +1972,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic22",
@@ -1680,7 +1989,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "ic24",
@@ -1694,7 +2006,10 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20, 2025"
     },
     {
       "id": "id01",
@@ -1708,7 +2023,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id02",
@@ -1722,7 +2040,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id03",
@@ -1736,7 +2057,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id04",
@@ -1750,7 +2074,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id05",
@@ -1764,7 +2091,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id06",
@@ -1778,7 +2108,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id07",
@@ -1792,7 +2125,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id08",
@@ -1806,7 +2142,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id09",
@@ -1820,7 +2159,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id10",
@@ -1834,7 +2176,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id11",
@@ -1848,7 +2193,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id12",
@@ -1862,7 +2210,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id13",
@@ -1876,7 +2227,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id14",
@@ -1890,7 +2244,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id15",
@@ -1904,7 +2261,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id16",
@@ -1918,7 +2278,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id17",
@@ -1932,7 +2295,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id18",
@@ -1946,7 +2312,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id19",
@@ -1960,7 +2329,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id20",
@@ -1974,7 +2346,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id21",
@@ -1988,7 +2363,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id22",
@@ -2002,7 +2380,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id23",
@@ -2016,7 +2397,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id24",
@@ -2030,7 +2414,10 @@
       "size": "12ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "id25",
@@ -2044,7 +2431,10 @@
       "size": "30ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting"
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "256947",
+      "order_date": "July 1, 2025"
     },
     {
       "id": "_gammnno",
@@ -2058,7 +2448,44 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "En Route"
+      "status": "En Route",
+      "supplier": "Atlas Stationers",
+      "order_number": "362672",
+      "order_date": "March 27, 2026"
+    },
+    {
+      "id": "_terredefeu",
+      "name": "Terre de Feu",
+      "maker": "Jacques Herbin",
+      "color": "Brown",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "Medium",
+      "limited": false,
+      "size": "30ml",
+      "retail": 15.5,
+      "purchase": 15.5,
+      "status": "En Route",
+      "supplier": "Atlas Stationers",
+      "order_number": "372763",
+      "order_date": "April 18, 2026"
+    },
+    {
+      "id": "_coffeebreak",
+      "name": "Coffee Break",
+      "maker": "Colorverse",
+      "color": "Brown",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "Medium",
+      "limited": false,
+      "size": "30ml",
+      "retail": 17,
+      "purchase": 17,
+      "status": "En Route",
+      "supplier": "Atlas Stationers",
+      "order_number": "372763",
+      "order_date": "April 18, 2026"
     }
   ],
   "accessories": [
@@ -2069,7 +2496,10 @@
       "maker": "Esterbrook",
       "purchase": 90,
       "status": "Active",
-      "note": "SKU EBT103"
+      "note": "SKU EBT103",
+      "supplier": "Atlas Stationers",
+      "order_number": "249268",
+      "order_date": "May 21, 2025"
     },
     {
       "id": "a2",
@@ -2078,7 +2508,10 @@
       "maker": "Esterbrook",
       "purchase": 32.32,
       "status": "Active",
-      "note": "SKU ECT100 · qty 2"
+      "note": "SKU ECT100 · qty 2",
+      "supplier": "Atlas Stationers",
+      "order_number": "249268",
+      "order_date": "May 21, 2025"
     },
     {
       "id": "a3",
@@ -2087,7 +2520,10 @@
       "maker": "Leuchtturm1917",
       "purchase": 35.5,
       "status": "Active",
-      "note": "SKU 330754"
+      "note": "SKU 330754",
+      "supplier": "Atlas Stationers",
+      "order_number": "248382",
+      "order_date": "May 17, 2025"
     },
     {
       "id": "a4",
@@ -2096,7 +2532,10 @@
       "maker": "Waterman",
       "purchase": 26.91,
       "status": "Active",
-      "note": "SKU 56010W · qty 3"
+      "note": "SKU 56010W · qty 3",
+      "supplier": "Atlas Stationers",
+      "order_number": "264244",
+      "order_date": "August 7, 2025"
     },
     {
       "id": "a5",
@@ -2105,7 +2544,10 @@
       "maker": "Pilot",
       "purchase": 6.4,
       "status": "Active",
-      "note": "SKU PIL-18292"
+      "note": "SKU PIL-18292",
+      "supplier": "Atlas Stationers",
+      "order_number": "267963",
+      "order_date": "August 15, 2025"
     },
     {
       "id": "a6",
@@ -2114,7 +2556,10 @@
       "maker": "Pilot",
       "purchase": 6.4,
       "status": "Active",
-      "note": "SKU PIL-18289"
+      "note": "SKU PIL-18289",
+      "supplier": "Atlas Stationers",
+      "order_number": "267963",
+      "order_date": "August 15, 2025"
     },
     {
       "id": "a7",
@@ -2123,7 +2568,10 @@
       "maker": "Wearingeul",
       "purchase": 8,
       "status": "Active",
-      "note": "SKU 8809943910689 · qty 2"
+      "note": "SKU 8809943910689 · qty 2",
+      "supplier": "Atlas Stationers",
+      "order_number": "267963",
+      "order_date": "August 15, 2025"
     },
     {
       "id": "a8",
@@ -2132,7 +2580,10 @@
       "maker": "Coins & More",
       "purchase": 273.74,
       "status": "Active",
-      "note": "Etsy order 7162025"
+      "note": "Etsy order 7162025",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a9",
@@ -2141,7 +2592,10 @@
       "maker": "Coins & More",
       "purchase": 255.95,
       "status": "Active",
-      "note": "Etsy order 8032025"
+      "note": "Etsy order 8032025",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a10",
@@ -2150,7 +2604,10 @@
       "maker": "Sailor",
       "purchase": 24,
       "status": "Active",
-      "note": "SKU 14-0806-220 · qty 2"
+      "note": "SKU 14-0806-220 · qty 2",
+      "supplier": "Atlas Stationers",
+      "order_number": "269706",
+      "order_date": "August 17, 2025"
     },
     {
       "id": "a11",
@@ -2159,7 +2616,10 @@
       "maker": "Jacques Herbin",
       "purchase": 19.2,
       "status": "Active",
-      "note": "SKU H21716. The \"straight\" or \"round\" pen description refers to the overall shape of the pen. This straight pen doesn't have the ball near the grip. It writes more like an Extra Fine/Fine. Pretty good for dabbing ink when using the end of the shaft."
+      "note": "SKU H21716. The \"straight\" or \"round\" pen description refers to the overall shape of the pen. This straight pen doesn't have the ball near the grip. It writes more like an Extra Fine/Fine. Pretty good for dabbing ink when using the end of the shaft.",
+      "supplier": "Atlas Stationers",
+      "order_number": "269706",
+      "order_date": "August 17, 2025"
     },
     {
       "id": "a12",
@@ -2168,7 +2628,10 @@
       "maker": "Jacques Herbin",
       "purchase": 19.2,
       "status": "Active",
-      "note": "SKU H21401. Definitely more delicate than the straight glass pen. It feels more like Extra Fine when writing in the journal. Almost like cutting the page. The grip is ok, but not very smooth on the finger joint."
+      "note": "SKU H21401. Definitely more delicate than the straight glass pen. It feels more like Extra Fine when writing in the journal. Almost like cutting the page. The grip is ok, but not very smooth on the finger joint.",
+      "supplier": "Atlas Stationers",
+      "order_number": "269706",
+      "order_date": "August 17, 2025"
     },
     {
       "id": "a13",
@@ -2177,7 +2640,10 @@
       "maker": "Wonderland222",
       "purchase": 16,
       "status": "Active",
-      "note": "SKU 192 B6 First Light"
+      "note": "SKU 192 B6 First Light",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a14",
@@ -2186,7 +2652,10 @@
       "maker": "Wonderland222",
       "purchase": 14,
       "status": "Active",
-      "note": "SKU 192 A6 First Light"
+      "note": "SKU 192 A6 First Light",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a15",
@@ -2195,7 +2664,10 @@
       "maker": "Wonderland222",
       "purchase": 19,
       "status": "Active",
-      "note": "SKU 192 A6 First Light"
+      "note": "SKU 192 A6 First Light",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a16",
@@ -2204,7 +2676,10 @@
       "maker": "Lamy",
       "purchase": 5.1,
       "status": "Active",
-      "note": "SKU LZ28"
+      "note": "SKU LZ28",
+      "supplier": "Atlas Stationers",
+      "order_number": "271384",
+      "order_date": "August 25, 2025"
     },
     {
       "id": "a17",
@@ -2213,7 +2688,10 @@
       "maker": "Tomoe River",
       "purchase": 17,
       "status": "Active",
-      "note": "SKU SR-A4P-W"
+      "note": "SKU SR-A4P-W",
+      "supplier": "Atlas Stationers",
+      "order_number": "271384",
+      "order_date": "August 25, 2025"
     },
     {
       "id": "a18",
@@ -2222,7 +2700,10 @@
       "maker": "Winsor & Newton",
       "purchase": 23.37,
       "status": "Active",
-      "note": "SKU 884955075111"
+      "note": "SKU 884955075111",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a19",
@@ -2231,7 +2712,10 @@
       "maker": "Winsor & Newton",
       "purchase": 33.2,
       "status": "Active",
-      "note": "SKU 094376973402"
+      "note": "SKU 094376973402",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a20",
@@ -2240,7 +2724,10 @@
       "maker": "eCraft",
       "purchase": 25.99,
       "status": "Active",
-      "note": "SKU B0CB5P4HNT"
+      "note": "SKU B0CB5P4HNT",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a21",
@@ -2249,7 +2736,10 @@
       "maker": "Midori",
       "purchase": 20,
       "status": "Active",
-      "note": "SKU 15312006"
+      "note": "SKU 15312006",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     },
     {
       "id": "a22",
@@ -2258,7 +2748,10 @@
       "maker": "Midori",
       "purchase": 9.5,
       "status": "Active",
-      "note": "SKU 49839006"
+      "note": "SKU 49839006",
+      "supplier": "",
+      "order_number": "",
+      "order_date": ""
     }
   ],
   "journal": [
