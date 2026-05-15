@@ -1101,23 +1101,6 @@
       "order_date": "6/20/2025"
     },
     {
-      "id": "i5",
-      "name": "Milky Sea",
-      "maker": "Colorverse",
-      "color": "Blue",
-      "shimmer": "Yes",
-      "sheen": "No",
-      "shading": "Low",
-      "limited": false,
-      "size": "15ml",
-      "retail": 0,
-      "purchase": 0,
-      "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": ""
-    },
-    {
       "id": "i6",
       "name": "Diamine Inkvent Calendar 2025",
       "maker": "Diamine",
