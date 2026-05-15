@@ -2425,6 +2425,23 @@
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "April 18, 2026"
+    },
+    {
+      "id": "_sjo3qme",
+      "name": "Milky Sea",
+      "maker": "Colorverse",
+      "color": "Blue",
+      "shimmer": "Yes",
+      "sheen": "No",
+      "shading": "Low",
+      "limited": true,
+      "size": "15ml",
+      "retail": 0,
+      "purchase": 0,
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "254926",
+      "order_date": "June 20,2025"
     }
   ],
   "accessories": [
