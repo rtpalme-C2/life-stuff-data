@@ -80,7 +80,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264103",
-      "order_date": "August 6, 2025",
+      "order_date": "08/06/2025",
       "care": [
         {
           "id": "c18",
@@ -117,7 +117,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "249268",
-      "order_date": "May 21, 2025",
+      "order_date": "05/21/2025",
       "care": [
         {
           "id": "c17",
@@ -212,7 +212,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "269706",
-      "order_date": "August 17, 2025",
+      "order_date": "08/17/2025",
       "care": [
         {
           "id": "c30",
@@ -257,7 +257,7 @@
       "gifted_to": "Amanda Mintz",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025",
+      "order_date": "05/17/2025",
       "care": [
         {
           "id": "c1",
@@ -280,7 +280,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025",
+      "order_date": "05/17/2025",
       "care": [
         {
           "id": "c21b",
@@ -338,7 +338,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025",
+      "order_date": "07/01/2025",
       "care": [
         {
           "id": "c8",
@@ -361,7 +361,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "253821",
-      "order_date": "June 13, 2025",
+      "order_date": "06/13/2025",
       "care": [
         {
           "id": "c13b",
@@ -399,7 +399,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "265514",
-      "order_date": "August 12, 2025",
+      "order_date": "08/12/2025",
       "care": [
         {
           "id": "c10",
@@ -422,7 +422,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "267963",
-      "order_date": "August 15, 2025",
+      "order_date": "08/15/2025",
       "care": [
         {
           "id": "c71b",
@@ -506,7 +506,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "289970",
-      "order_date": "October 17, 2025",
+      "order_date": "10/17/2025",
       "care": [
         {
           "id": "c56",
@@ -544,7 +544,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264103",
-      "order_date": "August 6, 2025",
+      "order_date": "08/06/2025",
       "care": [
         {
           "id": "c12",
@@ -567,7 +567,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "267963",
-      "order_date": "August 15, 2025",
+      "order_date": "08/15/2025",
       "care": []
     },
     {
@@ -582,7 +582,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "253821",
-      "order_date": "June 13, 2025",
+      "order_date": "06/13/2025",
       "care": [
         {
           "id": "c9",
@@ -612,7 +612,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "249268",
-      "order_date": "May 21, 2025",
+      "order_date": "05/21/2025",
       "care": []
     },
     {
@@ -627,7 +627,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "263055",
-      "order_date": "August 2, 2025",
+      "order_date": "08/02/2025",
       "care": [
         {
           "id": "c15",
@@ -728,7 +728,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025",
+      "order_date": "07/09/2025",
       "care": [
         {
           "id": "_2u23cw7",
@@ -751,7 +751,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "252592",
-      "order_date": "June 7, 2025",
+      "order_date": "06/07/2025",
       "care": [
         {
           "id": "c19",
@@ -774,7 +774,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025",
+      "order_date": "07/09/2025",
       "care": [
         {
           "id": "c16",
@@ -787,7 +787,7 @@
     },
     {
       "id": "p30",
-      "model": "Carene - L'essence du Bleu",
+      "model": "Carene - L’essence du Bleu",
       "maker": "Waterman",
       "nib_size": "Fine",
       "nib_type": "18K Gold",
@@ -797,7 +797,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025",
+      "order_date": "07/09/2025",
       "care": [
         {
           "id": "c64",
@@ -857,7 +857,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "272959",
-      "order_date": "August 30, 2025",
+      "order_date": "08/30/2025",
       "care": [
         {
           "id": "c25",
@@ -898,7 +898,7 @@
     },
     {
       "id": "p33",
-      "model": "Exception Slim - L'essence du Bleu",
+      "model": "Exception Slim - L’essence du Bleu",
       "maker": "Waterman",
       "nib_size": "Fine",
       "nib_type": "18K Gold",
@@ -908,7 +908,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264678",
-      "order_date": "August 8, 2025",
+      "order_date": "08/08/2025",
       "care": [
         {
           "id": "c7",
@@ -931,7 +931,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "272959",
-      "order_date": "August 30, 2025",
+      "order_date": "08/30/2025",
       "care": [
         {
           "id": "c38",
@@ -954,7 +954,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
-      "order_date": "August 7, 2025",
+      "order_date": "08/07/2025",
       "care": [
         {
           "id": "c22",
@@ -977,7 +977,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "263055",
-      "order_date": "August 2, 2025",
+      "order_date": "08/02/2025",
       "care": [
         {
           "id": "c20",
@@ -1000,7 +1000,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
-      "order_date": "March 27, 2026",
+      "order_date": "03/27/2026",
       "care": [
         {
           "id": "_u005ujb",
@@ -1038,7 +1038,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
-      "order_date": "April 18, 2026",
+      "order_date": "04/18/2026",
       "care": [
         {
           "id": "_jvdcrpj",
@@ -1061,7 +1061,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
-      "order_date": "April 18, 2026",
+      "order_date": "04/18/2026",
       "care": []
     }
   ],
@@ -1081,7 +1081,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "i2",
@@ -1098,7 +1098,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "6/20/2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "i6",
@@ -1115,7 +1115,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "i7",
@@ -1132,7 +1132,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264993",
-      "order_date": "August 9, 2025"
+      "order_date": "08/09/2025"
     },
     {
       "id": "i8",
@@ -1149,7 +1149,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271384",
-      "order_date": "August 25, 2025"
+      "order_date": "08/25/2025"
     },
     {
       "id": "i9",
@@ -1166,7 +1166,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "i10",
@@ -1183,7 +1183,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
-      "order_date": "August 23, 2025"
+      "order_date": "08/23/2025"
     },
     {
       "id": "i11",
@@ -1200,7 +1200,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
-      "order_date": "August 23, 2025"
+      "order_date": "08/23/2025"
     },
     {
       "id": "i12",
@@ -1217,7 +1217,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "289970",
-      "order_date": "October 17, 2025"
+      "order_date": "10/17/2025"
     },
     {
       "id": "i13",
@@ -1234,7 +1234,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025"
+      "order_date": "07/09/2025"
     },
     {
       "id": "i14",
@@ -1285,7 +1285,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "252366",
-      "order_date": "June 6, 2025"
+      "order_date": "06/06/2025"
     },
     {
       "id": "i17",
@@ -1302,7 +1302,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
-      "order_date": "August 7, 2025"
+      "order_date": "08/07/2025"
     },
     {
       "id": "i18",
@@ -1319,7 +1319,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264993",
-      "order_date": "August 9, 2025"
+      "order_date": "08/09/2025"
     },
     {
       "id": "i19",
@@ -1336,7 +1336,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "289970",
-      "order_date": "October 17, 2025"
+      "order_date": "10/17/2025"
     },
     {
       "id": "i20",
@@ -1353,7 +1353,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025"
+      "order_date": "07/09/2025"
     },
     {
       "id": "i21",
@@ -1370,7 +1370,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
-      "order_date": "July 9, 2025"
+      "order_date": "07/09/2025"
     },
     {
       "id": "i22",
@@ -1387,7 +1387,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
-      "order_date": "August 7, 2025"
+      "order_date": "08/07/2025"
     },
     {
       "id": "i23",
@@ -1404,7 +1404,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264993",
-      "order_date": "August 9, 2025"
+      "order_date": "08/09/2025"
     },
     {
       "id": "i24",
@@ -1421,7 +1421,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025"
+      "order_date": "05/17/2025"
     },
     {
       "id": "i25",
@@ -1438,7 +1438,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025"
+      "order_date": "05/17/2025"
     },
     {
       "id": "i26",
@@ -1455,7 +1455,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025"
+      "order_date": "05/17/2025"
     },
     {
       "id": "i27",
@@ -1472,7 +1472,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "249268",
-      "order_date": "May 21, 2025"
+      "order_date": "05/21/2025"
     },
     {
       "id": "i28",
@@ -1489,7 +1489,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "252366",
-      "order_date": "June 6, 2025"
+      "order_date": "06/06/2025"
     },
     {
       "id": "i29",
@@ -1506,7 +1506,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "252366",
-      "order_date": "June 6, 2025"
+      "order_date": "06/06/2025"
     },
     {
       "id": "i30",
@@ -1523,7 +1523,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "253821",
-      "order_date": "June 13, 2025"
+      "order_date": "06/13/2025"
     },
     {
       "id": "i31",
@@ -1540,7 +1540,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264993",
-      "order_date": "August 9, 2025"
+      "order_date": "08/09/2025"
     },
     {
       "id": "i32",
@@ -1557,7 +1557,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
-      "order_date": "August 23, 2025"
+      "order_date": "08/23/2025"
     },
     {
       "id": "i33",
@@ -1574,7 +1574,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
-      "order_date": "August 23, 2025"
+      "order_date": "08/23/2025"
     },
     {
       "id": "i34",
@@ -1591,7 +1591,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
-      "order_date": "August 23, 2025"
+      "order_date": "08/23/2025"
     },
     {
       "id": "ic01",
@@ -1608,7 +1608,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic02",
@@ -1625,7 +1625,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic03",
@@ -1642,7 +1642,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic05",
@@ -1659,7 +1659,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic06",
@@ -1676,7 +1676,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic07",
@@ -1693,7 +1693,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic08",
@@ -1710,7 +1710,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic09",
@@ -1727,7 +1727,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic10",
@@ -1744,7 +1744,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic11",
@@ -1761,7 +1761,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic12",
@@ -1778,7 +1778,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic13",
@@ -1795,7 +1795,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic14",
@@ -1812,7 +1812,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic15",
@@ -1829,7 +1829,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic16",
@@ -1846,7 +1846,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic17",
@@ -1863,7 +1863,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic19",
@@ -1880,7 +1880,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic20",
@@ -1897,7 +1897,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic21",
@@ -1914,7 +1914,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic22",
@@ -1931,7 +1931,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "ic24",
@@ -1948,7 +1948,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20, 2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "id01",
@@ -1965,7 +1965,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id02",
@@ -1982,7 +1982,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id03",
@@ -1999,7 +1999,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id04",
@@ -2016,7 +2016,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id05",
@@ -2033,7 +2033,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id06",
@@ -2050,7 +2050,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id07",
@@ -2067,7 +2067,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id08",
@@ -2084,7 +2084,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id09",
@@ -2101,7 +2101,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id10",
@@ -2118,7 +2118,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id11",
@@ -2135,7 +2135,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id12",
@@ -2152,7 +2152,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id13",
@@ -2169,7 +2169,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id14",
@@ -2186,7 +2186,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id15",
@@ -2203,7 +2203,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id16",
@@ -2220,7 +2220,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id17",
@@ -2237,7 +2237,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id18",
@@ -2254,7 +2254,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id19",
@@ -2271,7 +2271,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id20",
@@ -2288,7 +2288,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id21",
@@ -2305,7 +2305,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id22",
@@ -2322,7 +2322,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id23",
@@ -2339,7 +2339,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id24",
@@ -2356,7 +2356,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "id25",
@@ -2373,7 +2373,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "256947",
-      "order_date": "July 1, 2025"
+      "order_date": "07/01/2025"
     },
     {
       "id": "_gammnno",
@@ -2390,7 +2390,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
-      "order_date": "March 27, 2026"
+      "order_date": "03/27/2026"
     },
     {
       "id": "_terredefeu",
@@ -2407,7 +2407,7 @@
       "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
-      "order_date": "April 18, 2026"
+      "order_date": "04/18/2026"
     },
     {
       "id": "_coffeebreak",
@@ -2424,7 +2424,7 @@
       "status": "En Route",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
-      "order_date": "April 18, 2026"
+      "order_date": "04/18/2026"
     },
     {
       "id": "_sjo3qme",
@@ -2441,7 +2441,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20,2025"
+      "order_date": "06/20/2025"
     },
     {
       "id": "_ff9olfs",
@@ -2458,7 +2458,7 @@
       "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
-      "order_date": "June 20,2025"
+      "order_date": "06/20/2025"
     }
   ],
   "accessories": [
@@ -2472,7 +2472,7 @@
       "note": "SKU EBT103",
       "supplier": "Atlas Stationers",
       "order_number": "249268",
-      "order_date": "May 21, 2025"
+      "order_date": "05/21/2025"
     },
     {
       "id": "a2",
@@ -2484,7 +2484,7 @@
       "note": "SKU ECT100 · qty 2",
       "supplier": "Atlas Stationers",
       "order_number": "249268",
-      "order_date": "May 21, 2025"
+      "order_date": "05/21/2025"
     },
     {
       "id": "a3",
@@ -2496,7 +2496,7 @@
       "note": "SKU 330754",
       "supplier": "Atlas Stationers",
       "order_number": "248382",
-      "order_date": "May 17, 2025"
+      "order_date": "05/17/2025"
     },
     {
       "id": "a4",
@@ -2508,7 +2508,7 @@
       "note": "SKU 56010W · qty 3",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
-      "order_date": "August 7, 2025"
+      "order_date": "08/07/2025"
     },
     {
       "id": "a5",
@@ -2520,7 +2520,7 @@
       "note": "SKU PIL-18292",
       "supplier": "Atlas Stationers",
       "order_number": "267963",
-      "order_date": "August 15, 2025"
+      "order_date": "08/15/2025"
     },
     {
       "id": "a6",
@@ -2532,7 +2532,7 @@
       "note": "SKU PIL-18289",
       "supplier": "Atlas Stationers",
       "order_number": "267963",
-      "order_date": "August 15, 2025"
+      "order_date": "08/15/2025"
     },
     {
       "id": "a7",
@@ -2544,7 +2544,7 @@
       "note": "SKU 8809943910689 · qty 2",
       "supplier": "Atlas Stationers",
       "order_number": "267963",
-      "order_date": "August 15, 2025"
+      "order_date": "08/15/2025"
     },
     {
       "id": "a8",
@@ -2580,7 +2580,7 @@
       "note": "SKU 14-0806-220 · qty 2",
       "supplier": "Atlas Stationers",
       "order_number": "269706",
-      "order_date": "August 17, 2025"
+      "order_date": "08/17/2025"
     },
     {
       "id": "a11",
@@ -2592,7 +2592,7 @@
       "note": "SKU H21716. The \"straight\" or \"round\" pen description refers to the overall shape of the pen. This straight pen doesn't have the ball near the grip. It writes more like an Extra Fine/Fine. Pretty good for dabbing ink when using the end of the shaft.",
       "supplier": "Atlas Stationers",
       "order_number": "269706",
-      "order_date": "August 17, 2025"
+      "order_date": "08/17/2025"
     },
     {
       "id": "a12",
@@ -2604,7 +2604,7 @@
       "note": "SKU H21401. Definitely more delicate than the straight glass pen. It feels more like Extra Fine when writing in the journal. Almost like cutting the page. The grip is ok, but not very smooth on the finger joint.",
       "supplier": "Atlas Stationers",
       "order_number": "269706",
-      "order_date": "August 17, 2025"
+      "order_date": "08/17/2025"
     },
     {
       "id": "a13",
@@ -2652,7 +2652,7 @@
       "note": "SKU LZ28",
       "supplier": "Atlas Stationers",
       "order_number": "271384",
-      "order_date": "August 25, 2025"
+      "order_date": "08/25/2025"
     },
     {
       "id": "a17",
@@ -2664,7 +2664,7 @@
       "note": "SKU SR-A4P-W",
       "supplier": "Atlas Stationers",
       "order_number": "271384",
-      "order_date": "August 25, 2025"
+      "order_date": "08/25/2025"
     },
     {
       "id": "a18",
