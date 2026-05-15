@@ -480,7 +480,7 @@
       "special": false,
       "retail": 85,
       "purchase": 76.5,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "",
       "order_number": "",
       "order_date": "",
@@ -725,11 +725,19 @@
       "special": false,
       "retail": 165,
       "purchase": 165,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "258692",
       "order_date": "July 9, 2025",
-      "care": []
+      "care": [
+        {
+          "id": "c_p27_fill1",
+          "date": "5/14/2026",
+          "type": "Fill only",
+          "ink": "MAVEN Mission",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "p28",
@@ -816,7 +824,7 @@
       "special": false,
       "retail": 274,
       "purchase": 274,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "",
       "order_number": "",
       "order_date": "",
@@ -989,11 +997,26 @@
       "special": false,
       "retail": 100,
       "purchase": 80,
-      "status": "En Route",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
       "order_date": "March 27, 2026",
-      "care": []
+      "care": [
+        {
+          "id": "c_ebpmgpu_recv",
+          "date": "5/14/2026",
+          "type": "Received",
+          "ink": "",
+          "note": ""
+        },
+        {
+          "id": "c_ebpmgpu_fill",
+          "date": "5/14/2026",
+          "type": "Fill only",
+          "ink": "Hollyhock",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_violetrain",
@@ -1019,11 +1042,19 @@
       "special": true,
       "retail": 175.6,
       "purchase": 140.48,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "April 18, 2026",
-      "care": []
+      "care": [
+        {
+          "id": "c__hemisphere_cr_fill1",
+          "date": "5/14/2026",
+          "type": "Fill only",
+          "ink": "Terre de Feu",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_sheaffer_leg",
@@ -1105,7 +1136,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "",
       "order_number": "",
       "order_date": ""
@@ -1122,7 +1153,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "",
       "order_number": "",
       "order_date": ""
@@ -1547,7 +1578,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "253821",
       "order_date": "June 13, 2025"
@@ -1683,7 +1714,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
       "order_date": "June 20, 2025"
@@ -1853,7 +1884,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
       "order_date": "June 20, 2025"
@@ -2448,7 +2479,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "En Route",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
       "order_date": "March 27, 2026"
@@ -2465,7 +2496,7 @@
       "size": "30ml",
       "retail": 15.5,
       "purchase": 15.5,
-      "status": "En Route",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "April 18, 2026"
