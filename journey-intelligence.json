@@ -35,7 +35,7 @@
               "pct": "10",
               "amt": "27.54",
               "splitOverride": null,
-              "received": false
+              "received": true
             },
             {
               "supplier": "Viator",
@@ -43,7 +43,7 @@
               "pct": "10",
               "amt": "38.84",
               "splitOverride": null,
-              "received": false
+              "received": true
             }
           ],
           "fee": "0",
