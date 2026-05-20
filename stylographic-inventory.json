@@ -997,7 +997,7 @@
       "special": false,
       "retail": 100,
       "purchase": 80,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
       "order_date": "03/27/2026",
@@ -1007,6 +1007,13 @@
           "date": "5/14/2026",
           "type": "Fill only",
           "ink": "Hollyhock",
+          "note": ""
+        },
+        {
+          "id": "_rhpizuh",
+          "date": "5/15/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2387,7 +2394,7 @@
       "size": "15ml",
       "retail": 15,
       "purchase": 12,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "362672",
       "order_date": "03/27/2026"
