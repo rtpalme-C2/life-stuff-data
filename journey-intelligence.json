@@ -11,7 +11,27 @@
       "phone2": "",
       "email2": "",
       "notes": "",
-      "trips": []
+      "trips": [
+        {
+          "id": "mpkdf3nyefcp",
+          "destination": "Greg's 60th Birthday",
+          "depart": "",
+          "return": "",
+          "travelers": "",
+          "notes": "",
+          "status": "inquiry",
+          "commLines": [],
+          "fee": null,
+          "feeReceived": false,
+          "proposals": [
+            {
+              "label": "60th Birthday Ideas",
+              "url": "",
+              "dateSent": "2026-05-24"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mpkdczw4345x",
