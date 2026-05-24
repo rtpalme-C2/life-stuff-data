@@ -11,9 +11,9 @@
       "retail": 295,
       "purchase": 236,
       "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": "",
+      "supplier": "Nibs-USA.com",
+      "order_number": "N2296",
+      "order_date": "09/06/2025",
       "care": [
         {
           "id": "c50",
