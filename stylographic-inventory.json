@@ -1034,11 +1034,19 @@
       "special": false,
       "retail": 800,
       "purchase": 658.16,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Pen Boutique",
       "order_number": "299170",
       "order_date": "05/12/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_5acf4mb",
+          "date": "5/23/2026",
+          "type": "Fill only",
+          "ink": "Tender Purple",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "_hemisphere_cr",
@@ -1428,7 +1436,7 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 10.62,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
       "order_date": "08/07/2025"
