@@ -1332,7 +1332,7 @@
       "retail": 12.72,
       "purchase": 12.72,
       "status": "Resting",
-      "supplier": "",
+      "supplier": "Amazon",
       "order_number": "",
       "order_date": ""
     },
