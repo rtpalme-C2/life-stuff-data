@@ -13,6 +13,25 @@
       "notes": "",
       "trips": [
         {
+          "id": "mpk8x1imuaxd",
+          "destination": "Couples Trip with Friends",
+          "depart": "",
+          "return": "",
+          "travelers": "",
+          "notes": "Party type trips to take with friends",
+          "status": "inquiry",
+          "commLines": [],
+          "fee": null,
+          "feeReceived": false,
+          "proposals": [
+            {
+              "label": "Trains & Cruises",
+              "url": "https://res.cloudinary.com/foratravelportal/image/upload/688b1bbc-04f7-4e43-aa3d-6ee5c03c7161",
+              "dateSent": "2026-05-23"
+            }
+          ]
+        },
+        {
           "id": "mpk86myaocsc",
           "destination": "Couples Getaway",
           "depart": "",
