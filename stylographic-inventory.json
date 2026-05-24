@@ -1102,11 +1102,19 @@
       "special": true,
       "retail": 280,
       "purchase": 280,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Yoseka Stationery",
       "order_number": "YS347880",
       "order_date": "05/09/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_w19jxfn",
+          "date": "5/23/2026",
+          "type": "Fill only",
+          "ink": "Human Issues",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
