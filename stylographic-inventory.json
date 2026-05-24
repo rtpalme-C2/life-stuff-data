@@ -1297,20 +1297,20 @@
     },
     {
       "id": "i14",
-      "name": "#52 Shioya Sepia",
+      "name": "#52 Shioya Vintage Sepia",
       "maker": "Nagasawa",
       "color": "Brown",
       "shimmer": "No",
       "sheen": "No",
       "shading": "Low",
-      "limited": false,
+      "limited": true,
       "size": "50ml",
       "retail": 32,
       "purchase": 32,
       "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": ""
+      "supplier": "Jet Pens",
+      "order_number": "4224858",
+      "order_date": "07/09/2025"
     },
     {
       "id": "i15",
