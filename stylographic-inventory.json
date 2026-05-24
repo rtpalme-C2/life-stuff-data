@@ -1102,19 +1102,11 @@
       "special": true,
       "retail": 280,
       "purchase": 280,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Yoseka Stationery",
       "order_number": "YS347880",
       "order_date": "05/09/2026",
-      "care": [
-        {
-          "id": "_9mbrrvg",
-          "date": "5/22/2026",
-          "type": "Fill only",
-          "ink": "Tender Purple",
-          "note": ""
-        }
-      ]
+      "care": []
     }
   ],
   "inks": [
@@ -1198,7 +1190,7 @@
       "size": "25ml",
       "retail": 22,
       "purchase": 18.7,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "271384",
       "order_date": "08/25/2025"
@@ -1266,7 +1258,7 @@
       "size": "50ml",
       "retail": 12,
       "purchase": 10.8,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "289970",
       "order_date": "10/17/2025"
@@ -1436,7 +1428,7 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 10.62,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
       "order_date": "08/07/2025"
@@ -1572,7 +1564,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 21.25,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "253821",
       "order_date": "06/13/2025"
@@ -1623,7 +1615,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
       "order_date": "08/23/2025"
@@ -2490,7 +2482,7 @@
       "size": "15ml",
       "retail": 0,
       "purchase": 0,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "254926",
       "order_date": "06/20/2025"
