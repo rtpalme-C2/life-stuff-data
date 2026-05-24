@@ -1049,7 +1049,7 @@
       "special": true,
       "retail": 175.6,
       "purchase": 140.48,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "04/18/2026",
@@ -1059,6 +1059,13 @@
           "date": "5/14/2026",
           "type": "Fill only",
           "ink": "Terre de Feu",
+          "note": ""
+        },
+        {
+          "id": "_jg38a8i",
+          "date": "5/22/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2433,7 +2440,7 @@
       "size": "30ml",
       "retail": 15.5,
       "purchase": 15.5,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "04/18/2026"
