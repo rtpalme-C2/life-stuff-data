@@ -832,9 +832,9 @@
       "retail": 274,
       "purchase": 274,
       "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": "",
+      "supplier": "Jet Pens",
+      "order_number": "4224858",
+      "order_date": "07/09/2025",
       "care": [
         {
           "id": "c14",
