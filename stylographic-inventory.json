@@ -690,13 +690,13 @@
       "nib_size": "Medium",
       "nib_type": "Steel",
       "special": true,
-      "retail": 180,
-      "purchase": 162,
+      "retail": 184.95,
+      "purchase": 184.95,
       "status": "Gifted",
       "gifted_to": "Nichole",
-      "supplier": "",
-      "order_number": "",
-      "order_date": "",
+      "supplier": "Etsy",
+      "order_number": "3700733832",
+      "order_date": "06/06/2025",
       "care": [
         {
           "id": "c5",
