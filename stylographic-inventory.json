@@ -448,11 +448,11 @@
       "nib_type": "Steel",
       "special": true,
       "retail": 95,
-      "purchase": 85.5,
+      "purchase": 49.5,
       "status": "Resting",
-      "supplier": "",
-      "order_number": "",
-      "order_date": "",
+      "supplier": "The Goulet Pen Co.",
+      "order_number": "S1836410",
+      "order_date": "09/13/2025",
       "care": []
     },
     {
