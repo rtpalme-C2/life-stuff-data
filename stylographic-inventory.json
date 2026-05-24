@@ -48,9 +48,9 @@
       "retail": 214.95,
       "purchase": 183.56,
       "status": "Working",
-      "supplier": "",
-      "order_number": "",
-      "order_date": "",
+      "supplier": "Laywine's",
+      "order_number": "27214",
+      "order_date": "08/02/2025",
       "care": [
         {
           "id": "c11",
