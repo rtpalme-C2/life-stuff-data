@@ -1077,6 +1077,21 @@
       "order_number": "372763",
       "order_date": "04/18/2026",
       "care": []
+    },
+    {
+      "id": "_ukb6f9u",
+      "model": "Sailor 1911 Standard - Wicked Witch of the West",
+      "maker": "Sailor",
+      "nib_size": "Extra Fine",
+      "nib_type": "14K Gold",
+      "special": true,
+      "retail": 280,
+      "purchase": 280,
+      "status": "Resting",
+      "supplier": "Yoseka Stationery",
+      "order_number": "YS347880",
+      "order_date": "05/09/2026",
+      "care": []
     }
   ],
   "inks": [
