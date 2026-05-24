@@ -1102,11 +1102,19 @@
       "special": true,
       "retail": 280,
       "purchase": 280,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Yoseka Stationery",
       "order_number": "YS347880",
       "order_date": "05/09/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_9mbrrvg",
+          "date": "5/22/2026",
+          "type": "Fill only",
+          "ink": "Tender Purple",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -1428,7 +1436,7 @@
       "size": "50ml",
       "retail": 13.27,
       "purchase": 10.62,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "264244",
       "order_date": "08/07/2025"
