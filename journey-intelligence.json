@@ -14,15 +14,22 @@
       "trips": [
         {
           "id": "mpk86myaocsc",
-          "destination": "Vacation Ideas",
+          "destination": "Couples Getaway",
           "depart": "",
           "return": "",
           "travelers": "",
-          "notes": "",
+          "notes": "Quick trips for McKinley and Karley",
           "status": "inquiry",
           "commLines": [],
           "fee": null,
-          "feeReceived": false
+          "feeReceived": false,
+          "proposals": [
+            {
+              "label": "Couple Getaway Ideas",
+              "url": "https://res.cloudinary.com/foratravelportal/image/upload/153119a8-057b-4ef4-af53-3414d79fcc36",
+              "dateSent": "2026-05-23"
+            }
+          ]
         }
       ]
     },
