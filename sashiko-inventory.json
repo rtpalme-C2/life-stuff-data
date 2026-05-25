@@ -518,16 +518,18 @@
       "reorder": null
     },
     {
+      "id": "seed-17",
+      "name": "Essex Yarn Dyed—Nautical",
       "cat": "Fabric",
-      "name": "Essex Yarn Dyed — Nautical",
       "detail": "Linen-cotton blend · dark navy",
       "maker": "Robert Kaufman",
       "supplier": "Sewfinity",
       "qty": "2 FQ",
       "status": "in-stock",
-      "swatch": "#4A5868",
       "role": "Stash",
-      "id": "seed-17"
+      "swatch": "#4A5868",
+      "note": "",
+      "reorder": null
     },
     {
       "id": "seed-18",
