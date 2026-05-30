@@ -1513,9 +1513,9 @@
       "id": "seed-1",
       "name": "Kona Cotton — Ballet Slipper",
       "cat": "Fabric",
-      "detail": "K001-861",
+      "detail": "",
       "collection": "",
-      "fabric-code": "",
+      "fabric-code": "K001-861",
       "form": "Yardage",
       "prewashed": "Yes",
       "maker": "Robert Kaufman",
@@ -1524,7 +1524,7 @@
       "status": "in-stock",
       "role": "Project",
       "swatch": "#E8C8CC",
-      "note": "Washed & ironed",
+      "note": "",
       "reorder": null
     },
     {
