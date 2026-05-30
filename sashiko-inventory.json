@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsk34w493iv",
+      "name": "Kona Cotton — Cardinal",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-1063",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#8B0000",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpsk1u6p75ya",
       "name": "Kona Cotton — Ruby",
       "cat": "Fabric",
