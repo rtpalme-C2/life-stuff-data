@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsmm7odus0n",
+      "name": "Kona Cotton — Shadow",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Stormy Skies Bundle",
+      "fabric-code": "K001-457",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#888890",
+      "note": "FQ-1373-12 · May 2026 · $33.50",
+      "reorder": null
+    },
+    {
       "id": "mpsml0actsjn",
       "name": "Kona Cotton — Silver",
       "cat": "Fabric",
