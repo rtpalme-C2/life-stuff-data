@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsl8mdr76hv",
+      "name": "Essex Yarn Dyed — Cadet",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Blue Voyage Bundle",
+      "fabric-code": "E064-1058",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#5878A0",
+      "note": "Order 5943 · May 29, 2026 · Blue Voyage Bundle $42.00",
+      "reorder": null
+    },
+    {
       "id": "mpsl7j4bvpje",
       "name": "Essex Yarn Dyed — Chambray",
       "cat": "Fabric",
