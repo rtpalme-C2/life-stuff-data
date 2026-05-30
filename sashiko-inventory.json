@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsmg3iydw0j",
+      "name": "Kona Cotton — Graphite",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Stormy Skies Bundle",
+      "fabric-code": "K001-295",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#606060",
+      "note": "FQ-1373-12 · May 2026 · $33.50",
+      "reorder": null
+    },
+    {
       "id": "mpsmf432dr6x",
       "name": "Kona Cotton — Steel",
       "cat": "Fabric",
