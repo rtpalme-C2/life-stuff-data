@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsjz3x7d292",
+      "name": "Kona Cotton — Crimson",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-1091",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#A01020",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpsjvzw0yu2g",
       "name": "Kona Cotton — Nautical",
       "cat": "Fabric",
