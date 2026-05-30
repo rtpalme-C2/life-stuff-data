@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsl9rfi9ohk",
+      "name": "Essex Yarn Dyed — Indigo",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Blue Voyage Bundle",
+      "fabric-code": "E064-1178",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#2A3A6A",
+      "note": "Order 5943 · May 29, 2026 · Blue Voyage Bundle $42.00",
+      "reorder": null
+    },
+    {
       "id": "mpsl8mdr76hv",
       "name": "Essex Yarn Dyed — Cadet",
       "cat": "Fabric",
