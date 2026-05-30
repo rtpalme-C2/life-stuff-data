@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsk48ks6g1w",
+      "name": "Kona Cotton — Poppy",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-1296",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#D02020",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpsk34w493iv",
       "name": "Kona Cotton — Cardinal",
       "cat": "Fabric",
