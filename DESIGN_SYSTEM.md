@@ -232,10 +232,201 @@ header, .sync-bar, .top-bar, .filters, .content { padding-left: 40px; padding-ri
 
 ---
 
-## 8–24. [Sections 8–24 unchanged from Version 1.0]
 
-> Sections 8 through 24 (Header Pattern, Sync Bar, Config Notice, PAT Modal, Item Modal,
-> Form Fields, Toast, Tab Bar, Card, Table, Filter Pills, Badge, GitHub Sync Architecture,
+## 8. Filter & Sort Pattern Decisions
+
+### Overview
+
+Two distinct filtering patterns have emerged across Life Stuff apps. Choose based on data structure and use case. This section provides the decision framework.
+
+---
+
+### Pattern A: Labeled Filter-Rows (Stylographic, Sashiko Craft)
+
+#### When to use
+- **Multi-faceted data** with several independent filter dimensions (status, category, nib type, etc.)
+- **Tabbed or single-view layouts** where filters are reorganized per section
+- **Mobile-first requirement:** filters need to stack cleanly on small screens
+- **Discoverability important:** users should see all available filters at a glance
+
+#### DOM Structure
+
+```html
+<div class="controls" style="flex-direction:column;align-items:stretch;gap:6px">
+  <!-- Row 1: Search + inline dropdowns + action button -->
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <div class="search-wrap"><!-- search input --></div>
+    <select><!-- category or maker dropdown --></select>
+    <button class="btn-add">+ Add Item</button>
+  </div>
+  
+  <!-- Row 2+: Labeled filter rows for pills or dropdowns -->
+  <div class="filter-row">
+    <span class="filter-label">Status</span>
+    <button class="filter-pill">All</button>
+    <button class="filter-pill">Active</button>
+  </div>
+  
+  <!-- Sort as dedicated row with label -->
+  <div class="filter-row">
+    <span class="filter-label">Sort</span>
+    <select>
+      <option>Name</option>
+      <option>Date</option>
+    </select>
+  </div>
+</div>
+```
+
+#### CSS Class Standards
+
+```css
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.filter-label {
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ccc;
+  flex-shrink: 0;
+  min-width: 52px;
+}
+
+.filter-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1.5px solid var(--cream-dark);
+  background: white;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.filter-pill.active {
+  background: var(--gunmetal);
+  border-color: var(--gunmetal);
+  color: var(--brass-light);
+}
+
+.controls select {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 4px 24px 4px 11px;
+  border: 1.5px solid var(--sky-thread);
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+```
+
+#### Key Rules
+
+1. **Search is inline** — share the first row with category/maker dropdowns
+2. **Filter pills get their own rows** — one labeled row per filter type
+3. **Sort gets a dedicated row** — label + dropdown, never inline with search
+4. **Visual dividers are optional** — use spacing instead
+5. **Labels use min-width: 52px** — ensures alignment across rows
+
+#### Apps using this pattern
+- **Stylographic:** Status, Nib filters + Sort (Pens, Inks, Accessories tabs)
+- **Sashiko Craft:** Category buttons, Status/Form/Use dropdowns, Sort
+
+---
+
+### Pattern B: Sticky Filter Bar (Sashiko Craft variant)
+
+#### When to use
+- **Long, scrollable lists** where filter controls should stay visible
+- **Single data type** (not multi-tab)
+- **Users frequently change filters** while scrolling
+
+#### Key Differences
+
+| Aspect | Pattern A | Pattern B |
+|--------|-----------|-----------|
+| **Position** | Static | Sticky (top: 0) |
+| **Z-index** | Default | 10 |
+| **Border** | Full border + radius | Bottom border only |
+| **Use case** | Compact controls | Long lists, frequent filtering |
+
+#### CSS for sticky variant
+
+```css
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 40px;
+  background: white;
+  border-bottom: 1px solid var(--sky-thread);
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .filters {
+    position: static; /* revert to Pattern A on mobile */
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+  }
+}
+```
+
+#### Apps using this pattern
+- **Sashiko Craft:** Inventory list (long, frequent filtering)
+
+---
+
+### Decision Matrix
+
+Use this to choose which pattern for your next app:
+
+| Scenario | Pattern | Rationale |
+|----------|---------|-----------|
+| Multi-tab layout | A | Each tab gets fresh filter context |
+| Long, single-list view | B (or A) | B if scrolling often; A if short |
+| Mobile-first priority | A | Rows stack better |
+| Deep filtering (5+ dimensions) | A | Rows organize chaos |
+| Simple filtering (1-2 dimensions) | A | Safer default |
+
+---
+
+### Implementation Checklist
+
+When building a new app with Pattern A or B:
+
+- [ ] Use `.controls` + `.filter-row` + `.filter-label` class structure
+- [ ] Apply color tokens from palette (not hardcoded colors)
+- [ ] Include `.filter-pill.active` state styling
+- [ ] Test responsive behavior at 768px and 480px breakpoints
+- [ ] Ensure Sort gets a dedicated filter-row with label
+- [ ] Remove "Sort: " prefix from select options (label is now visible)
+- [ ] Use `min-width: 52px` on `.filter-label` for alignment
+
+---
+
+## 9–24. [Sections 9–24 unchanged from Version 1.0]
+
+> Sections 9 through 24 (Header Pattern, Sync Bar, Config Notice, PAT Modal, Item Modal,
+> Form Fields, Toast, Tab Bar, Card, Table, Badge, GitHub Sync Architecture,
 > Init Pattern, Meta Tags, Responsive Breakpoints, and New App Checklist) are unchanged
 > from Version 1.0. Refer to the previous version or individual app source files.
 
@@ -248,6 +439,7 @@ from all apps. Headers now show only the wordmark and tagline.
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.3 | May 2026 | Added Section 8: Filter & Sort Pattern Decisions. Documented labeled filter-rows pattern (Pattern A) and sticky filter bar variant (Pattern B). Added decision matrix for choosing patterns. Updated section numbering (was 8–24, now 9–24). |
 | 1.2 | May 2026 | Removed all Chapter 1/Chapter 2 references. Added Personal/Business app categorisation. Removed header eyebrow from all apps. Removed life-stuff-hub.html. Updated steady data file reference to steady-inventory.json. |
 | 1.1 | May 2026 | Added Journey Intelligence palette. Corrected chapter structure. Added Journey Intelligence repo files. |
 | 1.0 | March 2026 | Initial release |
