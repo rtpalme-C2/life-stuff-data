@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpskef4apugz",
+      "name": "Kona Cotton — Grasshopper",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-475",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#688050",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpskd7ceqv65",
       "name": "Kona Cotton — Putty",
       "cat": "Fabric",
