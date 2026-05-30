@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsjr7q8mvtn",
+      "name": "Kona Cotton — Ocean",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Waterfall Bundle",
+      "fabric-code": "K001-25",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#1848A0",
+      "note": "FQ-1381-12 · May 2026 · $31.82",
+      "reorder": null
+    },
+    {
       "id": "mpsjq5r4mexn",
       "name": "Kona Cotton — Royal",
       "cat": "Fabric",
