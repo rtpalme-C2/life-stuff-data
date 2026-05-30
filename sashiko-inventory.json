@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsmjv24vkmw",
+      "name": "Kona Cotton — Quicksilver",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Stormy Skies Bundle",
+      "fabric-code": "K001-856",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#B0B8B8",
+      "note": "FQ-1373-12 · May 2026 · $33.50",
+      "reorder": null
+    },
+    {
       "id": "mpsmidawd1qv",
       "name": "Kona Cotton — Overcast",
       "cat": "Fabric",
