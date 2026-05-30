@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpslesz6qy1r",
+      "name": "Essex Yarn Dyed — Charcoal",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Geology Bundle",
+      "fabric-code": "E064-1071",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#4A4A4A",
+      "note": "Order 5943 · May 29, 2026 · Geology Bundle $50.00",
+      "reorder": null
+    },
+    {
       "id": "mpslcbfk3cyz",
       "name": "Essex Yarn Dyed — Nautical",
       "cat": "Fabric",
