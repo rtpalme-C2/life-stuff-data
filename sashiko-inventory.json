@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsmsgy0bizn",
+      "name": "Kona Cotton — Charcoal",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Stormy Skies Bundle",
+      "fabric-code": "K001-1071",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#404040",
+      "note": "FQ-1373-12 · May 2026 · $33.50",
+      "reorder": null
+    },
+    {
       "id": "mpsmrfax1o8s",
       "name": "Kona Cotton — Coal",
       "cat": "Fabric",
