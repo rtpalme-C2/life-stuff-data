@@ -1408,6 +1408,10 @@
       "name": "Stencil Kit - Auspicious Cloud",
       "cat": "Stencils",
       "detail": "8-piece, 4 - 8.7\"; 4 - 5.5\"",
+      "collection": "",
+      "fabric-code": "",
+      "form": "",
+      "prewashed": "",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1",
@@ -1415,7 +1419,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "mnw4630s4ioo",
