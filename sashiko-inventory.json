@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsj68sctax9",
+      "name": "Kona Cotton — Dark Violet",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Violet 9 Bundle",
+      "fabric-code": "K001-1485",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#6030A0",
+      "note": "Order 5943 · May 29, 2026 · Violet 9 Bundle $22.50",
+      "reorder": null
+    },
+    {
       "id": "mpsj4rzcef5o",
       "name": "Kona Cotton — Geranium",
       "cat": "Fabric",
