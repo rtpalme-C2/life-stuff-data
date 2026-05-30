@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsk1u6p75ya",
+      "name": "Kona Cotton — Ruby",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-352",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#B01830",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpsjz3x7d292",
       "name": "Kona Cotton — Crimson",
       "cat": "Fabric",
