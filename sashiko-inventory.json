@@ -2326,6 +2326,10 @@
       "name": "Stencil Kit — Geometric",
       "cat": "Stencils",
       "detail": "12-piece, 5.5\", Shippo patterns",
+      "collection": "",
+      "fabric-code": "",
+      "form": "",
+      "prewashed": "",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1 kit",
@@ -2333,7 +2337,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "Delivered Mar 14",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "seed-55",
