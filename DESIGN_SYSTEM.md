@@ -1,6 +1,6 @@
 # Life Stuff Apps — Design System
 
-## Version 1.2 · May 2026
+## Version 1.4 · May 2026
 **Reference implementation: Sashiko Craft**
 
 ---
@@ -423,9 +423,167 @@ When building a new app with Pattern A or B:
 
 ---
 
-## 9–24. [Sections 9–24 unchanged from Version 1.0]
+## 9. Rating Modal Pattern
 
-> Sections 9 through 24 (Header Pattern, Sync Bar, Config Notice, PAT Modal, Item Modal,
+### Overview
+
+A three-state preference modal for capturing user sentiment on inventory items. The modal presents three mutually exclusive options as buttons, with the underlying data model using simple string values (`yes`, `undecided`, `no`). Display labels are semantic and contextualized to the app's domain.
+
+### Data Structure
+
+```javascript
+{
+  reorder: 'yes' | 'undecided' | 'no'  // underlying data model (never changes)
+}
+```
+
+The underlying data values are fixed and stable. Only the **display labels** and **button symbols** change per app context.
+
+---
+
+### Default Implementation (Sashiko Craft)
+
+**Label context:** "Rating" (preference to reorder/repurchase)
+
+#### Modal Buttons
+
+```html
+<div class="reorder-toggle">
+  <button type="button" class="reorder-btn" id="rbtn-yes"   onclick="setReorderModal('yes')">★ Would Buy Again</button>
+  <button type="button" class="reorder-btn" id="rbtn-null"  onclick="setReorderModal(null)">— Undecided</button>
+  <button type="button" class="reorder-btn" id="rbtn-no"    onclick="setReorderModal('no')">✕ Would Not Buy Again</button>
+</div>
+```
+
+#### Filter Dropdown
+
+```html
+<div class="filter-group">
+  <span class="filter-label">Rating</span>
+  <select class="filter-select" onchange="setRating(this.value)">
+    <option value="All">All</option>
+    <option value="yes">★ Would Buy Again</option>
+    <option value="undecided">— Undecided</option>
+    <option value="no">✕ Would Not Buy Again</option>
+  </select>
+</div>
+```
+
+#### Card Badge
+
+```javascript
+const ratingBadge = item.reorder === 'yes' 
+  ? `<span class="badge badge-rating-yes">Would Buy Again</span>`
+  : item.reorder === 'no'
+  ? `<span class="badge badge-rating-no">Would Not Buy Again</span>`
+  : '';
+```
+
+#### CSS for Button States
+
+```css
+.reorder-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reorder-btn:hover {
+  border-color: var(--thread-blue);
+}
+
+.reorder-btn.active[id="rbtn-yes"] {
+  background: rgba(90, 171, 122, 0.15);
+  border-color: #5aab7a;
+  color: #1a5c38;
+}
+
+.reorder-btn.active[id="rbtn-no"] {
+  background: rgba(176, 80, 80, 0.10);
+  border-color: #b05050;
+  color: #7a2020;
+}
+
+.reorder-btn.active[id="rbtn-null"] {
+  background: var(--sky-thread);
+  border-color: var(--thread-blue);
+  color: var(--ai-indigo);
+}
+
+.badge-rating-yes {
+  background: #e6f4ec;
+  color: #1a6040;
+}
+
+.badge-rating-no {
+  background: #f7eaea;
+  color: #7a2424;
+}
+```
+
+---
+
+### Adapting the Pattern for Other Apps
+
+When implementing the Rating modal in a new app, customize **only the display labels and button symbols**. The underlying data structure (`reorder: 'yes'/'undecided'/'no'`) remains constant across all apps.
+
+#### Example: Stylographic App (Hypothetical)
+
+If Stylographic adopted a "Would Use Again" rating for inks:
+
+| State | Display Label | Symbol |
+|-------|---------------|--------|
+| `yes` | ✓ Would Use Again | ✓ |
+| `undecided` | — Undecided | — |
+| `no` | ✗ Would Not Use Again | ✗ |
+
+**Key rule:** Never change the underlying data keys (`reorder: yes/undecided/no`). This preserves data portability and consistency across the design system.
+
+---
+
+### Filter Logic
+
+Apps must implement filter state tracking:
+
+```javascript
+let activeRating = 'All';  // or 'yes', 'undecided', 'no'
+
+function filterByRating(items) {
+  if (activeRating === 'All') return items;
+  if (activeRating === 'yes') return items.filter(i => i.reorder === 'yes');
+  if (activeRating === 'undecided') return items.filter(i => !i.reorder);
+  if (activeRating === 'no') return items.filter(i => i.reorder === 'no');
+}
+```
+
+---
+
+### Integration Checklist
+
+When adding the Rating modal to a new app:
+
+- [ ] Add `reorder: null` to item schema (or `reorder: 'undecided'` if preferred default)
+- [ ] Create modal button group with three states (yes, undecided, no)
+- [ ] Implement `setRatingModal(value)` function
+- [ ] Add filter dropdown with label and four options (All, yes, undecided, no)
+- [ ] Implement filter logic in `filterByRating(items)`
+- [ ] Add card badge CSS (`.badge-rating-yes`, `.badge-rating-no`)
+- [ ] Test modal state persistence in localStorage
+- [ ] Ensure filter state updates grid and summary
+- [ ] Test responsive behavior at all breakpoints
+
+---
+
+## 10–25. [Sections 10–25 unchanged from Version 1.0]
+
+> Sections 10 through 25 (Header Pattern, Sync Bar, Config Notice, PAT Modal, Item Modal,
 > Form Fields, Toast, Tab Bar, Card, Table, Badge, GitHub Sync Architecture,
 > Init Pattern, Meta Tags, Responsive Breakpoints, and New App Checklist) are unchanged
 > from Version 1.0. Refer to the previous version or individual app source files.
@@ -439,6 +597,7 @@ from all apps. Headers now show only the wordmark and tagline.
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4 | May 2026 | Added Section 9: Rating Modal Pattern. Documented three-state preference modal (yes/undecided/no) with customizable display labels. Includes integration checklist for other apps. Updated section numbering (was 9–24, now 10–25). |
 | 1.3 | May 2026 | Added Section 8: Filter & Sort Pattern Decisions. Documented labeled filter-rows pattern (Pattern A) and sticky filter bar variant (Pattern B). Added decision matrix for choosing patterns. Updated section numbering (was 8–24, now 9–24). |
 | 1.2 | May 2026 | Removed all Chapter 1/Chapter 2 references. Added Personal/Business app categorisation. Removed header eyebrow from all apps. Removed life-stuff-hub.html. Updated steady data file reference to steady-inventory.json. |
 | 1.1 | May 2026 | Added Journey Intelligence palette. Corrected chapter structure. Added Journey Intelligence repo files. |
