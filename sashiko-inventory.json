@@ -1390,6 +1390,10 @@
       "name": "Stencil Kit - Annual Ring",
       "cat": "Stencils",
       "detail": "8-piece, 4 - 8.7\"; 4 - 5.5\"",
+      "collection": "",
+      "fabric-code": "",
+      "form": "",
+      "prewashed": "",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1",
@@ -1397,7 +1401,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "mnwcjofni4rd",
