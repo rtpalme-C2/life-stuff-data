@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpslj93jtuau",
+      "name": "Essex Yarn Dyed — Oyster",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Geology Bundle",
+      "fabric-code": "E064-1268",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#D8CEBF",
+      "note": "Order 5943 · May 29, 2026 · Geology Bundle $50.00",
+      "reorder": null
+    },
+    {
       "id": "mpsli6o8wp9u",
       "name": "Essex Yarn Dyed — Steel",
       "cat": "Fabric",
