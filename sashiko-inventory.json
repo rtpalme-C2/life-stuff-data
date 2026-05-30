@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsmqdbdf135",
+      "name": "Kona Cotton — Med. Grey",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Stormy Skies Bundle",
+      "fabric-code": "K001-1223",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#909090",
+      "note": "FQ-1373-12 · May 2026 · $33.50",
+      "reorder": null
+    },
+    {
       "id": "mpsmm7odus0n",
       "name": "Kona Cotton — Shadow",
       "cat": "Fabric",
