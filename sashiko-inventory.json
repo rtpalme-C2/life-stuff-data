@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpslo3tea5ol",
+      "name": "Essex Yarn Dyed — Nutmeg",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Geology Bundle",
+      "fabric-code": "E064-1255",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#8A6040",
+      "note": "Order 5943 · May 29, 2026 · Geology Bundle $50.00",
+      "reorder": null
+    },
+    {
       "id": "mpslm99znmh0",
       "name": "Essex Yarn Dyed — Leather",
       "cat": "Fabric",
