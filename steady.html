@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steady</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+    --forest-deep:   #1F3329;
+    --forest-mid:    #2D4A3A;
+    --forest-light:  #4A7A5E;
+    --parchment:     #F0EADA;
+    --parchment-dim: #E2D9C8;
+    --amber:         #D4B06A;
+    --amber-light:   #E8C97E;
+    --amber-dim:     #A8883E;
+    --text-primary:  #1A2B22;
+    --text-secondary:#3D5A48;
+    --text-muted:    #6B8F79;
+    --text-on-dark:  #F0EADA;
+    --text-dim:      #C8BEA8;
+    --success:       #4A7A5E;
+    --warn:          #B85C3A;
+    --warn-light:    #E8705A;
+    --radius:        12px;
+    --radius-sm:     8px;
+  }
+
+body {
+  font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
+  background: var(--parchment);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  background: var(--forest-deep);
+  padding: 32px 40px 28px;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+}
+/* Sweeping header bg curves */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: none;
+  pointer-events: none;
+}
+.header-curves {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.header-inner { position: relative; display: flex; align-items: center; gap: 20px; }
+.header-icon { width: 52px; height: 52px; flex-shrink: 0; }
+header h1 { font-size: 2.2rem; font-weight: 200; color: var(--parchment); letter-spacing: .04em; line-height: 1; }
+header p {
+  font-size: .65rem; color: rgba(255,255,255,.3);
+  margin-top: 6px; letter-spacing: .14em; text-transform: uppercase;
+}
+
+/* ── Sync bar ── */
+.sync-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px;
+  padding: 8px 40px;
+  background: var(--forest-mid);
+  border-bottom: 1px solid rgba(212,176,106,.12);
+  font-size: .7rem;
+}
+.sync-status { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.35); }
+.sync-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255,255,255,.18); flex-shrink: 0; transition: background .3s;
+}
+.sync-dot.connected { background: #5aab7a; }
+.sync-dot.saving    { background: var(--amber); animation: pulse .8s infinite; }
+.sync-dot.error     { background: #b05050; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+.sync-actions { display: flex; gap: 8px; }
+.btn-sync {
+  font-family: inherit; font-size: .62rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 5px 16px; border-radius: 20px;
+  border: 1px solid rgba(212,176,106,.35);
+  background: transparent; color: var(--amber-light);
+  cursor: pointer; transition: all .18s;
+}
+.btn-sync:hover { border-color: var(--amber); color: var(--amber); }
+.btn-sync.primary {
+  background: var(--amber); border-color: var(--amber);
+  color: var(--forest-deep); font-weight: 500;
+}
+.btn-sync.primary:hover { background: var(--amber-light); }
+
+/* ── Config notice ── */
+.config-notice {
+  margin: 20px 40px; padding: 16px 20px;
+  background: #fff8e6; border: 1.5px solid #f0c040; border-radius: 8px;
+  font-size: .8rem; line-height: 1.6; color: #5a4000;
+}
+.config-notice strong { display: block; margin-bottom: 4px; font-size: .85rem; }
+.config-notice code {
+  background: #f0e8c8; padding: 1px 6px; border-radius: 4px;
+  font-family: monospace; font-size: .78rem;
+}
+
+/* ── PAT modal ── */
+.pat-modal-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(31,51,41,.5);
+  z-index: 2000; align-items: center; justify-content: center; padding: 1rem;
+}
+.pat-modal-backdrop.open { display: flex; }
+.pat-modal {
+  background: var(--parchment); border-top: 4px solid var(--amber);
+  border-radius: 16px; padding: 2rem; width: 100%; max-width: 460px;
+  box-shadow: 0 16px 48px rgba(31,51,41,.28); animation: slideUp .2s ease;
+}
+@keyframes slideUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.pat-modal h2 { font-size: 1.2rem; font-weight: 500; color: var(--forest-deep); margin-bottom: .5rem; }
+.pat-modal p { font-size: .79rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
+.pat-modal p code { background: #f0e8c8; padding: 1px 6px; border-radius: 4px; font-family: monospace; font-size: .76rem; }
+.pat-field label { display: block; font-size: .63rem; text-transform: uppercase; letter-spacing: .12em; color: #aaa; margin-bottom: .3rem; }
+.pat-field input {
+  width: 100%; padding: 8px 12px; border: 1.5px solid var(--parchment-dim);
+  border-radius: 8px; font-family: inherit; font-size: .82rem;
+  color: var(--text-primary); background: white; outline: none;
+  transition: border-color .18s; margin-bottom: 1rem;
+}
+.pat-field input:focus { border-color: var(--text-secondary); }
+.pat-actions { display: flex; gap: .75rem; }
+.btn-pat-cancel {
+  flex: 1; padding: 8px; border: 1.5px solid var(--parchment-dim); border-radius: 8px;
+  background: white; font-family: inherit; font-size: .74rem;
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+  color: #aaa; transition: all .15s;
+}
+.btn-pat-cancel:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
+.btn-pat-save {
+  flex: 2; padding: 8px; border: none; border-radius: 8px;
+  background: var(--forest-deep); color: var(--amber-light);
+  font-family: inherit; font-size: .74rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+  transition: background .15s;
+}
+.btn-pat-save:hover { background: var(--forest-mid); }
+.stats-bar {
+  display: flex; justify-content: space-around;
+  background: var(--forest-mid);
+  border-bottom: 1px solid rgba(212,176,106,.1);
+  padding: 14px 40px;
+}
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; }
+.stat-item + .stat-item { border-left: 1px solid rgba(255,255,255,.07); }
+.stat-value { font-size: 1.2rem; font-weight: 300; color: var(--amber-light); letter-spacing: -.01em; }
+.stat-value.down    { color: #7EC8A0; }
+.stat-value.up      { color: #E07060; }
+.stat-value.neutral { color: rgba(255,255,255,.3); }
+.stat-label { font-size: .55rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.3); }
+
+/* ── Content ── */
+.content { padding: 28px 40px 80px; }
+
+/* ── Section titles ── */
+.section-title {
+  font-size: .6rem; font-weight: 500; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text-muted);
+  padding-bottom: 8px; margin-bottom: 12px;
+  border-bottom: 1px solid var(--parchment-dim);
+}
+
+/* ── Cards ── */
+.card {
+  background: white; border: 1px solid var(--parchment-dim);
+  border-radius: 12px; box-shadow: 0 2px 8px rgba(31,51,41,.1);
+  margin-bottom: 24px;
+}
+.card-body { padding: 20px 24px; }
+
+/* ── Form ── */
+.form-row { display: flex; gap: 14px; margin-bottom: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.form-label { font-size: .58rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
+.form-input, .form-note {
+  font-family: inherit; font-size: .82rem;
+  padding: 7px 10px; border: 1px solid var(--parchment-dim);
+  border-radius: 8px; background: var(--parchment);
+  color: var(--text-primary); outline: none; transition: border-color .18s; width: 100%;
+}
+.form-input:focus, .form-note:focus { border-color: var(--amber); background: white; }
+.form-note { resize: none; min-height: 58px; }
+.form-input::placeholder, .form-note::placeholder { color: var(--text-muted); opacity: .6; }
+
+/* ── Motivation picker ── */
+.motivation-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.mot-btn {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 8px 4px;
+  background: var(--parchment); border: 1px solid var(--parchment-dim);
+  border-radius: 8px; cursor: pointer; transition: all .15s;
+  font-size: 18px; line-height: 1;
+}
+.mot-btn span {
+  font-family: inherit; font-size: .56rem; font-weight: 400;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted);
+}
+.mot-btn:hover { border-color: var(--amber-light); background: white; }
+.mot-btn.sel-happy   { border-color: #4A9E70; background: #F2FAF5; }
+.mot-btn.sel-neutral { border-color: var(--amber); background: var(--parchment); }
+.mot-btn.sel-sad     { border-color: #B85C3A; background: #FDF2EE; }
+
+/* ── Primary button ── */
+.btn-primary {
+  font-family: inherit; font-size: .68rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 9px 20px; border-radius: 20px;
+  border: none; background: var(--forest-deep);
+  color: var(--amber-light); cursor: pointer; transition: all .18s; width: 100%;
+}
+.btn-primary:hover { background: var(--forest-mid); }
+
+/* ── Chart ── */
+.chart-wrap { padding: 16px 20px 10px; }
+#trend-chart { width: 100%; display: block; }
+.chart-empty {
+  height: 120px; display: flex; align-items: center; justify-content: center;
+  font-size: .78rem; font-style: italic; color: var(--text-muted);
+}
+
+/* ── Shot tracker ── */
+.shot-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; border-bottom: 1px solid var(--parchment-dim);
+}
+.shot-title { font-size: .84rem; font-weight: 500; color: var(--text-primary); }
+.shot-sub   { font-size: .68rem; color: var(--text-muted); margin-top: 2px; }
+.btn-log-shot {
+  font-family: inherit; font-size: .62rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px;
+  border: 1px solid rgba(212,176,106,.35);
+  background: transparent; color: var(--amber-light);
+  cursor: pointer; transition: all .18s;
+}
+.btn-log-shot:hover { border-color: var(--amber); color: var(--amber); }
+.shot-log-list { padding: 4px 0; }
+.shot-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 12px;
+  align-items: center;
+  padding: 8px 24px; border-bottom: 1px solid rgba(242,234,216,.6);
+  font-size: .76rem; color: var(--text-secondary);
+}
+.shot-row:last-child { border-bottom: none; }
+.shot-empty { padding: 18px 24px; font-size: .78rem; font-style: italic; color: var(--text-muted); }
+
+/* ── History list ── */
+.history-empty {
+  padding: 24px; font-size: .78rem; font-style: italic;
+  color: var(--text-muted); text-align: center;
+}
+.history-header {
+  display: grid;
+  grid-template-columns: 72px 68px 52px 28px 1fr 28px;
+  gap: 0 12px;
+  padding: 7px 20px;
+  border-bottom: 1.5px solid var(--parchment-dim);
+  font-size: .56rem; font-weight: 500; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.history-row {
+  display: grid;
+  grid-template-columns: 72px 68px 52px 28px 1fr 28px;
+  align-items: center;
+  gap: 0 12px;
+  padding: 11px 20px;
+  border-bottom: 1px solid rgba(226,217,200,.55);
+  transition: background .12s;
+}
+.history-row:last-child { border-bottom: none; }
+.history-row:hover { background: #faf8f4; }
+.history-date {
+  font-size: .78rem; font-weight: 500; color: var(--text-primary);
+  white-space: nowrap;
+}
+.history-weight {
+  font-size: .82rem; font-weight: 300; color: var(--text-primary);
+  letter-spacing: .01em; font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.history-delta {
+  font-size: .72rem; font-weight: 500; letter-spacing: .01em;
+  font-variant-numeric: tabular-nums; text-align: right;
+}
+.history-delta.down { color: #4A9E70; }
+.history-delta.up   { color: #B85C3A; }
+.history-delta.flat { color: var(--text-muted); }
+.history-mood {
+  font-size: .9rem; line-height: 1; text-align: center;
+}
+.history-note {
+  font-size: .72rem; color: var(--text-muted); font-style: italic;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.btn-delete {
+  background: none; border: none; cursor: pointer;
+  color: var(--parchment-dim); font-size: .9rem; line-height: 1;
+  padding: 2px 4px; border-radius: 4px;
+  transition: color .15s; text-align: center;
+}
+.btn-delete:hover { color: var(--warn); }
+
+/* ── Toast ── */
+.toast {
+  position: fixed; bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(60px);
+  background: var(--forest-deep); color: var(--amber-light);
+  font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+  padding: 9px 20px; border-radius: 20px;
+  pointer-events: none; transition: transform .22s ease, opacity .22s ease;
+  opacity: 0; white-space: nowrap; z-index: 100;
+  box-shadow: 0 4px 20px rgba(31,51,41,.25);
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  header, .sync-bar, .stats-bar, .content { padding-left: 20px; padding-right: 20px; }
+  header { padding-top: 22px; padding-bottom: 18px; }
+  header h1 { font-size: 1.8rem; }
+  .stats-bar { padding-top: 10px; padding-bottom: 10px; }
+  .stat-value { font-size: 1rem; }
+  .form-row { flex-direction: column; gap: 8px; }
+  .history-row {
+    grid-template-columns: 64px 60px 48px 24px 1fr 24px;
+    gap: 0 8px; padding: 10px 16px;
+  }
+}
+@media (max-width: 480px) {
+  header, .sync-bar, .stats-bar, .content { padding-left: 16px; padding-right: 16px; }
+  header h1 { font-size: 1.5rem; }
+  .stats-bar { padding: 10px 8px; }
+  .stat-value { font-size: .9rem; }
+  .history-row {
+    grid-template-columns: 58px 56px 44px 22px 1fr 22px;
+    gap: 0 6px; padding: 9px 14px;
+    font-size: .7rem;
+  }
+  .history-note { display: none; }
+}
+</style>
+
+<script>
+// ── App icon — canvas-rendered at runtime ─────────────────────────────────────
+(function() {
+  function buildIcon(size) {
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    const r = size * 0.21;
+    ctx.beginPath();
+    ctx.moveTo(r,0); ctx.lineTo(size-r,0); ctx.quadraticCurveTo(size,0,size,r);
+    ctx.lineTo(size,size-r); ctx.quadraticCurveTo(size,size,size-r,size);
+    ctx.lineTo(r,size); ctx.quadraticCurveTo(0,size,0,size-r);
+    ctx.lineTo(0,r); ctx.quadraticCurveTo(0,0,r,0); ctx.closePath();
+    ctx.fillStyle = '#1F3329'; ctx.fill();
+
+    ctx.save();
+    ctx.beginPath(); ctx.moveTo(-size*.1,size*.75); ctx.bezierCurveTo(size*.3,size*.3,size*.8,size*.6,size*1.1,size*.25);
+    ctx.strokeStyle='rgba(212,176,106,.1)'; ctx.lineWidth=size*.012; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(-size*.1,size*.5); ctx.bezierCurveTo(size*.4,size*.1,size*.9,size*.45,size*1.1,size*.2);
+    ctx.strokeStyle='rgba(212,176,106,.06)'; ctx.lineWidth=size*.009; ctx.stroke();
+    ctx.restore();
+
+    const sc = size / 160;
+    function stone(cx,cy,rx,ry,fill,shadow) {
+      ctx.beginPath(); ctx.ellipse(cx*sc,(cy+ry*.55)*sc,rx*sc,ry*.45*sc,0,0,Math.PI*2);
+      ctx.fillStyle=shadow; ctx.globalAlpha=1; ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx*sc,cy*sc,rx*sc,ry*sc,0,0,Math.PI*2);
+      ctx.fillStyle=fill; ctx.fill();
+    }
+    stone(82,124,52,20,'#3D5E4A','#182D22');
+    stone(76,84,37,18,'#4A7A5E','#182D22');
+    stone(86,49,24,16,'#D4B06A','#182D22');
+    ctx.globalAlpha=1;
+    return c.toDataURL('image/png');
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const l180 = document.createElement('link'); l180.rel='apple-touch-icon'; l180.href=buildIcon(180); document.head.appendChild(l180);
+    const l32  = document.createElement('link'); l32.rel='icon'; l32.type='image/png'; l32.href=buildIcon(32); document.head.appendChild(l32);
+    const addMeta = (n,c) => { const m=document.createElement('meta'); m.name=n; m.content=c; document.head.appendChild(m); };
+    addMeta('apple-mobile-web-app-capable','yes');
+    addMeta('apple-mobile-web-app-status-bar-style','black-translucent');
+    addMeta('apple-mobile-web-app-title','Steady');
+    addMeta('theme-color','#1F3329');
+  });
+})();
+</script>
+</head>
+<body>
+
+<header>
+  <svg class="header-curves" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-20 120 Q200 55 500 100 Q800 145 1220 75" stroke="#D4B06A" stroke-width="1.5" fill="none" opacity=".14"/>
+    <path d="M-20 100 Q300 35 600 80 Q900 125 1220 55" stroke="#D4B06A" stroke-width=".8" fill="none" opacity=".08"/>
+    <path d="M-20 140 Q250 88 550 120 Q850 152 1220 95" stroke="#E8C97E" stroke-width=".6" fill="none" opacity=".06"/>
+  </svg>
+  <div class="header-inner">
+    <svg class="header-icon" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="82" cy="136" rx="52" ry="18" fill="#182D22"/>
+      <ellipse cx="82" cy="124" rx="52" ry="18" fill="#3D5E4A"/>
+      <ellipse cx="76" cy="99"  rx="37" ry="15" fill="#182D22"/>
+      <ellipse cx="76" cy="86"  rx="37" ry="15" fill="#4A7A5E"/>
+      <ellipse cx="86" cy="63"  rx="24" ry="14" fill="#182D22"/>
+      <ellipse cx="86" cy="51"  rx="24" ry="14" fill="#D4B06A"/>
+    </svg>
+    <div>
+      <h1>Steady</h1>
+      <p>Weekly &nbsp;·&nbsp; Weight &nbsp;·&nbsp; Progress</p>
+    </div>
+  </div>
+</header>
+
+<div class="sync-bar">
+  <div class="sync-status">
+    <div class="sync-dot" id="sync-dot"></div>
+    <span id="sync-label">Not connected to GitHub</span>
+  </div>
+  <div class="sync-actions">
+    <button class="btn-sync" onclick="resetLocalData()">Reset local data</button>
+    <button class="btn-sync" id="btn-disconnect" style="display:none" onclick="disconnectGitHub()">Disconnect</button>
+    <button class="btn-sync primary" id="btn-connect" onclick="openPATModal()">Connect GitHub</button>
+  </div>
+</div>
+
+<div class="config-notice" id="config-notice">
+  <strong>⚠️ GitHub sync not configured</strong>
+  Tap <strong>Connect GitHub</strong> to enter your Personal Access Token.
+  The PAT needs <code>contents: write</code> permission on the
+  <code>rtpalme-C2/life-stuff-data</code> repo. It is stored only in your
+  browser's localStorage and never sent anywhere except the GitHub API.
+</div>
+
+<!-- PAT setup modal -->
+<div class="pat-modal-backdrop" id="pat-modal" onclick="patBackdropClose(event)">
+  <div class="pat-modal">
+    <h2>Connect GitHub Sync</h2>
+    <p>
+      Enter a GitHub Personal Access Token with <strong>Contents: Read &amp; write</strong>
+      permission scoped to the <code>rtpalme-C2/life-stuff-data</code> repository.
+      The token is stored only in this browser's localStorage.
+    </p>
+    <div class="pat-field">
+      <label>Personal Access Token</label>
+      <input type="password" id="pat-input" placeholder="github_pat_…" autocomplete="off">
+    </div>
+    <div class="pat-actions">
+      <button class="btn-pat-cancel" onclick="closePATModal()">Cancel</button>
+      <button class="btn-pat-save" onclick="savePAT()">Save &amp; Sync</button>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-value neutral" id="stat-current">—</span>
+    <span class="stat-label">Current</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value neutral" id="stat-delta">—</span>
+    <span class="stat-label">This Week</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value neutral" id="stat-total">—</span>
+    <span class="stat-label">Total Lost</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value neutral" id="stat-avg">—</span>
+    <span class="stat-label">Avg / Wk</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value neutral" id="stat-mood" style="font-size:1.1rem">—</span>
+    <span class="stat-label">Motivation</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section-title">Log a Weigh-In</div>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="input-date">Date</label>
+          <input class="form-input" type="date" id="input-date">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="input-weight">Weight (lbs)</label>
+          <input class="form-input" type="number" id="input-weight" placeholder="0.0" step="0.1" min="0">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:12px">
+        <label class="form-label" for="input-note">Note (optional)</label>
+        <textarea class="form-note" id="input-note" placeholder="How are you feeling…"></textarea>
+      </div>
+      <div class="form-group" style="margin-bottom:14px">
+        <label class="form-label">Motivation</label>
+        <div class="motivation-row">
+          <button type="button" class="mot-btn" id="mot-happy"   data-value="happy">😊<span>Good</span></button>
+          <button type="button" class="mot-btn" id="mot-neutral" data-value="neutral">😐<span>Ok</span></button>
+          <button type="button" class="mot-btn" id="mot-sad"     data-value="sad">😔<span>Low</span></button>
+        </div>
+      </div>
+      <button class="btn-primary" id="btn-log">Log Weigh-In</button>
+    </div>
+  </div>
+
+  <div class="section-title">Trend</div>
+  <div class="card">
+    <div class="chart-wrap">
+      <div class="chart-empty" id="chart-empty">No data yet</div>
+      <svg id="trend-chart" style="display:none"></svg>
+    </div>
+  </div>
+
+  <div class="section-title">Sunday Shot</div>
+  <div class="card">
+    <div class="shot-header">
+      <div>
+        <div class="shot-title">Weekly Injection</div>
+        <div class="shot-sub" id="shot-next-label">Next Sunday</div>
+      </div>
+      <button class="btn-log-shot" onclick="openShotModal()">+ Log Shot</button>
+    </div>
+    <div class="shot-log-list" id="shot-log">
+      <div class="shot-empty" id="shot-log-empty">No shots logged yet</div>
+    </div>
+  </div>
+
+  <div class="section-title">History</div>
+  <div class="card">
+    <div class="history-header">
+      <span>Date</span>
+      <span style="text-align:right">Weight</span>
+      <span style="text-align:right">Δ</span>
+      <span></span>
+      <span>Note</span>
+      <span></span>
+    </div>
+    <div id="history-list">
+      <div class="history-empty">No weigh-ins logged yet</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+
+// ── Storage ───────────────────────────────────────────────────────────────────
+const STORAGE_KEY       = 'steady-v1';
+const SHOTS_STORAGE_KEY = 'steady-shots-v1';
+function loadEntries() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch { return []; } }
+function saveEntries(e) { localStorage.setItem(STORAGE_KEY, JSON.stringify(e)); }
+function loadShots()    { try { return JSON.parse(localStorage.getItem(SHOTS_STORAGE_KEY)) || []; } catch { return []; } }
+function saveShots(s)   { localStorage.setItem(SHOTS_STORAGE_KEY, JSON.stringify(s)); }
+
+// ── persist() ── always write latest state to localStorage as a safety net
+function persist() {
+  try {
+    localStorage.setItem(STORAGE_KEY,       JSON.stringify(loadEntries()));
+    localStorage.setItem(SHOTS_STORAGE_KEY, JSON.stringify(loadShots()));
+  } catch(e) {}
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ── Date utils ────────────────────────────────────────────────────────────────
+function todayISO() { return new Date().toISOString().split('T')[0]; }
+function formatDate(iso) {
+  const [,m,d] = iso.split('-');
+  return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1] + ' ' + +d;
+}
+function thisSunday() { const d=new Date(); d.setDate(d.getDate()-d.getDay()); return d.toISOString().split('T')[0]; }
+function nextSunday() { const d=new Date(); d.setDate(d.getDate()+(7-d.getDay())%7||7); return d.toISOString().split('T')[0]; }
+function isSunday()   { return new Date().getDay()===0; }
+
+// ── Stats ─────────────────────────────────────────────────────────────────────
+function computeStats(entries) {
+  if (!entries.length) return null;
+  const s = [...entries].sort((a,b) => a.date.localeCompare(b.date));
+  const first=s[0].weight, last=s[s.length-1].weight;
+  const weekDelta = s.length>=2 ? last-s[s.length-2].weight : null;
+  const totalLost = first-last;
+  let avgPerWeek=null;
+  if (s.length>=2) { const w=(new Date(s[s.length-1].date)-new Date(s[0].date))/604800000; if(w>0) avgPerWeek=totalLost/w; }
+  const wm=s.filter(e=>e.mood), latestMood=wm.length?wm[wm.length-1].mood:null;
+  let moodTrend=null;
+  if (wm.length>=3) { const sc={happy:2,neutral:1,sad:0},l3=wm.slice(-3).map(e=>sc[e.mood]); moodTrend=l3[2]>l3[0]?'up':l3[2]<l3[0]?'down':'flat'; }
+  return { current:last, weekDelta, totalLost, avgPerWeek, latestMood, moodTrend };
+}
+
+function renderStats(entries) {
+  const stats=computeStats(entries);
+  const set=(id,text,cls)=>{ const el=document.getElementById(id); el.textContent=text; el.className='stat-value '+(cls||'neutral'); };
+  if (!stats) { ['stat-current','stat-delta','stat-total','stat-avg','stat-mood'].forEach(id=>set(id,'—')); return; }
+  set('stat-current', stats.current.toFixed(1), '');
+  if (stats.weekDelta!==null) { const sg=stats.weekDelta<0?'−':stats.weekDelta>0?'+':''; set('stat-delta',sg+Math.abs(stats.weekDelta).toFixed(1),stats.weekDelta<0?'down':stats.weekDelta>0?'up':'neutral'); }
+  else set('stat-delta','—');
+  if (stats.totalLost>0)      set('stat-total','−'+stats.totalLost.toFixed(1),'down');
+  else if (stats.totalLost<0) set('stat-total','+'+Math.abs(stats.totalLost).toFixed(1),'up');
+  else                         set('stat-total','0.0');
+  if (stats.avgPerWeek!==null) set('stat-avg',(stats.avgPerWeek>0?'−':'+')+Math.abs(stats.avgPerWeek).toFixed(1),stats.avgPerWeek>0?'down':'up');
+  else set('stat-avg','—');
+  const moodEl=document.getElementById('stat-mood');
+  if (stats.latestMood) {
+    const e=stats.latestMood==='happy'?'😊':stats.latestMood==='neutral'?'😐':'😔';
+    const a=stats.moodTrend==='up'?' ↑':stats.moodTrend==='down'?' ↓':'';
+    moodEl.textContent=e+a; moodEl.className='stat-value '+(stats.moodTrend==='up'?'down':stats.moodTrend==='down'?'up':'');
+    moodEl.style.fontSize='1rem';
+  } else { moodEl.textContent='—'; moodEl.className='stat-value neutral'; moodEl.style.fontSize=''; }
+}
+
+// ── Chart ─────────────────────────────────────────────────────────────────────
+function renderChart(entries) {
+  const svg=document.getElementById('trend-chart'), empty=document.getElementById('chart-empty');
+  if (entries.length<2) { svg.style.display='none'; empty.style.display='flex'; return; }
+  svg.style.display='block'; empty.style.display='none';
+  const sorted=[...entries].sort((a,b)=>a.date.localeCompare(b.date));
+  const W=svg.parentElement.offsetWidth-40, H=136;
+  const PAD={top:14,right:14,bottom:38,left:38};
+  const iW=W-PAD.left-PAD.right, iH=H-PAD.top-PAD.bottom;
+  const ws=sorted.map(e=>e.weight), minW=Math.min(...ws)-1, maxW=Math.max(...ws)+1;
+  const xS=i=>PAD.left+(i/(sorted.length-1))*iW;
+  const yS=w=>PAD.top+iH-((w-minW)/(maxW-minW))*iH;
+  const pts=sorted.map((e,i)=>[xS(i),yS(e.weight)]);
+  const lp=pts.map((p,i)=>(i===0?`M${p[0]},${p[1]}`:`L${p[0]},${p[1]}`)).join(' ');
+  const ap=lp+` L${pts[pts.length-1][0]},${PAD.top+iH} L${pts[0][0]},${PAD.top+iH} Z`;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`); svg.setAttribute('width',W); svg.setAttribute('height',H);
+  const mc=m=>m==='happy'?'#4A9E70':m==='sad'?'#B85C3A':m==='neutral'?'#D4B06A':null;
+  svg.innerHTML=`
+    <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A7A5E" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7A5E" stop-opacity=".01"/>
+    </linearGradient></defs>
+    ${[0,.5,1].map(t=>`<line x1="${PAD.left}" y1="${yS(minW+t*(maxW-minW))}" x2="${PAD.left+iW}" y2="${yS(minW+t*(maxW-minW))}" stroke="#E2D9C8" stroke-width=".7"/>`).join('')}
+    ${[0,.5,1].map(t=>`<text x="${PAD.left-6}" y="${yS(minW+t*(maxW-minW))+4}" text-anchor="end" font-family="Plus Jakarta Sans,sans-serif" font-size="8" fill="#8AAE98" opacity=".8">${(minW+t*(maxW-minW)).toFixed(0)}</text>`).join('')}
+    <path d="${ap}" fill="url(#ag)"/>
+    <path d="${lp}" stroke="#4A7A5E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    ${pts.map((p,i)=>{
+      const isLast=i===pts.length-1, c=mc(sorted[i].mood);
+      return (isLast?`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="#D4B06A" stroke="white" stroke-width="1.5"/>`:`<circle cx="${p[0]}" cy="${p[1]}" r="2.5" fill="#4A7A5E" opacity=".55"/>`)
+        +(c?`<circle cx="${p[0]}" cy="${PAD.top+iH+10}" r="3.5" fill="${c}" opacity=".75"/>`: '');
+    }).join('')}
+    <text x="${pts[0][0]}" y="${H-6}" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="8" fill="#8AAE98" opacity=".8">${formatDate(sorted[0].date)}</text>
+    <text x="${pts[pts.length-1][0]}" y="${H-6}" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="8" fill="#D4B06A" opacity=".9">${formatDate(sorted[sorted.length-1].date)}</text>`;
+}
+
+// ── History ───────────────────────────────────────────────────────────────────
+function renderHistory(entries) {
+  const container=document.getElementById('history-list');
+  if (!entries.length) { container.innerHTML='<div class="history-empty">No weigh-ins logged yet</div>'; return; }
+  const sorted=[...entries].sort((a,b)=>b.date.localeCompare(a.date));
+  const chron=[...entries].sort((a,b)=>a.date.localeCompare(b.date));
+  container.innerHTML=sorted.map(entry=>{
+    const ci=chron.findIndex(e=>e.date===entry.date&&e.weight===entry.weight);
+    const prev=ci>0?chron[ci-1]:null, delta=prev?entry.weight-prev.weight:null;
+    let ds='—', dc='flat';
+    if (delta!==null) { if(delta<0){ds='−'+Math.abs(delta).toFixed(1);dc='down';}else if(delta>0){ds='+'+delta.toFixed(1);dc='up';}else ds='±0.0'; }
+    const me=entry.mood==='happy'?'😊':entry.mood==='neutral'?'😐':entry.mood==='sad'?'😔':'';
+    return `<div class="history-row">
+      <span class="history-date">${formatDate(entry.date)}</span>
+      <span class="history-weight">${entry.weight.toFixed(1)}</span>
+      <span class="history-delta ${dc}">${ds}</span>
+      <span class="history-mood">${me}</span>
+      <span class="history-note">${entry.note||''}</span>
+      <button class="btn-delete" data-date="${entry.date}" data-weight="${entry.weight}">×</button>
+    </div>`;
+  }).join('');
+  container.querySelectorAll('.btn-delete').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      let e=loadEntries(); const i=e.findIndex(x=>x.date===btn.dataset.date&&x.weight==btn.dataset.weight);
+      if(i>-1){e.splice(i,1);saveEntries(e);scheduleSave();renderAll();showToast('Entry deleted');}
+    });
+  });
+}
+
+// ── Shot tracker ──────────────────────────────────────────────────────────────
+function renderShots() {
+  const shots   = loadShots();
+  const logEl   = document.getElementById('shot-log');
+  const emptyEl = document.getElementById('shot-log-empty');
+  const subEl   = document.getElementById('shot-next-label');
+
+  const next = nextSunday();
+  subEl.textContent = 'Next: ' + formatDate(next);
+
+  const recent = [...shots].sort((a,b) => b.date.localeCompare(a.date)).slice(0, 8);
+  logEl.querySelectorAll('.shot-row').forEach(r => r.remove());
+
+  if (!recent.length) { if (emptyEl) emptyEl.style.display = 'block'; return; }
+  if (emptyEl) emptyEl.style.display = 'none';
+
+  recent.forEach(s => {
+    const row = document.createElement('div');
+    row.className = 'shot-row';
+    const dosageLabel = s.dosage != null ? s.dosage + ' mg' : '—';
+    row.innerHTML = `
+      <span>${formatDate(s.date)}</span>
+      <span style="color:var(--text-muted);font-size:.76rem;">${dosageLabel}</span>
+      <button onclick="deleteShot('${s.date}')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:.72rem;padding:0 2px;line-height:1;" title="Remove">&times;</button>`;
+    logEl.appendChild(row);
+  });
+}
+
+function deleteShot(date) {
+  if (!confirm('Remove this shot entry?')) return;
+  let shots = loadShots().filter(s => s.date !== date);
+  saveShots(shots);
+  scheduleSave();
+  renderShots();
+}
+
+function openShotModal() {
+  const shots = loadShots();
+  const lastDosage = shots.length > 0
+    ? [...shots].sort((a,b) => b.date.localeCompare(a.date))[0].dosage ?? ''
+    : '';
+  const overlay = document.createElement('div');
+  overlay.id = 'shot-overlay';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(10,20,15,.65);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1rem;';
+  overlay.innerHTML = `
+    <div style="background:var(--parchment);border-top:4px solid var(--amber);border-radius:16px;padding:24px;width:min(340px,90vw);box-shadow:0 20px 60px rgba(0,0,0,.4);">
+      <div style="font-size:1rem;font-weight:500;color:var(--forest-deep);margin-bottom:1rem;">Log Shot</div>
+      <label style="display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:.3rem;">Date</label>
+      <input type="date" id="shot-date-input" value="${todayISO()}"
+        style="width:100%;padding:8px 12px;border:1px solid var(--parchment-dim);border-radius:8px;font-family:inherit;font-size:.9rem;color:var(--text-primary);background:white;outline:none;margin-bottom:.85rem;">
+      <label style="display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:.3rem;">Dosage (mg)</label>
+      <input type="number" id="shot-dosage-input" value="${lastDosage}" step="0.25" min="0" placeholder="e.g. 0.5"
+        style="width:100%;padding:8px 12px;border:1px solid var(--parchment-dim);border-radius:8px;font-family:inherit;font-size:1rem;color:var(--text-primary);background:white;outline:none;margin-bottom:1rem;">
+      <div style="display:flex;gap:.75rem;">
+        <button onclick="closeShotModal()" style="flex:1;padding:8px;border:1px solid var(--parchment-dim);border-radius:8px;background:white;font-family:inherit;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--text-muted);">Cancel</button>
+        <button onclick="confirmShot()" style="flex:2;padding:8px;border:none;border-radius:8px;background:var(--forest-deep);color:var(--amber-light);font-family:inherit;font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;">Log Shot</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  setTimeout(() => document.getElementById('shot-dosage-input').focus(), 50);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeShotModal(); });
+}
+
+function closeShotModal() {
+  const el = document.getElementById('shot-overlay');
+  if (el) el.remove();
+}
+
+function confirmShot() {
+  const date   = document.getElementById('shot-date-input').value;
+  const val    = document.getElementById('shot-dosage-input').value.trim();
+  const dosage = val !== '' ? parseFloat(val) : null;
+  if (!date) { document.getElementById('shot-date-input').focus(); return; }
+  let shots = loadShots().filter(s => s.date !== date);
+  shots.push({ date, dosage });
+  saveShots(shots);
+  scheduleSave();
+  showToast('Shot logged ✓');
+  closeShotModal();
+  renderShots();
+}
+
+// ── Render all ────────────────────────────────────────────────────────────────
+function renderAll() { const e=loadEntries(); renderStats(e); renderChart(e); renderHistory(e); renderShots(); }
+
+// ── Motivation picker ─────────────────────────────────────────────────────────
+let selectedMood=null;
+document.querySelectorAll('.mot-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.mot-btn').forEach(b=>b.className='mot-btn');
+    selectedMood=btn.dataset.value; btn.classList.add('sel-'+selectedMood);
+  });
+});
+
+// ── Log form ──────────────────────────────────────────────────────────────────
+document.getElementById('input-date').value=todayISO();
+document.getElementById('btn-log').addEventListener('click',()=>{
+  const dateVal=document.getElementById('input-date').value;
+  const weightVal=parseFloat(document.getElementById('input-weight').value);
+  const noteVal=document.getElementById('input-note').value.trim();
+  if (!dateVal)                         { showToast('Please enter a date'); return; }
+  if (isNaN(weightVal)||weightVal<=0)   { showToast('Please enter a valid weight'); return; }
+  const entries=loadEntries(); entries.push({date:dateVal,weight:weightVal,note:noteVal,mood:selectedMood});
+  saveEntries(entries); scheduleSave();
+  document.getElementById('input-weight').value=''; document.getElementById('input-note').value='';
+  selectedMood=null; document.querySelectorAll('.mot-btn').forEach(b=>b.className='mot-btn');
+  renderAll(); showToast('Weigh-in logged');
+});
+
+
+
+// ── GitHub Sync ───────────────────────────────────────────────────────────────
+const GH_OWNER   = 'rtpalme-C2';
+const GH_REPO    = 'life-stuff-data';
+const GH_FILE    = 'steady-inventory.json';
+const GH_RAW_URL = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${GH_FILE}`;
+const GH_API_URL = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const LS_PAT     = 'steady_gh_pat';
+const LS_SHA     = 'steady_gh_sha';
+
+// ── Data version contract ─────────────────────────────────────────────────
+// Bump DATA_VERSION when schema changes make old data incompatible.
+// Update STORAGE_KEY to match (e.g. 'steady-v2'). For minor additions
+// (new optional fields), no bump needed — use optional chaining.
+const DATA_VERSION = 1;
+
+let saveTimer   = null;
+let pendingSave = false;
+
+function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
+function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
+function setSHA(s) { localStorage.setItem(LS_SHA, s); }
+function configOk(){ return !!getPAT(); }
+
+function updateSetupBanner() {
+  const notice = document.getElementById('config-notice');
+  if (configOk()) {
+    notice.style.display = 'none';
+    document.getElementById('btn-connect').style.display    = 'none';
+    document.getElementById('btn-disconnect').style.display = '';
+  } else {
+    notice.style.display = '';
+    document.getElementById('btn-connect').style.display    = '';
+    document.getElementById('btn-disconnect').style.display = 'none';
+  }
+}
+
+// ── PAT modal ──
+function openPATModal() {
+  document.getElementById('pat-input').value = getPAT();
+  document.getElementById('pat-modal').classList.add('open');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function closePATModal() { document.getElementById('pat-modal').classList.remove('open'); }
+function patBackdropClose(e) { if (e.target === document.getElementById('pat-modal')) closePATModal(); }
+
+async function savePAT() {
+  const val = document.getElementById('pat-input').value.trim();
+  if (!val) { document.getElementById('pat-input').focus(); return; }
+  localStorage.setItem(LS_PAT, val);
+  closePATModal();
+  updateSetupBanner();
+  await syncFromGitHub();
+}
+
+function disconnectGitHub() {
+  if (!confirm('Remove GitHub token from this browser?\n\nLocal data will be kept.')) return;
+  localStorage.removeItem(LS_PAT);
+  localStorage.removeItem(LS_SHA);
+  updateSetupBanner();
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+
+function setSyncStatus(state, label) {
+  const dot = document.getElementById('sync-dot');
+  document.getElementById('sync-label').textContent = label;
+  dot.className = 'sync-dot';
+  if (state === 'connected') dot.classList.add('connected');
+  else if (state === 'saving') dot.classList.add('saving');
+  else if (state === 'error') dot.classList.add('error');
+}
+
+// ── Read from GitHub raw URL ──
+async function syncFromGitHub() {
+  setSyncStatus('saving', 'Loading from GitHub…');
+  try {
+    const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
+    // 404 means file doesn't exist yet — push local data up to create it
+    if (res.status === 404) {
+      setSyncStatus('saving', 'Creating data file on GitHub…');
+      await saveToGitHub();
+      return;
+    }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    if (text && text.trim().startsWith('{')) {
+      const data = JSON.parse(text);
+      const hasEntries = data.entries && data.entries.length > 0;
+      const hasShots   = data.shots   && data.shots.length   > 0;
+      if (hasEntries || hasShots) {
+        if (hasEntries) localStorage.setItem(STORAGE_KEY,       JSON.stringify(data.entries));
+        if (hasShots)   localStorage.setItem(SHOTS_STORAGE_KEY, JSON.stringify(data.shots));
+        renderAll();
+        setSyncStatus('connected', 'Synced from GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+        await fetchSHA();
+        return;
+      }
+    }
+    // GitHub has no data — push local data up
+    setSyncStatus('saving', 'Pushing local data to GitHub…');
+    await saveToGitHub();
+  } catch(e) {
+    setSyncStatus('error', 'GitHub sync failed — working offline');
+    showToast('Could not reach GitHub. Changes saved locally.');
+  }
+}
+
+// ── Fetch current SHA ──
+async function fetchSHA() {
+  try {
+    const res = await fetch(GH_API_URL, {
+      headers: { 'Authorization': 'Bearer ' + getPAT(), 'Accept': 'application/vnd.github+json' }
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.sha) setSHA(data.sha);
+  } catch(e) { /* non-fatal */ }
+}
+
+// ── Write to GitHub ──
+async function saveToGitHub() {
+  if (!configOk()) return;
+  setSyncStatus('saving', 'Saving to GitHub…');
+  pendingSave = true;
+  try {
+    await fetchSHA();
+    const payload = { _version: DATA_VERSION, entries: loadEntries(), shots: loadShots() };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+    const body = { message: 'Steady update · ' + new Date().toISOString().slice(0,10), content };
+    if (getSHA()) body.sha = getSHA();
+
+    const res = await fetch(GH_API_URL, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + getPAT(),
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || 'HTTP ' + res.status); }
+    const result = await res.json();
+    if (result.content && result.content.sha) setSHA(result.content.sha);
+    pendingSave = false;
+    setSyncStatus('connected', 'Saved to GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+  } catch(e) {
+    pendingSave = false;
+    setSyncStatus('error', 'Save failed — changes kept locally');
+    showToast('GitHub save failed: ' + e.message);
+  }
+}
+
+function scheduleSave() {
+  persist();
+  if (!configOk()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToGitHub, 400);
+}
+
+function resetLocalData() {
+  if (!confirm('Clear locally cached data and reload?\n\nYour GitHub token will be kept — only data and the cached SHA are cleared. If GitHub sync is configured, data will reload from GitHub. Otherwise the app will reload fresh.')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(SHOTS_STORAGE_KEY);
+  localStorage.removeItem(LS_SHA);
+  location.reload();
+}
+
+// ── Keyboard shortcuts ──
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePATModal();
+  if (e.key === 'Enter' && document.getElementById('pat-modal').classList.contains('open')) {
+    e.preventDefault(); savePAT();
+  }
+});
+
+window.addEventListener('beforeunload', e => {
+  if (saveTimer || pendingSave) { e.preventDefault(); e.returnValue = ''; }
+});
+
+// ── Flush on page hide (iOS background suspend defence) ──────────────────────
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && saveTimer) {
+    clearTimeout(saveTimer);
+    saveTimer = null;
+    saveToGitHub();
+  }
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+renderAll();
+updateSetupBanner();
+window.addEventListener('resize', () => renderChart(loadEntries()));
+updateSetupBanner();
+if (configOk()) {
+  syncFromGitHub();
+} else {
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+</script>
+</body>
+</html>

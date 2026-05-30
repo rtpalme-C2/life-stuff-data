@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Journey Intelligence">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACi0lEQVR42u1bPW7DIBR+xpalXqBjD+Kpeyqrc/bkEDlADhHvnaso2TvlIB17gUqRrHaokCiy4fH4tYEpirHh+97HAx6PChTl6fHhB1ZQPr++q7ln1ZqBY4iocgCuIoLlBl7GyiDzwnKzvqyC7BVQ5Wh9sTShG+y7dgcA8PI8DvKzy0e9AwA43+7DahTAAfNyvt2H06Gerb8/jpPvLI4ADkLuvAh+fxy1/6u+lSQBqs5ykDJAbB0fRDSuwc91TiX7ufoyCfzbqnaiEGBiGZX1+XMdWefbfXClBushgLEGRvrUd2zVwHyD911ENQQlIAXwLkhgvsFT5C/WxzpPKgllN7hk6btQAfMJnip/6jCgkFCGwBqkb6MCEwW8Lsy4qP42Jtbvu/YqsLxJDbHcP4xqG0NpbaYam6pn6wDlvQHfHOnaDbYZUjXWd+318sF/19aWFb/lWnmNJyfkTAEuplMrJ7gk70+ZDZqYHVSFwZJdCvsAb7raWzwBmMBoqKKNCJ0O9ZuHdrcK8M7b2x/HLZkAqhNUeW5ZATpfYDML6PofZQhgzwNW7QRlsLFmgajTYCzQRgqwjbpG3hxp/VcJiBQCPI9v28WNz40QmgA5GLKQ8X/FrF9MZoH3vmutgg8hQIv9BYCNMwL4bCAcUTuNzBBBTrZrsnr1FhEC+B/JoRb5G67JNT4eD3k4QnnXtH+MYPlkF0aUjVtZBxDHP1oF1PWAqfyp23ayAlIaCjaBW6shkAIJtlFrJ3mCmIwtE0lj6rrKEnMSDzDJ35vK/5sC79Pq3gIiqvw9TP6fLljiI1O05AqXbPHAFyaSuy8AkOedIYC/63NlKcyZyNH6ZTMkEpCTCkSs5fK06oUcrs//Akxg+/05X8G3AAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAHVklEQVR42u2dPW7bShSFqZFg4G3glVmIq/QODNfp7UV4AV6E1ad+EOzelRfi0hswIMB4r7EemIlIkeL83HvmO0CAxJEpcu7HwzPD4XDVZdC3v//6t0PohN7eP1apt7kCYKQE+AqQkRLYK0BGSmCvABkpgR2AGVnXHPYCMCMlqAMwIyWoAzAjJagDMCMlqAMwIyWoAzAjJagDzYKUFHBnpOTSODTSdGjcGSm4NA6N9Bwad0YqLo1DI80MjRBAI2RMK/IzUtKGJkij68uL2/hnP75/boc+//Sy/uPzu9f9lpbEoauDG8P4eL+evL27h89Z20YAnRTgMbjmgDwG9pJ9AGiAHgVoKjzHYB6DdO7nl+4fQANxlwPk1L8P3AB9FIhzYIhhnANijm0tORZGORp043Mz8NTfX5LB+8fSsms35dApHawP31KYc263NdduBujry4vbVEXNBXPO7ac8foAWceUSMOeGWt2tN4B8fsetlB7v10mgjjO2ItgbVZhzFyunO6fqJE4BWw1qqciR03lKRY3S36vm1hslmLmxgFsHYLbrzvH35czwu9f9dmhyFA4tEDFqdwRzdxBPQe3VrTeeYS7d6KXduUQHUS2CBGD2484l98trBAnAbNuda36/R6gDMCMlqAMw2xvZmOLSJeOQJ6gDMCMlqAMw+3Dn2i7tBeoAzEgJ6gDMSAnqAMx+4oaF2GEdata2Q1IyBzRRg+ghA3RtmD3EDUuxwyLUAZiREtRkaESGVndn63HD4n5acekAzPVzqMr+W4CayIGIHHQEkVWXxqGd5mev+ysLtCV39p6frR1HTZcOrcOMtKAmciAiB+6MrLp08w7taf7GlI6hSn8AoBEqDTRxg9ih5tA315cXz5S5HX3V+0YOaIWVLZH9+hd16N3r/upw1uLU+s58qPGh7pKdwv7BWQLb+y1kK/sf17QkzF1X6JUUQ53BGObSB68wZGfleKbUssSgQNX1ofsRxALg6HyArdTMxILncQyx4uDoNMDW6rIp0BCzLjNx44wBDuzloE3R1ocx6Zyxw/wrKQay2PPcYgD8dGA9t5vLd6wMNfJYwY7939NL///Xrop5zvG0cMJLvUn2VFHmOpTSWHkrV6isw3bW525MGeayCPUQnF6GIXNysekQziakZqePqt1UiY+j1XnRzIdGAI0QQCPkGWieTkEjHe1sT7Hg0EhKDNtl1rHRBpbvIkPLwDz2cwTQ7mAGaoB2D/Pdw+f/f4AaoN3DPPZvoAZoNxrq/NEpzKdss+0e79e/Gm3Tn1PAjZz5V6Mn/E8cGqEaDq0wFzpHhp76GWvH5YUPHDpzbo7hzQkz4k5hNqj74A6NZABzeuHQhZwamAFaFmpgJnLIOjXCoREqD7SFF5kjm8o5pItDIxwaIYBGCKDzSXFRFsXFcwAa4dC5xEgHipV70hoOjXBohAAaIQWgydGoVH7GoREOjVDzQFuNHao3HyweV6lnTHHoL3m/W8iCNQCNBFXsiZWv2PH89XfeLNWIejUvsqQFDo2IHAtc+upw1iq9pRUdd+YaV+QaD8n+03XdTXQ5IoKIRYyo3sXqWyVy7F73V32Iazq2wrxoC/Og4xrGNZZ16MOY9O51v+1HkGNnN87tyon/qFmN9Q1NrMsRu/VQowG4PYCt1WVTCeDt0NkbN84Y4MBeDtq5bV1r9dlsy+lObMCzDvqcvH2qCIcc6vF2+NR9z9FulmA2EzlSNfJYwU4V8+nl8Lm1C9fvH8+xfS8BrkVVdejSZ3PLY9+lgK290P2Gov5+2Y4v3RZPgv5xsHSBMYe2cFZ7ztGW9tlCHU3M5bA2X9rLDRZL+2nFlJichKRkBmgepvUrS288M+XQtaH2NK/DSmfQ2uv7zEUOnBpnJkMjZBnomi7tIXYYmS5q8k3BZh2a6EHUkIscQA3Mchm6BtSWY0fNuGEdZjedQpwaZ5YCugbUFl26ljt7gdkV0Dg1ziwHdE2oa7t0je/3BrNLoEtCbXUaaYn98ghz1zme4N+HulTDP96vq0Be0p1LtylAR1DndpO7h09TQ3c5Tyivruw+cpSOIDVHPEqNbCjA7N6ha0cQlVEMpTYz8UyhF7cpPQ6c+/tUXFnSoUu7de4OYs5oo3wlk13GoN9hTFW8Wh3EVCdOC5FMMnLkvrzmjgI5tq8YL5oGOrVD5YI69XZb6yg3BXRc5KWFTg1fqu2lOj4ytLN8ndLBlnYSU2Rzhi0bdeiUrnYMxDlgL/39lt0YoDNCMhfMJSADMUAngfsUQEtiwxjMc/YBoAF6EeDHIJsDdrR078ltI4CuBvqP75+DID69rG8BNwPQXdd1QI0U9Pb+sWIpMCQlgEYAjZBpoN/eP1Y0BfKen3FopBs5cGnk3Z1xaKTdKcSlkWd3xqGRtkPj0sizOw86NFAjjzCPRg6gRt5gPpmhgRp5gnlSpxCokReYJwEN1MgLzJOBBmrkAeau+5rgP1c8EICsgbwIaMBG1kBOAjRgIysgJwUawFEtgGP9B8fIg/pOUEKwAAAAAElFTkSuQmCC">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --night-slate:#1E1609;
+  --deep-steel:#2E2410;
+  --steel:#6C500F;
+  --warm-silver:#B8900C;
+  --silver-mist:#D4AE3A;
+  --paper:#F5F2EC;
+  --text-main:#1E1609;
+  --text-mid:#4A3A12;
+  --text-dim:#7A6A3A;
+  --text-faint:#B8A878;
+  --border:rgba(30,22,9,.1);
+  --card-bg:#FFFFFF;
+  --green:#2e7d52;
+  --amber:#8a6a28;
+  --red:#c0392b;
+}
+
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:var(--text-main);min-height:100vh;}
+
+/* ── HEADER ── */
+header{background:var(--night-slate);padding:36px 40px 30px;position:relative;overflow:hidden;}
+.hdr-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hdr-accent{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--warm-silver) 20%,var(--warm-silver) 80%,transparent);opacity:.7;}
+.hdr-inner{position:relative;z-index:1;display:flex;align-items:flex-start;gap:24px}
+.hdr-mark{flex-shrink:0;margin-top:4px}
+.hdr-eyebrow{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--warm-silver);font-weight:400;margin-bottom:7px;}
+.hdr-name{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:500;color:#F5F2EC;letter-spacing:-.02em;line-height:1;margin-bottom:6px;}
+.hdr-name em{font-style:italic;font-weight:200;color:#D4AE3A}
+.hdr-tagline{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,236,.32);font-weight:300;margin-top:7px;}
+
+/* ── SYNC BAR ── */
+.sync-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:8px 40px;background:var(--deep-steel);border-bottom:1px solid rgba(184,144,12,.15);font-size:.74rem;}
+.sync-status{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.38)}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:#ccc;flex-shrink:0;transition:background .3s}
+.sync-dot.connected{background:#2e8b57}
+.sync-dot.saving{background:var(--warm-silver);animation:pulse .8s infinite}
+.sync-dot.error{background:#c0392b}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.sync-actions{display:flex;gap:8px}
+.btn-sync{font-family:'Plus Jakarta Sans',sans-serif;font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;border:1px solid rgba(184,144,12,.35);background:transparent;color:var(--warm-silver);cursor:pointer;transition:all .18s;}
+.btn-sync:hover{border-color:var(--warm-silver);color:#F5F2EC}
+.btn-sync.primary{background:var(--warm-silver);border-color:var(--warm-silver);color:var(--night-slate);font-weight:500}
+.btn-sync.primary:hover{background:#D4AE3A}
+
+/* ── CONFIG NOTICE ── */
+.config-notice{margin:20px 40px;padding:16px 20px;background:#fff8e6;border:1.5px solid #f0c040;border-radius:4px;font-size:.8rem;line-height:1.6;color:#5a4000;}
+.config-notice strong{display:block;margin-bottom:4px;font-size:.85rem;}
+.config-notice code{background:#f0e8c8;padding:1px 6px;border-radius:4px;font-family:monospace;font-size:.78rem;}
+
+/* ── DASHBOARD ── */
+.dashboard{padding:24px 40px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:8px;}
+.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:14px 18px;}
+.stat-label{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);font-weight:500;margin-bottom:4px;}
+.stat-value{font-size:1.4rem;font-weight:500;color:var(--text-main);letter-spacing:-.02em;}
+.stat-value.silver{color:var(--steel)}
+.stat-value.green{color:var(--green)}
+.stat-value.amber{color:var(--amber)}
+
+/* ── AGENCY SPLIT BADGE ── */
+.split-badge{display:inline-flex;align-items:center;gap:5px;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--warm-silver);background:rgba(184,144,12,.12);padding:3px 9px;border-radius:4px;}
+.split-badge svg{opacity:.6}
+
+/* ── TOOLBAR ── */
+.toolbar{padding:20px 40px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.search-wrap{flex:1;min-width:180px;position:relative;}
+.search-wrap input{width:100%;font-family:inherit;font-size:.8rem;background:#fff;border:1px solid rgba(30,22,9,.12);color:var(--text-main);padding:9px 14px 9px 36px;border-radius:6px;outline:none;transition:border-color .15s;}
+.search-wrap input::placeholder{color:var(--text-faint)}
+.search-wrap input:focus{border-color:rgba(108,80,15,.5)}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none;}
+.filter-select{font-family:inherit;font-size:.74rem;background:#fff;border:1px solid rgba(30,22,9,.12);color:var(--text-mid);padding:9px 14px;border-radius:6px;outline:none;cursor:pointer;}
+.btn-add{font-family:inherit;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:var(--night-slate);color:#D4AE3A;border:1px solid rgba(184,144,12,.2);padding:9px 20px;border-radius:6px;cursor:pointer;transition:all .15s;white-space:nowrap;}
+
+.btn-settings{font-family:inherit;background:none;border:1px solid var(--border);color:var(--text-dim);padding:7px 9px;border-radius:6px;cursor:pointer;display:flex;align-items:center;transition:all .15s;flex-shrink:0;}
+.btn-settings:hover{border-color:rgba(108,80,15,.4);color:var(--text-main);}
+.btn-add:hover{background:var(--deep-steel);border-color:rgba(184,144,12,.4)}
+
+/* ── CLIENT LIST ── */
+.clients-wrap{padding:20px 40px 80px;}
+.client-card{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:12px;transition:box-shadow .18s;animation:fadeUp .3s ease both;}
+.client-card:hover{box-shadow:0 4px 20px rgba(30,22,9,.08);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.client-header{background:var(--night-slate);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;position:relative;overflow:hidden;}
+.client-hbg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.client-hbar{position:absolute;bottom:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(184,144,12,.4),transparent);}
+.client-info{position:relative;z-index:1;}
+.client-name{font-size:.94rem;font-weight:500;color:#F5F2EC;letter-spacing:-.01em;}
+.client-contact{font-size:.68rem;color:rgba(245,242,236,.4);font-weight:300;margin-top:2px;}
+.client-meta{position:relative;z-index:1;display:flex;align-items:center;gap:12px;}
+.trip-count-badge{font-size:.62rem;letter-spacing:.06em;color:rgba(184,144,12,.65);}
+.client-toggle{color:rgba(184,144,12,.5);font-size:.88rem;transition:transform .2s;}
+.client-toggle.open{transform:rotate(180deg);}
+
+.client-body{display:none;padding:0;}
+.client-body.open{display:block;}
+
+/* ── TRIP LIST ── */
+.trips-list{padding:12px 18px 16px;}
+.trip-item{border:1px solid var(--border);border-radius:6px;margin-bottom:8px;overflow:hidden;background:#fafafa;}
+.trip-item:last-child{margin-bottom:0;}
+.trip-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;gap:12px;cursor:pointer;}
+.trip-left{flex:1;min-width:0;}
+.trip-destination{font-size:.8rem;font-weight:500;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.trip-dates{font-size:.62rem;color:var(--text-dim);margin-top:2px;}
+.trip-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.trip-status{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:3px 8px;border-radius:4px;}
+.status-inquiry{background:rgba(108,80,15,.12);color:#6C500F}
+.status-quoted{background:rgba(138,106,40,.12);color:#8a6a28}
+.status-booked{background:rgba(46,111,82,.12);color:#2e6f52}
+.status-completed{background:rgba(184,144,12,.2);color:#4A3A12}
+.status-cancelled{background:rgba(192,57,43,.1);color:#c0392b}
+.trip-commission{font-size:.74rem;font-weight:500;color:var(--text-main);}
+
+.trip-detail{display:none;padding:0 14px 14px;border-top:1px solid var(--border);}
+.trip-detail.open{display:block;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+.detail-item{display:flex;flex-direction:column;gap:3px;}
+.detail-label{font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);font-weight:500;}
+.detail-value{font-size:.74rem;color:var(--text-main);}
+
+/* ── COMMISSION BOX ── */
+.commission-box{background:var(--night-slate);border-radius:6px;padding:12px 14px;margin-top:12px;}
+.commission-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.commission-row:last-child{margin-bottom:0;}
+.commission-row.total-row{padding-top:8px;border-top:1px solid rgba(184,144,12,.15);}
+.comm-label{font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(184,144,12,.55);font-weight:500;}
+.comm-label .supplier{font-size:.62rem;color:rgba(184,144,12,.75);letter-spacing:.04em;text-transform:none;}
+.comm-values{display:flex;align-items:center;gap:8px;}
+.comm-gross{font-size:.68rem;color:rgba(184,144,12,.45);text-decoration:line-through;}
+.comm-net{font-size:.8rem;font-weight:500;color:#F5F2EC;}
+.comm-net.total{color:#D4AE3A;font-size:.88rem;}
+.comm-badge{font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:4px;font-weight:500;}
+.comm-received{background:rgba(46,111,82,.25);color:#5db882;}
+.comm-pending{background:rgba(184,144,12,.15);color:rgba(184,144,12,.7);}
+.comm-split-tag{font-size:.5rem;color:rgba(184,144,12,.4);letter-spacing:.04em;}
+
+.trip-actions{display:flex;gap:8px;margin-top:12px;}
+.btn-trip{font-family:inherit;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;flex:1;background:none;border:1px solid var(--border);color:var(--text-dim);padding:7px;border-radius:4px;cursor:pointer;transition:all .15s;}
+.btn-trip:hover{border-color:rgba(108,80,15,.4);color:var(--text-main)}
+.btn-trip.primary{background:var(--night-slate);color:rgba(245,242,236,.8);border-color:transparent}
+.btn-trip.primary:hover{background:var(--deep-steel);color:#D4AE3A}
+
+.add-trip-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;font-family:inherit;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;background:none;border:1px dashed rgba(108,80,15,.3);color:var(--text-dim);width:100%;border-radius:6px;cursor:pointer;transition:all .15s;margin-top:8px;}
+.add-trip-btn:hover{border-color:rgba(108,80,15,.5);color:var(--text-main);background:rgba(108,80,15,.04)}
+
+.empty-state{text-align:center;padding:60px 24px;color:var(--text-dim);}
+.empty-state p{font-size:.8rem;margin-bottom:6px;}
+.empty-state span{font-size:.68rem;color:var(--text-faint)}
+
+/* ── MODALS ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(30,22,9,.65);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .2s;}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--paper);border-top:4px solid var(--warm-silver);border-radius:16px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;transform:translateY(16px);transition:transform .2s;border:1px solid rgba(30,22,9,.08);}
+.modal-overlay.open .modal{transform:translateY(0)}
+
+.modal-header{background:var(--night-slate);padding:22px 28px;border-radius:16px 16px 0 0;position:relative;overflow:hidden;}
+.modal-hbg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.modal-hbar{position:absolute;bottom:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(184,144,12,.4),transparent);}
+.modal-header-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;}
+.modal-title{font-size:.94rem;font-weight:500;color:#F5F2EC;letter-spacing:-.01em;}
+.modal-title em{font-style:italic;font-weight:200;color:#D4AE3A}
+.modal-close{background:none;border:none;color:rgba(245,242,236,.4);cursor:pointer;font-size:1.25rem;line-height:1;padding:4px;transition:color .15s;}
+.modal-close:hover{color:#F5F2EC}
+
+.modal-body{padding:22px 28px 28px}
+.form-section{margin-bottom:20px}
+.form-section-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#B8900C;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form-grid.full{grid-template-columns:1fr}
+.form-field{display:flex;flex-direction:column;gap:4px}
+.form-field label{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--text-dim)}
+.form-field input,.form-field select,.form-field textarea{font-family:inherit;font-size:.8rem;background:#fff;border:1px solid rgba(30,22,9,.14);color:var(--text-main);padding:8px 12px;border-radius:6px;outline:none;transition:border-color .15s;}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:rgba(108,80,15,.5)}
+.form-field input::placeholder{color:var(--text-faint)}
+.form-field textarea{resize:vertical;min-height:60px}
+
+/* Agency split settings */
+.split-settings{background:rgba(30,22,9,.04);border:1px solid rgba(30,22,9,.1);border-radius:6px;padding:12px 14px;margin-bottom:12px;}
+.split-settings-label{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);font-weight:500;margin-bottom:8px;}
+.split-row{display:flex;align-items:center;gap:10px;}
+.split-row label{font-size:.74rem;color:var(--text-mid);flex:1;}
+.split-input{font-family:inherit;font-size:.8rem;background:#fff;border:1px solid rgba(30,22,9,.14);color:var(--text-main);padding:6px 10px;border-radius:4px;outline:none;width:80px;text-align:right;}
+.split-input:focus{border-color:rgba(108,80,15,.5)}
+.split-pct-label{font-size:.68rem;color:var(--text-dim);}
+
+/* Commission line */
+.comm-line{background:#f8f9fa;border:1px solid rgba(30,22,9,.1);border-radius:6px;padding:12px;margin-bottom:8px;}
+.comm-line-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.comm-line-header .form-field{flex:1;}
+.btn-remove-line{background:none;border:none;color:var(--text-faint);font-size:1.1rem;cursor:pointer;padding:0 4px;line-height:1;transition:color .15s;flex-shrink:0;}
+.btn-remove-line:hover{color:#c0392b}
+.comm-line-calcs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;}
+.comm-line-calcs .form-field input{font-size:.74rem;padding:6px 10px;}
+.comm-line-calcs .form-field label{font-size:.56rem;}
+.comm-line-split{display:flex;align-items:center;gap:8px;background:rgba(30,22,9,.04);border-radius:4px;padding:8px 10px;}
+.comm-line-split label{font-size:.68rem;color:var(--text-mid);flex:1;}
+.split-override-input{font-family:inherit;font-size:.74rem;background:#fff;border:1px solid rgba(30,22,9,.14);color:var(--text-main);padding:4px 8px;border-radius:4px;outline:none;width:64px;text-align:right;}
+.split-override-input:focus{border-color:rgba(108,80,15,.5)}
+.comm-line-net{font-size:.68rem;font-weight:500;color:var(--green);margin-left:auto;}
+
+.comm-received-toggle{display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border-radius:4px;border:1px solid rgba(30,22,9,.12);background:#fff;font-size:.74rem;color:var(--text-mid);transition:all .15s;-webkit-user-select:none;user-select:none;margin-top:8px;}
+.comm-received-toggle:has(input:checked){border-color:rgba(46,111,82,.35);background:rgba(46,111,82,.06);color:var(--text-main)}
+.comm-received-toggle input{display:none}
+.toggle-track{width:30px;height:17px;border-radius:9px;background:rgba(30,22,9,.15);position:relative;transition:background .2s;flex-shrink:0}
+.comm-received-toggle:has(input:checked) .toggle-track{background:#2e7d52}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:11px;height:11px;border-radius:50%;background:#fff;transition:transform .2s}
+.comm-received-toggle:has(input:checked) .toggle-thumb{transform:translateX(13px)}
+
+.btn-add-line{font-family:inherit;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:none;border:1px solid rgba(30,22,9,.2);color:var(--text-dim);padding:4px 10px;border-radius:4px;cursor:pointer;transition:all .15s;}
+.btn-add-line:hover{border-color:rgba(108,80,15,.5);color:var(--text-main)}
+
+.modal-footer{border-top:1px solid var(--border);padding:14px 28px;display:flex;gap:10px;justify-content:flex-end;background:rgba(245,242,236,.5);border-radius:0 0 16px 16px;}
+.btn-cancel{font-family:inherit;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:none;border:1px solid var(--border);color:var(--text-dim);padding:8px 16px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.btn-cancel:hover{border-color:var(--text-dim);color:var(--text-main)}
+.btn-save{font-family:inherit;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:var(--night-slate);color:#D4AE3A;border:1px solid rgba(184,144,12,.2);padding:8px 22px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.btn-save:hover{background:var(--deep-steel);border-color:rgba(184,144,12,.4)}
+.btn-danger{font-family:inherit;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:none;border:1px solid rgba(192,57,43,.25);color:#c0392b;padding:8px 16px;border-radius:6px;cursor:pointer;transition:all .15s;margin-right:auto;}
+.btn-danger:hover{background:rgba(192,57,43,.06)}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;right:24px;z-index:200;background:var(--night-slate);color:#F5F2EC;font-size:.74rem;letter-spacing:.04em;padding:12px 18px;border-radius:8px;border-left:3px solid var(--warm-silver);transform:translateY(60px);opacity:0;transition:transform .25s ease,opacity .25s ease;pointer-events:none;max-width:300px;}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.err{border-left-color:#c0392b}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  header{padding:24px 20px 20px}
+  .sync-bar,.dashboard,.toolbar,.clients-wrap,.config-notice{padding-left:16px;padding-right:16px}
+  .form-grid{grid-template-columns:1fr}
+  .comm-line-calcs{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  header h1{font-size:1.7rem}
+  .modal-body{padding:18px}
+  .modal-footer{padding:12px 18px}
+}
+
+/* ── PROPOSALS ── */
+.proposal-section{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.proposal-line{background:#f8f9fa;border:1px solid rgba(30,22,9,.1);border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:8px;align-items:flex-end;}
+.proposal-line .form-field{flex:1;margin:0;}
+.proposal-line .form-field.narrow{flex:0 0 120px;}
+.btn-remove-proposal{background:none;border:none;color:var(--text-faint);font-size:1.1rem;cursor:pointer;padding:0 4px;line-height:1;transition:color .15s;flex-shrink:0;align-self:flex-end;margin-bottom:2px;}
+.btn-remove-proposal:hover{color:#c0392b}
+#proposal-lines-wrap:empty::before{content:"No proposals yet — click + Add Proposal";font-size:.7rem;color:var(--text-dim);font-style:italic;display:block;padding:6px 0;}
+.trip-proposals{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);}
+.trip-proposals-label{font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);font-weight:500;margin-bottom:6px;}
+.proposal-link-row{display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:.76rem;}
+.proposal-link-row a{color:var(--steel);text-decoration:none;font-weight:500;}
+.proposal-link-row a:hover{text-decoration:underline;}
+.proposal-link-nourl{color:var(--text-main);font-weight:500;}
+.proposal-link-date{color:var(--text-dim);font-size:.68rem;}
+
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <svg class="hdr-bg" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice">
+    <path d="M-10 140 C80 70 200 110 350 50 C460 10 560 65 700 42 C850 18 980 72 1100 38 C1180 18 1230 48 1260 32" stroke="rgba(184,144,12,.12)" stroke-width="2" fill="none"/>
+    <path d="M-10 95 C100 40 240 98 380 42 C480 5 590 55 730 28 C880 -2 1020 52 1150 22 C1210 8 1250 36 1270 24" stroke="rgba(184,144,12,.07)" stroke-width="1.3" fill="none"/>
+    <path d="M40 168 C160 98 300 138 460 62 C600 -8 760 72 940 18 C1060 -14 1180 42 1265 26" stroke="rgba(184,144,12,.04)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="hdr-accent"></div>
+  <div class="hdr-inner">
+    <div class="hdr-mark">
+      <svg width="56" height="56" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="21" stroke="#6C500F" stroke-width=".7" fill="none" opacity=".4"/>
+        <ellipse cx="24" cy="24" rx="9" ry="21" stroke="#B8900C" stroke-width="1.6" fill="none" opacity=".95"/>
+        <line x1="3" y1="24" x2="45" y2="24" stroke="#B8900C" stroke-width="1" stroke-linecap="round" opacity=".65"/>
+        <path d="M6 14 Q24 10 42 14" stroke="#6C500F" stroke-width=".6" fill="none" stroke-linecap="round" opacity=".45"/>
+        <path d="M6 34 Q24 38 42 34" stroke="#6C500F" stroke-width=".6" fill="none" stroke-linecap="round" opacity=".45"/>
+        <circle cx="24" cy="24" r="2.4" fill="#B8900C" opacity=".95"/>
+        <circle cx="24" cy="24" r="1" fill="#1E1609"/>
+      </svg>
+    </div>
+    <div class="hdr-text">
+      <h1 class="hdr-name">Journey <em>Intelligence</em></h1>
+      <div class="hdr-tagline">Advisory · Curation · Insight</div>
+    </div>
+  </div>
+</header>
+
+<!-- ── SYNC BAR ── -->
+<div class="sync-bar">
+  <div class="sync-status">
+    <div class="sync-dot" id="sync-dot"></div>
+    <span id="sync-label">Not connected to GitHub</span>
+  </div>
+  <div class="sync-actions">
+    <button class="btn-sync" onclick="resetLocalData()">Reset local data</button>
+    <button class="btn-sync" id="btn-disconnect" style="display:none" onclick="disconnectGitHub()">Disconnect</button>
+    <button class="btn-sync primary" id="btn-connect" onclick="openPATModal()">Connect GitHub</button>
+  </div>
+</div>
+
+<div class="config-notice" id="config-notice">
+  <strong>⚠️ GitHub sync not configured</strong>
+  Tap <strong>Connect GitHub</strong> to enter your Personal Access Token.
+  The PAT needs <code>contents: write</code> permission on the
+  <code>rtpalme-C2/life-stuff-data</code> repo. It is stored only in your
+  browser's localStorage and never sent anywhere except the GitHub API.
+</div>
+
+<!-- ── DASHBOARD ── -->
+<div class="dashboard">
+  <div class="stats-grid" id="stats-grid"></div>
+</div>
+
+<!-- ── TOOLBAR ── -->
+<div class="toolbar">
+  <div class="search-wrap">
+    <svg class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="search-input" placeholder="Search clients, destinations…">
+  </div>
+  <select class="filter-select" id="filter-status">
+    <option value="">All trips</option>
+    <option value="inquiry">Inquiry</option>
+    <option value="quoted">Quoted</option>
+    <option value="booked">Booked</option>
+    <option value="completed">Completed</option>
+    <option value="cancelled">Cancelled</option>
+  </select>
+  <button class="btn-add" id="btn-add-client">+ Add Client</button>
+  <button class="btn-settings" onclick="openSettings()" title="Agency Split Settings">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- ── CLIENTS ── -->
+<div class="clients-wrap" id="clients-wrap"></div>
+
+<!-- ── PAT MODAL ── -->
+<div class="modal-overlay" id="pat-modal" onclick="patBackdropClose(event)">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-header">
+      <svg class="modal-hbg" viewBox="0 0 560 100" preserveAspectRatio="xMidYMid slice">
+        <path d="M-10 60 C80 20 200 70 350 30 C460 5 520 45 580 25" stroke="rgba(184,144,12,.12)" stroke-width="1.5" fill="none"/>
+      </svg>
+      <div class="modal-hbar"></div>
+      <div class="modal-header-inner">
+        <div class="modal-title">Connect <em>GitHub Sync</em></div>
+        <button class="modal-close" onclick="closePATModal()">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:.79rem;color:#666;line-height:1.6;margin-bottom:1rem;">
+        Enter a GitHub Personal Access Token with <strong>Contents: Read &amp; write</strong>
+        permission scoped to the <code style="background:#f0e8c8;padding:1px 5px;border-radius:4px;font-family:monospace;font-size:.76rem;">rtpalme-C2/life-stuff-data</code> repository.
+        The token is stored only in this browser's localStorage.
+      </p>
+      <div class="form-field" style="margin-bottom:1rem;">
+        <label>Personal Access Token</label>
+        <input type="password" id="pat-input" placeholder="github_pat_…" autocomplete="off">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closePATModal()">Cancel</button>
+      <button class="btn-save" onclick="savePAT()">Save &amp; Sync</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── SETTINGS MODAL ── -->
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <svg class="modal-hbg" viewBox="0 0 560 110" preserveAspectRatio="xMidYMid slice">
+        <path d="M-10 80 C80 35 220 72 400 22 C480 0 530 36 560 24" stroke="rgba(184,144,12,.12)" stroke-width="1.5" fill="none"/>
+        <path d="M-10 55 C100 18 260 60 430 12" stroke="rgba(184,144,12,.07)" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="modal-hbar"></div>
+      <div class="modal-header-inner">
+        <div class="modal-title"><em>Settings</em></div>
+        <button class="modal-close" onclick="closeModal('settings-modal')">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="form-section">
+        <div class="form-section-label">Commission Split</div>
+        <div class="split-settings">
+          <div class="split-settings-label">Global Default</div>
+          <div class="split-row">
+            <label>My split (your share of each commission)</label>
+            <input type="number" class="split-input" id="s-agency-pct" min="0" max="100" step="1" value="70">
+            <span class="split-pct-label">%</span>
+          </div>
+          <div style="font-size:.62rem;color:var(--text-faint);margin-top:8px;">
+            Net shown = commission × my split%. Override per supplier line in each trip.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeModal('settings-modal')">Cancel</button>
+      <button class="btn-save" onclick="saveSettings()">Save Settings</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── CLIENT MODAL ── -->
+<div class="modal-overlay" id="client-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <svg class="modal-hbg" viewBox="0 0 560 110" preserveAspectRatio="xMidYMid slice">
+        <path d="M-10 80 C80 35 220 72 400 22 C480 0 530 36 560 24" stroke="rgba(184,144,12,.12)" stroke-width="1.5" fill="none"/>
+        <path d="M-10 55 C100 18 260 60 430 12" stroke="rgba(184,144,12,.07)" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="modal-hbar"></div>
+      <div class="modal-header-inner">
+        <div class="modal-title" id="client-modal-title">Add <em>Client</em></div>
+        <button class="modal-close" onclick="closeModal('client-modal')">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="form-section">
+        <div class="form-section-label">Client Identity</div>
+        <div class="form-grid">
+          <div class="form-field" style="grid-column:1/-1">
+            <label>Last Name</label>
+            <input type="text" id="c-lastname" placeholder="e.g. Mitchell">
+          </div>
+          <div class="form-field">
+            <label>Primary First Name</label>
+            <input type="text" id="c-primary-first" placeholder="e.g. Sarah">
+          </div>
+          <div class="form-field">
+            <label>Secondary First Name</label>
+            <input type="text" id="c-secondary-first" placeholder="e.g. James (optional)">
+          </div>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-section-label">Primary Contact</div>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" id="c-phone" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" id="c-email" placeholder="email@example.com">
+          </div>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-section-label">Secondary Contact</div>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" id="c-phone2" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" id="c-email2" placeholder="email@example.com">
+          </div>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-section-label">Notes</div>
+        <div class="form-grid full">
+          <div class="form-field">
+            <label>Preferences / Notes</label>
+            <textarea id="c-notes" placeholder="Travel preferences, dietary needs, special occasions…"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-danger" id="client-delete-btn" style="display:none" onclick="deleteClient()">Delete</button>
+      <button class="btn-cancel" onclick="closeModal('client-modal')">Cancel</button>
+      <button class="btn-save" onclick="saveClient()">Save Client</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── TRIP MODAL ── -->
+<div class="modal-overlay" id="trip-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <svg class="modal-hbg" viewBox="0 0 560 110" preserveAspectRatio="xMidYMid slice">
+        <path d="M-10 80 C80 35 220 72 400 22 C480 0 530 36 560 24" stroke="rgba(184,144,12,.12)" stroke-width="1.5" fill="none"/>
+        <path d="M-10 55 C100 18 260 60 430 12" stroke="rgba(184,144,12,.07)" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="modal-hbar"></div>
+      <div class="modal-header-inner">
+        <div class="modal-title" id="trip-modal-title">Add <em>Trip</em></div>
+        <button class="modal-close" onclick="closeModal('trip-modal')">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="form-section">
+        <div class="form-section-label">Trip Details</div>
+        <div class="form-grid">
+          <div class="form-field" style="grid-column:1/-1">
+            <label>Destination</label>
+            <input type="text" id="t-destination" placeholder="e.g. Amalfi Coast, Italy">
+          </div>
+          <div class="form-field">
+            <label>Departure</label>
+            <input type="date" id="t-depart">
+          </div>
+          <div class="form-field">
+            <label>Return</label>
+            <input type="date" id="t-return">
+          </div>
+          <div class="form-field">
+            <label>Travelers</label>
+            <input type="number" id="t-travelers" placeholder="2" min="1">
+          </div>
+          <div class="form-field">
+            <label>Status</label>
+            <select id="t-status">
+              <option value="inquiry">Inquiry</option>
+              <option value="quoted">Quoted</option>
+              <option value="booked">Booked</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="form-field" style="grid-column:1/-1">
+            <label>Notes</label>
+            <textarea id="t-notes" placeholder="Itinerary details, special requests…"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">
+          Supplier Commissions
+          <button type="button" class="btn-add-line" onclick="addCommLine()">+ Add Supplier</button>
+        </div>
+        <div id="comm-lines-wrap"></div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">Planning Fee</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="form-field" style="flex:1;margin-bottom:0;">
+            <label>Fee Amount</label>
+            <input type="number" id="t-fee" placeholder="0.00" min="0" step="0.01">
+          </div>
+          <label class="comm-received-toggle" style="flex-shrink:0;margin-top:18px;">
+            <input type="checkbox" id="t-fee-received">
+            <div class="toggle-track"><div class="toggle-thumb"></div></div>
+            <span>Fee received</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">
+          Proposals
+          <button type="button" class="btn-add-line" onclick="addProposalLine()">+ Add Proposal</button>
+        </div>
+        <div id="proposal-lines-wrap"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-danger" id="trip-delete-btn" style="display:none" onclick="deleteTrip()">Delete</button>
+      <button class="btn-cancel" onclick="closeModal('trip-modal')">Cancel</button>
+      <button class="btn-save" onclick="saveTrip()">Save Trip</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script>
+
+// ════════════════════════════════════════════════════════════════════
+//  GITHUB SYNC CONFIG
+// ════════════════════════════════════════════════════════════════════
+const GH_OWNER    = 'rtpalme-C2';
+const GH_REPO     = 'life-stuff-data';
+const GH_FILE     = 'journey-intelligence.json';
+const GH_RAW_URL  = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${GH_FILE}`;
+const GH_API_URL  = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const LS_PAT      = 'ji_gh_pat';
+const LS_SHA      = 'ji_gh_sha';
+
+// ── Data version contract ─────────────────────────────────────────────────
+// DATA_VERSION guards against loading stale/incompatible localStorage data.
+// Bump DATA_VERSION when schema changes make old data incompatible.
+// Update LS_DATA_KEY to match (e.g. 'ji-v2').
+const DATA_VERSION = 1;
+const LS_KEY = 'ji-v1';
+
+let clients = [];
+let settings = { myPct: 70 };
+let editingClientId = null;
+let editingTripId = null;
+let editingTripClientId = null;
+let saveTimer = null;
+let pendingSave = false;
+let commLines = [];
+let proposalLines = [];
+
+// ── PAT / SHA helpers ─────────────────────────────────────────────────────
+function getPAT()  { return localStorage.getItem(LS_PAT) || ''; }
+function getSHA()  { return localStorage.getItem(LS_SHA) || ''; }
+function setSHA(s) { localStorage.setItem(LS_SHA, s); }
+function configOk(){ return !!getPAT(); }
+
+function updateSetupBanner() {
+  const notice = document.getElementById('config-notice');
+  if (configOk()) {
+    notice.style.display = 'none';
+    document.getElementById('btn-connect').style.display    = 'none';
+    document.getElementById('btn-disconnect').style.display = '';
+  } else {
+    notice.style.display = '';
+    document.getElementById('btn-connect').style.display    = '';
+    document.getElementById('btn-disconnect').style.display = 'none';
+  }
+}
+
+// ── PAT modal ─────────────────────────────────────────────────────────────
+function openPATModal() {
+  document.getElementById('pat-input').value = getPAT();
+  document.getElementById('pat-modal').classList.add('open');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function closePATModal() { document.getElementById('pat-modal').classList.remove('open'); }
+function patBackdropClose(e) { if (e.target === document.getElementById('pat-modal')) closePATModal(); }
+
+async function savePAT() {
+  const val = document.getElementById('pat-input').value.trim();
+  if (!val) { document.getElementById('pat-input').focus(); return; }
+  localStorage.setItem(LS_PAT, val);
+  closePATModal();
+  updateSetupBanner();
+  await syncFromGitHub();
+}
+
+function disconnectGitHub() {
+  if (!confirm('Remove GitHub token from this browser?\n\nLocal data will be kept.')) return;
+  localStorage.removeItem(LS_PAT);
+  localStorage.removeItem(LS_SHA);
+  updateSetupBanner();
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+
+// ── Data ──
+function loadLocal() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+    if (raw && raw._version === DATA_VERSION) {
+      clients = raw.data || [];
+      if (raw.settings) { const s = raw.settings; settings = {...settings, myPct: s.myPct ?? (s.agencyPct ? (100 - s.agencyPct) : 70) }; }
+    } else if (raw) {
+      localStorage.removeItem(LS_KEY); // stale version — discard
+    }
+  } catch(e) {}
+  if (!clients) clients = [];
+}
+
+function persist() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify({_version:DATA_VERSION, data:clients, settings})); }
+  catch(e) {}
+}
+
+function scheduleSave() {
+  persist();
+  if (!configOk()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToGitHub, 1200);
+}
+
+function newId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+function formatMoney(n){
+  if(n == null || n === '' || isNaN(Number(n))) return '—';
+  return '$' + Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+
+// Agency split helpers
+function myPct(override){ return (override != null && override !== '') ? parseFloat(override) : settings.myPct; }
+function netAmt(grossAmt, splitPct){ return (parseFloat(grossAmt)||0) * (splitPct/100); }
+
+function tripNetTotal(trip){
+  const commNet = (trip.commLines||[]).reduce((sum,l) => {
+    const gross = parseFloat(l.amt) || 0;
+    const pct = myPct(l.splitOverride);
+    return sum + gross * pct / 100;
+  }, 0);
+  const fee = parseFloat(trip.fee) || 0;
+  return commNet + fee;
+}
+
+function tripGrossTotal(trip){
+  const commGross = (trip.commLines||[]).reduce((sum,l) => sum + (parseFloat(l.amt)||0), 0);
+  const fee = parseFloat(trip.fee) || 0;
+  return commGross + fee;
+}
+
+function clientTotals(client){
+  let earned = 0, pending = 0, commissionableValue = 0;
+  (client.trips||[]).forEach(t => {
+    if(t.status === 'cancelled') return;
+    (t.commLines||[]).forEach(l => {
+      const gross = parseFloat(l.amt) || 0;
+      const pct = myPct(l.splitOverride);
+      const net = gross * pct / 100;
+      commissionableValue += parseFloat(l.price) || 0;
+      if(l.received) earned += net; else pending += net;
+    });
+    const fee = parseFloat(t.fee) || 0;
+    if(t.feeReceived) earned += fee; else pending += fee;
+  });
+  return {earned, pending, commissionableValue};
+}
+
+// ── RENDER ──
+const statusLabels = {inquiry:'Inquiry',quoted:'Quoted',booked:'Booked',completed:'Completed',cancelled:'Cancelled'};
+const statusClasses = {inquiry:'status-inquiry',quoted:'status-quoted',booked:'status-booked',completed:'status-completed',cancelled:'status-cancelled'};
+
+function renderStats(){
+  const el = document.getElementById('stats-grid');
+  const allTrips = clients.flatMap(c => c.trips||[]);
+  const active = allTrips.filter(t => ['inquiry','quoted','booked'].includes(t.status)).length;
+  const completed = allTrips.filter(t => t.status === 'completed').length;
+  let totalEarned = 0, totalPending = 0, totalCommVal = 0;
+  clients.forEach(c => {
+    const {earned, pending, commissionableValue} = clientTotals(c);
+    totalEarned += earned; totalPending += pending; totalCommVal += commissionableValue;
+  });
+
+  el.innerHTML = `
+    <div class="stat-card"><div class="stat-label">Clients</div><div class="stat-value">${clients.length}</div></div>
+    <div class="stat-card"><div class="stat-label">Active Trips</div><div class="stat-value silver">${active}</div></div>
+    <div class="stat-card"><div class="stat-label">Completed</div><div class="stat-value silver">${completed}</div></div>
+    <div class="stat-card"><div class="stat-label">Commissionable Value</div><div class="stat-value silver">${formatMoney(totalCommVal)}</div></div>
+    <div class="stat-card"><div class="stat-label">Net Earned</div><div class="stat-value green">${formatMoney(totalEarned)}</div></div>
+    <div class="stat-card"><div class="stat-label">Net Pending</div><div class="stat-value amber">${formatMoney(totalPending)}</div></div>
+    <div class="stat-card"><div class="stat-label">My Split</div><div class="stat-value silver">${settings.myPct}%</div></div>
+  `;
+}
+
+function filteredClients(){
+  const q = document.getElementById('search-input').value.toLowerCase();
+  const st = document.getElementById('filter-status').value;
+  return clients.filter(c => {
+    const matchesQ = !q ||
+      ([c.lastName, c.primaryFirst, c.secondaryFirst].filter(Boolean).join(' ').toLowerCase().includes(q)) ||
+      (c.trips||[]).some(t => (t.destination||'').toLowerCase().includes(q));
+    const matchesSt = !st || (c.trips||[]).some(t => t.status === st);
+    return matchesQ && matchesSt;
+  });
+}
+
+function renderClients(){
+  const wrap = document.getElementById('clients-wrap');
+  const list = filteredClients();
+
+  if(list.length === 0){
+    wrap.innerHTML = `<div class="empty-state">
+      <p>${clients.length === 0 ? 'No clients yet' : 'No clients match this filter'}</p>
+      <span>${clients.length === 0 ? 'Add your first client to get started' : 'Try adjusting your search or filters'}</span>
+    </div>`;
+    return;
+  }
+
+  wrap.innerHTML = list.map((client, ci) => {
+    const trips = client.trips || [];
+    const {earned, pending} = clientTotals(client);
+    const filterSt = document.getElementById('filter-status').value;
+    const visibleTrips = filterSt ? trips.filter(t => t.status === filterSt) : trips;
+
+    const tripsHtml = visibleTrips.map(trip => {
+      const netTotal = tripNetTotal(trip);
+      const grossTotal = tripGrossTotal(trip);
+      const fee = parseFloat(trip.fee) || 0;
+      const hasSplit = (trip.commLines||[]).some(l => l.splitOverride != null && l.splitOverride !== '');
+
+      return `<div class="trip-item">
+        <div class="trip-row" onclick="toggleTrip('${client.id}','${trip.id}')">
+          <div class="trip-left">
+            <div class="trip-destination">${trip.destination || 'Unnamed trip'}</div>
+            <div class="trip-dates">${trip.depart ? trip.depart + (trip.return ? ' → ' + trip.return : '') : 'Dates TBD'}${trip.travelers ? ' · ' + trip.travelers + ' travelers' : ''}</div>
+          </div>
+          <div class="trip-right">
+            <span class="trip-status ${statusClasses[trip.status]||'status-inquiry'}">${statusLabels[trip.status]||'Inquiry'}</span>
+            <span class="trip-commission">${netTotal > 0 ? formatMoney(netTotal) + '<span style="font-size:.56rem;color:var(--text-faint);margin-left:3px;">net</span>' : '—'}</span>
+          </div>
+        </div>
+        <div class="trip-detail" id="td-${client.id}-${trip.id}">
+          ${trip.notes || trip.travelers ? `<div class="detail-grid" style="margin-top:12px;">
+            ${trip.notes ? `<div class="detail-item" style="grid-column:1/-1"><div class="detail-label">Notes</div><div class="detail-value">${trip.notes}</div></div>` : ''}
+          </div>` : ''}
+          <div class="commission-box">
+            ${(trip.commLines||[]).map(l => {
+              const gross = parseFloat(l.amt)||0;
+              if(!gross && !l.supplier) return '';
+              const splitPct = myPct(l.splitOverride);
+              const net = gross * splitPct / 100;
+              const overrideNote = (l.splitOverride != null && l.splitOverride !== '') ? ` (${l.splitOverride}%)` : ` (${settings.myPct}%)`;
+              return `<div class="commission-row">
+                <span class="comm-label"><span class="supplier">${l.supplier||'Supplier'}</span><br>gross ${formatMoney(l.amt)} · my split${overrideNote}</span>
+                <div class="comm-values">
+                  <span class="comm-gross">${formatMoney(l.amt)}</span>
+                  <span class="comm-net">${formatMoney(net)}</span>
+                  <span class="comm-badge ${l.received ? 'comm-received' : 'comm-pending'}">${l.received ? 'Received' : 'Pending'}</span>
+                </div>
+              </div>`;
+            }).join('')}
+            ${fee > 0 ? `<div class="commission-row">
+              <span class="comm-label">Planning fee</span>
+              <div class="comm-values">
+                <span class="comm-net">${formatMoney(fee)}</span>
+                <span class="comm-badge ${trip.feeReceived ? 'comm-received' : 'comm-pending'}">${trip.feeReceived ? 'Received' : 'Pending'}</span>
+              </div>
+            </div>` : ''}
+            <div class="commission-row total-row">
+              <span class="comm-label">Net total</span>
+              <div class="comm-values">
+                ${grossTotal !== netTotal ? `<span class="comm-gross">${formatMoney(grossTotal)}</span>` : ''}
+                <span class="comm-net total">${formatMoney(netTotal)}</span>
+              </div>
+            </div>
+          </div>
+          ${(trip.proposals||[]).length > 0 ? `<div class="trip-proposals">
+            <div class="trip-proposals-label">Proposals</div>
+            ${(trip.proposals||[]).map(p => {
+              const date = p.dateSent ? ` <span class="proposal-link-date">Sent ${p.dateSent}</span>` : '';
+              const label = p.label || p.url || 'Proposal';
+              const linkContent = p.url
+                ? `<a href="${p.url}" target="_blank" rel="noopener">${label}</a>`
+                : `<span class="proposal-link-nourl">${label}</span>`;
+              return `<div class="proposal-link-row">📄 ${linkContent}${date}</div>`;
+            }).join('')}
+          </div>` : ''}
+          <div class="trip-actions">
+            <button class="btn-trip primary" onclick="openEditTrip('${client.id}','${trip.id}')">Edit</button>
+            ${trip.status !== 'completed' ? `<button class="btn-trip" onclick="quickStatus('${client.id}','${trip.id}','completed')">Mark Complete</button>` : ''}
+            ${(trip.commLines||[]).some(l => !l.received && (parseFloat(l.amt)||0) > 0) ? `<button class="btn-trip" onclick="quickCommReceived('${client.id}','${trip.id}')">Comm Received</button>` : ''}
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+    return `<div class="client-card" style="animation-delay:${ci*0.04}s">
+      <div class="client-header" onclick="toggleClient('${client.id}')">
+        <svg class="client-hbg" viewBox="0 0 600 60" preserveAspectRatio="xMidYMid slice">
+          <path d="M-10 45 C80 20 200 42 380 14 C470 0 540 22 610 12" stroke="rgba(184,144,12,.12)" stroke-width="1.5" fill="none"/>
+          <path d="M-10 30 C100 8 260 34 430 6" stroke="rgba(184,144,12,.07)" stroke-width="1" fill="none"/>
+        </svg>
+        <div class="client-hbar"></div>
+        <div class="client-info">
+          <div class="client-name">${clientDisplayName(client)}</div>
+          <div class="client-contact">${[client.email, client.phone].filter(Boolean).join(' · ') || (client.email2 || client.phone2 ? [client.email2, client.phone2].filter(Boolean).join(' · ') : 'No contact info')}</div>
+        </div>
+        <div class="client-meta">
+          <span class="trip-count-badge">${trips.length} trip${trips.length!==1?'s':''}${earned>0?' · '+formatMoney(earned)+' net earned':''}${pending>0?' · '+formatMoney(pending)+' pending':''}</span>
+          <button class="btn-trip" style="padding:4px 10px;font-size:.56rem;flex:unset" onclick="event.stopPropagation();openEditClient('${client.id}')">Edit</button>
+          <span class="client-toggle" id="ct-${client.id}">▾</span>
+        </div>
+      </div>
+      <div class="client-body" id="cb-${client.id}">
+        <div class="trips-list">
+          ${tripsHtml}
+          <button class="add-trip-btn" onclick="openAddTrip('${client.id}')">+ Add Trip</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function render(){ renderStats(); renderClients(); }
+
+// ── TOGGLE ──
+function toggleClient(id){
+  const body = document.getElementById('cb-'+id);
+  const toggle = document.getElementById('ct-'+id);
+  if(!body) return;
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+function toggleTrip(clientId, tripId){
+  const el = document.getElementById(`td-${clientId}-${tripId}`);
+  if(el) el.classList.toggle('open');
+}
+
+// ── CLIENT HELPERS ──
+function clientDisplayName(c){
+  const last = c.lastName || '';
+  const first = c.primaryFirst || '';
+  const second = c.secondaryFirst || '';
+  if(!last && !first) return 'Unnamed Client';
+  const firstPart = second ? first + ' & ' + second : first;
+  return last ? last + (firstPart ? ' — ' + firstPart : '') : firstPart;
+}
+
+// ── SETTINGS MODAL ──
+function openSettings(){
+  document.getElementById('s-agency-pct').value = settings.myPct;
+  document.getElementById('settings-modal').classList.add('open');
+}
+
+function saveSettings(){
+  settings.myPct = parseFloat(document.getElementById('s-agency-pct').value) || 70;
+  scheduleSave();
+  closeModal('settings-modal');
+  render();
+  showToast('Settings saved');
+}
+
+// ── CLIENT MODAL ──
+function openAddClient(){
+  editingClientId = null;
+  document.getElementById('client-modal-title').innerHTML = 'Add <em>Client</em>';
+  document.getElementById('client-delete-btn').style.display = 'none';
+  ['c-lastname','c-primary-first','c-secondary-first','c-phone','c-email','c-phone2','c-email2','c-notes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('client-modal').classList.add('open');
+  setTimeout(() => document.getElementById('c-lastname').focus(), 50);
+}
+
+function openEditClient(id){
+  const client = clients.find(c => c.id === id);
+  if(!client) return;
+  editingClientId = id;
+  document.getElementById('client-modal-title').innerHTML = 'Edit <em>Client</em>';
+  document.getElementById('client-delete-btn').style.display = 'block';
+  document.getElementById('c-lastname').value = client.lastName||'';
+  document.getElementById('c-primary-first').value = client.primaryFirst||'';
+  document.getElementById('c-secondary-first').value = client.secondaryFirst||'';
+  document.getElementById('c-phone').value = client.phone||'';
+  document.getElementById('c-email').value = client.email||'';
+  document.getElementById('c-phone2').value = client.phone2||'';
+  document.getElementById('c-email2').value = client.email2||'';
+  document.getElementById('c-notes').value = client.notes||'';
+  document.getElementById('client-modal').classList.add('open');
+}
+
+function saveClient(){
+  const lastName = document.getElementById('c-lastname').value.trim();
+  const primaryFirst = document.getElementById('c-primary-first').value.trim();
+  if(!lastName && !primaryFirst){ showToast('Last name or first name is required', true); return; }
+  const data = {
+    id: editingClientId || newId(),
+    lastName,
+    primaryFirst,
+    secondaryFirst: document.getElementById('c-secondary-first').value.trim(),
+    phone: document.getElementById('c-phone').value.trim(),
+    email: document.getElementById('c-email').value.trim(),
+    phone2: document.getElementById('c-phone2').value.trim(),
+    email2: document.getElementById('c-email2').value.trim(),
+    notes: document.getElementById('c-notes').value.trim(),
+    trips: editingClientId ? (clients.find(c=>c.id===editingClientId)||{}).trips||[] : [],
+    createdAt: editingClientId ? undefined : new Date().toISOString(),
+  };
+  if(editingClientId){
+    const idx = clients.findIndex(c=>c.id===editingClientId);
+    clients[idx] = {...clients[idx], ...data};
+  } else {
+    clients.unshift(data);
+  }
+  scheduleSave();
+  closeModal('client-modal');
+  render();
+  showToast(editingClientId ? 'Client updated' : 'Client added');
+}
+
+function deleteClient(){
+  if(!confirm('Delete this client and all their trips?')) return;
+  clients = clients.filter(c=>c.id!==editingClientId);
+  scheduleSave();
+  closeModal('client-modal');
+  render();
+  showToast('Client deleted');
+}
+
+// ── TRIP MODAL ──
+function openAddTrip(clientId){
+  editingTripId = null;
+  editingTripClientId = clientId;
+  document.getElementById('trip-modal-title').innerHTML = 'Add <em>Trip</em>';
+  document.getElementById('trip-delete-btn').style.display = 'none';
+  ['t-destination','t-depart','t-return','t-travelers','t-notes','t-fee'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('t-status').value = 'inquiry';
+  document.getElementById('t-fee-received').checked = false;
+  commLines = [];
+  renderCommLines();
+  proposalLines = [];
+  renderProposalLines();
+  document.getElementById('trip-modal').classList.add('open');
+  setTimeout(() => document.getElementById('t-destination').focus(), 50);
+}
+
+function openEditTrip(clientId, tripId){
+  const client = clients.find(c=>c.id===clientId);
+  const trip = (client?.trips||[]).find(t=>t.id===tripId);
+  if(!trip) return;
+  editingTripId = tripId;
+  editingTripClientId = clientId;
+  document.getElementById('trip-modal-title').innerHTML = 'Edit <em>Trip</em>';
+  document.getElementById('trip-delete-btn').style.display = 'block';
+  document.getElementById('t-destination').value = trip.destination||'';
+  document.getElementById('t-depart').value = trip.depart||'';
+  document.getElementById('t-return').value = trip.return||'';
+  document.getElementById('t-travelers').value = trip.travelers||'';
+  document.getElementById('t-notes').value = trip.notes||'';
+  document.getElementById('t-status').value = trip.status||'inquiry';
+  document.getElementById('t-fee').value = trip.fee||'';
+  document.getElementById('t-fee-received').checked = !!trip.feeReceived;
+  commLines = (trip.commLines||[]).map(l => ({...l, _id:'cl-'+Date.now()+Math.random().toString(36).slice(2,5)}));
+  renderCommLines();
+  proposalLines = (trip.proposals||[]).map(p => ({...p, _pid:'pl-'+Date.now()+Math.random().toString(36).slice(2,5)}));
+  renderProposalLines();
+  document.getElementById('trip-modal').classList.add('open');
+}
+
+function saveTrip(){
+  const destination = document.getElementById('t-destination').value.trim();
+  if(!destination){ showToast('Destination is required', true); return; }
+  syncCommLines();
+
+  const trip = {
+    id: editingTripId || newId(),
+    destination,
+    depart: document.getElementById('t-depart').value,
+    return: document.getElementById('t-return').value,
+    travelers: document.getElementById('t-travelers').value,
+    notes: document.getElementById('t-notes').value.trim(),
+    status: document.getElementById('t-status').value,
+    commLines: commLines.map(l => ({
+      supplier: l.supplier,
+      price: l.price || null,
+      pct: l.pct || null,
+      amt: l.amt || null,
+      splitOverride: (l.splitOverride !== '' && l.splitOverride != null) ? l.splitOverride : null,
+      received: l.received,
+    })),
+    fee: document.getElementById('t-fee').value || null,
+    feeReceived: document.getElementById('t-fee-received').checked,
+    proposals: syncProposalLines(),
+  };
+
+  const client = clients.find(c=>c.id===editingTripClientId);
+  if(!client) return;
+  if(!client.trips) client.trips = [];
+
+  if(editingTripId){
+    const idx = client.trips.findIndex(t=>t.id===editingTripId);
+    client.trips[idx] = trip;
+  } else {
+    client.trips.unshift(trip);
+  }
+
+  scheduleSave();
+  closeModal('trip-modal');
+  render();
+  setTimeout(() => {
+    const body = document.getElementById('cb-'+editingTripClientId);
+    const toggle = document.getElementById('ct-'+editingTripClientId);
+    if(body) body.classList.add('open');
+    if(toggle) toggle.classList.add('open');
+  }, 50);
+  showToast(editingTripId ? 'Trip updated' : 'Trip added');
+}
+
+function deleteTrip(){
+  if(!confirm('Delete this trip?')) return;
+  const client = clients.find(c=>c.id===editingTripClientId);
+  if(client) client.trips = (client.trips||[]).filter(t=>t.id!==editingTripId);
+  scheduleSave();
+  closeModal('trip-modal');
+  render();
+  showToast('Trip deleted');
+}
+
+function quickStatus(clientId, tripId, status){
+  const client = clients.find(c=>c.id===clientId);
+  const trip = (client?.trips||[]).find(t=>t.id===tripId);
+  if(trip){ trip.status = status; scheduleSave(); render(); showToast('Marked as ' + statusLabels[status]); }
+}
+
+function quickCommReceived(clientId, tripId){
+  const client = clients.find(c=>c.id===clientId);
+  const trip = (client?.trips||[]).find(t=>t.id===tripId);
+  if(trip){ (trip.commLines||[]).forEach(l => l.received = true); scheduleSave(); render(); showToast('All commissions marked received'); }
+}
+
+// ── COMMISSION LINES ──
+function addCommLine(data){
+  const _id = 'cl-' + Date.now() + Math.random().toString(36).slice(2,5);
+  commLines.push({_id, supplier: data?.supplier||'', price: data?.price||'', pct: data?.pct||'10', amt: data?.amt||'', splitOverride: data?.splitOverride ?? null, received: data?.received||false});
+  renderCommLines();
+}
+
+function removeCommLine(_id){
+  commLines = commLines.filter(l => l._id !== _id);
+  renderCommLines();
+}
+
+function autoCalcLineAmt(_id){
+  const price = parseFloat(document.getElementById('cl-price-'+_id)?.value) || 0;
+  const pct = parseFloat(document.getElementById('cl-pct-'+_id)?.value) || 0;
+  if(price && pct){
+    const amt = (price * pct / 100).toFixed(2);
+    const el = document.getElementById('cl-amt-'+_id);
+    if(el) el.value = amt;
+  }
+  updateLineNet(_id);
+}
+
+function updateLineNet(_id){
+  const amt = parseFloat(document.getElementById('cl-amt-'+_id)?.value) || 0;
+  const splitRaw = document.getElementById('cl-split-'+_id)?.value;
+  const splitPct = (splitRaw !== '' && splitRaw != null) ? parseFloat(splitRaw) : settings.myPct;
+  const net = amt * splitPct / 100;
+  const netEl = document.getElementById('cl-net-'+_id);
+  if(netEl) netEl.textContent = amt > 0 ? formatMoney(net) + ' net' : '';
+}
+
+function syncCommLines(){
+  commLines.forEach(line => {
+    line.supplier = document.getElementById('cl-supplier-'+line._id)?.value || '';
+    line.price    = document.getElementById('cl-price-'+line._id)?.value || '';
+    line.pct      = document.getElementById('cl-pct-'+line._id)?.value || '';
+    line.amt      = document.getElementById('cl-amt-'+line._id)?.value || '';
+    const splitRaw = document.getElementById('cl-split-'+line._id)?.value;
+    line.splitOverride = (splitRaw !== '' && splitRaw != null && splitRaw !== String(settings.myPct) && !isNaN(parseFloat(splitRaw))) ? parseFloat(splitRaw) : null;
+    line.received = document.getElementById('cl-recv-'+line._id)?.checked || false;
+  });
+}
+
+function renderCommLines(){
+  const wrap = document.getElementById('comm-lines-wrap');
+  if(!wrap) return;
+  if(commLines.length === 0){
+    wrap.innerHTML = '<div style="font-size:.74rem;color:var(--text-faint);padding:8px 0;">No supplier commissions added yet.</div>';
+    return;
+  }
+  wrap.innerHTML = commLines.map(line => `
+    <div class="comm-line" id="comm-line-${line._id}">
+      <div class="comm-line-header">
+        <div class="form-field">
+          <label style="font-size:.56rem;">Supplier</label>
+          <input type="text" id="cl-supplier-${line._id}" value="${line.supplier}" placeholder="e.g. Villa Cimbrone" style="font-size:.74rem;padding:6px 10px;">
+        </div>
+        <button type="button" class="btn-remove-line" onclick="removeCommLine('${line._id}')">×</button>
+      </div>
+      <div class="comm-line-calcs">
+        <div class="form-field">
+          <label>Supplier Price</label>
+          <input type="number" id="cl-price-${line._id}" value="${line.price}" placeholder="0.00" min="0" step="0.01"
+            oninput="autoCalcLineAmt('${line._id}')">
+        </div>
+        <div class="form-field">
+          <label>Comm %</label>
+          <input type="number" id="cl-pct-${line._id}" value="${line.pct}" placeholder="10" min="0" max="100" step=".5"
+            oninput="autoCalcLineAmt('${line._id}')">
+        </div>
+        <div class="form-field">
+          <label>Commission Amt</label>
+          <input type="number" id="cl-amt-${line._id}" value="${line.amt}" placeholder="Auto" min="0" step="0.01"
+            oninput="updateLineNet('${line._id}')">
+        </div>
+      </div>
+      <div class="comm-line-split">
+        <label>My split override <span style="font-size:.62rem;color:var(--text-faint)">(default: ${settings.myPct}%)</span></label>
+        <input type="number" class="split-override-input" id="cl-split-${line._id}" value="${line.splitOverride ?? ''}" placeholder="${settings.myPct}" min="0" max="100" step="1"
+          oninput="updateLineNet('${line._id}')">
+        <span style="font-size:.68rem;color:var(--text-dim);">%</span>
+        <span class="comm-line-net" id="cl-net-${line._id}"></span>
+      </div>
+      <label class="comm-received-toggle" style="font-size:.68rem;">
+        <input type="checkbox" id="cl-recv-${line._id}" ${line.received ? 'checked' : ''}>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span>Commission received</span>
+      </label>
+    </div>
+  `).join('');
+  // trigger net calculations
+  commLines.forEach(l => updateLineNet(l._id));
+}
+
+
+// ── PROPOSAL LINES ──
+function addProposalLine(data){
+  const _pid = 'pl-' + Date.now() + Math.random().toString(36).slice(2,5);
+  proposalLines.push({_pid, label: data?.label||'', url: data?.url||'', dateSent: data?.dateSent||''});
+  renderProposalLines();
+}
+
+function removeProposalLine(_pid){
+  proposalLines = proposalLines.filter(p => p._pid !== _pid);
+  renderProposalLines();
+}
+
+function syncProposalLines(){
+  proposalLines.forEach(p => {
+    p.label    = document.getElementById('pl-label-'+p._pid)?.value.trim() || '';
+    p.url      = document.getElementById('pl-url-'+p._pid)?.value.trim() || '';
+    p.dateSent = document.getElementById('pl-date-'+p._pid)?.value || '';
+  });
+  return proposalLines
+    .filter(p => p.label || p.url)
+    .map(({label, url, dateSent}) => ({label, url, dateSent}));
+}
+
+function renderProposalLines(){
+  const wrap = document.getElementById('proposal-lines-wrap');
+  if(!wrap) return;
+  if(proposalLines.length === 0){ wrap.innerHTML = ''; return; }
+  wrap.innerHTML = proposalLines.map(p => `
+    <div class="proposal-line" data-pid="${p._pid}">
+      <div class="form-field">
+        <label style="font-size:.56rem;">Label</label>
+        <input type="text" id="pl-label-${p._pid}" value="${p.label}" placeholder="e.g. Amalfi Coast Proposal" style="font-size:.74rem;padding:6px 10px;">
+      </div>
+      <div class="form-field">
+        <label style="font-size:.56rem;">URL</label>
+        <input type="url" id="pl-url-${p._pid}" value="${p.url}" placeholder="https://…" style="font-size:.74rem;padding:6px 10px;">
+      </div>
+      <div class="form-field narrow">
+        <label style="font-size:.56rem;">Date Sent</label>
+        <input type="date" id="pl-date-${p._pid}" value="${p.dateSent}" style="font-size:.74rem;padding:6px 10px;">
+      </div>
+      <button type="button" class="btn-remove-proposal" onclick="removeProposalLine('${p._pid}')">×</button>
+    </div>
+  `).join('');
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+}
+
+document.querySelectorAll('.modal-overlay').forEach(el => {
+  el.addEventListener('click', e => { if(e.target === el) el.classList.remove('open'); });
+});
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(el=>el.classList.remove('open')); });
+
+document.getElementById('btn-add-client').onclick = openAddClient;
+document.getElementById('search-input').addEventListener('input', render);
+document.getElementById('filter-status').addEventListener('change', render);
+
+// ── TOAST ──
+let toastTimer;
+function showToast(msg, isErr=false){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast' + (isErr?' err':'') + ' show';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>el.classList.remove('show'), 2800);
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  GITHUB SYNC FUNCTIONS
+// ════════════════════════════════════════════════════════════════════
+async function syncFromGitHub() {
+  setSyncStatus('saving', 'Loading from GitHub…');
+  try {
+    const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
+    // 404 means file doesn't exist yet — push local data up to create it
+    if (res.status === 404) {
+      setSyncStatus('saving', 'Creating data file on GitHub…');
+      await saveToGitHub();
+      return;
+    }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    if (text && text.trim().startsWith('{')) {
+      const parsed = JSON.parse(text);
+      const hasData = parsed && parsed._version === DATA_VERSION &&
+        Array.isArray(parsed.data) && parsed.data.length > 0;
+      if (hasData) {
+        clients = parsed.data;
+        if (parsed.settings) { const s = parsed.settings; settings = {...settings, myPct: s.myPct ?? (s.agencyPct ? (100 - s.agencyPct) : 70) }; }
+        persist();
+        render();
+        setSyncStatus('connected', 'Synced from GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+        await fetchSHA();
+        return;
+      }
+    }
+    setSyncStatus('saving', 'Pushing local data to GitHub…');
+    await saveToGitHub();
+  } catch(e) {
+    setSyncStatus('error', 'GitHub sync failed — working offline');
+    showToast('Could not reach GitHub. Changes saved locally.');
+  }
+}
+
+async function fetchSHA() {
+  try {
+    const res = await fetch(GH_API_URL, {
+      headers: { 'Authorization': 'Bearer ' + getPAT(), 'Accept': 'application/vnd.github+json' }
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.sha) setSHA(data.sha);
+  } catch(e) {}
+}
+
+async function saveToGitHub() {
+  if (!configOk()) return;
+  setSyncStatus('saving', 'Saving to GitHub…');
+  pendingSave = true;
+  try {
+    await fetchSHA();
+    const payload = { _version: DATA_VERSION, data: clients, settings };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+    const body = { message: 'Journey Intelligence update · ' + new Date().toISOString().slice(0,10), content };
+    if (getSHA()) body.sha = getSHA();
+    const res = await fetch(GH_API_URL, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + getPAT(),
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || 'HTTP ' + res.status); }
+    const result = await res.json();
+    if (result.content && result.content.sha) setSHA(result.content.sha);
+    pendingSave = false;
+    setSyncStatus('connected', 'Saved to GitHub · ' + new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+  } catch(e) {
+    pendingSave = false;
+    setSyncStatus('error', 'Save failed — changes kept locally');
+    showToast('GitHub save failed: ' + e.message);
+  }
+}
+
+function setSyncStatus(state, label) {
+  const dot = document.getElementById('sync-dot');
+  document.getElementById('sync-label').textContent = label;
+  dot.className = 'sync-dot';
+  if (state === 'connected') dot.classList.add('connected');
+  else if (state === 'saving') dot.classList.add('saving');
+  else if (state === 'error')  dot.classList.add('error');
+}
+
+function resetLocalData() {
+  if (!confirm('Clear locally cached data and reload?\n\nYour GitHub token will be kept — only data and the cached SHA are cleared. If GitHub sync is configured, data will reload from GitHub. Otherwise the app will reload from its built-in seed data.')) return;
+  localStorage.removeItem(LS_KEY);
+  localStorage.removeItem(LS_SHA);
+  location.reload();
+}
+
+window.addEventListener('beforeunload', e => { if (saveTimer || pendingSave) { e.preventDefault(); e.returnValue = ''; } });
+
+
+// ── PHONE FORMATTING ──────────────────────────────────────────────────────
+function formatPhone(input) {
+  // Strip all non-digit chars except leading +
+  let raw = input.value.replace(/[^\d+]/g, '');
+  // Detect international prefix (starts with + or more than 10 digits)
+  let formatted = '';
+  if (raw.startsWith('+')) {
+    // International: keep + then format rest
+    const digits = raw.slice(1).replace(/\D/g, '');
+    if (digits.length <= 1) {
+      formatted = '+' + digits;
+    } else if (digits.length <= 4) {
+      formatted = '+' + digits.slice(0,1) + ' (' + digits.slice(1);
+    } else if (digits.length <= 7) {
+      formatted = '+' + digits.slice(0,1) + ' (' + digits.slice(1,4) + ') ' + digits.slice(4);
+    } else if (digits.length <= 11) {
+      formatted = '+' + digits.slice(0,1) + ' (' + digits.slice(1,4) + ') ' + digits.slice(4,7) + '-' + digits.slice(7);
+    } else {
+      formatted = '+' + digits.slice(0,1) + ' (' + digits.slice(1,4) + ') ' + digits.slice(4,7) + '-' + digits.slice(7,11);
+    }
+  } else {
+    // Domestic US/CA: assume +1
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length <= 3) {
+      formatted = digits.length ? '(' + digits : '';
+    } else if (digits.length <= 6) {
+      formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+    } else if (digits.length <= 10) {
+      formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+    } else {
+      // 11+ digits — treat first digit as country code
+      formatted = '+' + digits.slice(0,1) + ' (' + digits.slice(1,4) + ') ' + digits.slice(4,7) + '-' + digits.slice(7,11);
+    }
+  }
+  input.value = formatted;
+}
+
+['c-phone','c-phone2'].forEach(id => {
+  const el = document.getElementById(id);
+  if(el) el.addEventListener('input', () => formatPhone(el));
+});
+
+// ── SEED DATA ──
+function seedData(){
+  return [{
+    id: 'seed-001',
+    lastName: 'Hargrove',
+    primaryFirst: 'Catherine',
+    secondaryFirst: 'William',
+    phone: '(214) 555-0182',
+    email: 'catherine.hargrove@email.com',
+    phone2: '(214) 555-0193',
+    email2: '',
+    notes: 'Prefers luxury properties. Anniversary trip — 25 years. Catherine handles all communication.',
+    createdAt: new Date().toISOString(),
+    trips: [{
+      id: 'trip-001',
+      destination: 'Amalfi Coast, Italy',
+      depart: '2025-09-12',
+      return: '2025-09-22',
+      travelers: '2',
+      status: 'booked',
+      notes: '10-night itinerary. Villa rental in Ravello + private boat day.',
+      commLines: [
+        {supplier:'Villa Cimbrone', price:'14000', pct:'12', amt:'1680', splitOverride:null, received:false},
+        {supplier:'Amalfi Coast Tours', price:'4800', pct:'10', amt:'480', splitOverride:25, received:true},
+      ],
+      fee: '500',
+      feeReceived: true,
+    }],
+  }];
+}
+
+
+// ── Keyboard shortcuts ──
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closePATModal(); closeModal('settings-modal'); }
+  if (e.key === 'Enter' && document.getElementById('pat-modal').classList.contains('open')) {
+    e.preventDefault(); savePAT();
+  }
+});
+
+// ── INIT ──
+loadLocal();
+if (clients.length === 0) { clients = seedData(); persist(); }
+render();
+updateSetupBanner();
+
+if (configOk()) {
+  syncFromGitHub();
+} else {
+  setSyncStatus('disconnected', 'Not connected to GitHub');
+}
+
+</script>
+
+</body>
+</html>
