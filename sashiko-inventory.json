@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpskfp76gipu",
+      "name": "Kona Cotton — Jungle",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-147",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#2A5030",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpskef4apugz",
       "name": "Kona Cotton — Grasshopper",
       "cat": "Fabric",
