@@ -2336,6 +2336,10 @@
       "name": "Stencil Kit — Flowers",
       "cat": "Stencils",
       "detail": "12-piece, 5.5\", Sakura/floral",
+      "collection": "",
+      "fabric-code": "",
+      "form": "",
+      "prewashed": "",
       "maker": "FREEBLOSS",
       "supplier": "Amazon",
       "qty": "1 kit",
@@ -2343,7 +2347,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "seed-57",
