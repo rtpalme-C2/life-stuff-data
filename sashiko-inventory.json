@@ -1387,8 +1387,8 @@
       "id": "seed-6",
       "name": "Kona Cotton — Cloud",
       "cat": "Fabric",
-      "detail": "Pantone 2026 Collection",
-      "collection": "",
+      "detail": "Powdered Pastels",
+      "collection": "Pantone 2026 Collection",
       "fabric-code": "",
       "form": "",
       "prewashed": "Unknown",
@@ -1398,7 +1398,7 @@
       "status": "in-stock",
       "role": "Stash",
       "swatch": "#B8C8DC",
-      "note": "Powdered Pastels",
+      "note": "",
       "reorder": null
     },
     {
