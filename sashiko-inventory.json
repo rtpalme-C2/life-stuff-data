@@ -2338,6 +2338,10 @@
       "name": "Mini Wonder Clips",
       "cat": "Notions",
       "detail": "50 pcs · fabric clips",
+      "collection": "",
+      "fabric-code": "",
+      "form": "",
+      "prewashed": "",
       "maker": "Clover",
       "supplier": "Amazon",
       "qty": "1 pack",
@@ -2345,7 +2349,7 @@
       "role": "Stash",
       "swatch": "",
       "note": "Delivered Mar 14",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "seed-58",
