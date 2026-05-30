@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpsk7ii2y87v",
+      "name": "Kona Cotton — Cream",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Holiday Bundle",
+      "fabric-code": "K001-1090",
+      "form": "Fat Quarter",
+      "prewashed": "Yes",
+      "maker": "Robert Kaufman",
+      "supplier": "Amazon",
+      "qty": "1 FQ",
+      "status": "in-stock",
+      "role": "Stash",
+      "swatch": "#F0EAD6",
+      "note": "FQ-1379-12 · May 2026 · $38.61",
+      "reorder": null
+    },
+    {
       "id": "mpsk6dojsatg",
       "name": "Kona Cotton — Oyster",
       "cat": "Fabric",
