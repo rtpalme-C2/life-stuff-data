@@ -353,7 +353,7 @@
     },
     {
       "id": "seed-3",
-      "name": "Kona Cotton — Foxglove",
+      "name": "Kona Cotton - Foxglove",
       "cat": "Fabric",
       "detail": "K001-956",
       "maker": "Robert Kaufman",
@@ -363,7 +363,7 @@
       "role": "Project",
       "swatch": "#C4909A",
       "note": "Washed & ironed",
-      "reorder": null
+      "reorder": "yes"
     },
     {
       "id": "seed-4",
