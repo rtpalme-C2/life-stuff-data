@@ -2,6 +2,24 @@
   "_version": 3,
   "data": [
     {
+      "id": "mpslcbfk3cyz",
+      "name": "Essex Yarn Dyed — Nautical",
+      "cat": "Fabric",
+      "detail": "",
+      "collection": "Blue Voyage Bundle",
+      "fabric-code": "E064-412",
+      "form": "Fat Quarter",
+      "prewashed": "No",
+      "maker": "Robert Kaufman",
+      "supplier": "Sewfinity",
+      "qty": "1 FQ",
+      "status": "on-order",
+      "role": "Stash",
+      "swatch": "#1E2E50",
+      "note": "Order 5943 · May 29, 2026 · Blue Voyage Bundle $42.00",
+      "reorder": null
+    },
+    {
       "id": "mpslaw6owd3d",
       "name": "Essex Yarn Dyed — Denim",
       "cat": "Fabric",
