@@ -1129,6 +1129,21 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_7gi9zti",
+      "model": "3776 Century - Travia",
+      "maker": "Platinum",
+      "nib_size": "Fine",
+      "nib_type": "14K Gold",
+      "special": true,
+      "retail": 595,
+      "purchase": 595,
+      "status": "Working",
+      "supplier": "Goulet Pens",
+      "order_number": "S1912698",
+      "order_date": "06/12/2026",
+      "care": []
     }
   ],
   "inks": [
