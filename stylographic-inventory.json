@@ -2580,6 +2580,23 @@
       "supplier": "The Goulet Pen Co.",
       "order_number": "S1912698",
       "order_date": "06/12/2026"
+    },
+    {
+      "id": "_efiv0kd",
+      "name": "No. 50 Kyo Town Legend Blue",
+      "maker": "Nagasawa",
+      "color": "Blue",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "Low",
+      "limited": false,
+      "size": "50ml",
+      "retail": 30,
+      "purchase": 30,
+      "status": "Resting",
+      "supplier": "Yoseka Stationery",
+      "order_number": "YS357602",
+      "order_date": "06/17/2026"
     }
   ],
   "accessories": [
