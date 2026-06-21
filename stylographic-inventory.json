@@ -2540,6 +2540,23 @@
       "supplier": "Atlas Stationers",
       "order_number": "254926",
       "order_date": "06/20/2025"
+    },
+    {
+      "id": "_itake6j",
+      "name": "Chou Kuro Black",
+      "maker": "Platinum",
+      "color": "Black",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "No",
+      "limited": false,
+      "size": "60ml",
+      "retail": 64,
+      "purchase": 64,
+      "status": "Resting",
+      "supplier": "Goulet Pens",
+      "order_number": "S1912698",
+      "order_date": "06/12/2026"
     }
   ],
   "accessories": [
