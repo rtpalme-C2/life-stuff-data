@@ -1143,7 +1143,15 @@
       "supplier": "Goulet Pens",
       "order_number": "S1912698",
       "order_date": "06/12/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_oxgs6do",
+          "date": "6/21/2026",
+          "type": "Fill only",
+          "ink": "Chou Kuro Black",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -2553,7 +2561,7 @@
       "size": "60ml",
       "retail": 64,
       "purchase": 64,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Goulet Pens",
       "order_number": "S1912698",
       "order_date": "06/12/2026"
