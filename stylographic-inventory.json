@@ -1123,7 +1123,7 @@
       "special": true,
       "retail": 280,
       "purchase": 280,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Yoseka Stationery",
       "order_number": "YS347880",
       "order_date": "05/09/2026",
@@ -1133,6 +1133,13 @@
           "date": "5/23/2026",
           "type": "Fill only",
           "ink": "Human Issues",
+          "note": ""
+        },
+        {
+          "id": "_uibb17t",
+          "date": "6/28/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -1665,7 +1672,7 @@
       "size": "30ml",
       "retail": 25,
       "purchase": 22.5,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
       "order_date": "08/23/2025"
