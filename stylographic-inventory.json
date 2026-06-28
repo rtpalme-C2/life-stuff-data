@@ -940,7 +940,7 @@
       "special": true,
       "retail": 522.8,
       "purchase": 418.24,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "264678",
       "order_date": "08/08/2025",
@@ -950,6 +950,13 @@
           "date": "8/17/2025",
           "type": "Empty, Clean",
           "ink": "",
+          "note": ""
+        },
+        {
+          "id": "_281lfuv",
+          "date": "6/28/2026",
+          "type": "Fill only",
+          "ink": "Cafe des Illes",
           "note": ""
         }
       ]
@@ -1337,7 +1344,7 @@
       "size": "30ml",
       "retail": 12.56,
       "purchase": 11.31,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "271055",
       "order_date": "08/23/2025"
