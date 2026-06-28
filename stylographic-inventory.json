@@ -1190,11 +1190,19 @@
       "special": true,
       "retail": 470,
       "purchase": 470,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Yoseka Stationery",
       "order_number": "YS357602",
       "order_date": "06/17/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_335wbzk",
+          "date": "6/28/2026",
+          "type": "Fill only",
+          "ink": "No. 50 Kyo Town Legend Blue",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -2621,7 +2629,7 @@
       "size": "50ml",
       "retail": 30,
       "purchase": 30,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Yoseka Stationery",
       "order_number": "YS357602",
       "order_date": "06/17/2026"
