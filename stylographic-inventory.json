@@ -47,7 +47,7 @@
       "special": false,
       "retail": 214.95,
       "purchase": 183.56,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Laywine's",
       "order_number": "27214",
       "order_date": "08/02/2025",
@@ -71,6 +71,13 @@
           "date": "5/23/2026",
           "type": "Fill only",
           "ink": "Coffee Break",
+          "note": ""
+        },
+        {
+          "id": "_4teioqh",
+          "date": "6/28/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2539,7 +2546,7 @@
       "size": "30ml",
       "retail": 17,
       "purchase": 17,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "372763",
       "order_date": "04/18/2026"
