@@ -1210,6 +1210,21 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_ywbjtj2",
+      "model": "2000 - Makrolon",
+      "maker": "Lamy",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 223.2,
+      "purchase": 189.72,
+      "status": "Resting",
+      "supplier": "Atlas Stationers",
+      "order_number": "405103",
+      "order_date": "06/28/2026",
+      "care": []
     }
   ],
   "inks": [
