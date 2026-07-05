@@ -2680,6 +2680,23 @@
       "supplier": "Atlas Stationers",
       "order_number": "405103",
       "order_date": "06/28/2026"
+    },
+    {
+      "id": "_xrtsxjr",
+      "name": "No. 25 Tarumi Apricot",
+      "maker": "Nagasawa",
+      "color": "Orange",
+      "shimmer": "No",
+      "sheen": "Low",
+      "shading": "High",
+      "limited": false,
+      "size": "50ml",
+      "retail": 30,
+      "purchase": 30,
+      "status": "Resting",
+      "supplier": "Vanness",
+      "order_number": "173013",
+      "order_date": "06/30/2026"
     }
   ],
   "accessories": [
