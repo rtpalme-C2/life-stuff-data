@@ -1233,6 +1233,21 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_0kxpi45",
+      "model": "Odyssey Star Seeker",
+      "maker": "Nagasawa",
+      "nib_size": "Extra Fine",
+      "nib_type": "14K Gold",
+      "special": true,
+      "retail": 440,
+      "purchase": 440,
+      "status": "Resting",
+      "supplier": "Vanness",
+      "order_number": "173013",
+      "order_date": "06/30/2026",
+      "care": []
     }
   ],
   "inks": [
