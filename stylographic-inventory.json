@@ -1174,7 +1174,7 @@
       "special": true,
       "retail": 595,
       "purchase": 595,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "The Goulet Pen Co.",
       "order_number": "S1912698",
       "order_date": "06/12/2026",
@@ -1184,6 +1184,13 @@
           "date": "6/21/2026",
           "type": "Fill only",
           "ink": "Chou Kuro Black",
+          "note": ""
+        },
+        {
+          "id": "_3pk6kl9",
+          "date": "7/22/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2664,7 +2671,7 @@
       "size": "60ml",
       "retail": 64,
       "purchase": 64,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "The Goulet Pen Co.",
       "order_number": "S1912698",
       "order_date": "06/12/2026"
