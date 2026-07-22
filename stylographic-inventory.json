@@ -1220,7 +1220,7 @@
       "special": false,
       "retail": 223.2,
       "purchase": 189.72,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "405103",
       "order_date": "06/28/2026",
@@ -1230,6 +1230,13 @@
           "date": "7/5/2026",
           "type": "Fill only",
           "ink": "Gris Galet",
+          "note": ""
+        },
+        {
+          "id": "_w7yyuuy",
+          "date": "7/22/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2691,7 +2698,7 @@
       "size": "30ml",
       "retail": 15.5,
       "purchase": 13.18,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Atlas Stationers",
       "order_number": "405103",
       "order_date": "06/28/2026"
