@@ -2858,6 +2858,23 @@
       "supplier": "Tom's Studio",
       "order_number": "",
       "order_date": ""
+    },
+    {
+      "id": "_6aa7dwp",
+      "name": "24 Sepia",
+      "maker": "Tom's Studio",
+      "color": "Brown",
+      "shimmer": "No",
+      "sheen": "No",
+      "shading": "High",
+      "limited": false,
+      "size": "5ml",
+      "retail": 5.35,
+      "purchase": 5.35,
+      "status": "Resting",
+      "supplier": "Tom's Studio",
+      "order_number": "",
+      "order_date": ""
     }
   ],
   "accessories": [
