@@ -2807,6 +2807,23 @@
       "supplier": "Tom's Studio",
       "order_number": "",
       "order_date": ""
+    },
+    {
+      "id": "_a8zffra",
+      "name": "08 Loch Ness",
+      "maker": "Tom's Studio",
+      "color": "Blue",
+      "shimmer": "",
+      "sheen": "",
+      "shading": "",
+      "limited": false,
+      "size": "5ml",
+      "retail": 5.35,
+      "purchase": 5.35,
+      "status": "Resting",
+      "supplier": "Tom's Studio",
+      "order_number": "",
+      "order_date": ""
     }
   ],
   "accessories": [
