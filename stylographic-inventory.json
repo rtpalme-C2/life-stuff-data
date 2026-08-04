@@ -1277,6 +1277,21 @@
           "note": ""
         }
       ]
+    },
+    {
+      "id": "_nrezpkh",
+      "model": "Botanica Studio",
+      "maker": "Tom's Studio",
+      "nib_size": "Extra Fine",
+      "nib_type": "14K Gold",
+      "special": true,
+      "retail": 120,
+      "purchase": 120,
+      "status": "Resting",
+      "supplier": "Tom's Studio",
+      "order_number": "200995",
+      "order_date": "07/25/2026",
+      "care": []
     }
   ],
   "inks": [
