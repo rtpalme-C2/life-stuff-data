@@ -1294,11 +1294,19 @@
       "special": true,
       "retail": 120,
       "purchase": 120,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Tom's Studio",
       "order_number": "200995",
       "order_date": "07/25/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_1siuo2t",
+          "date": "8/4/2026",
+          "type": "Fill only",
+          "ink": "21 Ivy",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
@@ -2895,7 +2903,7 @@
       "size": "5ml",
       "retail": 5.35,
       "purchase": 5.35,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Tom's Studio",
       "order_number": "",
       "order_date": ""
