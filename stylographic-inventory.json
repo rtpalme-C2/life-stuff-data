@@ -531,7 +531,7 @@
       "special": true,
       "retail": 79.2,
       "purchase": 71.28,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Atlas Stationers",
       "order_number": "289970",
       "order_date": "10/17/2025",
@@ -541,6 +541,13 @@
           "date": "10/26/2025",
           "type": "Fill only",
           "ink": "Cliff",
+          "note": ""
+        },
+        {
+          "id": "_nly7fvr",
+          "date": "8/4/2026",
+          "type": "Fill only",
+          "ink": "Black",
           "note": ""
         }
       ]
@@ -1509,7 +1516,7 @@
       "size": "60ml",
       "retail": 12.72,
       "purchase": 12.72,
-      "status": "Resting",
+      "status": "Working",
       "supplier": "Amazon",
       "order_number": "",
       "order_date": ""
