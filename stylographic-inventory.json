@@ -1285,7 +1285,7 @@
       "special": true,
       "retail": 440,
       "purchase": 440,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Vanness",
       "order_number": "173013",
       "order_date": "06/30/2026",
@@ -1295,6 +1295,13 @@
           "date": "7/22/2026",
           "type": "Fill only",
           "ink": "No. 25 Tarumi Apricot",
+          "note": ""
+        },
+        {
+          "id": "_tgs89cd",
+          "date": "9/22/2026",
+          "type": "Empty, Clean",
+          "ink": "",
           "note": ""
         }
       ]
@@ -2781,7 +2788,7 @@
       "size": "50ml",
       "retail": 30,
       "purchase": 30,
-      "status": "Working",
+      "status": "Resting",
       "supplier": "Vanness",
       "order_number": "173013",
       "order_date": "06/30/2026"
