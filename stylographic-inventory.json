@@ -1343,6 +1343,21 @@
       "order_number": "Dallas Pen Show",
       "order_date": "09/26/2026",
       "care": []
+    },
+    {
+      "id": "_r2zasz1",
+      "model": "Cobra - Black Guilloche",
+      "maker": "Diplomat",
+      "nib_size": "Extra Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 100,
+      "purchase": 90,
+      "status": "Resting",
+      "supplier": "Dromgoole’s",
+      "order_number": "Dallas Pen Show",
+      "order_date": "09/26/2026",
+      "care": []
     }
   ],
   "inks": [
