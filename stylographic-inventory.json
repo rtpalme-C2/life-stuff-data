@@ -1358,6 +1358,21 @@
       "order_number": "Dallas Pen Show",
       "order_date": "09/26/2026",
       "care": []
+    },
+    {
+      "id": "_2ndlu5c",
+      "model": "Viper - Orange Guilloche",
+      "maker": "Diplomat",
+      "nib_size": "Fine",
+      "nib_type": "Steel",
+      "special": false,
+      "retail": 100,
+      "purchase": 100,
+      "status": "En Route",
+      "supplier": "The Goulet Pen Company",
+      "order_number": "S1942017",
+      "order_date": "09/26/2026",
+      "care": []
     }
   ],
   "inks": [
