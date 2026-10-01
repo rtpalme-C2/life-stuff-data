@@ -1388,7 +1388,15 @@
       "supplier": "The Goulet Pen Company",
       "order_number": "S1942017",
       "order_date": "09/26/2026",
-      "care": []
+      "care": [
+        {
+          "id": "_0zxj493",
+          "date": "10/1/2026",
+          "type": "Received",
+          "ink": "",
+          "note": ""
+        }
+      ]
     }
   ],
   "inks": [
