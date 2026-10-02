@@ -19,7 +19,7 @@
           "return": "",
           "travelers": "",
           "notes": "",
-          "status": "inquiry",
+          "status": "cancelled",
           "commLines": [],
           "fee": null,
           "feeReceived": false,
