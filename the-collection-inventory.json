@@ -2,6 +2,35 @@
   "_version": 1,
   "items": [
     {
+      "id": "murjbph2vsgd",
+      "name": "Empire Soft Carryall Bag 48",
+      "brand": "Coach",
+      "category": "Carryall",
+      "notes": "",
+      "features": "",
+      "condition": "",
+      "accompanied": "",
+      "sku": "",
+      "size": "",
+      "material": "",
+      "hardware": "",
+      "color": "",
+      "origin": "",
+      "purchased": "",
+      "dimensions": "",
+      "cost": "",
+      "costCurrency": "USD",
+      "price": "",
+      "soldPrice": "",
+      "status": "stash",
+      "channels": [],
+      "purchaseType": "new",
+      "acquired": "",
+      "receipt": true,
+      "priceHistory": [],
+      "images": []
+    },
+    {
       "id": "muotblc83zim",
       "name": "Turnlock Tote Bag 40",
       "brand": "Coach",
@@ -28,7 +57,9 @@
       "acquired": "2026-09-09",
       "receipt": true,
       "priceHistory": [],
-      "images": []
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1790815754/Turnlock_Tote_admfb4.png"
+      ]
     },
     {
       "id": "muot03n4l0s3",
