@@ -32,8 +32,8 @@ Business apps:
                                     proposal-template.html
                                     brand-system.md
   rtpalme-C2/Sashiko-Craft   → sashiko-craft-inventory.html
-  rtpalme-C2/Modern-Heirloom → the-collection.html   (the app formerly called Modern Heirloom;
-                                 repo name unchanged. modern-heirloom-inventory.html is retired.)
+  rtpalme-C2/The-Collection  → the-collection.html   (formerly the Modern Heirloom app and repo;
+                                 modern-heirloom-inventory.html has been deleted)
 
 Data files in rtpalme-C2/life-stuff-data:
   sashiko-inventory.json
@@ -194,12 +194,14 @@ Apps supporting active business operations and commerce.
 --radius-sm:     8px;
 ```
 
-### The Collection (formerly Modern Heirloom) — Rose / Plum
+### The Collection (formerly Modern Heirloom) — Plum / Champagne
 ```css
---mh-dark:  #1C0810;
---mh-mid:   #4A1428;
---mh-rose:  #D4617A;
+--mh-dark: #1C0810;
+--mh-mid: #4A1428;
+--mh-accent: #8B2040;
+--mh-rose: #DCC9A6;
 --mh-petal: #F5F2EC;
+--mh-petal-dim: #EAE6DF;
 ```
 
 ---
@@ -642,7 +644,7 @@ older name). A token key is never shared between apps. `DATA_VERSION` is per app
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.5 | October 2026 | Added sections 26–27 (push guard, save timer, local dates, escaping, status colours, storage constants). Radius scale restricted to 4/8/12/16/20/50% (removed Soft 10px). Headers: no eyebrow, no tagline. Modern Heirloom renamed The Collection. Incorporates the October 2026 audit rulings. |
+| 1.5 | October 2026 | Corrected The Collection palette to match the live app. Added sections 26–27 (push guard, save timer, local dates, escaping, status colours, storage constants). Radius scale restricted to 4/8/12/16/20/50% (removed Soft 10px). Headers: no eyebrow, no tagline. Modern Heirloom renamed The Collection (repo The-Collection). Incorporates the October 2026 audit rulings. |
 | 1.4 | May 2026 | Added Section 9: Rating Modal Pattern. Documented three-state preference modal (yes/undecided/no) with customizable display labels. Includes integration checklist for other apps. Updated section numbering (was 9–24, now 10–25). |
 | 1.3 | May 2026 | Added Section 8: Filter & Sort Pattern Decisions. Documented labeled filter-rows pattern (Pattern A) and sticky filter bar variant (Pattern B). Added decision matrix for choosing patterns. Updated section numbering (was 8–24, now 9–24). |
 | 1.2 | May 2026 | Removed all Chapter 1/Chapter 2 references. Added Personal/Business app categorisation. Removed header eyebrow from all apps. Removed life-stuff-hub.html. Updated steady data file reference to steady-inventory.json. |
