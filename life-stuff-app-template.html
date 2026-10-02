@@ -34,7 +34,7 @@
  *  2. All font sizes must use rem, never px.
  *     Exception: html { font-size: 16px } — the rem base, stays in px.
  *  3. Sync bar background must always use a CSS var, never a hardcoded hex.
- *  4. Eyebrow text: mixed case "Chapter N · Name" — never ALL CAPS.
+ *  4. No eyebrow, tagline or "Chapter N" text in the header — wordmark only.
  *  5. viewBox="0 0 1200 160" with preserveAspectRatio="xMidYMid slice".
  *     Rendered header height is set by CSS padding, not the viewBox.
  * ════════════════════════════════════════════════════════════════════
@@ -44,8 +44,7 @@
 
 /* ── PALETTE — replace with app-specific values ── */
 :root {
-  /* Chapter 2 · Craft & Life palette (Sashiko / reference)
-     For other apps, swap these values — keep variable names */
+  /* App palette — swap these values per app, keep variable names */
   --app-dark:    #1A2840;   /* header bg, primary dark */
   --app-mid:     #2E4A68;   /* sync bar, hover states */
   --app-accent:  #4A7A9B;   /* active states */
@@ -56,6 +55,12 @@
   --brass-light: #D4AE78;   /* button text on dark, hover */
   --shadow:      rgba(20,40,70,.12);
   --ink:         #1A2840;   /* body text */
+  /* Status colours — canonical set (same names in every app; swap values only) */
+  --ok:#2e8b57; --ok-bg:#eaf6ef; --ok-text:#2e6f52; --ok-border:#b9dfc8;
+  --warn:#c9a227; --warn-bg:#fff8e6; --warn-text:#5a4000; --warn-border:#f0c040;
+  --err:#b05050; --err-bg:#fdeeee; --err-text:#8a2f2f; --err-border:#e6b8b8;
+  --info-bg:#eaf1f8; --info-text:#2e4a68;
+  --neutral:#8a8f98; --neutral-bg:#f0f1f3; --neutral-text:#555a63;
 }
 
 body {
@@ -83,20 +88,12 @@ header::after {
   background: linear-gradient(90deg, transparent, var(--brass), transparent);
 }
 .header-inner { position: relative; display: flex; align-items: center; gap: 22px; }
-.header-eyebrow {
-  font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--brass-light); margin-bottom: 7px; font-weight: 400;
-}
 header h1 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.2rem; font-weight: 300; color: var(--app-bg);
   letter-spacing: .04em; line-height: 1;
 }
 header h1 em { font-style: italic; color: var(--app-border); }
-header p {
-  font-size: .68rem; color: rgba(255,255,255,.32);
-  margin-top: 7px; letter-spacing: .12em; text-transform: uppercase;
-}
 
 /* ══════════════════════════════════════════════════════════════════
    SYNC BAR — dark, extends from header
@@ -143,7 +140,8 @@ header p {
   background: #fff8e6; border: 1.5px solid #f0c040; border-radius: 4px;
   font-size: .8rem; line-height: 1.6; color: #5a4000;
 }
-.config-notice strong { display: block; margin-bottom: 4px; font-size: .85rem; }
+strong { font-weight: 500; }
+.config-notice > strong:first-child { display: block; margin-bottom: 4px; font-size: .85rem; }
 .config-notice code {
   background: #f0e8c8; padding: 1px 6px; border-radius: 4px;
   font-family: monospace; font-size: .78rem;
@@ -165,7 +163,7 @@ header p {
 }
 .pat-modal h2 { font-size: 1.2rem; font-weight: 500; color: var(--app-dark); margin-bottom: .5rem; }
 .pat-modal p { font-size: .79rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
-.pat-modal p code { background: #f0e8c8; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: .76rem; }
+.pat-modal p code { background: #f0e8c8; padding: 1px 5px; border-radius: 4px; font-family: monospace; font-size: .76rem; }
 .pat-field label {
   display: block; font-size: .63rem; text-transform: uppercase;
   letter-spacing: .12em; color: #aaa; margin-bottom: .3rem;
@@ -275,7 +273,7 @@ header p {
 /* ── Summary stats ── */
 .summary { display: flex; gap: 16px; padding: 20px 40px 4px; flex-wrap: wrap; }
 .stat {
-  background: white; border: 1px solid var(--app-border); border-radius: 10px;
+  background: white; border: 1px solid var(--app-border); border-radius: 12px;
   padding: 12px 20px; text-align: center; min-width: 100px;
 }
 .stat-num { font-size: 1.8rem; font-weight: 500; color: var(--app-mid); line-height: 1; }
@@ -320,14 +318,14 @@ header p {
 .btn-card {
   font-family: 'Plus Jakarta Sans', sans-serif; font-size: .62rem; font-weight: 500;
   letter-spacing: .05em; text-transform: uppercase;
-  padding: 3px 10px; border-radius: 10px; border: 1.5px solid var(--app-border);
+  padding: 3px 10px; border-radius: 20px; border: 1.5px solid var(--app-border);
   background: white; color: var(--app-accent); cursor: pointer; transition: all .15s;
 }
 .btn-card:hover { border-color: var(--app-accent); color: var(--app-mid); }
 .btn-card.del:hover { border-color: #c0392b; color: #c0392b; background: #fff0ee; }
 
 /* ── Badges ── */
-.badge { font-size: .63rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; }
+.badge { font-size: .63rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; }
 
 /* ── No results ── */
 .no-results { grid-column: 1/-1; text-align: center; padding: 60px 20px; font-style: italic; color: var(--app-thread); font-size: 1.3rem; }
@@ -338,7 +336,7 @@ header p {
 .toast {
   position: fixed; bottom: 24px; right: 24px; z-index: 3000;
   background: var(--app-dark); color: white;
-  padding: 10px 18px; border-radius: 10px; font-size: .76rem;
+  padding: 10px 18px; border-radius: 12px; font-size: .76rem;
   letter-spacing: .04em; box-shadow: 0 4px 18px rgba(20,40,70,.3);
   opacity: 0; transform: translateY(8px); transition: all .25s;
   pointer-events: none;
@@ -385,9 +383,7 @@ header p {
     </svg>
 
     <div>
-      <div class="header-eyebrow">Chapter N · Category</div>
       <h1>App <em>Name</em></h1>
-      <p>Tagline · Subtitle · Description</p>
     </div>
   </div>
 </header>
@@ -515,6 +511,10 @@ const DATA_VERSION = 1;
 
 let saveTimer   = null;
 let pendingSave = false;
+let remoteReady  = false;  // true once the remote file has been read (or confirmed missing/empty)
+let localTrusted = false;  // true when this device started with real cached data (not seed/empty)
+function pushAllowed() { return remoteReady || localTrusted; }
+function localYMD() { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
 
 // ════════════════════════════════════════════════════════════════════
 //  PAT / SHA HELPERS
@@ -586,8 +586,10 @@ async function syncFromGitHub() {
     const res = await fetch(GH_RAW_URL + '?t=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const text = await res.text();
+    if (!text || !text.trim()) remoteReady = true;
     if (text && text.trim().startsWith('{')) {
       const parsed = JSON.parse(text);
+      remoteReady = true;
       const hasData = parsed && parsed._version === DATA_VERSION &&
         Array.isArray(parsed.data) && parsed.data.length > 0;
       if (hasData) {
@@ -620,13 +622,14 @@ async function fetchSHA() {
 
 async function saveToGitHub() {
   if (!configOk()) return;
+  if (!pushAllowed()) { setSyncStatus('error', 'Not synced yet — changes kept locally'); return; }
   setSyncStatus('saving', 'Saving to GitHub…');
   pendingSave = true;
   try {
     await fetchSHA();
     const payload = { _version: DATA_VERSION, data: supplies };
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
-    const body = { message: '[AppName] update · ' + new Date().toISOString().slice(0,10), content };
+    const body = { message: '[AppName] update · ' + localYMD(), content };
     if (getSHA()) body.sha = getSHA();
     const res = await fetch(GH_API_URL, {
       method: 'PUT',
@@ -659,8 +662,9 @@ function persist() {
 function scheduleSave() {
   persist();
   if (!configOk()) return;
+  if (!pushAllowed()) { setSyncStatus('error', 'Not synced yet — changes kept locally'); return; }
   clearTimeout(saveTimer);
-  saveTimer = setTimeout(saveToGitHub, 1200);
+  saveTimer = setTimeout(() => { saveTimer = null; saveToGitHub(); }, 1200);
 }
 
 function resetLocalData() {
@@ -684,7 +688,8 @@ try {
   if (raw && raw._version === DATA_VERSION) supplies = raw.data;
   else if (raw) localStorage.removeItem(LS_DATA_KEY); // stale — discard
 } catch(e) {}
-if (!supplies) { supplies = SEED.map((s,i) => ({...s, id: 'seed-'+i})); persist(); }
+localTrusted = !!supplies;   // seed data is never trusted: it must not overwrite a remote file
+if (!supplies) { supplies = SEED.map((s,i) => ({...s, id: 'seed-'+i})); if (!configOk()) persist(); }
 
 // ════════════════════════════════════════════════════════════════════
 //  UI STATE

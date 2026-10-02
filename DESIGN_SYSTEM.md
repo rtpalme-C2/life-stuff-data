@@ -1,6 +1,6 @@
 # Life Stuff Apps — Design System
 
-## Version 1.4 · May 2026
+## Version 1.5 · October 2026
 **Reference implementation: Sashiko Craft**
 
 ---
@@ -32,7 +32,8 @@ Business apps:
                                     proposal-template.html
                                     brand-system.md
   rtpalme-C2/Sashiko-Craft   → sashiko-craft-inventory.html
-  rtpalme-C2/Modern-Heirloom → modern-heirloom-inventory.html
+  rtpalme-C2/Modern-Heirloom → the-collection.html   (the app formerly called Modern Heirloom;
+                                 repo name unchanged. modern-heirloom-inventory.html is retired.)
 
 Data files in rtpalme-C2/life-stuff-data:
   sashiko-inventory.json
@@ -40,7 +41,8 @@ Data files in rtpalme-C2/life-stuff-data:
   steady-inventory.json
   ritual-data.json
   journey-intelligence.json
-  modern-heirloom-inventory.json
+  the-collection-inventory.json
+  modern-heirloom-inventory.json  ← retired; kept only as The Collection's one-time import source
   DESIGN_SYSTEM.md               ← this file
   life-stuff-app-template.html   ← starter template for new apps
   life-stuff-continuity.docx     ← Claude continuity document
@@ -65,10 +67,10 @@ Apps supporting active business operations and commerce.
 | App | Business | Purpose |
 |---|---|---|
 | Journey Intelligence | Fora Travel | Travel advisory — client management, commission tracking |
-| Modern Heirloom | Luxury Resale | Hermès, Louis Vuitton and luxury goods inventory and sales |
+| The Collection (formerly Modern Heirloom) | Luxury Resale | Hermès, Louis Vuitton and luxury goods inventory and sales |
 | Sashiko Craft | Sashiko | Embroidery supplies management and sales |
 
-**Note:** Personal collection items (Stylographic, etc.) would move to Modern Heirloom if a decision is made to sell them.
+**Note:** Personal collection items (Stylographic, etc.) would move to The Collection if a decision is made to sell them.
 
 ---
 
@@ -88,8 +90,8 @@ Apps supporting active business operations and commerce.
 | 200 | Wordmark secondary word (italic), decorative |
 | 300 | `<h1>` wordmark, body copy, panel titles |
 | 400 | Default body, labels, tags |
-| 500 | Buttons, section headers, eyebrow, emphasis |
-| italic 200–500 | Available for secondary wordmark, taglines |
+| 500 | Buttons, section headers, emphasis (`strong` = 500) |
+| italic 200–500 | Available for the secondary wordmark word |
 
 ### Scale (rem-based)
 | Role | Size | Weight |
@@ -192,7 +194,7 @@ Apps supporting active business operations and commerce.
 --radius-sm:     8px;
 ```
 
-### Modern Heirloom — Rose / Plum
+### The Collection (formerly Modern Heirloom) — Rose / Plum
 ```css
 --mh-dark:  #1C0810;
 --mh-mid:   #4A1428;
@@ -209,9 +211,10 @@ Apps supporting active business operations and commerce.
 | Pill | 20px | Sync buttons, filter pills, action buttons, `+ Add` buttons |
 | Modal | 16px | All modals (PAT modal, item modal) |
 | Card | 12px | Content cards, metric blocks, control panels |
-| Soft | 10px | Stat pills, toast, badges |
 | Input | 8px | Form inputs, selects, textareas, modal action buttons |
-| Sharp | 2–4px | Config notice alert, Stylographic badges |
+| Sharp | 4px | Config notice alert, inline `code`, Stylographic badges |
+
+**Only these radii are allowed:** 4, 8, 12, 16, 20 px and `50%` (plus directional forms such as `16px 16px 0 0`). No 2, 3, 5, 6, 9, 10px.
 
 ---
 
@@ -588,8 +591,50 @@ When adding the Rating modal to a new app:
 > Init Pattern, Meta Tags, Responsive Breakpoints, and New App Checklist) are unchanged
 > from Version 1.0. Refer to the previous version or individual app source files.
 
-**Header note (v1.2):** The header eyebrow line (`Chapter N · Name`) has been removed
-from all apps. Headers now show only the wordmark and tagline.
+**Header note (v1.5):** Headers show the wordmark only — no eyebrow line (`Chapter N · Name`) and no tagline.
+The `<h1>` is weight 300, `clamp(…, 2.2rem)` maximum.
+
+---
+
+## 26. Sync Safety, Dates and Escaping (v1.5)
+
+Every app that syncs to GitHub follows these rules. They exist because an app that starts with an
+empty or seed-filled local copy and a failed read can otherwise overwrite the real data file.
+
+**Push guard.** Declare `let remoteReady = false; let localTrusted = false;` and
+`function pushAllowed() { return remoteReady || localTrusted; }`.
+- `remoteReady = true` only after the remote read is confirmed: a parsed JSON body, an empty body,
+  or (for apps that create their own file) a 404. A network error, a non-404 HTTP error or an HTML
+  body leaves it `false`.
+- `localTrusted = true` only when the device started with real cached data. Seed or default data is
+  never trusted. Do not persist seed data to local storage when a token is configured.
+- `scheduleSave()` and `saveToGitHub()` both return early when `!pushAllowed()`, setting the status
+  "Not synced yet — changes kept locally".
+- The "GitHub has no data — push local data up" bootstrap is allowed because the empty remote was
+  confirmed first.
+
+**Save timer.** The debounced save is `saveTimer = setTimeout(() => { saveTimer = null; saveToGitHub(); }, 1200)`.
+The `beforeunload` guard tests `saveTimer || pendingSave`, so `saveTimer` must be cleared when it fires.
+
+**Dates.** Never use `new Date().toISOString().slice(0,10)` for a user-facing date or a commit
+message (it is the UTC date; after about 7 pm US Central it is tomorrow). Use `localYMD()`.
+
+**Escaping.** User-typed text placed into `innerHTML` or an attribute goes through `esc()`.
+Numbers, dates and constants need no escaping.
+
+**Secrets.** The GitHub token lives under `LS_PAT`. Stylographic also keeps an Anthropic API key under
+`LS_ANTHROPIC` (`stylographic_anthropic_key`) for its in-app AI feature; it is stored only in that
+browser's local storage. "Reset local data" leaves it in place, like the GitHub token.
+
+## 27. Status Colours and Storage Constants (v1.5)
+
+**Status colours.** Every app defines the status variables it uses under the canonical names, each with
+`-bg`, `-text` and `-border` variants: `--ok`, `--warn`, `--err`, `--info`, `--neutral`. Only the values
+change per app. Journey Intelligence also keeps `--green`, `--amber` and `--red` as ruled exceptions.
+
+**Storage constants.** Each app has one set, with its own prefix: `LS_PAT`, `LS_SHA`, `LS_DATA_KEY`
+(plus `LS_SHOTS_KEY` in Steady; `LS_KEY` in Journey Intelligence and Ritual is the same constant under its
+older name). A token key is never shared between apps. `DATA_VERSION` is per app.
 
 ---
 
@@ -597,6 +642,7 @@ from all apps. Headers now show only the wordmark and tagline.
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.5 | October 2026 | Added sections 26–27 (push guard, save timer, local dates, escaping, status colours, storage constants). Radius scale restricted to 4/8/12/16/20/50% (removed Soft 10px). Headers: no eyebrow, no tagline. Modern Heirloom renamed The Collection. Incorporates the October 2026 audit rulings. |
 | 1.4 | May 2026 | Added Section 9: Rating Modal Pattern. Documented three-state preference modal (yes/undecided/no) with customizable display labels. Includes integration checklist for other apps. Updated section numbering (was 9–24, now 10–25). |
 | 1.3 | May 2026 | Added Section 8: Filter & Sort Pattern Decisions. Documented labeled filter-rows pattern (Pattern A) and sticky filter bar variant (Pattern B). Added decision matrix for choosing patterns. Updated section numbering (was 8–24, now 9–24). |
 | 1.2 | May 2026 | Removed all Chapter 1/Chapter 2 references. Added Personal/Business app categorisation. Removed header eyebrow from all apps. Removed life-stuff-hub.html. Updated steady data file reference to steady-inventory.json. |
