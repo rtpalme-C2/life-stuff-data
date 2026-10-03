@@ -25,7 +25,7 @@
       "madeIn": "",
       "purchased": "Coach In-Store",
       "dimensions": "Length: 9.75\" Height: 7.25\" Width: 5.5\"",
-      "cost": null,
+      "cost": 225,
       "costCurrency": "USD",
       "costUSD": null,
       "soldDate": "",
@@ -34,10 +34,12 @@
       "status": "stash",
       "channels": [],
       "purchaseType": "new",
-      "acquired": "",
+      "acquired": "2026-09-12",
       "receipt": true,
       "priceHistory": [],
-      "images": []
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791069662/Travel_Kit_Black_16x9_fc14qp.jpg"
+      ]
     },
     {
       "id": "mut0ufczyipm",
