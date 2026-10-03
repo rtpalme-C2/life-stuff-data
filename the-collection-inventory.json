@@ -36,9 +36,11 @@
       "channels": [],
       "purchaseType": "new",
       "acquired": "",
-      "receipt": false,
+      "receipt": true,
       "priceHistory": [],
-      "images": []
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791036532/Mott_Blue_16x9_yuhopl.jpg"
+      ]
     },
     {
       "id": "murlv61805xa",
