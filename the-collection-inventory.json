@@ -3,7 +3,7 @@
   "items": [
     {
       "id": "mut1979lfj6r",
-      "name": "Breast Pocket Wallet",
+      "name": "Breast Pocket Wallet225",
       "brand": "Coach",
       "category": "Small Leather Good",
       "notes": "Designed to fit perfectly inside the pocket of an overcoat or blazer, this slim wallet is crafted of natural grain leather with beautiful texture and soft feel. It unfolds to reveal an impressively organized interior, complete with full-length bill compartments, multiple card slots and a zip compartment to keep coins, cash and receipts secure.",
@@ -23,7 +23,7 @@
       "madeIn": "",
       "purchased": "Coach In-Store",
       "dimensions": "Length: 3.75\" Height: 7.5\" Width: 0.75\"",
-      "cost": null,
+      "cost": 225,
       "costCurrency": "USD",
       "costUSD": null,
       "soldDate": "",
@@ -32,8 +32,8 @@
       "status": "stash",
       "channels": [],
       "purchaseType": "new",
-      "acquired": "",
-      "receipt": false,
+      "acquired": "2026-09-12",
+      "receipt": true,
       "priceHistory": [],
       "images": []
     },
