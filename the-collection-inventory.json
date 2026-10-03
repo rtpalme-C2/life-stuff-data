@@ -22,11 +22,11 @@
       "hardware": "Silver",
       "hardwareNote": "",
       "color": "Navy/Green",
-      "source": "",
+      "source": "Retail",
       "madeIn": "",
-      "purchased": "",
-      "dimensions": "",
-      "cost": null,
+      "purchased": "Coach Online",
+      "dimensions": "Length: 18.5\" Height: 14.25\" Width: 4.25\"",
+      "cost": 550,
       "costCurrency": "USD",
       "costUSD": null,
       "soldDate": "",
@@ -35,10 +35,12 @@
       "status": "stash",
       "channels": [],
       "purchaseType": "new",
-      "acquired": "",
-      "receipt": false,
+      "acquired": "2026-09-09",
+      "receipt": true,
       "priceHistory": [],
-      "images": []
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791036531/Mott_Navy_Green_16x9_mqk4cp.jpg"
+      ]
     },
     {
       "id": "musyqret8jyj",
