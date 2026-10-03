@@ -21,7 +21,7 @@
       "material": "Glovetanned leather",
       "hardware": "Brass",
       "hardwareNote": "",
-      "color": "",
+      "color": "Saffron",
       "source": "Retail",
       "madeIn": "",
       "purchased": "Coach Online",
@@ -38,7 +38,9 @@
       "acquired": "2026-09-12",
       "receipt": true,
       "priceHistory": [],
-      "images": []
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791069640/Kisslock_30_Saffron_2_16x9_beojab.jpg"
+      ]
     },
     {
       "id": "musz22xmp5di",
