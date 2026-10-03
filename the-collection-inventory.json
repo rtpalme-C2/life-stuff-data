@@ -2,6 +2,47 @@
   "_version": 1,
   "items": [
     {
+      "id": "musyqret8jyj",
+      "name": "Turnlock Messenger Bag",
+      "brand": "Coach",
+      "category": "Carryall",
+      "notes": "Quintessentially Coach, our Turnlock Messenger Bag is a sleek supersized style. Crafted of silky natural grain leather with beautiful texture and a soft feel, this spacious design is finished with our iconic turnlock closure and a convenient outside zip pocket. With room for a 16” laptop and more, it’s perfect for workdays and weekends.",
+      "features": "Strap with 17\" drop\nOutside zip pocket\nInside zip pocket\nTurnlock closure\nFits a 16\" laptop",
+      "condition": "",
+      "conditionGrade": "new",
+      "accessories": [
+        "Dustbag",
+        "Hangtag"
+      ],
+      "accessoryNote": "",
+      "sku": "CGP28",
+      "size": "Extra Large",
+      "modelSize": "",
+      "material": "Oiled natural grain leather",
+      "hardware": "Silver",
+      "hardwareNote": "",
+      "color": "Driftwood",
+      "source": "Retail",
+      "madeIn": "",
+      "purchased": "Coach Online",
+      "dimensions": "",
+      "cost": null,
+      "costCurrency": "USD",
+      "costUSD": null,
+      "soldDate": "",
+      "price": null,
+      "soldPrice": null,
+      "status": "stash",
+      "channels": [],
+      "purchaseType": "new",
+      "acquired": "",
+      "receipt": true,
+      "priceHistory": [],
+      "images": [
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791036531/Turnlock_Messenger_16x9_opq89m.jpg"
+      ]
+    },
+    {
       "id": "musybgtavtun",
       "name": "Compass 25 with Pockets",
       "brand": "Coach",
