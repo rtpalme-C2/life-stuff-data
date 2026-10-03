@@ -109,7 +109,7 @@
       "madeIn": "",
       "purchased": "Coach Online",
       "dimensions": "Length: 18.5\" Height: 14.25\" Width: 4.25\"",
-      "cost": null,
+      "cost": 550,
       "costCurrency": "USD",
       "costUSD": null,
       "soldDate": "",
@@ -118,7 +118,7 @@
       "status": "stash",
       "channels": [],
       "purchaseType": "new",
-      "acquired": "",
+      "acquired": "2026-07-27",
       "receipt": true,
       "priceHistory": [],
       "images": [
