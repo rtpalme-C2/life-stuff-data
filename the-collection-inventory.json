@@ -882,7 +882,7 @@
       "receipt": false,
       "priceHistory": [],
       "images": [
-        "https://res.cloudinary.com/drbkhakzv/image/upload/v1790815228/Rhyder_38_fvcgmq.png"
+        "https://res.cloudinary.com/drbkhakzv/image/upload/v1791036531/Rhyder_38_16x9_whptz6.jpg"
       ],
       "modelSize": "",
       "hardwareNote": "",
@@ -892,7 +892,9 @@
       "accessories": [
         "Hangtag"
       ],
-      "accessoryNote": ""
+      "accessoryNote": "",
+      "costUSD": null,
+      "soldDate": ""
     },
     {
       "id": "mnky6k8fuf8s",
