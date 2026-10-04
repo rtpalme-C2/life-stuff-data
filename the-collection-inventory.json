@@ -660,7 +660,7 @@
       "condition": "",
       "accompanied": "Hagtag",
       "sku": "CCB51",
-      "size": "Medium",
+      "size": "Small",
       "material": "Natural grain leather",
       "hardware": "Silver",
       "color": "Maple",
@@ -688,7 +688,9 @@
       "accessories": [
         "Hangtag"
       ],
-      "accessoryNote": ""
+      "accessoryNote": "",
+      "costUSD": null,
+      "soldDate": ""
     },
     {
       "id": "murkima1ka5k",
