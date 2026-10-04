@@ -782,7 +782,7 @@
       "condition": "",
       "accompanied": "Hagtag",
       "sku": "CW617",
-      "size": "Large",
+      "size": "Extra Large",
       "material": "Natural Grain Leather",
       "hardware": "Brass",
       "color": "Honey",
@@ -810,7 +810,9 @@
       "accessories": [
         "Hangtag"
       ],
-      "accessoryNote": ""
+      "accessoryNote": "",
+      "costUSD": null,
+      "soldDate": ""
     },
     {
       "id": "muotblc83zim",
